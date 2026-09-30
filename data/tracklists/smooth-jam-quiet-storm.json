@@ -1,0 +1,17 @@
+{
+  "album": "Smooth Jam: Quiet Storm",
+  "slug": "smooth-jam-quiet-storm",
+  "year": 2002,
+  "titleJa": "SMOOTH JAM -Quiet Storm-",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Malibu", "titleJa": "Malibu", "note": "originally by Lee Ritenour (Phil Perry / Lee Ritenour, 1996, 'Blue-Dollar Bill' era)" },
+    { "n": 2, "title": "The Best of Me", "titleJa": "The Best of Me", "note": "originally by Michael Jackson (1984, from 'Thriller')" },
+    { "n": 3, "title": "No Sympathy", "titleJa": "No Sympathy", "note": "originally by Lee Ritenour (Eric Tagg / Lee Ritenour, 1981, from 'Rit')" },
+    { "n": 4, "title": "Every Breath You Take", "titleJa": "Every Breath You Take", "note": "originally by The Police (Sting, 1983)" },
+    { "n": 5, "title": "If", "titleJa": "If", "note": "originally by Bread (David Gates, 1971)" },
+    { "n": 6, "title": "Hard to Say I'm Sorry", "titleJa": "Hard to Say I'm Sorry", "note": "originally by Chicago (Peter Cetera / David Foster, 1982)" },
+    { "n": 7, "title": "Somewhere in Time", "titleJa": "Somewhere in Time", "note": "originally by John Barry (Mark Mueller / John Barry, theme from the 1986 film 'Somewhere in Time')" }
+  ]
+}

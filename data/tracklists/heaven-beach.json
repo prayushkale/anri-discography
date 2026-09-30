@@ -1,0 +1,21 @@
+{
+  "album": "Heaven Beach",
+  "slug": "heaven-beach",
+  "year": 1982,
+  "titleJa": "Heaven Beach",
+  "wiki": "https://ja.wikipedia.org/wiki/Heaven_Beach",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Nibanme no Affair", "titleJa": "二番目のaffair" },
+    { "n": 2, "title": "Last Summer Whisper", "titleJa": null },
+    { "n": 3, "title": "Lonely Driving", "titleJa": null },
+    { "n": 4, "title": "Resolution", "titleJa": null },
+    { "n": 5, "title": "Fly By Day", "titleJa": null },
+    { "n": 6, "title": "Flash Back Memories", "titleJa": null },
+    { "n": 7, "title": "Honesty Man", "titleJa": null },
+    { "n": 8, "title": "Memorial Story", "titleJa": null },
+    { "n": 9, "title": "Natsu ni Seo wo Mukete", "titleJa": "夏に背を向けて" },
+    { "n": 10, "title": "Heaven Beach", "titleJa": null },
+    { "n": 11, "title": "Kaze no Naka de Loving You", "titleJa": "風の中でloving you" }
+  ]
+}

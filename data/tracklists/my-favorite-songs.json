@@ -1,0 +1,26 @@
+{
+  "album": "My Favorite Songs",
+  "slug": "my-favorite-songs",
+  "year": 1988,
+  "titleJa": "MY FAVORITE SONGS",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Olivia o Kikinagara (New Take)", "titleJa": "オリビアを聴きながら (New Take)" },
+    { "n": 2, "title": "Namida wo Umi ni Kaeshitai", "titleJa": "涙を海に返したい" },
+    { "n": 3, "title": "Cotton Kibun", "titleJa": "コットン気分" },
+    { "n": 4, "title": "Sunahama (New Take)", "titleJa": "砂浜 (New Take)" },
+    { "n": 5, "title": "Omoikiri American", "titleJa": "思いきりアメリカン" },
+    { "n": 6, "title": "Cat's Eye (Original)", "titleJa": "CAT'S EYE" },
+    { "n": 7, "title": "Kanashimi ga Tomaranai", "titleJa": "悲しみがとまらない" },
+    { "n": 8, "title": "Kimama ni Reflection", "titleJa": "気ままにREFLECTION" },
+    { "n": 9, "title": "16 (Sixteen) Beat", "titleJa": "16(Sixteen)BEAT" },
+    { "n": 10, "title": "Innocent Time", "titleJa": "INNOCENT TIME" },
+    { "n": 11, "title": "Morning Squall", "titleJa": "モーニング スコール" },
+    { "n": 12, "title": "Trouble in Paradise (English Version)", "titleJa": "TROUBLE IN PARADISE" },
+    { "n": 13, "title": "Happy End de Furaretai", "titleJa": "HAPPYENDでふられたい" },
+    { "n": 14, "title": "Catch the Wind", "titleJa": "CATCH THE WIND" },
+    { "n": 15, "title": "Surf & Tears", "titleJa": "SURF & TEARS" },
+    { "n": 16, "title": "Last Picture Show", "titleJa": "LAST PICTURE SHOW" }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "album": "My Favorite Songs 2",
+  "slug": "my-favorite-songs-2",
+  "year": 1991,
+  "titleJa": "MY FAVORITE SONGS 2",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Christmas Calendar", "titleJa": "CHRISTMAS CALENDAR" },
+    { "n": 2, "title": "Boyfriend", "titleJa": "ボーイフレンド" },
+    { "n": 3, "title": "Sayonara Single Days", "titleJa": "さよならシングル・デイズ" },
+    { "n": 4, "title": "Saigo no Surf Holiday", "titleJa": "最後のサーフホリデー" },
+    { "n": 5, "title": "Summer Candles", "titleJa": "SUMMER CANDLES" },
+    { "n": 6, "title": "Aishiteru Nante Totemo Ienai", "titleJa": "愛してるなんてとても言えない" },
+    { "n": 7, "title": "Snow Flake no Machikado", "titleJa": "スノーフレイクの街角" },
+    { "n": 8, "title": "Groove A Go Go", "titleJa": "Groove A・Go・Go" },
+    { "n": 9, "title": "P.S. Kotoba ni Naranai", "titleJa": "P.S. 言葉にならない" },
+    { "n": 10, "title": "Mind Cruisin'", "titleJa": "MIND CRUISIN'" },
+    { "n": 11, "title": "Sweet Emotion (Single Version)", "titleJa": "Sweet Emotion" },
+    { "n": 12, "title": "Stardust Go Home (English)", "titleJa": "STARDUST GO HOME" },
+    { "n": 13, "title": "Back to the Basic (Remix #1)", "titleJa": "Back to the BASIC" },
+    { "n": 14, "title": "Uso Nara Yasashiku", "titleJa": "嘘ならやさしく" },
+    { "n": 15, "title": "Last Love", "titleJa": "ラスト ラブ" }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+ "al-coool-t02": {
+  "start": 62.51,
+  "end": 118.79,
+  "confidence": 0.573,
+  "duration": 190.9
+ },
+ "al-timely-t01": {
+  "start": 81.99,
+  "end": 141.76,
+  "confidence": 0.559,
+  "duration": 225.3
+ }
+}

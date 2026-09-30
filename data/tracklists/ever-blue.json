@@ -1,0 +1,21 @@
+{
+  "album": "Ever Blue",
+  "slug": "ever-blue",
+  "year": 1999,
+  "titleJa": "Ever Blue",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "EVER BLUE", "titleJa": null },
+    { "n": 2, "title": "Bless And Kiss", "titleJa": null },
+    { "n": 3, "title": "Aenai Setsunasa to", "titleJa": "逢えないせつなさと" },
+    { "n": 4, "title": "Mirai no Saisho no Hi", "titleJa": "未来の最初の日" },
+    { "n": 5, "title": "Hidarikime no Jinx", "titleJa": "左ききのジンクス" },
+    { "n": 6, "title": "Summerpolis", "titleJa": null },
+    { "n": 7, "title": "Radiogenic", "titleJa": null },
+    { "n": 8, "title": "Nasty", "titleJa": null },
+    { "n": 9, "title": "JOY ~Yours Only~", "titleJa": null },
+    { "n": 10, "title": "Daybreak", "titleJa": null },
+    { "n": 11, "title": "Love Song ga Kikoeru", "titleJa": "Love Songが聞こえる" }
+  ]
+}

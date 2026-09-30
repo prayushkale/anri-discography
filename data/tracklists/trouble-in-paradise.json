@@ -1,0 +1,20 @@
+{
+  "album": "Trouble in Paradise",
+  "slug": "trouble-in-paradise",
+  "year": 1986,
+  "titleJa": "トラブル・イン・パラダイス",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "The Pages Of Your History", "titleJa": null },
+    { "n": 2, "title": "Time Out", "titleJa": null },
+    { "n": 3, "title": "Imitation Lover", "titleJa": null },
+    { "n": 4, "title": "The Torch", "titleJa": null },
+    { "n": 5, "title": "A Slow Boat To Heart", "titleJa": null },
+    { "n": 6, "title": "Trouble In Paradise", "titleJa": null },
+    { "n": 7, "title": "Precious Time", "titleJa": null },
+    { "n": 8, "title": "Fallen Angel", "titleJa": null },
+    { "n": 9, "title": "Christmas Calendar", "titleJa": null },
+    { "n": 10, "title": "Curtain Call", "titleJa": null }
+  ]
+}

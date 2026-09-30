@@ -1,0 +1,22 @@
+{
+  "album": "MIND CRUISIN'",
+  "slug": "mind-cruisin",
+  "year": 1990,
+  "titleJa": "マインド・クルージング",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "SOUTHERN CURRENT", "titleJa": null },
+    { "n": 2, "title": "V.S. SPACE POWER", "titleJa": null },
+    { "n": 3, "title": "MIND CRUSIN'", "titleJa": null },
+    { "n": 4, "title": "STARDUST GO HOME", "titleJa": null },
+    { "n": 5, "title": "WHAT'S UP SISTERS", "titleJa": null },
+    { "n": 6, "title": "SHADE OF BLUE", "titleJa": null },
+    { "n": 7, "title": "JOSHUA", "titleJa": null },
+    { "n": 8, "title": "Banshatsu no Koibito-tachi e", "titleJa": "晩夏の恋人たちへ" },
+    { "n": 9, "title": "Heartbreak Kōatsuryō", "titleJa": "ハートブレイク高気圧" },
+    { "n": 10, "title": "LOVE LETTERS", "titleJa": null },
+    { "n": 11, "title": "BIG FIGHT BIG KISS", "titleJa": null },
+    { "n": 12, "title": "HOLY RAIN", "titleJa": null }
+  ]
+}

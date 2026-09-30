@@ -1,0 +1,20 @@
+{
+  "album": "The Beach House",
+  "slug": "the-beach-house",
+  "year": 2000,
+  "titleJa": "ザ ビーチ ハウス",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Surf Break Highway", "titleJa": null },
+    { "n": 2, "title": "Kyou wa Naku no ni Fusawaui Hi", "titleJa": "今日は泣くのにふさわしい日" },
+    { "n": 3, "title": "Ame yori Setsunaku", "titleJa": "雨よりせつなく" },
+    { "n": 4, "title": "Chain Affection", "titleJa": null },
+    { "n": 5, "title": "Touch Me in Paradise", "titleJa": null },
+    { "n": 6, "title": "Tasogare", "titleJa": "たそがれ" },
+    { "n": 7, "title": "Voice to Voice", "titleJa": null },
+    { "n": 8, "title": "Ten Years Later ~Boyfriend Futari ni~", "titleJa": "Ten Years Later～ボーイフレンド再び～" },
+    { "n": 9, "title": "Itoshii", "titleJa": "愛しい" },
+    { "n": 10, "title": "Sennen no Koi", "titleJa": "千年の恋" }
+  ]
+}

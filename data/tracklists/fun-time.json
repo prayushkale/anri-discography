@@ -1,0 +1,22 @@
+{
+  "album": "FUN TIME",
+  "slug": "fun-time",
+  "year": 2017,
+  "titleJa": "ファン・タイム",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Catch the Wind", "titleJa": null, "note": "live" },
+    { "n": 2, "title": "Kan Beer to Denim Shatsu", "titleJa": "缶ビールとデニムシャツ", "note": "live" },
+    { "n": 3, "title": "One ~Ai wa Futari no Kotoba Dakara~", "titleJa": "ONE-愛はふたりの言葉だから-", "note": "live" },
+    { "n": 4, "title": "Lovers on Venus", "titleJa": null, "note": "live" },
+    { "n": 5, "title": "Secret Lovers", "titleJa": null, "note": "live; cover, originally recorded by Dreams" },
+    { "n": 6, "title": "Between the Sheets", "titleJa": null, "note": "live; cover, originally by The Isley Brothers" },
+    { "n": 7, "title": "Move Me", "titleJa": null, "note": "live" },
+    { "n": 8, "title": "Kanashimi ga Tomaranai", "titleJa": "悲しみがとまらない", "note": "live" },
+    { "n": 9, "title": "Cat's Eye", "titleJa": "CAT'S EYE", "note": "live" },
+    { "n": 10, "title": "Summer Candles", "titleJa": "SUMMER CANDLES", "note": "live" },
+    { "n": 11, "title": "Olivia wo Kikinagara", "titleJa": "オリビアを聴きながら", "note": "live" },
+    { "n": 12, "title": "Uso Nara Yasashiku", "titleJa": "嘘ならやさしく", "note": "live" }
+  ]
+}

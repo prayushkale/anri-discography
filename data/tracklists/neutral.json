@@ -1,0 +1,21 @@
+{
+  "album": "NEUTRAL",
+  "slug": "neutral",
+  "year": 1991,
+  "titleJa": "ニュートラル",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Back to the BASIC", "titleJa": null },
+    { "n": 2, "title": "Private Sold out", "titleJa": "プライベート Sold out" },
+    { "n": 3, "title": "Earring ~tears of two~", "titleJa": "イヤリング〜tears of two〜" },
+    { "n": 4, "title": "Rap Up Africa", "titleJa": null },
+    { "n": 5, "title": "Voice of my heart", "titleJa": null },
+    { "n": 6, "title": "Oasis", "titleJa": null },
+    { "n": 7, "title": "Sweet Emotion", "titleJa": null },
+    { "n": 8, "title": "9-gatsu no Hometown kara", "titleJa": "9月のHometownから" },
+    { "n": 9, "title": "Ai wa Communication", "titleJa": "愛はCommunication" },
+    { "n": 10, "title": "St. Imagination", "titleJa": null },
+    { "n": 11, "title": "Uso Nara Yasashiku", "titleJa": "嘘ならやさしく" }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "album": "Timely!!",
+  "slug": "timely",
+  "year": 1983,
+  "titleJa": "タイムリー",
+  "wiki": "https://en.wikipedia.org/wiki/Timely!!",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Cat's Eye", "titleJa": "CAT'S EYE" },
+    { "n": 2, "title": "Windy Summer", "titleJa": null },
+    { "n": 3, "title": "Stay By Me", "titleJa": null },
+    { "n": 4, "title": "A Hope from Sad Street", "titleJa": null },
+    { "n": 5, "title": "You Are Not Alone", "titleJa": null },
+    { "n": 6, "title": "Kanashimi ga Tomaranai", "titleJa": "悲しみがとまらない" },
+    { "n": 7, "title": "Shyness Boy", "titleJa": null },
+    { "n": 8, "title": "Lost Love in the Rain", "titleJa": null },
+    { "n": 9, "title": "Driving My Love", "titleJa": null },
+    { "n": 10, "title": "Good-Night for You", "titleJa": null },
+    { "n": 11, "title": "Remember Summer Days", "titleJa": null }
+  ]
+}

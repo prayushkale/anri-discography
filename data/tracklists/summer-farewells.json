@@ -1,0 +1,20 @@
+{
+  "album": "Summer Farewells",
+  "slug": "summer-farewells",
+  "year": 1987,
+  "titleJa": "サマーフェアウェルズ",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Dance With Nostalgia", "titleJa": null },
+    { "n": 2, "title": "Café 25 (Vingt Cinq)", "titleJa": null },
+    { "n": 3, "title": "Boyfriend", "titleJa": "ボーイフレンド" },
+    { "n": 4, "title": "Uki na Kano-tachi no Tame ni", "titleJa": "浮気な彼のために" },
+    { "n": 5, "title": "Chanel de Good-bye", "titleJa": "シャネルでグッドバイ" },
+    { "n": 6, "title": "Moon In The Rain", "titleJa": null },
+    { "n": 7, "title": "Sayonara Single Days", "titleJa": "さよなら シングル・デイズ" },
+    { "n": 8, "title": "Kirisame ni Kiete Yuku", "titleJa": "霧雨に消えてゆく" },
+    { "n": 9, "title": "Happy End de Furaretai", "titleJa": "HAPPYENDでふられたい" },
+    { "n": 10, "title": "Honolulu Birthday Eve", "titleJa": "ホノルル・バースデイ・イヴ" }
+  ]
+}

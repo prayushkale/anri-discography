@@ -1,0 +1,23 @@
+{
+  "album": "Feelin'",
+  "slug": "feelin",
+  "year": 1979,
+  "titleJa": "Feelin'",
+  "wiki": "https://ja.wikipedia.org/wiki/Feelin'",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Cordoba no Odoriko", "titleJa": "コルドバの踊り子" },
+    { "n": 2, "title": "Kugatsu no Suna", "titleJa": "九月の砂" },
+    { "n": 3, "title": "Blue Moon", "titleJa": "ブルー・ムーン" },
+    { "n": 4, "title": "Slip Away", "titleJa": "スリップアウェイ" },
+    { "n": 5, "title": "Mahogany Town", "titleJa": "マホガニータウン" },
+    { "n": 6, "title": "Chichuukai Dream", "titleJa": "地中海ドリーム" },
+    { "n": 7, "title": "Morning Flight", "titleJa": "モーニング・フライト" },
+    { "n": 8, "title": "Kanashimi wa Mado no Mukou", "titleJa": "悲しみは窓の向こう" },
+    { "n": 9, "title": "Tokimeki", "titleJa": "ときめき" },
+    { "n": 10, "title": "Megurikuru Kisetsu no You ni", "titleJa": "めぐり来る季節のように" },
+    { "n": 11, "title": "Umibe kara", "titleJa": "海辺から" },
+    { "n": 12, "title": "Kaze no Jealousy", "titleJa": "風のジェラシー" },
+    { "n": 13, "title": "My Special Love Scene", "titleJa": null }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "album": "Boogie Woogie Mainland",
+  "slug": "boogie-woogie-mainland",
+  "year": 1988,
+  "titleJa": "ブギウギ・メインランド",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Boogie Woogie Mainland", "titleJa": null },
+    { "n": 2, "title": "Please! Make Me Cry", "titleJa": null },
+    { "n": 3, "title": "Aishiteru Nante Totemo Ienai", "titleJa": "愛してるなんてとても言えない" },
+    { "n": 4, "title": "D.J. I Love You", "titleJa": null },
+    { "n": 5, "title": "Watashi Dake no Joker", "titleJa": "私だけのJOKER" },
+    { "n": 6, "title": "Goodbye Future", "titleJa": null },
+    { "n": 7, "title": "Mercy! Mercy!", "titleJa": null },
+    { "n": 8, "title": "Edge Of Heaven", "titleJa": null },
+    { "n": 9, "title": "Saigo no Surf Holiday", "titleJa": "最後のサーフホリデー" },
+    { "n": 10, "title": "Summer Candles", "titleJa": null }
+  ]
+}

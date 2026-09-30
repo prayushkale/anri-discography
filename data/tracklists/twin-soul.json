@@ -1,0 +1,22 @@
+{
+  "album": "Twin Soul",
+  "slug": "twin-soul",
+  "year": 1997,
+  "titleJa": "Twin Soul",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Odoraseru", "titleJa": "踊らせて" },
+    { "n": 2, "title": "Future For You", "titleJa": null },
+    { "n": 3, "title": "Midnight Profiling", "titleJa": null },
+    { "n": 4, "title": "Forever Twin Soul", "titleJa": null },
+    { "n": 5, "title": "Umarekawaru Tame ni", "titleJa": "生まれ変わるために" },
+    { "n": 6, "title": "EX-LOVER", "titleJa": null },
+    { "n": 7, "title": "Our Little One", "titleJa": null },
+    { "n": 8, "title": "Hareta Hi no Wiper", "titleJa": "晴れた日のワイパー" },
+    { "n": 9, "title": "Mr. SANTA CLAUS ~Present~", "titleJa": "Mr.SANTA CLAUS～Present～" },
+    { "n": 10, "title": "Close To You", "titleJa": null },
+    { "n": 11, "title": "KISS", "titleJa": null },
+    { "n": 12, "title": "Cat's Eye 2000 (Album Version)", "titleJa": "CAT'S EYE -2000-" }
+  ]
+}

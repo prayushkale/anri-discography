@@ -1,0 +1,21 @@
+{
+  "album": "Meditation",
+  "slug": "meditation",
+  "year": 1987,
+  "titleJa": "meditation",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Olivia o Kikinagara", "titleJa": "OLIVIA O KIKINAGARA" },
+    { "n": 2, "title": "Last Picture Show", "titleJa": "LAST PICTURE SHOW" },
+    { "n": 3, "title": "You Are Not Alone", "titleJa": "YOU ARE NOT ALONE" },
+    { "n": 4, "title": "Heaven Beach", "titleJa": "HEAVEN BEACH" },
+    { "n": 5, "title": "All of You", "titleJa": "ALL OF YOU" },
+    { "n": 6, "title": "Oversea Call", "titleJa": "OVERSEA CALL" },
+    { "n": 7, "title": "I Can't Ever Change Your Love for Me", "titleJa": "I CAN'T EVER CHANGE YOUR LOVE FOR ME" },
+    { "n": 8, "title": "Long Island Beach", "titleJa": "LONG ISLAND BEACH" },
+    { "n": 9, "title": "Sunahama", "titleJa": "SUNAHAMA" },
+    { "n": 10, "title": "Affection", "titleJa": "AFFECTION" },
+    { "n": 11, "title": "Good-Night for You", "titleJa": "GOOD-NIGHT FOR YOU", "note": "CD-only bonus track (not on the original LP/CT)" }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "album": "MOANA LANI",
+  "slug": "moana-lani",
+  "year": 1992,
+  "titleJa": "モアナ・ラニ",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "PAPAYA PAPAIA", "titleJa": null },
+    { "n": 2, "title": "KOHOLA TAIL", "titleJa": null },
+    { "n": 3, "title": "Ai wa Dare no Mono de mo Naku", "titleJa": "愛は誰のものでもなく" },
+    { "n": 4, "title": "Saigo no Shooting Star", "titleJa": "最後のShooting Star" },
+    { "n": 5, "title": "Surf Break HALEIWA", "titleJa": null },
+    { "n": 6, "title": "RETURN WITH LOVE", "titleJa": null },
+    { "n": 7, "title": "Yūnagi", "titleJa": "夕なぎ" },
+    { "n": 8, "title": "MOVE ME", "titleJa": null },
+    { "n": 9, "title": "Shūmatsu dake no PARADISE", "titleJa": "週末だけのPARADISE" },
+    { "n": 10, "title": "GIRLS IN SUMMER", "titleJa": null },
+    { "n": 11, "title": "Lani: Heavenly Garden", "titleJa": null },
+    { "n": 12, "title": "Dreaming", "titleJa": null }
+  ]
+}

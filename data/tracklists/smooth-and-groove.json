@@ -1,0 +1,22 @@
+{
+  "album": "Smooth & Groove",
+  "slug": "smooth-and-groove",
+  "year": 2015,
+  "titleJa": "スムース・アンド・グルーヴ",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Grooving Life", "titleJa": null },
+    { "n": 2, "title": "Brand New Day!", "titleJa": null },
+    { "n": 3, "title": "Eyes On Me", "titleJa": null },
+    { "n": 4, "title": "Fall In Love", "titleJa": null },
+    { "n": 5, "title": "In Tears", "titleJa": null },
+    { "n": 6, "title": "You Drive Me Crazy", "titleJa": null },
+    { "n": 7, "title": "Before Full Moon", "titleJa": null },
+    { "n": 8, "title": "Sakihokore", "titleJa": "サキホコレ" },
+    { "n": 9, "title": "Ready to Love", "titleJa": null },
+    { "n": 10, "title": "Flashback Time", "titleJa": null },
+    { "n": 11, "title": "Sense of Happiness", "titleJa": null },
+    { "n": 12, "title": "Be with U", "titleJa": null, "note": "duet with SHIKATA" }
+  ]
+}

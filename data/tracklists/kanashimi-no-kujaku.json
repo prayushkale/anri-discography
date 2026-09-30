@@ -1,0 +1,23 @@
+{
+  "album": "Kanashimi no Kujaku",
+  "slug": "kanashimi-no-kujaku",
+  "year": 1981,
+  "titleJa": "哀しみの孔雀",
+  "wiki": "https://ja.wikipedia.org/wiki/哀しみの孔雀",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Ikoku no Dekigoto", "titleJa": "異国の出来事" },
+    { "n": 2, "title": "Espresso de Nemurenai", "titleJa": "エスプレッソで眠れない" },
+    { "n": 3, "title": "FACE FACE FACE", "titleJa": null },
+    { "n": 4, "title": "Shiroi Yacht", "titleJa": "白いヨット" },
+    { "n": 5, "title": "Cecil Cut", "titleJa": "セシルカット" },
+    { "n": 6, "title": "Riviera kara no Tegami", "titleJa": "リビエラからの手紙" },
+    { "n": 7, "title": "Headlight", "titleJa": "ヘッドライト" },
+    { "n": 8, "title": "Silhouette of Romance", "titleJa": "シルエット オブ ロマンス" },
+    { "n": 9, "title": "Am I Afraid?", "titleJa": null },
+    { "n": 10, "title": "Itsu no Hi ka Happy End", "titleJa": "いつの日かHappy End" },
+    { "n": 11, "title": "Sayonara wa Yoake no Yume ni", "titleJa": "さよならは夜明けの夢に" },
+    { "n": 12, "title": "Kanashimi no Kujaku", "titleJa": "哀しみの孔雀" },
+    { "n": 13, "title": "Kawaii Paolin", "titleJa": "可愛いポーリン" }
+  ]
+}

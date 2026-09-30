@@ -1,0 +1,21 @@
+{
+  "album": "Anri: Apricot Jam",
+  "slug": "apricot-jam",
+  "year": 1978,
+  "titleJa": "杏里 -apricot jam-",
+  "wiki": "https://ja.wikipedia.org/wiki/杏里_-apricot_jam-",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Olivia wo Kikinagara", "titleJa": "オリビアを聴きながら" },
+    { "n": 2, "title": "Rhapsody", "titleJa": "ラプソディー" },
+    { "n": 3, "title": "Sozoro Fuyu", "titleJa": "そぞろ寒" },
+    { "n": 4, "title": "Nishibi Usurete", "titleJa": "西日うすれて" },
+    { "n": 5, "title": "So Long", "titleJa": null },
+    { "n": 6, "title": "Flying Gozen Juji Hatsu", "titleJa": "Flying 午前10時発" },
+    { "n": 7, "title": "Chinese Doll", "titleJa": "中国人形" },
+    { "n": 8, "title": "Keyword o Sagase", "titleJa": "キーワードを探せ" },
+    { "n": 9, "title": "Blue City", "titleJa": null },
+    { "n": 10, "title": "Fade Out", "titleJa": "フェイド・アウト" },
+    { "n": 11, "title": "Tooi Hi no Image", "titleJa": "遠い日のイマージュ" }
+  ]
+}

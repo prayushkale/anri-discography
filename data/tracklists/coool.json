@@ -1,0 +1,21 @@
+{
+  "album": "Coool",
+  "slug": "coool",
+  "year": 1984,
+  "titleJa": "クール",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Bring Me To The Dancenight", "titleJa": null },
+    { "n": 2, "title": "Gone With The Sadness", "titleJa": null },
+    { "n": 3, "title": "Kimamani Reflection", "titleJa": "気ままにREFLECTION" },
+    { "n": 4, "title": "I Can't Ever Change Your Love For Me", "titleJa": null },
+    { "n": 5, "title": "Silly City Girl", "titleJa": null },
+    { "n": 6, "title": "Morning Highway", "titleJa": null },
+    { "n": 7, "title": "Surprise Of Summer", "titleJa": null },
+    { "n": 8, "title": "Flashin' Night", "titleJa": null },
+    { "n": 9, "title": "Mercury Lamp", "titleJa": "水銀燈" },
+    { "n": 10, "title": "He's My Music", "titleJa": null },
+    { "n": 11, "title": "Maui", "titleJa": null }
+  ]
+}

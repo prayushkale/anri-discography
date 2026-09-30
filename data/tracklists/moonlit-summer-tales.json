@@ -1,0 +1,22 @@
+{
+  "album": "Moonlit Summer Tales",
+  "slug": "moonlit-summer-tales",
+  "year": 1998,
+  "titleJa": "ムーンリット サマー テイルズ",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Natsu no Tsuki", "titleJa": "夏の月" },
+    { "n": 2, "title": "Eternity", "titleJa": null },
+    { "n": 3, "title": "Lost Vacation", "titleJa": null },
+    { "n": 4, "title": "First Season", "titleJa": null },
+    { "n": 5, "title": "Long Way To Your Heart", "titleJa": null },
+    { "n": 6, "title": "Jiyu na Sakana", "titleJa": "自由な魚" },
+    { "n": 7, "title": "Hikari ni Nagasarete", "titleJa": "光に流されて" },
+    { "n": 8, "title": "Soramimi", "titleJa": null },
+    { "n": 9, "title": "Sky Diver", "titleJa": null },
+    { "n": 10, "title": "What is love?", "titleJa": null },
+    { "n": 11, "title": "Sin", "titleJa": null },
+    { "n": 12, "title": "Natsu no Tsuki (Reprise)", "titleJa": "夏の月(Reprise)" }
+  ]
+}

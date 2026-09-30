@@ -1,0 +1,358 @@
+{
+  "artist": {
+    "name": "Anri",
+    "nameJa": "杏里",
+    "realName": "Kawashima Eiko (川島 栄子)",
+    "born": "1961-08-31",
+    "birthplace": "Yamato, Kanagawa, Japan",
+    "genres": ["Jazz", "R&B", "J-pop", "city pop"],
+    "instrument": "Vocals",
+    "yearsActive": "1978–present",
+    "website": "https://anri-music.com",
+    "portrait": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/AnriLA22023_%28cropped%29.jpg/500px-AnriLA22023_%28cropped%29.jpg",
+    "portraitCredit": "Anri performing in 2023 — Wikimedia Commons (CC BY-SA)",
+    "youtube": "https://www.youtube.com/@anriofficial3041",
+    "subscribers": "187K",
+    "channelViews": "229M",
+    "bio": "Eiko Kawashima (川島 栄子, Kawashima Eiko; born 31 August 1961), better known as Anri (杏里), is a Japanese pop singer from Yamato, Kanagawa Prefecture. In a career spanning more than 40 years she achieved commercial success and popularity in the city pop music scene during the 1980s. Her debut release was 1978's \"Oribia o Kikinagara\" (\"While Listening to Olivia\"), written by Amii Ozaki. She broke through with her signature 1983 album Timely!!, which spawned the hits \"Cat's Eye\" and \"Kanashimi ga Tomaranai\". Throughout the 1980s and early 1990s her albums were bestsellers, including a tour with attendance of almost 100,000. With the renewed popularity of city pop — and her songs having been sampled by many new vaporwave and future funk artists — Anri has enjoyed a second wave of success outside Japan, and several of her albums were reissued in 2023.",
+    "highlights": [
+      { "year": "1983", "text": "\"Cat's Eye\" debuted at No. 1 on Countdown Japan and spent 4 weeks at No. 1 on the Oricon chart. It was the first opening theme of the eponymous anime series, one of the earliest J-pop anime tie-ins." },
+      { "year": "1983", "text": "\"Timely!!\" became her first No. 1 album, propelled by \"Cat's Eye\" and \"Kanashimi ga Tomaranai\" (\"I Can't Stop the Loneliness\")." },
+      { "year": "1987–88", "text": "\"Summer Candles\" and \"Dolphin Ring\" became standard songs at Japanese weddings and receptions." },
+      { "year": "1987", "text": "Toured Hawaii for the first time, and played a tour that drew close to 100,000 attendees." },
+      { "year": "1998", "text": "Sang \"Furusato\" during the closing ceremony of the 1998 Winter Olympics in Nagano." },
+      { "year": "2002", "text": "Began collaborating with jazz fusion guitarist Lee Ritenour, who produced the LP Smooth Jam – Quiet Storm." },
+      { "year": "2021", "text": "Teamed up with Mariya Takeuchi on \"Watching Over You\" as \"Peach & Apricot\"." },
+      { "year": "2020s", "text": "City pop revival: her catalogue is sampled by vaporwave and future funk artists, and several albums were reissued in 2023." }
+    ]
+  },
+  "years": [
+    {
+      "year": 1978,
+      "releases": [
+        { "id": "al-apricot-jam", "type": "Studio album", "title": "Anri: Apricot Jam", "titleJa": "杏里 Apricot Jam", "label": "For Life", "oricon": 51, "tracklist": "apricot-jam", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1978-olivia", "type": "Single", "title": "Olivia wo Kikinagara", "titleJa": "オリビアを聴きながら", "label": "For Life", "oricon": 65, "note": "Debut release, written by Amii Ozaki.", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 1979,
+      "releases": [
+        { "id": "al-feelin", "type": "Studio album", "title": "Feelin'", "titleJa": "フィーリン", "label": "For Life", "oricon": 71, "tracklist": "feelin", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1979-chichuukai", "type": "Single", "title": "Chichuukai Dream", "titleJa": "地中海ドリーム", "label": "For Life", "oricon": 86, "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1979-namida", "type": "Single", "title": "Namida wo Umi ni Kaeshitai", "titleJa": "涙を海に返したい", "label": "For Life", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1979-inspiration", "type": "Single", "title": "Inspiration", "titleJa": "インスピレーション", "label": "For Life", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 1980,
+      "releases": [
+        { "id": "c-1980-anri-the-best", "type": "Compilation", "title": "Anri the Best", "label": "For Life", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "c-1980-anri-2", "type": "Compilation", "title": "Anri: The Best", "titleJa": "杏里 ザ・ベスト", "label": "For Life", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1980-kaze", "type": "Single", "title": "Kaze no Jealousy", "titleJa": "風のジェラシー", "label": "For Life", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1980-kawaii-boring", "type": "Single", "title": "Kawaii Boring", "titleJa": "可愛いポーリン", "label": "For Life", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 1981,
+      "releases": [
+        { "id": "al-kanashimi-no-kujaku", "type": "Studio album", "title": "Kanashimi no Kujaku", "titleJa": "哀しみの孔雀", "label": "For Life", "tracklist": "kanashimi-no-kujaku", "note": "Sad Peacock.", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1981-cotton", "type": "Single", "title": "Cotton Kibun", "titleJa": "コットン気分", "label": "For Life", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1981-ikoku", "type": "Single", "title": "Ikoku no Dekigoto", "titleJa": "異国の出来事", "label": "For Life", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 1982,
+      "releases": [
+        { "id": "al-heaven-beach", "type": "Studio album", "title": "Heaven Beach", "label": "For Life", "oricon": 89, "tracklist": "heaven-beach", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "c-1982-omoikiri-american", "type": "Compilation", "title": "Omoikiri American ~ I Love Poping World, Anri ~", "titleJa": "思いきりアメリカン", "label": "For Life", "oricon": 43, "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1982-espresso", "type": "Single", "title": "Espresso de Nerenai", "titleJa": "エスプレッソで眠れない", "label": "For Life", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1982-omoikiri-american", "type": "Single", "title": "Omoikiri American", "titleJa": "思いきりアメリカン", "label": "For Life", "oricon": 74, "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1982-fly-by-day", "type": "Single", "title": "Fly by day", "label": "For Life", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 1983,
+      "releases": [
+        { "id": "al-timely", "type": "Studio album", "title": "Timely!!", "titleJa": "タイムリー", "label": "For Life", "oricon": 1, "tracklist": "timely", "note": "Her first No. 1 album. Home of \"Cat's Eye\" and \"Kanashimi ga Tomaranai\".", "wiki": "https://en.wikipedia.org/wiki/Timely!!" },
+        { "id": "al-bi-ki-ni", "type": "Studio album", "title": "Bi・Ki・Ni", "label": "For Life", "oricon": 27, "tracklist": "bi-ki-ni", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1983-lady-sunshine", "type": "Single", "title": "Lady Sunshine", "label": "For Life", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1983-cats-eye", "type": "Single", "title": "Cat's Eye", "titleJa": "キャッツ・アイ", "label": "For Life", "oricon": 1, "note": "First opening theme of the 1983 anime Cat's Eye. Debuted No. 1 on Countdown Japan; 4 weeks at No. 1 on Oricon. Performed at the 1983 Kōhaku Uta Gassen.", "wiki": "https://en.wikipedia.org/wiki/Cat%27s_Eye_(song)" },
+        { "id": "s-1983-kanashimi-ga-tomaranai", "type": "Single", "title": "Kanashimi ga Tomaranai", "titleJa": "悲しみがとまらない", "label": "For Life", "oricon": 4, "note": "I Can't Stop the Loneliness.", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 1984,
+      "releases": [
+        { "id": "al-coool", "type": "Studio album", "title": "Coool", "titleJa": "クール", "label": "For Life", "oricon": 5, "tracklist": "coool", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "v-1984-in-concert", "type": "Video", "title": "ANRI in Concert", "formats": "LaserDisc, VHS", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1984-kimama-ni", "type": "Single", "title": "Kimama ni Reflection", "titleJa": "気ままにREFLECTION", "label": "For Life", "oricon": 7, "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 1985,
+      "releases": [
+        { "id": "al-wave", "type": "Studio album", "title": "Wave", "label": "For Life", "oricon": 5, "tracklist": "wave", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1985-sixteen-beat", "type": "Single", "title": "16(Sixteen)Beat", "label": "For Life", "oricon": 31, "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 1986,
+      "releases": [
+        { "id": "al-mystique", "type": "Studio album", "title": "Mystique", "label": "For Life", "oricon": 6, "tracklist": "mystique", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "al-trouble-in-paradise", "type": "Studio album", "title": "Trouble in Paradise", "label": "For Life", "oricon": 9, "tracklist": "trouble-in-paradise", "note": "English-language album.", "wiki": "https://en.wikipedia.org/wiki/Trouble_in_Paradise_(Anri_album)" },
+        { "id": "c-1986-the-anri", "type": "Compilation", "title": "The Anri", "titleJa": "ザ・杏里", "label": "For Life", "oricon": 13, "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1986-oriental-rose", "type": "Single", "title": "Oriental Rose", "titleJa": "オリエンタル・ローズ", "label": "For Life", "oricon": 39, "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1986-morning-squall", "type": "Single", "title": "Morning Squall", "titleJa": "モーニング スコール", "label": "For Life", "oricon": 51, "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1986-trouble-in-paradise", "type": "Single", "title": "Trouble in Paradise", "label": "For Life", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 1987,
+      "releases": [
+        { "id": "al-summer-farewells", "type": "Studio album", "title": "Summer Farewells", "label": "For Life", "oricon": 4, "tracklist": "summer-farewells", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "c-1987-meditation", "type": "Compilation", "title": "Meditation", "label": "For Life", "oricon": 3, "tracklist": "meditation", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "v-1987-budokan", "type": "Video", "title": "Anri: Live in Budokan", "formats": "LaserDisc, VHS", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1987-happy-end", "type": "Single", "title": "Happy end de Furaretai", "titleJa": "HAPPYENDでふられたい", "label": "For Life", "oricon": 17, "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1987-surf-and-tears", "type": "Single", "title": "Surf & Tears", "label": "For Life", "oricon": 27, "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 1988,
+      "releases": [
+        { "id": "al-boogie-woogie-mainland", "type": "Studio album", "title": "Boogie Woogie Mainland", "label": "For Life", "oricon": 2, "tracklist": "boogie-woogie-mainland", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "c-1988-my-favorite-songs", "type": "Compilation", "title": "My Favorite Songs", "label": "For Life", "oricon": 8, "tracklist": "my-favorite-songs", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "v-1988-hiroshima", "type": "Video", "title": "Anri: Hiroshima Peace Concert", "formats": "LaserDisc, VHS", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1988-summer-candles", "type": "Single", "title": "Summer Candles", "label": "For Life", "oricon": 16, "note": "Became a standard song at Japanese weddings and receptions.", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1988-snow-flake", "type": "Single", "title": "Snow Flake no Machikado", "titleJa": "スノーフレイクの街角", "label": "For Life", "oricon": 12, "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 1989,
+      "releases": [
+        { "id": "al-circuit-of-rainbow", "type": "Studio album", "title": "Circuit of Rainbow", "label": "For Life", "oricon": 1, "tracklist": "circuit-of-rainbow", "note": "Released 27 May 1989. Winner of the 31st Japan Record Awards Album Grand Prix.", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "v-1989-hawaii", "type": "Video", "title": "Anri: Concert in Hawaii", "formats": "VHS", "note": "First Hawaii tour.", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 1990,
+      "releases": [
+        { "id": "al-mind-cruisin", "type": "Studio album", "title": "Mind Cruisin'", "titleJa": "マインド・クルージング", "label": "For Life", "oricon": 1, "tracklist": "mind-cruisin", "note": "No pre-release singles; every track is new material.", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 1991,
+      "releases": [
+        { "id": "al-neutral", "type": "Studio album", "title": "Neutral", "titleJa": "ニュートラル", "label": "For Life", "oricon": 2, "tracklist": "neutral", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "c-1991-mfs2", "type": "Compilation", "title": "My Favorite Songs 2", "label": "For Life", "oricon": 2, "tracklist": "my-favorite-songs-2", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1991-sweet-emotion", "type": "Single", "title": "Sweet Emotion", "label": "For Life", "oricon": 13, "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1991-back-to-basic", "type": "Single", "title": "Back to the basic", "label": "For Life", "oricon": 43, "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1991-uso-nara", "type": "Single", "title": "Uso Nara Yasashiku", "titleJa": "嘘ならやさしく", "label": "For Life", "oricon": 14, "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1991-last-love", "type": "Single", "title": "Last Love", "titleJa": "ラスト ラブ", "label": "For Life", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 1992,
+      "releases": [
+        { "id": "al-moana-lani", "type": "Studio album", "title": "Moana Lani", "titleJa": "モアナラニ", "label": "For Life", "oricon": 3, "tracklist": "moana-lani", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1992-lani-heavenly-garden", "type": "Single", "title": "Lani: Heavenly Garden", "label": "For Life", "oricon": 18, "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 1993,
+      "releases": [
+        { "id": "s-1993-dolphin-ring", "type": "Single", "title": "Dolphin Ring", "titleJa": "ドルフィン・リング", "label": "For Life", "oricon": 9, "note": "Became a standard song at Japanese weddings and receptions.", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 1994,
+      "releases": [
+        { "id": "c-1994-16th-summer-breeze", "type": "Compilation", "title": "16th Summer Breeze", "label": "For Life", "oricon": 1, "tracklist": "16th-summer-breeze", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1994-all-of-you", "type": "Single", "title": "All of you", "label": "For Life", "oricon": 27, "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1994-share", "type": "Single", "title": "Share Hitomi no Naka no Hero", "titleJa": "SHARE 瞳の中のヒーロー", "label": "For Life", "oricon": 47, "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 1995,
+      "releases": [
+        { "id": "c-1995-opus-21", "type": "Compilation", "title": "Opus 21", "label": "For Life", "oricon": 1, "tracklist": "opus-21", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1995-legends-of-love", "type": "Single", "title": "Legends of Love", "label": "For Life", "oricon": 67, "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 1996,
+      "releases": [
+        { "id": "al-angel-whisper", "type": "Studio album", "title": "Angel Whisper", "titleJa": "エンジェル・ウィスパー", "label": "For Life", "oricon": 4, "tracklist": "angel-whisper", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1996-ano-natsu", "type": "Single", "title": "Ano Natsu ni Modoritai", "titleJa": "あの夏に戻りたい", "label": "For Life", "oricon": 50, "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1996-birthday", "type": "Single", "title": "Mou Hitotsu no Birthday", "titleJa": "もうひとつのBirthday", "label": "For Life", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 1997,
+      "releases": [
+        { "id": "al-twin-soul", "type": "Studio album", "title": "Twin Soul", "label": "For Life", "oricon": 9, "tracklist": "twin-soul", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1997-cats-eye-2000", "type": "Single", "title": "Cat's Eye-2000", "label": "For Life", "oricon": 47, "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1997-future-for-you", "type": "Single", "title": "Future For You", "label": "For Life", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 1998,
+      "releases": [
+        { "id": "al-moonlit-summer-tales", "type": "Studio album", "title": "Moonlit Summer Tales", "label": "For Life", "oricon": 5, "tracklist": "moonlit-summer-tales", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1998-eternity", "type": "Single", "title": "Eternity", "label": "For Life", "oricon": 85, "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1998-natsu-no-tsuki", "type": "Single", "title": "Natsu no Tsuki", "titleJa": "夏の月", "label": "For Life", "oricon": 22, "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 1999,
+      "releases": [
+        { "id": "al-ever-blue", "type": "Studio album", "title": "Ever Blue", "label": "For Life", "oricon": 24, "tracklist": "ever-blue", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-1999-aenai", "type": "Single", "title": "Aenai Setsunasa to", "titleJa": "逢えないせつなさと", "label": "For Life", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2000,
+      "releases": [
+        { "id": "al-beach-house", "type": "Studio album", "title": "The Beach House", "label": "For Life", "oricon": 20, "tracklist": "the-beach-house", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "c-2000-anri-the-best", "type": "Compilation", "title": "Anri the Best", "label": "For Life", "oricon": 8, "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2001,
+      "releases": [
+        { "id": "al-my-music", "type": "Studio album", "title": "My Music", "label": "Dolphin Hearts", "oricon": 48, "tracklist": "my-music", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-2001-sunset-beach-hotel", "type": "Single", "title": "Sunset Beach Hotel", "label": "Nippon Crown", "oricon": 100, "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2002,
+      "releases": [
+        { "id": "ca-2002-smooth-jam-aspasia", "type": "Cover album", "title": "Smooth Jam: Aspasia", "label": "Nippon Crown", "tracklist": "smooth-jam-aspasia", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "ca-2002-smooth-jam-quiet-storm", "type": "Cover album", "title": "Smooth Jam: Quiet Storm", "label": "Nippon Crown", "tracklist": "smooth-jam-quiet-storm", "note": "Produced in collaboration with jazz fusion guitarist Lee Ritenour.", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "co-2002-candle-light", "type": "Collaboration", "title": "Candle Light", "with": "Tetsurou Oda", "label": "Cutting edge", "oricon": 97, "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2003,
+      "releases": [
+        { "id": "c-2003-r134", "type": "Compilation", "title": "R134 Ocean Delights", "label": "For Life", "oricon": 34, "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "co-2003-tenshi", "type": "Collaboration", "title": "Tenshi wa Hitomi wo Tojite", "with": "Hiroyuki Amano", "label": "independent", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2004,
+      "releases": [
+        { "id": "s-2004-return-to-silence", "type": "Single", "title": "Return To The Silence", "label": "Nippon Columbia", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2005,
+      "releases": [
+        { "id": "al-sol", "type": "Studio album", "title": "Sol", "label": "Nippon Columbia", "oricon": 192, "tracklist": "sol", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-2005-field-of-lights", "type": "Single", "title": "Field of Lights", "label": "Nippon Columbia", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2007,
+      "releases": [
+        { "id": "ca-2007-tears-of-anri", "type": "Cover album", "title": "Tears of Anri", "label": "Universal Music Japan", "oricon": 25, "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "c-2007-a-day-in-summer", "type": "Compilation", "title": "a day in the summer — The Best from \"16th Summer Breeze\" and \"OPUS 21\"", "label": "For Life", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2008,
+      "releases": [
+        { "id": "ca-2008-tears-of-anri-2", "type": "Cover album", "title": "Tears of Anri II", "label": "Universal Music Japan", "oricon": 30, "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "s-2008-mou-kanashikunai", "type": "Single", "title": "Mou Kanashikunai: Anri 30th Anniversary Edition", "titleJa": "もう悲しくない〜anri 30th anniversary edition〜", "label": "Universal Music Japan", "oricon": 99, "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2009,
+      "releases": [
+        { "id": "sc-2009-anri-again", "type": "Self-cover album", "title": "Anri Again – Best of Myself", "label": "Universal Music Japan", "oricon": 44, "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2011,
+      "releases": [
+        { "id": "c-2011-heart-to-heart", "type": "Compilation", "title": "Heart to Heart ～with you～", "label": "Warner Music Japan", "oricon": 50, "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2013,
+      "releases": [
+        { "id": "sc-2013-surf-city", "type": "Self-cover album", "title": "Surf City -Coool Breeze-", "label": "IVY Records", "oricon": 19, "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2014,
+      "releases": [
+        { "id": "sc-2014-surf-and-tears", "type": "Self-cover album", "title": "Surf & Tears", "label": "IVY Records", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2015,
+      "releases": [
+        { "id": "al-2015-smooth-and-groove", "type": "Studio album", "title": "Smooth & Groove", "label": "IVY Records", "oricon": 52, "tracklist": "smooth-and-groove", "note": "All-new original compositions.", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2016,
+      "releases": [
+        { "id": "c-2016-melodies", "type": "Compilation", "title": "Melodies: Smooth & Groove", "label": "Warner Music Japan", "oricon": 71, "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2017,
+      "releases": [
+        { "id": "live-2017-fun-time", "type": "Live album", "title": "Fun Time", "label": "IVY Records", "oricon": 84, "tracklist": "fun-time", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2018,
+      "releases": [
+        { "id": "al-2018-anri", "type": "Studio album", "title": "Anri", "titleJa": "杏里", "label": "IVY Records", "oricon": 38, "tracklist": "anri-2018", "note": "40th anniversary album of all-new original compositions.", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2019,
+      "releases": [
+        { "id": "d-2019-dukes-anthem", "type": "Digital single", "title": "Duke's Anthem", "note": "Also on the 2019 Deluxe edition of the album Anri.", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "d-2019-wasurerarenai", "type": "Digital single", "title": "Wasurerarenai Okurimono", "titleJa": "忘れられない贈りもの", "note": "Also on the 2019 Deluxe edition of the album Anri.", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "d-2019-crescent-moon", "type": "Digital single", "title": "Crescent Moon", "note": "Also on the 2019 Deluxe edition of the album Anri.", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2020,
+      "releases": [
+        { "id": "box-2020-in-the-box", "type": "Box set", "title": "Anri in the Box", "label": "For Life", "formats": "22 CDs", "note": "Complete box set of her For Life catalogue.", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2021,
+      "releases": [
+        { "id": "c-2021-voice-to-voice", "type": "Compilation", "title": "Anri Voice to Voice", "label": "Disc Union", "formats": "LP", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "co-2021-watching-over-you", "type": "Collaboration", "title": "Watching over you", "with": "Mariya Takeuchi", "label": "Warner Music Japan", "note": "Released as the unit \"Peach & Apricot\". Digital single only.", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2023,
+      "releases": [
+        { "id": "box-2023-coool-timely", "type": "Box set", "title": "Coool / Timely", "label": "For Life", "formats": "2 CDs", "note": "City pop reissue.", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "box-2023-heaven-beach-bikini", "type": "Box set", "title": "Heaven Beach / Bi・Ki・Ni", "label": "For Life", "formats": "2 CDs", "note": "City pop reissue.", "wiki": "https://en.wikipedia.org/wiki/Anri" },
+        { "id": "d-2023-cats-eye", "type": "Digital single", "title": "Cat's Eye 2023", "note": "40th anniversary re-recording of her signature hit.", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2024,
+      "releases": [
+        { "id": "co-2024-marine-blue-memories", "type": "Collaboration", "title": "Marine Blue Memories", "with": "Tatsuya Ishii", "label": "Warner Music Japan", "note": "Digital single only.", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    },
+    {
+      "year": 2025,
+      "releases": [
+        { "id": "c-2025-anri-the-best-blue", "type": "Compilation", "title": "Anri the Best Blue", "label": "For Life", "oricon": 30, "note": "Released 2 July 2025.", "wiki": "https://en.wikipedia.org/wiki/Anri" }
+      ]
+    }
+  ]
+}

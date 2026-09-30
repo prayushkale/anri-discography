@@ -1,0 +1,21 @@
+{
+  "album": "ANRI",
+  "slug": "anri-2018",
+  "year": 2018,
+  "titleJa": "アンリ",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Catch The Wave", "titleJa": null },
+    { "n": 2, "title": "Don't Stop Dreaming", "titleJa": null, "note": "feat. Diggy-MO'" },
+    { "n": 3, "title": "Everlasting Love", "titleJa": null },
+    { "n": 4, "title": "Back To The 80's", "titleJa": null },
+    { "n": 5, "title": "Close To You", "titleJa": "Close To You -あなただけを-", "note": "original song, not the Carpenters' \"Close To You\"" },
+    { "n": 6, "title": "You'll Be In My Heart", "titleJa": null },
+    { "n": 7, "title": "Sweet Friends", "titleJa": null },
+    { "n": 8, "title": "If We Try", "titleJa": null },
+    { "n": 9, "title": "Precious One", "titleJa": "Precious One ～かけがえのないストーリー", "note": "~Kakegaenai Story~" },
+    { "n": 10, "title": "Don't Stop Dreaming (Key of Life Remix)", "titleJa": null, "note": "remix of track 2, feat. Diggy-MO'" },
+    { "n": 11, "title": "Everlasting Love (Acoustic Version)", "titleJa": null, "note": "acoustic version of track 3" }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "album": "Wave",
+  "slug": "wave",
+  "year": 1985,
+  "titleJa": "ウェーブ",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "City Fiction", "titleJa": null },
+    { "n": 2, "title": "Yoake no Soldier", "titleJa": "夜明けのSOLDIER" },
+    { "n": 3, "title": "Into The Body", "titleJa": null },
+    { "n": 4, "title": "Long Island Beach", "titleJa": null },
+    { "n": 5, "title": "Wave", "titleJa": null },
+    { "n": 6, "title": "Take It", "titleJa": null },
+    { "n": 7, "title": "Lover's Night", "titleJa": null },
+    { "n": 8, "title": "16(Sixteen)Beat", "titleJa": null },
+    { "n": 9, "title": "Oversea Call", "titleJa": null },
+    { "n": 10, "title": "Hitomi wa Eien no Kaori", "titleJa": "瞳は永遠の香り" }
+  ]
+}

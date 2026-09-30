@@ -1,0 +1,22 @@
+{
+  "album": "CIRCUIT of RAINBOW",
+  "slug": "circuit-of-rainbow",
+  "year": 1989,
+  "titleJa": null,
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "THE BREAK OF DAWN", "titleJa": null },
+    { "n": 2, "title": "CIRCUIT of RAINBOW", "titleJa": null },
+    { "n": 3, "title": "Asian Girl", "titleJa": null },
+    { "n": 4, "title": "Shoo-be Doo-be My Boy", "titleJa": null },
+    { "n": 5, "title": "Shitsugeemu Ga Omaru Made", "titleJa": "失恋ゲームが終るまで" },
+    { "n": 6, "title": "WHO KNOWS MY LONELINESS?", "titleJa": null },
+    { "n": 7, "title": "Havana Beans", "titleJa": null },
+    { "n": 8, "title": "Groove A Go Go", "titleJa": "Groove A・Go・Go" },
+    { "n": 9, "title": "P.S. Kotoba ni Naranai", "titleJa": "P.S.言葉にならない" },
+    { "n": 10, "title": "MISS YOU, MISS ME", "titleJa": null },
+    { "n": 11, "title": "Sentimental o Sutekata Hito", "titleJa": "センチメンタルを捨てた人" },
+    { "n": 12, "title": "LOVERS ON VENUS", "titleJa": null }
+  ]
+}

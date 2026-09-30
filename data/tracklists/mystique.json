@@ -1,0 +1,20 @@
+{
+  "album": "Mystique",
+  "slug": "mystique",
+  "year": 1986,
+  "titleJa": "ミスティーク",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Red Moon Calling", "titleJa": null },
+    { "n": 2, "title": "Sentimental Express", "titleJa": null },
+    { "n": 3, "title": "Honeymoon Shuttle", "titleJa": "蜜月船" },
+    { "n": 4, "title": "Mystery Zone", "titleJa": null },
+    { "n": 5, "title": "All Of You", "titleJa": null },
+    { "n": 6, "title": "Morning Squall", "titleJa": "モーニング スコール" },
+    { "n": 7, "title": "Southern Comfort", "titleJa": null },
+    { "n": 8, "title": "Pride And Tears", "titleJa": null },
+    { "n": 9, "title": "Whisper In Paradise", "titleJa": null },
+    { "n": 10, "title": "Easy Break", "titleJa": null }
+  ]
+}

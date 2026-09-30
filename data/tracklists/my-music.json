@@ -1,0 +1,20 @@
+{
+  "album": "My Music",
+  "slug": "my-music",
+  "year": 2001,
+  "titleJa": "マイ ミュージック",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Love Wonderland", "titleJa": null },
+    { "n": 2, "title": "Sunset Beach Hotel", "titleJa": null },
+    { "n": 3, "title": "Tooi Natsu no Image", "titleJa": "遠い夏のイマージュ" },
+    { "n": 4, "title": "Stardust Coast", "titleJa": null },
+    { "n": 5, "title": "My Music", "titleJa": null },
+    { "n": 6, "title": "Sunshine on me", "titleJa": null },
+    { "n": 7, "title": "Tears in Crystal (Album Version)", "titleJa": null },
+    { "n": 8, "title": "Eien no Himitsu", "titleJa": "永遠の秘密" },
+    { "n": 9, "title": "You are a Star", "titleJa": null },
+    { "n": 10, "title": "River of Life", "titleJa": null }
+  ]
+}

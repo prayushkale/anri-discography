@@ -1,0 +1,22 @@
+{
+  "album": "Sol",
+  "slug": "sol",
+  "year": 2005,
+  "titleJa": "Sol",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Field of Lights", "titleJa": null },
+    { "n": 2, "title": "Woman's Soul", "titleJa": null },
+    { "n": 3, "title": "Kaze ni Fukarete", "titleJa": "風に吹かれて" },
+    { "n": 4, "title": "Eien ni Kiss wa Shinaide", "titleJa": "永遠にキスはしないで" },
+    { "n": 5, "title": "Tender Solitude", "titleJa": null },
+    { "n": 6, "title": "Somewhere Sometime", "titleJa": null },
+    { "n": 7, "title": "Not Serious But Free", "titleJa": null },
+    { "n": 8, "title": "Anata ga Soko ni Iru Dake de", "titleJa": "あなたがそこにいるだけで" },
+    { "n": 9, "title": "Pride and Dream", "titleJa": null },
+    { "n": 10, "title": "ONLY HEAVEN CAN WAIT (FOR LOVE)", "titleJa": null },
+    { "n": 11, "title": "Everything Must Change", "titleJa": null },
+    { "n": 12, "title": "ONLY HEAVEN CAN WAIT (FOR LOVE) -reprise-", "titleJa": null }
+  ]
+}

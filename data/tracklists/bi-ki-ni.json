@@ -1,0 +1,20 @@
+{
+  "album": "Bi・Ki・Ni",
+  "slug": "bi-ki-ni",
+  "year": 1983,
+  "titleJa": "Bi・Ki・Ni",
+  "wiki": "https://ja.wikipedia.org/wiki/Bi・Ki・Ni",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Good Bye Boogie Dance", "titleJa": null },
+    { "n": 2, "title": "Dancin' Blue", "titleJa": null },
+    { "n": 3, "title": "September Walkin'", "titleJa": null },
+    { "n": 4, "title": "Lady Sunshine", "titleJa": null },
+    { "n": 5, "title": "Yes I'm In Love", "titleJa": null },
+    { "n": 6, "title": "Surf City", "titleJa": null },
+    { "n": 7, "title": "Just Be Yourself", "titleJa": null },
+    { "n": 8, "title": "Beach Boy In My Heart", "titleJa": null },
+    { "n": 9, "title": "Summer Focus", "titleJa": null },
+    { "n": 10, "title": "Affection", "titleJa": null }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "album": "Smooth Jam: Aspasia",
+  "slug": "smooth-jam-aspasia",
+  "year": 2002,
+  "titleJa": "SMOOTH JAM -Aspasia-",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Calina", "titleJa": "Calina", "note": "composed by Calina" },
+    { "n": 2, "title": "It's Too Late", "titleJa": "It's Too Late", "note": "originally by The Carpenters (Toni Stern / Carole King, 1972)" },
+    { "n": 3, "title": "Everything's Alright Now", "titleJa": "Everything's Allright Now", "note": "self-cover" },
+    { "n": 4, "title": "Loving Blue", "titleJa": "Loving Blue" },
+    { "n": 5, "title": "Private Sold Out", "titleJa": "プライベート Sold out" },
+    { "n": 6, "title": "Lost Vacation", "titleJa": "Lost Vacation" },
+    { "n": 7, "title": "Funkin' for Jamaica", "titleJa": "Funkin' For Jamaica", "note": "originally by Tom Browne (1980)" }
+  ]
+}

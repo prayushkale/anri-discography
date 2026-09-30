@@ -1,0 +1,23 @@
+{
+  "album": "Angel Whisper",
+  "slug": "angel-whisper",
+  "year": 1996,
+  "titleJa": "エンジェル・ウィスパー",
+  "wiki": "https://en.wikipedia.org/wiki/Anri",
+  "verified": true,
+  "tracks": [
+    { "n": 1, "title": "Goui", "titleJa": "疑惑" },
+    { "n": 2, "title": "Lady no Ketsugi wa Daiyamondo Yori Katai", "titleJa": "レディの決意はダイヤモンドより硬い" },
+    { "n": 3, "title": "Ano Natsu ni Modoritai", "titleJa": "あの夏に戻りたい" },
+    { "n": 4, "title": "Mou Hitotsu no Birthday", "titleJa": "もうひとつのBirthday" },
+    { "n": 5, "title": "1996-nen no Tamatebako", "titleJa": "1996年の玉手箱" },
+    { "n": 6, "title": "Angel's Gonna Cry", "titleJa": null },
+    { "n": 7, "title": "Legend of Love", "titleJa": null },
+    { "n": 8, "title": "Rakuen o Mitsuketa Asa", "titleJa": "楽園を見つけた朝" },
+    { "n": 9, "title": "Wedding Shower", "titleJa": null },
+    { "n": 10, "title": "Antonio's Song / The Rainbow", "titleJa": null },
+    { "n": 11, "title": "Morning Dreamer", "titleJa": null },
+    { "n": 12, "title": "Celebration On The Beach", "titleJa": null },
+    { "n": 13, "title": "Mou Hitotsu no Birthday (Reprise)", "titleJa": "もうひとつのBirthday（Reprise）" }
+  ]
+}
