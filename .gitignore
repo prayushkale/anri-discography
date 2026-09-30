@@ -1,3 +1,7 @@
 node_modules/
 .DS_Store
 *.log
+
+# Never commit browser cookies — they contain live session credentials.
+cookies.txt
+*.cookies.txt

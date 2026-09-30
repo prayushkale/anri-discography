@@ -288,10 +288,10 @@
   "duration": 217.3
  },
  "al-timely-t04": {
-  "start": 113.27,
-  "end": 172.43,
-  "confidence": 0.574,
-  "duration": 258.8
+  "start": 113.31,
+  "end": 172.48,
+  "confidence": 0.573,
+  "duration": 258.9
  },
  "al-timely-t05": {
   "start": 116.42,
@@ -322,5 +322,1505 @@
   "end": 151.95,
   "confidence": 0.571,
   "duration": 291.4
+ },
+ "al-timely-t10": {
+  "start": 202.13,
+  "end": 260.64,
+  "confidence": 0.566,
+  "duration": 385.3
+ },
+ "al-timely-t11": {
+  "start": 78.95,
+  "end": 138.48,
+  "confidence": 0.574,
+  "duration": 206.8
+ },
+ "al-bi-ki-ni-t01": {
+  "start": 105.35,
+  "end": 164.05,
+  "confidence": 0.578,
+  "duration": 270.2
+ },
+ "al-bi-ki-ni-t02": {
+  "start": 60.26,
+  "end": 120.21,
+  "confidence": 0.579,
+  "duration": 195.6
+ },
+ "al-bi-ki-ni-t03": {
+  "start": 67.71,
+  "end": 126.41,
+  "confidence": 0.577,
+  "duration": 230.8
+ },
+ "al-bi-ki-ni-t04": {
+  "start": 76.12,
+  "end": 136.02,
+  "confidence": 0.569,
+  "duration": 222.1
+ },
+ "al-bi-ki-ni-t05": {
+  "start": 130.89,
+  "end": 190.52,
+  "confidence": 0.577,
+  "duration": 308.1
+ },
+ "al-bi-ki-ni-t06": {
+  "start": 74.79,
+  "end": 134.75,
+  "confidence": 0.579,
+  "duration": 260.2
+ },
+ "al-bi-ki-ni-t07": {
+  "start": 130.33,
+  "end": 187.73,
+  "confidence": 0.579,
+  "duration": 303.6
+ },
+ "al-bi-ki-ni-t08": {
+  "start": 104.75,
+  "end": 163.49,
+  "confidence": 0.58,
+  "duration": 244.9
+ },
+ "al-bi-ki-ni-t09": {
+  "start": 47.3,
+  "end": 105.58,
+  "confidence": 0.562,
+  "duration": 196.1
+ },
+ "al-bi-ki-ni-t10": {
+  "start": 90.77,
+  "end": 150.49,
+  "confidence": 0.571,
+  "duration": 279
+ },
+ "al-coool-t01": {
+  "start": 63.85,
+  "end": 122.04,
+  "confidence": 0.574,
+  "duration": 190.8
+ },
+ "al-coool-t03": {
+  "start": 101.29,
+  "end": 158.36,
+  "confidence": 0.566,
+  "duration": 235.9
+ },
+ "al-coool-t04": {
+  "start": 107.55,
+  "end": 165.37,
+  "confidence": 0.568,
+  "duration": 262.7
+ },
+ "al-coool-t05": {
+  "start": 59.81,
+  "end": 119.68,
+  "confidence": 0.573,
+  "duration": 180
+ },
+ "al-coool-t06": {
+  "start": 94.04,
+  "end": 153.95,
+  "confidence": 0.571,
+  "duration": 233.3
+ },
+ "al-coool-t07": {
+  "start": 78.95,
+  "end": 138.48,
+  "confidence": 0.574,
+  "duration": 206.8
+ },
+ "al-coool-t08": {
+  "start": 79.48,
+  "end": 136.84,
+  "confidence": 0.57,
+  "duration": 221.6
+ },
+ "al-coool-t09": {
+  "start": 94.67,
+  "end": 153.69,
+  "confidence": 0.566,
+  "duration": 335.3
+ },
+ "al-coool-t10": {
+  "start": 50.85,
+  "end": 109.55,
+  "confidence": 0.578,
+  "duration": 193.8
+ },
+ "al-coool-t11": {
+  "start": 71.01,
+  "end": 130.68,
+  "confidence": 0.58,
+  "duration": 201
+ },
+ "al-wave-t01": {
+  "start": 82.01,
+  "end": 140.06,
+  "confidence": 0.564,
+  "duration": 230
+ },
+ "al-wave-t02": {
+  "start": 79.44,
+  "end": 139.06,
+  "confidence": 0.567,
+  "duration": 278.1
+ },
+ "al-wave-t03": {
+  "start": 72.07,
+  "end": 130.4,
+  "confidence": 0.566,
+  "duration": 254.5
+ },
+ "al-wave-t04": {
+  "start": 99.01,
+  "end": 156.92,
+  "confidence": 0.565,
+  "duration": 256.1
+ },
+ "al-wave-t05": {
+  "start": 115.4,
+  "end": 173.41,
+  "confidence": 0.577,
+  "duration": 285.4
+ },
+ "al-wave-t06": {
+  "start": 94.11,
+  "end": 153.18,
+  "confidence": 0.568,
+  "duration": 261.3
+ },
+ "al-wave-t07": {
+  "start": 102.12,
+  "end": 160.54,
+  "confidence": 0.58,
+  "duration": 262.4
+ },
+ "al-wave-t08": {
+  "start": 86.63,
+  "end": 145.84,
+  "confidence": 0.569,
+  "duration": 283
+ },
+ "al-wave-t09": {
+  "start": 139.2,
+  "end": 198.65,
+  "confidence": 0.573,
+  "duration": 264.1
+ },
+ "al-wave-t10": {
+  "start": 104.1,
+  "end": 164.05,
+  "confidence": 0.568,
+  "duration": 267.1
+ },
+ "al-mystique-t01": {
+  "start": 95.81,
+  "end": 155.48,
+  "confidence": 0.561,
+  "duration": 208.4
+ },
+ "al-mystique-t02": {
+  "start": 98.5,
+  "end": 157.52,
+  "confidence": 0.581,
+  "duration": 253
+ },
+ "al-mystique-t03": {
+  "start": 66.39,
+  "end": 122.25,
+  "confidence": 0.566,
+  "duration": 149.8
+ },
+ "al-mystique-t04": {
+  "start": 94.9,
+  "end": 153.55,
+  "confidence": 0.594,
+  "duration": 248.5
+ },
+ "al-mystique-t06": {
+  "start": 106.25,
+  "end": 165.98,
+  "confidence": 0.575,
+  "duration": 222.6
+ },
+ "al-mystique-t07": {
+  "start": 1172.49,
+  "end": 1229.71,
+  "confidence": 0.559,
+  "duration": 2543.3
+ },
+ "al-mystique-t08": {
+  "start": 73.44,
+  "end": 128.1,
+  "confidence": 0.569,
+  "duration": 265.3
+ },
+ "al-mystique-t09": {
+  "start": 105.63,
+  "end": 163.68,
+  "confidence": 0.592,
+  "duration": 248.7
+ },
+ "al-mystique-t10": {
+  "start": 91.86,
+  "end": 150.7,
+  "confidence": 0.574,
+  "duration": 239.4
+ },
+ "al-trouble-in-paradise-t01": {
+  "start": 114.66,
+  "end": 173.17,
+  "confidence": 0.562,
+  "duration": 289.3
+ },
+ "al-trouble-in-paradise-t02": {
+  "start": 86.4,
+  "end": 146.31,
+  "confidence": 0.566,
+  "duration": 230.2
+ },
+ "al-trouble-in-paradise-t03": {
+  "start": 142.62,
+  "end": 202.15,
+  "confidence": 0.561,
+  "duration": 324.7
+ },
+ "al-trouble-in-paradise-t04": {
+  "start": 119.49,
+  "end": 179.03,
+  "confidence": 0.571,
+  "duration": 297.8
+ },
+ "al-trouble-in-paradise-t05": {
+  "start": 113.06,
+  "end": 173.01,
+  "confidence": 0.568,
+  "duration": 303.3
+ },
+ "al-trouble-in-paradise-t06": {
+  "start": 104.23,
+  "end": 163.68,
+  "confidence": 0.576,
+  "duration": 268.4
+ },
+ "al-trouble-in-paradise-t07": {
+  "start": 125.81,
+  "end": 184.92,
+  "confidence": 0.566,
+  "duration": 308.7
+ },
+ "al-trouble-in-paradise-t08": {
+  "start": 76.09,
+  "end": 135.02,
+  "confidence": 0.566,
+  "duration": 196.5
+ },
+ "al-trouble-in-paradise-t09": {
+  "start": 1194.06,
+  "end": 1254.02,
+  "confidence": 0.562,
+  "duration": 1434.8
+ },
+ "al-trouble-in-paradise-t10": {
+  "start": 151.42,
+  "end": 209.7,
+  "confidence": 0.562,
+  "duration": 332.7
+ },
+ "al-summer-farewells-t01": {
+  "start": 119.35,
+  "end": 177.82,
+  "confidence": 0.572,
+  "duration": 270.1
+ },
+ "al-summer-farewells-t02": {
+  "start": 89.65,
+  "end": 148.63,
+  "confidence": 0.575,
+  "duration": 233.6
+ },
+ "al-summer-farewells-t03": {
+  "start": 121.9,
+  "end": 177.17,
+  "confidence": 0.587,
+  "duration": 301.4
+ },
+ "al-summer-farewells-t05": {
+  "start": 105.35,
+  "end": 164.05,
+  "confidence": 0.578,
+  "duration": 270.2
+ },
+ "al-summer-farewells-t06": {
+  "start": 122.02,
+  "end": 181.97,
+  "confidence": 0.57,
+  "duration": 301.1
+ },
+ "al-summer-farewells-t07": {
+  "start": 133.54,
+  "end": 192.52,
+  "confidence": 0.568,
+  "duration": 325
+ },
+ "al-summer-farewells-t08": {
+  "start": 122.3,
+  "end": 181.88,
+  "confidence": 0.587,
+  "duration": 305.2
+ },
+ "al-summer-farewells-t09": {
+  "start": 104.03,
+  "end": 163.98,
+  "confidence": 0.578,
+  "duration": 239.1
+ },
+ "al-summer-farewells-t10": {
+  "start": 153.02,
+  "end": 207.96,
+  "confidence": 0.57,
+  "duration": 299
+ },
+ "c-1987-meditation-t01": {
+  "start": 177.93,
+  "end": 237.01,
+  "confidence": 0.574,
+  "duration": 326.8
+ },
+ "c-1987-meditation-t02": {
+  "start": 125.04,
+  "end": 182.11,
+  "confidence": 0.58,
+  "duration": 295.9
+ },
+ "c-1987-meditation-t08": {
+  "start": 99.06,
+  "end": 156.97,
+  "confidence": 0.565,
+  "duration": 256.1
+ },
+ "c-1987-meditation-t09": {
+  "start": 114.22,
+  "end": 168.32,
+  "confidence": 0.567,
+  "duration": 281.1
+ },
+ "c-1988-my-favorite-songs-t03": {
+  "start": 87.1,
+  "end": 146.91,
+  "confidence": 0.615,
+  "duration": 183.3
+ },
+ "al-feelin-t02": {
+  "start": 91.74,
+  "end": 145.84,
+  "confidence": 0.567,
+  "duration": 281.1
+ },
+ "al-feelin-t06": {
+  "start": 58.65,
+  "end": 118.19,
+  "confidence": 0.561,
+  "duration": 190.4
+ },
+ "al-kanashimi-no-kujaku-t11": {
+  "start": 75.23,
+  "end": 134.77,
+  "confidence": 0.607,
+  "duration": 208.2
+ },
+ "al-mystique-t05": {
+  "start": 128.38,
+  "end": 185.74,
+  "confidence": 0.568,
+  "duration": 256.4
+ },
+ "al-summer-farewells-t04": {
+  "start": 99.13,
+  "end": 158.89,
+  "confidence": 0.58,
+  "duration": 264.9
+ },
+ "c-1987-meditation-t03": {
+  "start": 116.42,
+  "end": 175.08,
+  "confidence": 0.575,
+  "duration": 249.2
+ },
+ "c-1987-meditation-t04": {
+  "start": 105.63,
+  "end": 163.68,
+  "confidence": 0.592,
+  "duration": 248.7
+ },
+ "c-1987-meditation-t05": {
+  "start": 128.38,
+  "end": 185.74,
+  "confidence": 0.568,
+  "duration": 256.4
+ },
+ "c-1987-meditation-t06": {
+  "start": 139.2,
+  "end": 198.65,
+  "confidence": 0.573,
+  "duration": 264.1
+ },
+ "c-1987-meditation-t07": {
+  "start": 107.55,
+  "end": 165.37,
+  "confidence": 0.568,
+  "duration": 262.7
+ },
+ "c-1987-meditation-t10": {
+  "start": 90.77,
+  "end": 150.49,
+  "confidence": 0.571,
+  "duration": 279
+ },
+ "c-1987-meditation-t11": {
+  "start": 202.13,
+  "end": 260.64,
+  "confidence": 0.566,
+  "duration": 385.3
+ },
+ "al-boogie-woogie-mainland-t01": {
+  "start": 100.38,
+  "end": 159.4,
+  "confidence": 0.571,
+  "duration": 259.3
+ },
+ "al-boogie-woogie-mainland-t03": {
+  "start": 158.89,
+  "end": 217.83,
+  "confidence": 0.578,
+  "duration": 298.2
+ },
+ "al-boogie-woogie-mainland-t04": {
+  "start": 101.1,
+  "end": 159.75,
+  "confidence": 0.568,
+  "duration": 278.5
+ },
+ "al-boogie-woogie-mainland-t05": {
+  "start": 105.16,
+  "end": 163.17,
+  "confidence": 0.572,
+  "duration": 267.1
+ },
+ "al-boogie-woogie-mainland-t06": {
+  "start": 110.43,
+  "end": 169.92,
+  "confidence": 0.568,
+  "duration": 280.5
+ },
+ "al-boogie-woogie-mainland-t07": {
+  "start": 102.4,
+  "end": 159.57,
+  "confidence": 0.579,
+  "duration": 265.9
+ },
+ "al-boogie-woogie-mainland-t08": {
+  "start": 105.63,
+  "end": 163.68,
+  "confidence": 0.592,
+  "duration": 248.7
+ },
+ "al-boogie-woogie-mainland-t09": {
+  "start": 108.04,
+  "end": 164.98,
+  "confidence": 0.569,
+  "duration": 269.6
+ },
+ "al-boogie-woogie-mainland-t10": {
+  "start": 229.83,
+  "end": 289.74,
+  "confidence": 0.57,
+  "duration": 389.2
+ },
+ "c-1988-my-favorite-songs-t01": {
+  "start": 177.93,
+  "end": 237.01,
+  "confidence": 0.574,
+  "duration": 326.8
+ },
+ "c-1988-my-favorite-songs-t02": {
+  "start": 103,
+  "end": 161.94,
+  "confidence": 0.564,
+  "duration": 208.4
+ },
+ "c-1988-my-favorite-songs-t04": {
+  "start": 91.74,
+  "end": 145.84,
+  "confidence": 0.567,
+  "duration": 281.1
+ },
+ "c-1988-my-favorite-songs-t05": {
+  "start": 99.06,
+  "end": 158.59,
+  "confidence": 0.566,
+  "duration": 249
+ },
+ "c-1988-my-favorite-songs-t06": {
+  "start": 66.22,
+  "end": 126.13,
+  "confidence": 0.571,
+  "duration": 237.4
+ },
+ "c-1988-my-favorite-songs-t07": {
+  "start": 93.81,
+  "end": 152.93,
+  "confidence": 0.575,
+  "duration": 267
+ },
+ "c-1988-my-favorite-songs-t08": {
+  "start": 101.29,
+  "end": 158.36,
+  "confidence": 0.566,
+  "duration": 235.9
+ },
+ "c-1988-my-favorite-songs-t09": {
+  "start": 86.63,
+  "end": 145.84,
+  "confidence": 0.569,
+  "duration": 283
+ },
+ "c-1988-my-favorite-songs-t10": {
+  "start": 125.81,
+  "end": 184.92,
+  "confidence": 0.566,
+  "duration": 308.7
+ },
+ "c-1988-my-favorite-songs-t11": {
+  "start": 106.25,
+  "end": 165.98,
+  "confidence": 0.575,
+  "duration": 222.6
+ },
+ "c-1988-my-favorite-songs-t12": {
+  "start": 104.23,
+  "end": 163.68,
+  "confidence": 0.576,
+  "duration": 268.4
+ },
+ "c-1988-my-favorite-songs-t13": {
+  "start": 104.03,
+  "end": 163.98,
+  "confidence": 0.578,
+  "duration": 239.1
+ },
+ "c-1988-my-favorite-songs-t14": {
+  "start": 103.49,
+  "end": 162.98,
+  "confidence": 0.565,
+  "duration": 265.8
+ },
+ "c-1988-my-favorite-songs-t15": {
+  "start": 123.27,
+  "end": 181.88,
+  "confidence": 0.571,
+  "duration": 306.3
+ },
+ "c-1988-my-favorite-songs-t16": {
+  "start": 122.58,
+  "end": 182.3,
+  "confidence": 0.569,
+  "duration": 309.6
+ },
+ "al-circuit-of-rainbow-t01": {
+  "start": 66.71,
+  "end": 106.79,
+  "confidence": 0.55,
+  "duration": 109.3
+ },
+ "al-circuit-of-rainbow-t02": {
+  "start": 95.92,
+  "end": 153.65,
+  "confidence": 0.577,
+  "duration": 287.9
+ },
+ "al-circuit-of-rainbow-t03": {
+  "start": 59.81,
+  "end": 119.68,
+  "confidence": 0.573,
+  "duration": 180
+ },
+ "al-circuit-of-rainbow-t04": {
+  "start": 147.93,
+  "end": 206.26,
+  "confidence": 0.562,
+  "duration": 338.8
+ },
+ "al-circuit-of-rainbow-t05": {
+  "start": 127.32,
+  "end": 185.6,
+  "confidence": 0.572,
+  "duration": 272.8
+ },
+ "al-circuit-of-rainbow-t06": {
+  "start": 173.71,
+  "end": 233.52,
+  "confidence": 0.562,
+  "duration": 401
+ },
+ "al-circuit-of-rainbow-t07": {
+  "start": 26.26,
+  "end": 85.1,
+  "confidence": 0.596,
+  "duration": 110
+ },
+ "al-circuit-of-rainbow-t08": {
+  "start": 160.54,
+  "end": 219.38,
+  "confidence": 0.579,
+  "duration": 327.3
+ },
+ "al-circuit-of-rainbow-t09": {
+  "start": 140.25,
+  "end": 198.62,
+  "confidence": 0.576,
+  "duration": 305
+ },
+ "al-circuit-of-rainbow-t10": {
+  "start": 97.04,
+  "end": 156.9,
+  "confidence": 0.572,
+  "duration": 254
+ },
+ "al-circuit-of-rainbow-t11": {
+  "start": 123.99,
+  "end": 182.6,
+  "confidence": 0.588,
+  "duration": 307.1
+ },
+ "al-circuit-of-rainbow-t12": {
+  "start": 177.89,
+  "end": 237.84,
+  "confidence": 0.569,
+  "duration": 315.4
+ },
+ "al-mind-cruisin-t01": {
+  "start": 99.33,
+  "end": 158.82,
+  "confidence": 0.565,
+  "duration": 266.4
+ },
+ "al-mind-cruisin-t02": {
+  "start": 100.01,
+  "end": 158.57,
+  "confidence": 0.572,
+  "duration": 240.2
+ },
+ "al-mind-cruisin-t03": {
+  "start": 91.83,
+  "end": 151.79,
+  "confidence": 0.582,
+  "duration": 256.9
+ },
+ "al-mind-cruisin-t04": {
+  "start": 130.66,
+  "end": 189.22,
+  "confidence": 0.574,
+  "duration": 320.6
+ },
+ "al-mind-cruisin-t05": {
+  "start": 116.05,
+  "end": 175.17,
+  "confidence": 0.574,
+  "duration": 253
+ },
+ "al-mind-cruisin-t06": {
+  "start": 122.11,
+  "end": 180.21,
+  "confidence": 0.593,
+  "duration": 237.5
+ },
+ "al-mind-cruisin-t07": {
+  "start": 23.43,
+  "end": 81.99,
+  "confidence": 0.565,
+  "duration": 105
+ },
+ "al-mind-cruisin-t08": {
+  "start": 138.09,
+  "end": 196.88,
+  "confidence": 0.604,
+  "duration": 337.5
+ },
+ "al-mind-cruisin-t09": {
+  "start": 90.7,
+  "end": 150.65,
+  "confidence": 0.562,
+  "duration": 246
+ },
+ "al-mind-cruisin-t10": {
+  "start": 106.97,
+  "end": 164.28,
+  "confidence": 0.577,
+  "duration": 271.9
+ },
+ "al-mind-cruisin-t11": {
+  "start": 114.94,
+  "end": 174.89,
+  "confidence": 0.569,
+  "duration": 285.9
+ },
+ "al-neutral-t01": {
+  "start": 170.48,
+  "end": 229.46,
+  "confidence": 0.582,
+  "duration": 328.3
+ },
+ "al-neutral-t02": {
+  "start": 92.16,
+  "end": 151.65,
+  "confidence": 0.566,
+  "duration": 308.8
+ },
+ "al-neutral-t03": {
+  "start": 127.34,
+  "end": 185.95,
+  "confidence": 0.563,
+  "duration": 309.4
+ },
+ "al-neutral-t04": {
+  "start": 0,
+  "end": 57.03,
+  "confidence": 0.572,
+  "duration": 273
+ },
+ "al-neutral-t05": {
+  "start": 123.67,
+  "end": 183.58,
+  "confidence": 0.568,
+  "duration": 307
+ },
+ "al-neutral-t06": {
+  "start": 119.63,
+  "end": 179.58,
+  "confidence": 0.57,
+  "duration": 298.9
+ },
+ "al-neutral-t07": {
+  "start": 118.31,
+  "end": 178.21,
+  "confidence": 0.585,
+  "duration": 295.7
+ },
+ "al-neutral-t08": {
+  "start": 132.08,
+  "end": 190.45,
+  "confidence": 0.568,
+  "duration": 320.2
+ },
+ "al-neutral-t09": {
+  "start": 94.71,
+  "end": 152.21,
+  "confidence": 0.574,
+  "duration": 280.8
+ },
+ "al-neutral-t10": {
+  "start": 59.3,
+  "end": 113.13,
+  "confidence": 0.568,
+  "duration": 233.9
+ },
+ "al-neutral-t11": {
+  "start": 168.9,
+  "end": 228.44,
+  "confidence": 0.577,
+  "duration": 332.6
+ },
+ "c-1991-mfs2-t01": {
+  "start": 1194.06,
+  "end": 1254.02,
+  "confidence": 0.562,
+  "duration": 1434.8
+ },
+ "c-1991-mfs2-t02": {
+  "start": 121.9,
+  "end": 177.17,
+  "confidence": 0.587,
+  "duration": 301.4
+ },
+ "c-1991-mfs2-t03": {
+  "start": 133.54,
+  "end": 192.52,
+  "confidence": 0.568,
+  "duration": 325
+ },
+ "c-1991-mfs2-t04": {
+  "start": 100.54,
+  "end": 159.57,
+  "confidence": 0.562,
+  "duration": 259.1
+ },
+ "c-1991-mfs2-t05": {
+  "start": 229.83,
+  "end": 289.74,
+  "confidence": 0.57,
+  "duration": 389.2
+ },
+ "c-1991-mfs2-t06": {
+  "start": 158.89,
+  "end": 217.83,
+  "confidence": 0.578,
+  "duration": 298.2
+ },
+ "c-1991-mfs2-t07": {
+  "start": 65.64,
+  "end": 125.6,
+  "confidence": 0.568,
+  "duration": 190.6
+ },
+ "c-1991-mfs2-t08": {
+  "start": 160.54,
+  "end": 219.38,
+  "confidence": 0.579,
+  "duration": 327.3
+ },
+ "c-1991-mfs2-t09": {
+  "start": 140.25,
+  "end": 198.62,
+  "confidence": 0.576,
+  "duration": 305
+ },
+ "c-1991-mfs2-t10": {
+  "start": 91.83,
+  "end": 151.79,
+  "confidence": 0.582,
+  "duration": 256.9
+ },
+ "c-1991-mfs2-t11": {
+  "start": 118.31,
+  "end": 178.21,
+  "confidence": 0.585,
+  "duration": 295.7
+ },
+ "c-1991-mfs2-t12": {
+  "start": 130.66,
+  "end": 189.22,
+  "confidence": 0.574,
+  "duration": 320.6
+ },
+ "c-1991-mfs2-t13": {
+  "start": 170.48,
+  "end": 229.46,
+  "confidence": 0.582,
+  "duration": 328.3
+ },
+ "c-1991-mfs2-t14": {
+  "start": 168.9,
+  "end": 228.44,
+  "confidence": 0.577,
+  "duration": 332.6
+ },
+ "c-1991-mfs2-t15": {
+  "start": 105.63,
+  "end": 163.68,
+  "confidence": 0.592,
+  "duration": 248.7
+ },
+ "al-moana-lani-t01": {
+  "start": 35.99,
+  "end": 91.25,
+  "confidence": 0.57,
+  "duration": 133.4
+ },
+ "al-moana-lani-t02": {
+  "start": 106.23,
+  "end": 165.67,
+  "confidence": 0.573,
+  "duration": 296.1
+ },
+ "al-moana-lani-t03": {
+  "start": 134.65,
+  "end": 194,
+  "confidence": 0.576,
+  "duration": 279.4
+ },
+ "al-moana-lani-t04": {
+  "start": 104.28,
+  "end": 164.23,
+  "confidence": 0.564,
+  "duration": 270
+ },
+ "al-moana-lani-t05": {
+  "start": 146.15,
+  "end": 206.1,
+  "confidence": 0.578,
+  "duration": 303.7
+ },
+ "al-moana-lani-t06": {
+  "start": 110.57,
+  "end": 169.55,
+  "confidence": 0.578,
+  "duration": 278.3
+ },
+ "al-moana-lani-t07": {
+  "start": 91.58,
+  "end": 149.91,
+  "confidence": 0.59,
+  "duration": 306.7
+ },
+ "al-moana-lani-t08": {
+  "start": 116.84,
+  "end": 175.96,
+  "confidence": 0.565,
+  "duration": 293.4
+ },
+ "al-moana-lani-t09": {
+  "start": 106.18,
+  "end": 165.16,
+  "confidence": 0.569,
+  "duration": 310.9
+ },
+ "al-moana-lani-t10": {
+  "start": 52.36,
+  "end": 111.2,
+  "confidence": 0.57,
+  "duration": 163.5
+ },
+ "al-moana-lani-t11": {
+  "start": 134.49,
+  "end": 192.91,
+  "confidence": 0.564,
+  "duration": 271.7
+ },
+ "al-moana-lani-t12": {
+  "start": 133.77,
+  "end": 193.12,
+  "confidence": 0.564,
+  "duration": 326.4
+ },
+ "c-1994-16th-summer-breeze-t01": {
+  "start": 128.38,
+  "end": 185.74,
+  "confidence": 0.568,
+  "duration": 256.4
+ },
+ "c-1994-16th-summer-breeze-t02": {
+  "start": 107.55,
+  "end": 165.37,
+  "confidence": 0.568,
+  "duration": 262.7
+ },
+ "c-1994-16th-summer-breeze-t03": {
+  "start": 74.79,
+  "end": 134.75,
+  "confidence": 0.579,
+  "duration": 260.2
+ },
+ "c-1994-16th-summer-breeze-t04": {
+  "start": 125.81,
+  "end": 184.92,
+  "confidence": 0.566,
+  "duration": 308.7
+ },
+ "c-1994-16th-summer-breeze-t05": {
+  "start": 94.67,
+  "end": 153.69,
+  "confidence": 0.566,
+  "duration": 335.3
+ },
+ "c-1994-16th-summer-breeze-t06": {
+  "start": 139.2,
+  "end": 198.65,
+  "confidence": 0.573,
+  "duration": 264.1
+ },
+ "c-1994-16th-summer-breeze-t07": {
+  "start": 103.49,
+  "end": 162.98,
+  "confidence": 0.565,
+  "duration": 265.8
+ },
+ "c-1994-16th-summer-breeze-t08": {
+  "start": 93.81,
+  "end": 152.93,
+  "confidence": 0.575,
+  "duration": 267
+ },
+ "c-1994-16th-summer-breeze-t09": {
+  "start": 106.18,
+  "end": 165.16,
+  "confidence": 0.569,
+  "duration": 310.9
+ },
+ "c-1994-16th-summer-breeze-t10": {
+  "start": 158.89,
+  "end": 217.83,
+  "confidence": 0.578,
+  "duration": 298.2
+ },
+ "c-1994-16th-summer-breeze-t11": {
+  "start": 123.27,
+  "end": 181.88,
+  "confidence": 0.571,
+  "duration": 306.3
+ },
+ "c-1994-16th-summer-breeze-t12": {
+  "start": 104.03,
+  "end": 163.98,
+  "confidence": 0.578,
+  "duration": 239.1
+ },
+ "c-1994-16th-summer-breeze-t13": {
+  "start": 130.66,
+  "end": 189.22,
+  "confidence": 0.574,
+  "duration": 320.6
+ },
+ "c-1994-16th-summer-breeze-t14": {
+  "start": 131.29,
+  "end": 189.99,
+  "confidence": 0.592,
+  "duration": 332.6
+ },
+ "c-1994-16th-summer-breeze-t15": {
+  "start": 91.83,
+  "end": 151.79,
+  "confidence": 0.582,
+  "duration": 256.9
+ },
+ "c-1994-16th-summer-breeze-t16": {
+  "start": 123.67,
+  "end": 183.58,
+  "confidence": 0.568,
+  "duration": 307
+ },
+ "c-1994-16th-summer-breeze-t17": {
+  "start": 121.9,
+  "end": 177.17,
+  "confidence": 0.587,
+  "duration": 301.4
+ },
+ "c-1994-16th-summer-breeze-t18": {
+  "start": 102.07,
+  "end": 161.29,
+  "confidence": 0.577,
+  "duration": 277.1
+ },
+ "c-1994-16th-summer-breeze-t19": {
+  "start": 119.35,
+  "end": 177.82,
+  "confidence": 0.572,
+  "duration": 270.1
+ },
+ "c-1994-16th-summer-breeze-t20": {
+  "start": 94.04,
+  "end": 153.95,
+  "confidence": 0.571,
+  "duration": 233.3
+ },
+ "c-1994-16th-summer-breeze-t21": {
+  "start": 100.38,
+  "end": 159.4,
+  "confidence": 0.571,
+  "duration": 259.3
+ },
+ "c-1994-16th-summer-breeze-t22": {
+  "start": 108.04,
+  "end": 164.98,
+  "confidence": 0.569,
+  "duration": 269.6
+ },
+ "c-1994-16th-summer-breeze-t23": {
+  "start": 52.36,
+  "end": 111.2,
+  "confidence": 0.57,
+  "duration": 163.5
+ },
+ "c-1994-16th-summer-breeze-t24": {
+  "start": 160.54,
+  "end": 219.38,
+  "confidence": 0.579,
+  "duration": 327.3
+ },
+ "c-1994-16th-summer-breeze-t25": {
+  "start": 170.48,
+  "end": 229.46,
+  "confidence": 0.582,
+  "duration": 328.3
+ },
+ "c-1994-16th-summer-breeze-t26": {
+  "start": 118.31,
+  "end": 178.21,
+  "confidence": 0.585,
+  "duration": 295.7
+ },
+ "c-1994-16th-summer-breeze-t27": {
+  "start": 154.48,
+  "end": 213.6,
+  "confidence": 0.566,
+  "duration": 315
+ },
+ "c-1994-16th-summer-breeze-t28": {
+  "start": 168.9,
+  "end": 228.44,
+  "confidence": 0.577,
+  "duration": 332.6
+ },
+ "c-1994-16th-summer-breeze-t29": {
+  "start": 116.84,
+  "end": 175.96,
+  "confidence": 0.565,
+  "duration": 293.4
+ },
+ "c-1994-16th-summer-breeze-t30": {
+  "start": 177.93,
+  "end": 237.01,
+  "confidence": 0.574,
+  "duration": 326.8
+ },
+ "c-1995-opus-21-t01": {
+  "start": 91.74,
+  "end": 145.84,
+  "confidence": 0.567,
+  "duration": 281.1
+ },
+ "c-1995-opus-21-t02": {
+  "start": 137.51,
+  "end": 196.81,
+  "confidence": 0.569,
+  "duration": 291
+ },
+ "c-1995-opus-21-t03": {
+  "start": 97.38,
+  "end": 156.08,
+  "confidence": 0.577,
+  "duration": 289
+ },
+ "c-1995-opus-21-t04": {
+  "start": 173.71,
+  "end": 233.52,
+  "confidence": 0.562,
+  "duration": 401
+ },
+ "c-1995-opus-21-t05": {
+  "start": 147.93,
+  "end": 206.26,
+  "confidence": 0.562,
+  "duration": 338.8
+ },
+ "c-1995-opus-21-t06": {
+  "start": 202.13,
+  "end": 260.64,
+  "confidence": 0.566,
+  "duration": 385.3
+ },
+ "c-1995-opus-21-t07": {
+  "start": 166.32,
+  "end": 221.73,
+  "confidence": 0.57,
+  "duration": 327.9
+ },
+ "c-1995-opus-21-t08": {
+  "start": 134.49,
+  "end": 192.91,
+  "confidence": 0.564,
+  "duration": 271.7
+ },
+ "c-1995-opus-21-t09": {
+  "start": 128.5,
+  "end": 187.29,
+  "confidence": 0.595,
+  "duration": 316.3
+ },
+ "c-1995-opus-21-t10": {
+  "start": 229.83,
+  "end": 289.74,
+  "confidence": 0.57,
+  "duration": 389.2
+ },
+ "c-1995-opus-21-t11": {
+  "start": 122.02,
+  "end": 181.97,
+  "confidence": 0.57,
+  "duration": 301.1
+ },
+ "c-1995-opus-21-t12": {
+  "start": 1194.06,
+  "end": 1254.02,
+  "confidence": 0.562,
+  "duration": 1434.8
+ },
+ "c-1995-opus-21-t13": {
+  "start": 133.54,
+  "end": 192.52,
+  "confidence": 0.568,
+  "duration": 325
+ },
+ "c-1995-opus-21-t14": {
+  "start": 104.28,
+  "end": 164.23,
+  "confidence": 0.564,
+  "duration": 270
+ },
+ "c-1995-opus-21-t15": {
+  "start": 65.64,
+  "end": 125.6,
+  "confidence": 0.568,
+  "duration": 190.6
+ },
+ "c-1995-opus-21-t16": {
+  "start": 119.63,
+  "end": 179.58,
+  "confidence": 0.57,
+  "duration": 298.9
+ },
+ "c-1995-opus-21-t17": {
+  "start": 106.97,
+  "end": 164.28,
+  "confidence": 0.577,
+  "duration": 271.9
+ },
+ "c-1995-opus-21-t18": {
+  "start": 133.77,
+  "end": 193.12,
+  "confidence": 0.564,
+  "duration": 326.4
+ },
+ "c-1995-opus-21-t19": {
+  "start": 140.25,
+  "end": 198.62,
+  "confidence": 0.576,
+  "duration": 305
+ },
+ "c-1995-opus-21-t20": {
+  "start": 91.58,
+  "end": 149.91,
+  "confidence": 0.59,
+  "duration": 306.7
+ },
+ "c-1995-opus-21-t21": {
+  "start": 177.89,
+  "end": 237.84,
+  "confidence": 0.569,
+  "duration": 315.4
+ },
+ "c-1995-opus-21-t22": {
+  "start": 59.3,
+  "end": 113.13,
+  "confidence": 0.568,
+  "duration": 233.9
+ },
+ "c-1995-opus-21-t23": {
+  "start": 101.1,
+  "end": 159.75,
+  "confidence": 0.568,
+  "duration": 278.5
+ },
+ "c-1995-opus-21-t24": {
+  "start": 151.42,
+  "end": 209.7,
+  "confidence": 0.562,
+  "duration": 332.7
+ },
+ "c-1995-opus-21-t25": {
+  "start": 116.42,
+  "end": 175.08,
+  "confidence": 0.575,
+  "duration": 249.2
+ },
+ "c-1995-opus-21-t26": {
+  "start": 109.88,
+  "end": 168.99,
+  "confidence": 0.577,
+  "duration": 278.5
+ },
+ "al-angel-whisper-t01": {
+  "start": 142.59,
+  "end": 201.48,
+  "confidence": 0.572,
+  "duration": 265.9
+ },
+ "al-angel-whisper-t02": {
+  "start": 111.06,
+  "end": 170.55,
+  "confidence": 0.581,
+  "duration": 314.1
+ },
+ "al-angel-whisper-t03": {
+  "start": 96.85,
+  "end": 156.34,
+  "confidence": 0.574,
+  "duration": 271.9
+ },
+ "al-angel-whisper-t04": {
+  "start": 179.3,
+  "end": 237.45,
+  "confidence": 0.569,
+  "duration": 324.7
+ },
+ "al-angel-whisper-t05": {
+  "start": 83.99,
+  "end": 143.43,
+  "confidence": 0.568,
+  "duration": 261.8
+ },
+ "al-angel-whisper-t06": {
+  "start": 124.2,
+  "end": 183.69,
+  "confidence": 0.57,
+  "duration": 281.9
+ },
+ "al-angel-whisper-t07": {
+  "start": 124.39,
+  "end": 181.37,
+  "confidence": 0.577,
+  "duration": 281.9
+ },
+ "al-angel-whisper-t08": {
+  "start": 167.21,
+  "end": 227.16,
+  "confidence": 0.567,
+  "duration": 388.9
+ },
+ "al-angel-whisper-t09": {
+  "start": 97.36,
+  "end": 157.32,
+  "confidence": 0.577,
+  "duration": 278.7
+ },
+ "al-angel-whisper-t10": {
+  "start": 132.19,
+  "end": 192.15,
+  "confidence": 0.576,
+  "duration": 332.2
+ },
+ "al-angel-whisper-t11": {
+  "start": 106.25,
+  "end": 165.98,
+  "confidence": 0.575,
+  "duration": 222.6
+ },
+ "al-angel-whisper-t12": {
+  "start": 118.63,
+  "end": 176.54,
+  "confidence": 0.573,
+  "duration": 295.4
+ },
+ "al-angel-whisper-t13": {
+  "start": 36.94,
+  "end": 96.9,
+  "confidence": 0.559,
+  "duration": 135.4
+ },
+ "al-twin-soul-t01": {
+  "start": 95.29,
+  "end": 154.78,
+  "confidence": 0.572,
+  "duration": 249.7
+ },
+ "al-twin-soul-t02": {
+  "start": 110.43,
+  "end": 169.92,
+  "confidence": 0.568,
+  "duration": 280.5
+ },
+ "al-twin-soul-t03": {
+  "start": 63.09,
+  "end": 121.14,
+  "confidence": 0.586,
+  "duration": 437.9
+ },
+ "al-twin-soul-t04": {
+  "start": 123.99,
+  "end": 183.07,
+  "confidence": 0.567,
+  "duration": 308.4
+ },
+ "al-twin-soul-t05": {
+  "start": 99.13,
+  "end": 158.89,
+  "confidence": 0.58,
+  "duration": 264.9
+ },
+ "al-twin-soul-t06": {
+  "start": 102.12,
+  "end": 160.54,
+  "confidence": 0.58,
+  "duration": 262.4
+ },
+ "al-twin-soul-t07": {
+  "start": 110.71,
+  "end": 169.78,
+  "confidence": 0.568,
+  "duration": 274.1
+ },
+ "al-twin-soul-t08": {
+  "start": 149.86,
+  "end": 207.96,
+  "confidence": 0.573,
+  "duration": 346.8
+ },
+ "al-twin-soul-t09": {
+  "start": 59.3,
+  "end": 113.13,
+  "confidence": 0.568,
+  "duration": 233.9
+ },
+ "al-twin-soul-t10": {
+  "start": 80.78,
+  "end": 139.48,
+  "confidence": 0.571,
+  "duration": 239.9
+ },
+ "al-twin-soul-t11": {
+  "start": 23.64,
+  "end": 81.59,
+  "confidence": 0.561,
+  "duration": 190.6
+ },
+ "al-twin-soul-t12": {
+  "start": 109.18,
+  "end": 167.46,
+  "confidence": 0.563,
+  "duration": 263.3
+ },
+ "al-moonlit-summer-tales-t01": {
+  "start": 121.95,
+  "end": 179.91,
+  "confidence": 0.569,
+  "duration": 316.7
+ },
+ "al-moonlit-summer-tales-t02": {
+  "start": 84.71,
+  "end": 143.59,
+  "confidence": 0.574,
+  "duration": 288.1
+ },
+ "al-moonlit-summer-tales-t03": {
+  "start": 56.33,
+  "end": 116.29,
+  "confidence": 0.576,
+  "duration": 221.8
+ },
+ "al-moonlit-summer-tales-t04": {
+  "start": 117.96,
+  "end": 176.98,
+  "confidence": 0.576,
+  "duration": 312.8
+ },
+ "al-moonlit-summer-tales-t05": {
+  "start": 127.97,
+  "end": 187.78,
+  "confidence": 0.575,
+  "duration": 305
+ },
+ "al-moonlit-summer-tales-t06": {
+  "start": 134.56,
+  "end": 193.4,
+  "confidence": 0.576,
+  "duration": 296.3
+ },
+ "al-moonlit-summer-tales-t07": {
+  "start": 138.34,
+  "end": 191.66,
+  "confidence": 0.578,
+  "duration": 229
  }
 }

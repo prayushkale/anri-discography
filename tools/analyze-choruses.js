@@ -29,6 +29,18 @@ const FORCE = args.includes('--force');
 const DRY = args.includes('--dry-run');
 const ONLY = (() => { const i = args.indexOf('--only'); return i >= 0 ? args[i + 1] : null; })();
 const LIMIT = (() => { const i = args.indexOf('--limit'); return i >= 0 ? parseInt(args[i + 1], 10) : Infinity; })();
+const PAUSE_MS = (() => { const i = args.indexOf('--pause'); return i >= 0 ? parseInt(args[i + 1], 10) : 2500; })();
+/* Optional browser cookies, e.g. --cookies ../cookies.txt
+   Only useful if you later hit the bot check again and the cookie jar is fresh.
+   A stale or SABR-only account cookie jar makes downloads FAIL where they would
+   otherwise succeed, so this is opt-in and never the default. */
+const COOKIES = (() => {
+  const i = args.indexOf('--cookies');
+  if (i < 0) return null;
+  const p = path.resolve(process.cwd(), args[i + 1] || 'cookies.txt');
+  if (!fs.existsSync(p)) { console.error(`  ! cookie file not found: ${p}`); process.exit(1); }
+  return p;
+})();
 const SR = 22050;        // analysis sample rate
 const HOP = 512;         // STFT hop -> 43.07 frames/sec at 22.05kHz
 const FFT = 1024;
@@ -70,26 +82,64 @@ async function have(bin) {
 }
 
 /* ---------- audio fetch + decode ---------- */
+
+/* YouTube rate-limits sustained downloads and starts answering
+   "Sign in to confirm you're not a bot" / HTTP 403. When that happens we back
+   off for a long, escalating interval rather than hammering it. */
+let throttleStrikes = 0;
+const THROTTLE_BACKOFF = [60, 180, 420, 900];
+function looksThrottled(msg) {
+  return /sign in to confirm|not a bot|403|429|too many requests/i.test(msg || '');
+}
+async function throttleWait(trackId) {
+  const waitSec = THROTTLE_BACKOFF[Math.min(throttleStrikes, THROTTLE_BACKOFF.length - 1)];
+  throttleStrikes++;
+  console.log(`\n  ⏳ YouTube is rate-limiting downloads — pausing ${waitSec}s before continuing`);
+  await new Promise(r => setTimeout(r, waitSec * 1000));
+}
+function noteSuccess() { if (throttleStrikes > 0) throttleStrikes = 0; }
+
+let COOKIES_OFF = false;
 async function fetchPcm(videoId, tmpDir) {
   const out = path.join(tmpDir, videoId);
-  try {
-    await run('yt-dlp', [
-      '-f', 'bestaudio/best',
-      '-x', '--audio-format', 'wav',
-      '-o', out + '.%(ext)s',
-      '--no-playlist', '--no-warnings', '--quiet',
-      'https://www.youtube.com/watch?v=' + videoId
-    ], { timeout: 180000 });
-  } catch (e) {
-    const msg = (e.stderr || e.message || '').slice(0, 160);
-    throw new Error('yt-dlp failed: ' + msg);
+  const cookieArgs = (COOKIES && !COOKIES_OFF) ? ['--cookies', COOKIES] : [];
+  let lastMsg = '';
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      await run('yt-dlp', [
+        ...cookieArgs,
+        '-f', 'bestaudio/best',
+        '-x', '--audio-format', 'wav',
+        '-o', out + '.%(ext)s',
+        '--no-playlist', '--no-warnings', '--quiet',
+        '--sleep-requests', '1',
+        'https://www.youtube.com/watch?v=' + videoId
+      ], { timeout: 180000 });
+      lastMsg = '';
+      break;
+    } catch (e) {
+      lastMsg = (e.stderr || e.message || '').slice(0, 200);
+      // A cookie jar that cannot serve the stream is worse than no cookies.
+      if ((COOKIES && !COOKIES_OFF) && /requested format is not available|sabr|needs to be reloaded/i.test(lastMsg)) {
+        console.log('\n  ! cookies cannot serve this stream — falling back to no cookies for the rest of the run');
+        COOKIES_OFF = true;
+        continue;                       // retry this same track without cookies
+      }
+      if (looksThrottled(lastMsg)) {
+        await throttleWait(videoId);
+        continue;                      // retry this same track after the pause
+      }
+      if (attempt < 2) await new Promise(r => setTimeout(r, 3000 * (attempt + 1)));
+    }
   }
+  if (lastMsg && looksThrottled(lastMsg)) throw new Error('rate-limited by YouTube');
+
   let wav = null;
   for (const ext of ['wav', 'm4a', 'mp3', 'opus', 'webm']) {
     const p = out + '.' + ext;
     if (fs.existsSync(p) && fs.statSync(p).size > 1024) { wav = p; break; }
   }
-  if (!wav) throw new Error('no audio file produced');
+  if (!wav) throw new Error('no audio file produced' + (lastMsg ? ' — ' + lastMsg.slice(0, 80) : ''));
   return wav;
 }
 
@@ -257,12 +307,14 @@ function detectChorus(nov) {
   let done = 0, ok = 0, failed = 0, low = 0;
   const tmpRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'anri-chorus-'));
 
+  const throttled = [];   // tracks skipped because YouTube throttled us
+
   for (const task of queue) {
     const dir = path.join(tmpRoot, task.id);
     fs.mkdirSync(dir, { recursive: true });
-    let wav = null;
     try {
-      wav = await fetchPcm(task.videoId, dir);
+      const wav = await fetchPcm(task.videoId, dir);
+      noteSuccess();
       const pcm = await decodePcm(wav);
       if (DRY) {
         console.log(`  ~ ${task.id}  ${task.title}  ${(pcm.length / SR).toFixed(1)}s decoded`);
@@ -280,14 +332,46 @@ function detectChorus(nov) {
         }
       }
     } catch (e) {
-      failed++;
-      console.log(`  ✗ ${task.id}  ${task.title}  ${String(e.message).slice(0, 90)}`);
+      const msg = String(e.message);
+      if (/rate-limited/i.test(msg)) {
+        throttled.push(task);
+        console.log(`  ⏭  ${task.id}  ${task.title}  (deferred — YouTube throttled)`);
+      } else {
+        failed++;
+        console.log(`  ✗ ${task.id}  ${task.title}  ${msg.slice(0, 90)}`);
+      }
     } finally {
       try { fs.rmSync(dir, { recursive: true, force: true }); } catch (e) {}   // never keep the audio
       if (done % 5 === 0 || !queue.length) fs.writeFileSync(OUT, JSON.stringify(store, null, 1));
     }
     done++;
-    process.stdout.write('');
+    // steady pace: sustained downloading is what triggers the bot check
+    if (!DRY) await new Promise(r => setTimeout(r, PAUSE_MS));
+  }
+
+  // Second pass over anything deferred by throttling, now that we have paused.
+  if (throttled.length) {
+    console.log(`\n  Retrying ${throttled.length} throttled track(s) after a cool-down…\n`);
+    await new Promise(r => setTimeout(r, 120000));
+    for (const task of throttled) {
+      const dir = path.join(tmpRoot, task.id);
+      fs.mkdirSync(dir, { recursive: true });
+      try {
+        const wav = await fetchPcm(task.videoId, dir);
+        const pcm = await decodePcm(wav);
+        const res = detectChorus(noveltyCurve(pcm));
+        if (res) {
+          store[task.id] = { start: res.start, end: res.end, confidence: res.confidence, duration: res.duration };
+          ok++;
+          console.log(`  ✓ ${task.id}  ${task.title}  ${fmt(res.start)}–${fmt(res.end)}  (retry)`);
+        }
+      } catch (e) {
+        console.log(`  ✗ ${task.id}  ${task.title}  still unavailable`);
+      } finally {
+        try { fs.rmSync(dir, { recursive: true, force: true }); } catch (e) {}
+        await new Promise(r => setTimeout(r, PAUSE_MS * 2));
+      }
+    }
   }
 
   fs.writeFileSync(OUT, JSON.stringify(store, null, 1));

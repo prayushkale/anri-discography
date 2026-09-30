@@ -85,17 +85,29 @@ node tools/resolve-youtube.js --force      # re-resolve everything
 node tools/resolve-youtube.js --only cat   # only tracks matching a filter
 ```
 
-Searches `"<track title> ANRI"` and takes the best result — preferring official
-`Anri - Topic` uploads, skipping live streams and anything under 90 seconds.
+Searches `"<track title> ANRI"` and takes the best result. If the romanized title
+matches nothing plausible, it retries with the original Japanese title — many
+1980s–90s tracks have no Latin-script name on YouTube at all.
+
+Ranking strongly prefers the artist's own channels (`Anri - Topic`,
+`ANRI 杏里 Official`, the label channels) and penalises live, tribute and cover
+takes, since a discography entry refers to the studio recording. Results that
+belong to a different artist also called Anri are rejected outright. 84% of the
+404 tracks resolved to an Anri-owned channel; the rest are fan uploads of the
+correct recording. Four tracks with obscure titles matched nothing and fall back
+to a YouTube search link in the app.
+
 Results are checkpointed after every track, so an interrupted run loses nothing.
+`tools/improve-matches.js` re-resolves only the tracks that did *not* land on an
+Anri channel — useful after changing the ranking rules.
 
 **On embeddability:** the resolver does *not* pre-check it, because there is no
 reliable way to check it outside a browser. Both the oEmbed endpoint and
-scraping `youtube.com/embed/<id>` return false negatives — they report success
-(or a generic `ERROR`) for videos that play perfectly in a real player, and vice
-versa. So a track is assumed playable, and if the embed genuinely fails the app
-shows a clear fallback panel with an "Open on YouTube" link instead of a broken
-player.
+scraping `youtube.com/embed/<id>` return false results — one reports success for
+videos whose embed is blocked, the other reports a generic `ERROR` for videos
+that play perfectly (verified directly against the YT.Player API). So a track is
+assumed playable, and if the embed genuinely fails the app shows a clear fallback
+panel with an "Open on YouTube" link instead of a broken player.
 
 ## Regenerating the choruses
 
@@ -115,6 +127,32 @@ repeated section. The search is restricted to the middle 80% of the track so
 intro vamps and outros don't win.
 
 Audio is deleted immediately after analysis. Only timestamps are kept.
+
+**Rate limiting.** YouTube throttles sustained downloading and starts answering
+`Sign in to confirm you're not a bot` or HTTP 403. The tool detects that, pauses
+with an escalating back-off (60s → 180s → 420s → 900s), and retries the track
+once things cool down. Anything still unavailable after that is simply left
+without a chorus — the app falls back to "Set chorus here". If you need to fill
+gaps later, just run the command again; it only processes what's missing.
+
+```bash
+node tools/analyze-choruses.js --pause 4000   # slower, if you keep hitting 403s
+```
+
+**Browser cookies.** If you do get blocked and have a fresh cookie export:
+
+```bash
+node tools/analyze-choruses.js --cookies cookies.txt
+```
+
+Cookies are opt-in, and the tool will fall back to no cookies automatically if
+the jar can't serve the stream. This matters: a stale export, or an account with
+YouTube's SABR-only streaming experiment enabled, makes downloads **fail** where
+they would otherwise succeed — in testing, 0/3 videos downloaded with cookies
+where all 3 succeeded without them. The default (no cookies) is the more reliable
+path; reach for `--cookies` only as a second opinion when you're actually blocked.
+
+`cookies.txt` is gitignored. Don't commit it — it holds live session credentials.
 
 **Accuracy.** This finds *the most-repeated section*, which is usually the chorus
 but is not guaranteed to be. A track whose intro riffs harder than its chorus, or
