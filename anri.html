@@ -67,7 +67,10 @@ body{display:flex;align-items:center;justify-content:center}
   aspect-ratio:4/5;background:linear-gradient(150deg,#2a1a5e,#4a1440 55%,#1b2a6b);flex:0 0 auto}
 .portrait img{width:100%;height:100%;object-fit:cover;display:block}
 .portrait .fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-  font-size:110px;font-weight:800;color:rgba(255,255,255,.14)}
+  font-size:110px;font-weight:800;color:rgba(255,255,255,.14);z-index:0}
+/* the fallback is only for when the photo fails; once the image paints it must not
+   show through, so it is removed once the image reports success */
+.portrait img{position:relative;z-index:1}
 .credit{position:absolute;left:0;right:0;bottom:0;padding:18px 12px 8px;font-size:9px;color:rgba(255,255,255,.55);
   letter-spacing:.04em;background:linear-gradient(180deg,transparent,rgba(0,0,0,.75))}
 .hlTitle{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--dim);margin-bottom:12px}
@@ -420,19 +423,17 @@ function renderIntro(){
 
   var R = el('div','introR');
   var port = el('div','portrait');
+  var fb = el('div','fallback', esc(A.nameJa));
+  port.appendChild(fb);
   if(DATA.portrait){
     var img = el('img');
     img.alt = 'Anri performing in 2023';
-    img.onerror = function(){
-      this.style.display = 'none';
-      var fb = port.querySelector('.fallback');
-      if(fb) fb.style.display = 'flex';
-    };
+    img.onload  = function(){ fb.style.display = 'none'; };
+    img.onerror = function(){ this.style.display = 'none'; fb.style.display = 'flex'; };
     img.src = DATA.portrait;
     port.appendChild(img);
     if(A.portraitCredit) port.appendChild(el('div','credit', esc(A.portraitCredit)));
   }
-  port.appendChild(el('div','fallback', esc(A.nameJa)));
   R.appendChild(port);
   R.appendChild(el('div','hlTitle','Career highlights'));
   var hl = el('div','hlList');
