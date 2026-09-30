@@ -179,6 +179,8 @@ body{display:flex;align-items:center;justify-content:center}
 .scrubChorus{position:absolute;top:-4px;bottom:-4px;background:rgba(57,208,216,.28);
   border-left:1.5px solid var(--cyan);border-right:1.5px solid var(--cyan);border-radius:2px;pointer-events:none;display:none}
 .scrubChorus.show{display:block}
+/* duration unknown: show the marker centred rather than hiding it */
+.scrubChorus.show:not([style*="left"]){left:50%;transform:translateX(-50%);width:26px}
 .time{font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums;flex:0 0 auto;letter-spacing:.03em}
 
 .chorusBox{background:linear-gradient(135deg,rgba(57,208,216,.11),rgba(255,77,141,.07));
@@ -895,8 +897,18 @@ function refreshProgress(){
     band.classList.add('show');
     band.style.left = (c.start / d * 100) + '%';
     band.style.width = (Math.max(end - c.start, 3) / d * 100) + '%';
-  } else if(band){ band.classList.remove('show'); }
-  if(time) time.textContent = fmtTime(n) + ' / ' + fmtTime(d);
+  } else if(band){
+    // Duration is not available until the player is ready, and stays 0 in some
+    // environments. Keep the chorus visible as a marker rather than hiding it.
+    if(c && c.start != null){
+      band.classList.add('show');
+      band.style.left = '';
+      band.style.width = '';
+    } else {
+      band.classList.remove('show');
+    }
+  }
+  if(time) time.textContent = fmtTime(n) + (d ? ' / ' + fmtTime(d) : '');
 }
 
 function markSelected(trackId, releaseId){

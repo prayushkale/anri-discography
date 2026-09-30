@@ -10,5 +10,317 @@
   "end": 141.76,
   "confidence": 0.559,
   "duration": 225.3
+ },
+ "al-apricot-jam-t01": {
+  "start": 177.93,
+  "end": 237.01,
+  "confidence": 0.574,
+  "duration": 326.8
+ },
+ "al-apricot-jam-t02": {
+  "start": 102.98,
+  "end": 162.84,
+  "confidence": 0.56,
+  "duration": 237
+ },
+ "al-apricot-jam-t03": {
+  "start": 152.23,
+  "end": 211.58,
+  "confidence": 0.569,
+  "duration": 253.6
+ },
+ "al-apricot-jam-t04": {
+  "start": 99.96,
+  "end": 159.36,
+  "confidence": 0.565,
+  "duration": 218.5
+ },
+ "al-apricot-jam-t05": {
+  "start": 76.81,
+  "end": 136.77,
+  "confidence": 0.563,
+  "duration": 202.3
+ },
+ "al-apricot-jam-t07": {
+  "start": 69.57,
+  "end": 129.24,
+  "confidence": 0.569,
+  "duration": 163.7
+ },
+ "al-apricot-jam-t08": {
+  "start": 89.65,
+  "end": 148.86,
+  "confidence": 0.559,
+  "duration": 218.3
+ },
+ "al-apricot-jam-t09": {
+  "start": 734.61,
+  "end": 794.28,
+  "confidence": 0.562,
+  "duration": 1266.2
+ },
+ "al-apricot-jam-t10": {
+  "start": 124.64,
+  "end": 181.12,
+  "confidence": 0.588,
+  "duration": 276
+ },
+ "al-apricot-jam-t11": {
+  "start": 170.43,
+  "end": 229.97,
+  "confidence": 0.577,
+  "duration": 282.4
+ },
+ "al-feelin-t01": {
+  "start": 78.99,
+  "end": 138.34,
+  "confidence": 0.565,
+  "duration": 216.1
+ },
+ "al-feelin-t03": {
+  "start": 86.03,
+  "end": 145.19,
+  "confidence": 0.56,
+  "duration": 216.7
+ },
+ "al-feelin-t04": {
+  "start": 92.69,
+  "end": 152.56,
+  "confidence": 0.566,
+  "duration": 277.6
+ },
+ "al-feelin-t05": {
+  "start": 154.41,
+  "end": 214.32,
+  "confidence": 0.565,
+  "duration": 242.9
+ },
+ "al-feelin-t07": {
+  "start": 106.25,
+  "end": 165.98,
+  "confidence": 0.575,
+  "duration": 222.6
+ },
+ "al-feelin-t08": {
+  "start": 56.31,
+  "end": 115.98,
+  "confidence": 0.579,
+  "duration": 171.8
+ },
+ "al-feelin-t09": {
+  "start": 112.78,
+  "end": 171.29,
+  "confidence": 0.573,
+  "duration": 276.2
+ },
+ "al-feelin-t10": {
+  "start": 104.98,
+  "end": 162.98,
+  "confidence": 0.59,
+  "duration": 237.3
+ },
+ "al-feelin-t11": {
+  "start": 141.01,
+  "end": 199.81,
+  "confidence": 0.579,
+  "duration": 260.3
+ },
+ "al-feelin-t12": {
+  "start": 124.9,
+  "end": 182.76,
+  "confidence": 0.569,
+  "duration": 227
+ },
+ "al-feelin-t13": {
+  "start": 91.63,
+  "end": 150.98,
+  "confidence": 0.573,
+  "duration": 226.8
+ },
+ "al-kanashimi-no-kujaku-t01": {
+  "start": 118.98,
+  "end": 176.98,
+  "confidence": 0.582,
+  "duration": 210.2
+ },
+ "al-kanashimi-no-kujaku-t02": {
+  "start": 79.69,
+  "end": 138.99,
+  "confidence": 0.561,
+  "duration": 248.4
+ },
+ "al-kanashimi-no-kujaku-t03": {
+  "start": 84.27,
+  "end": 143.89,
+  "confidence": 0.574,
+  "duration": 216.8
+ },
+ "al-kanashimi-no-kujaku-t04": {
+  "start": 113.66,
+  "end": 139.44,
+  "confidence": 0.574,
+  "duration": 157.1
+ },
+ "al-kanashimi-no-kujaku-t05": {
+  "start": 80.74,
+  "end": 140.69,
+  "confidence": 0.555,
+  "duration": 158
+ },
+ "al-kanashimi-no-kujaku-t06": {
+  "start": 88.38,
+  "end": 142.43,
+  "confidence": 0.569,
+  "duration": 219.7
+ },
+ "al-kanashimi-no-kujaku-t07": {
+  "start": 45.02,
+  "end": 104.42,
+  "confidence": 0.563,
+  "duration": 161.7
+ },
+ "al-kanashimi-no-kujaku-t08": {
+  "start": 103.61,
+  "end": 162.68,
+  "confidence": 0.565,
+  "duration": 298.1
+ },
+ "al-kanashimi-no-kujaku-t09": {
+  "start": 67.55,
+  "end": 126.39,
+  "confidence": 0.578,
+  "duration": 198.5
+ },
+ "al-kanashimi-no-kujaku-t10": {
+  "start": 104.03,
+  "end": 163.98,
+  "confidence": 0.578,
+  "duration": 239.1
+ },
+ "al-kanashimi-no-kujaku-t12": {
+  "start": 1387.46,
+  "end": 1447.09,
+  "confidence": 0.562,
+  "duration": 2612
+ },
+ "al-kanashimi-no-kujaku-t13": {
+  "start": 97.96,
+  "end": 156.34,
+  "confidence": 0.569,
+  "duration": 229
+ },
+ "al-heaven-beach-t01": {
+  "start": 90.77,
+  "end": 149.93,
+  "confidence": 0.572,
+  "duration": 280.4
+ },
+ "al-heaven-beach-t02": {
+  "start": 105.63,
+  "end": 163.68,
+  "confidence": 0.592,
+  "duration": 248.7
+ },
+ "al-heaven-beach-t03": {
+  "start": 76.58,
+  "end": 135,
+  "confidence": 0.589,
+  "duration": 201.3
+ },
+ "al-heaven-beach-t04": {
+  "start": 151.14,
+  "end": 210.12,
+  "confidence": 0.573,
+  "duration": 266
+ },
+ "al-heaven-beach-t05": {
+  "start": 105.6,
+  "end": 165.09,
+  "confidence": 0.581,
+  "duration": 273.8
+ },
+ "al-heaven-beach-t06": {
+  "start": 94.64,
+  "end": 152.83,
+  "confidence": 0.602,
+  "duration": 247.4
+ },
+ "al-heaven-beach-t07": {
+  "start": 123.09,
+  "end": 182.53,
+  "confidence": 0.575,
+  "duration": 248.8
+ },
+ "al-heaven-beach-t08": {
+  "start": 114.01,
+  "end": 173.5,
+  "confidence": 0.578,
+  "duration": 254.4
+ },
+ "al-heaven-beach-t09": {
+  "start": 118.19,
+  "end": 176.05,
+  "confidence": 0.588,
+  "duration": 262
+ },
+ "al-heaven-beach-t10": {
+  "start": 105.63,
+  "end": 163.68,
+  "confidence": 0.592,
+  "duration": 248.7
+ },
+ "al-heaven-beach-t11": {
+  "start": 85.26,
+  "end": 145.12,
+  "confidence": 0.561,
+  "duration": 256.2
+ },
+ "al-timely-t02": {
+  "start": 63.69,
+  "end": 123.14,
+  "confidence": 0.561,
+  "duration": 191.2
+ },
+ "al-timely-t03": {
+  "start": 77.44,
+  "end": 136.23,
+  "confidence": 0.563,
+  "duration": 217.3
+ },
+ "al-timely-t04": {
+  "start": 113.27,
+  "end": 172.43,
+  "confidence": 0.574,
+  "duration": 258.8
+ },
+ "al-timely-t05": {
+  "start": 116.42,
+  "end": 175.08,
+  "confidence": 0.575,
+  "duration": 249.2
+ },
+ "al-timely-t06": {
+  "start": 101.54,
+  "end": 161.49,
+  "confidence": 0.572,
+  "duration": 262.9
+ },
+ "al-timely-t07": {
+  "start": 49.41,
+  "end": 107.46,
+  "confidence": 0.573,
+  "duration": 157
+ },
+ "al-timely-t08": {
+  "start": 99.38,
+  "end": 157.66,
+  "confidence": 0.573,
+  "duration": 259
+ },
+ "al-timely-t09": {
+  "start": 92.69,
+  "end": 151.95,
+  "confidence": 0.571,
+  "duration": 291.4
  }
 }

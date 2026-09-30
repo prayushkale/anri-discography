@@ -1,10 +1,10 @@
 {
  "al-apricot-jam-t02": {
   "id": "al-apricot-jam-t02",
-  "videoId": "BYqbZldLmb4",
-  "title": "02 - Anri - Rhapsody",
-  "channel": "ElektroBros",
-  "duration": 237,
+  "videoId": "Dvx_4QBe8xM",
+  "title": "ラプソディー",
+  "channel": "Anri - Topic",
+  "duration": 240,
   "query": "Rhapsody ANRI",
   "embeddable": true
  },
@@ -28,10 +28,10 @@
  },
  "al-apricot-jam-t04": {
   "id": "al-apricot-jam-t04",
-  "videoId": "eZFWjBn3Bts",
-  "title": "04 - Anri - Nishibi Usurete",
-  "channel": "ElektroBros",
-  "duration": 219,
+  "videoId": "R0HWPNF6MzI",
+  "title": "西日うすれて",
+  "channel": "Anri - Topic",
+  "duration": 221,
   "query": "Nishibi Usurete ANRI",
   "embeddable": true
  },
@@ -46,28 +46,28 @@
  },
  "al-apricot-jam-t06": {
   "id": "al-apricot-jam-t06",
-  "videoId": "zaf6o28HtJw",
-  "title": "06  Anri - Flying Gozen Juujihatsu",
-  "channel": "ElektroBros",
-  "duration": 318,
+  "videoId": "pO_vvkVCir8",
+  "title": "Flying 午前10時発",
+  "channel": "Anri - Topic",
+  "duration": 321,
   "query": "Flying Gozen Juji Hatsu ANRI",
   "embeddable": true
  },
  "al-apricot-jam-t08": {
   "id": "al-apricot-jam-t08",
-  "videoId": "IxeoP4hEgsg",
-  "title": "08 - Anri - Keyword no Sagase",
-  "channel": "ElektroBros",
-  "duration": 219,
+  "videoId": "XTuHaCcERic",
+  "title": "キーワードを探せ",
+  "channel": "Anri - Topic",
+  "duration": 192,
   "query": "Keyword o Sagase ANRI",
   "embeddable": true
  },
  "al-apricot-jam-t07": {
   "id": "al-apricot-jam-t07",
-  "videoId": "z7FEcssp94E",
-  "title": "China Doll",
-  "channel": "Leroy Anderson - Topic",
-  "duration": 164,
+  "videoId": "8-4aE0WCMmw",
+  "title": "07 - Anri - Chinese Doll",
+  "channel": "ElektroBros",
+  "duration": 203,
   "query": "Chinese Doll ANRI",
   "embeddable": true
  },
@@ -82,19 +82,19 @@
  },
  "al-apricot-jam-t11": {
   "id": "al-apricot-jam-t11",
-  "videoId": "ABLbMHSsn5A",
-  "title": "11 - Anri - Tooi Hi no Image [Bonus Track]",
-  "channel": "ElektroBros",
-  "duration": 283,
+  "videoId": "zHpuLbJNgoU",
+  "title": "遠い日のイマージュ",
+  "channel": "Anri - Topic",
+  "duration": 267,
   "query": "Tooi Hi no Image ANRI",
   "embeddable": true
  },
  "al-apricot-jam-t10": {
   "id": "al-apricot-jam-t10",
-  "videoId": "D5mQSSgT-2w",
-  "title": "Fade Out Lines (Deluxe Edit)",
-  "channel": "Ed Seery - Topic",
-  "duration": 276,
+  "videoId": "dmwDALqYqwg",
+  "title": "ANRI／FADE OUT",
+  "channel": "Summer Lake",
+  "duration": 267,
   "query": "Fade Out ANRI",
   "embeddable": true
  },
@@ -154,11 +154,3449 @@
  },
  "al-feelin-t09": {
   "id": "al-feelin-t09",
-  "videoId": "GV5SqgrGBaM",
-  "title": "悲しみがとまらない I CAN'T STOP THE LONELINESS(Original by 杏里 / ANRI) - Tokimeki Records feat.ひかり",
-  "channel": "Tokimeki Records",
-  "duration": 277,
+  "videoId": "VoVvMpL9sds",
+  "title": "ときめき",
+  "channel": "Anri - Topic",
+  "duration": 227,
   "query": "Tokimeki ANRI",
+  "embeddable": true
+ },
+ "al-feelin-t11": {
+  "id": "al-feelin-t11",
+  "videoId": "5GnYKUz21lM",
+  "title": "海辺から",
+  "channel": "Anri - Topic",
+  "duration": 264,
+  "query": "Umibe kara ANRI",
+  "embeddable": true
+ },
+ "al-feelin-t12": {
+  "id": "al-feelin-t12",
+  "videoId": "-BwzuNaPmqc",
+  "title": "Anri Kumaki (熊木杏里) - Kaze No Kioku",
+  "channel": "Anri Kumaki 熊木杏里",
+  "duration": 228,
+  "query": "Kaze no Jealousy ANRI",
+  "embeddable": true
+ },
+ "al-feelin-t13": {
+  "id": "al-feelin-t13",
+  "videoId": "MlmSY4PIxAY",
+  "title": "ANRI／MY SPECIAL LOVE SCENE",
+  "channel": "Summer Lake",
+  "duration": 227,
+  "query": "My Special Love Scene ANRI",
+  "embeddable": true
+ },
+ "al-kanashimi-no-kujaku-t03": {
+  "id": "al-kanashimi-no-kujaku-t03",
+  "videoId": "8YNEnU0rSX8",
+  "title": "FACE FACE FACE",
+  "channel": "Anri - Topic",
+  "duration": 217,
+  "query": "FACE FACE FACE ANRI",
+  "embeddable": true
+ },
+ "al-kanashimi-no-kujaku-t02": {
+  "id": "al-kanashimi-no-kujaku-t02",
+  "videoId": "sSYxTy9ed2w",
+  "title": "エスプレッソで眠れない",
+  "channel": "Anri - Topic",
+  "duration": 174,
+  "query": "Espresso de Nemurenai ANRI",
+  "embeddable": true
+ },
+ "al-kanashimi-no-kujaku-t04": {
+  "id": "al-kanashimi-no-kujaku-t04",
+  "videoId": "82hwTza_-IE",
+  "title": "白いヨット",
+  "channel": "Anri - Topic",
+  "duration": 238,
+  "query": "Shiroi Yacht ANRI",
+  "embeddable": true
+ },
+ "al-kanashimi-no-kujaku-t05": {
+  "id": "al-kanashimi-no-kujaku-t05",
+  "videoId": "6adPIjJUHXo",
+  "title": "セシルカット",
+  "channel": "Anri - Topic",
+  "duration": 159,
+  "query": "Cecil Cut ANRI",
+  "embeddable": true
+ },
+ "al-kanashimi-no-kujaku-t07": {
+  "id": "al-kanashimi-no-kujaku-t07",
+  "videoId": "Y-bOdwHWGSY",
+  "title": "ヘッドライト",
+  "channel": "Anri - Topic",
+  "duration": 249,
+  "query": "Headlight ANRI",
+  "embeddable": true
+ },
+ "al-kanashimi-no-kujaku-t06": {
+  "id": "al-kanashimi-no-kujaku-t06",
+  "videoId": "7-9vF0p6wFg",
+  "title": "リビエラからの手紙",
+  "channel": "Anri - Topic",
+  "duration": 156,
+  "query": "Riviera kara no Tegami ANRI",
+  "embeddable": true
+ },
+ "al-kanashimi-no-kujaku-t08": {
+  "id": "al-kanashimi-no-kujaku-t08",
+  "videoId": "dzlqRbBBqPQ",
+  "title": "シルエット　オブ　ロマンス",
+  "channel": "Anri - Topic",
+  "duration": 170,
+  "query": "Silhouette of Romance ANRI",
+  "embeddable": true
+ },
+ "al-kanashimi-no-kujaku-t11": {
+  "id": "al-kanashimi-no-kujaku-t11",
+  "videoId": "Et7vC3emQz8",
+  "title": "Sayonara ha Yoake no Yume ni さよならは夜明けの夢に  [Intrumental] - Anri - I Love Poping World",
+  "channel": "Cayley Hamilton",
+  "duration": 209,
+  "query": "Sayonara wa Yoake no Yume ni ANRI",
+  "embeddable": true
+ },
+ "al-kanashimi-no-kujaku-t12": {
+  "id": "al-kanashimi-no-kujaku-t12",
+  "videoId": "XQdeX7sPi6Y",
+  "title": "Anri (杏里) - Kanashimi no kujaku 哀しみの孔雀 (1981)",
+  "channel": "Hasan Uçar",
+  "duration": 2613,
+  "query": "Kanashimi no Kujaku ANRI",
+  "embeddable": true
+ },
+ "al-kanashimi-no-kujaku-t09": {
+  "id": "al-kanashimi-no-kujaku-t09",
+  "videoId": "4AsXozvHgxk",
+  "title": "Am I Afraid?",
+  "channel": "Anri - Topic",
+  "duration": 199,
+  "query": "Am I Afraid? ANRI",
+  "embeddable": true
+ },
+ "al-kanashimi-no-kujaku-t13": {
+  "id": "al-kanashimi-no-kujaku-t13",
+  "videoId": "Axn3j4DfclI",
+  "title": "可愛いポーリン",
+  "channel": "Anri - Topic",
+  "duration": 230,
+  "query": "Kawaii Paolin ANRI",
+  "embeddable": true
+ },
+ "al-heaven-beach-t01": {
+  "id": "al-heaven-beach-t01",
+  "videoId": "53n84GIZmxc",
+  "title": "二番目のaffair",
+  "channel": "Anri - Topic",
+  "duration": 281,
+  "query": "Nibanme no Affair ANRI",
+  "embeddable": true
+ },
+ "al-heaven-beach-t02": {
+  "id": "al-heaven-beach-t02",
+  "videoId": "uWqnsVMc8CQ",
+  "title": "ANRI アンリ 杏里    ”Last Summer  Whisper”  Heaven Beach🎤♪🎶🎸［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 249,
+  "query": "Last Summer Whisper ANRI",
+  "embeddable": true
+ },
+ "al-heaven-beach-t03": {
+  "id": "al-heaven-beach-t03",
+  "videoId": "p-l_u01fZlE",
+  "title": "Lonely Driving",
+  "channel": "Anri - Topic",
+  "duration": 202,
+  "query": "Lonely Driving ANRI",
+  "embeddable": true
+ },
+ "al-heaven-beach-t04": {
+  "id": "al-heaven-beach-t04",
+  "videoId": "C7y67MXt2Gw",
+  "title": "Resolution",
+  "channel": "Anri - Topic",
+  "duration": 267,
+  "query": "Resolution ANRI",
+  "embeddable": true
+ },
+ "al-heaven-beach-t05": {
+  "id": "al-heaven-beach-t05",
+  "videoId": "7yvrsDDGWNQ",
+  "title": "Fly By Day",
+  "channel": "Anri - Topic",
+  "duration": 274,
+  "query": "Fly By Day ANRI",
+  "embeddable": true
+ },
+ "al-heaven-beach-t07": {
+  "id": "al-heaven-beach-t07",
+  "videoId": "CiqtwM0TrNE",
+  "title": "Honesty Man",
+  "channel": "Anri - Topic",
+  "duration": 249,
+  "query": "Honesty Man ANRI",
+  "embeddable": true
+ },
+ "al-heaven-beach-t06": {
+  "id": "al-heaven-beach-t06",
+  "videoId": "eFIR1OXjuAQ",
+  "title": "Flash Back Memories",
+  "channel": "Anri - Topic",
+  "duration": 248,
+  "query": "Flash Back Memories ANRI",
+  "embeddable": true
+ },
+ "al-heaven-beach-t08": {
+  "id": "al-heaven-beach-t08",
+  "videoId": "C__2qiL9gpQ",
+  "title": "杏里／Memorial Story【うたスキ動画】アルバム「heaven beach」より",
+  "channel": "杏里まちゃ",
+  "duration": 255,
+  "query": "Memorial Story ANRI",
+  "embeddable": true
+ },
+ "al-heaven-beach-t09": {
+  "id": "al-heaven-beach-t09",
+  "videoId": "Cr963RCSYRo",
+  "title": "夏に背を向けて",
+  "channel": "Anri - Topic",
+  "duration": 263,
+  "query": "Natsu ni Seo wo Mukete ANRI",
+  "embeddable": true
+ },
+ "al-heaven-beach-t11": {
+  "id": "al-heaven-beach-t11",
+  "videoId": "mTxhQ9emRxE",
+  "title": "風の中でloving you",
+  "channel": "Anri - Topic",
+  "duration": 257,
+  "query": "Kaze no Naka de Loving You ANRI",
+  "embeddable": true
+ },
+ "al-timely-t01": {
+  "id": "al-timely-t01",
+  "videoId": "yiUuVRBaCy0",
+  "title": "CAT'S EYE",
+  "channel": "Anri - Topic",
+  "duration": 203,
+  "query": "Cat's Eye ANRI",
+  "embeddable": true
+ },
+ "al-timely-t02": {
+  "id": "al-timely-t02",
+  "videoId": "-8WTumwpvmg",
+  "title": "ANRI  杏里  アンリ Anri ”WINDY SUMMER”  Timely!!🎤♪🎶🎸［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 192,
+  "query": "Windy Summer ANRI",
+  "embeddable": true
+ },
+ "al-timely-t03": {
+  "id": "al-timely-t03",
+  "videoId": "DFmIVOKnw84",
+  "title": "STAY BY ME",
+  "channel": "Anri - Topic",
+  "duration": 218,
+  "query": "Stay By Me ANRI",
+  "embeddable": true
+ },
+ "al-timely-t04": {
+  "id": "al-timely-t04",
+  "videoId": "634LjuocJx0",
+  "title": "ANRI 杏里 / A HOPE FROM SAD STREET [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 259,
+  "query": "A Hope from Sad Street ANRI",
+  "embeddable": true
+ },
+ "al-heaven-beach-t10": {
+  "id": "al-heaven-beach-t10",
+  "videoId": "uWqnsVMc8CQ",
+  "title": "ANRI アンリ 杏里    ”Last Summer  Whisper”  Heaven Beach🎤♪🎶🎸［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 249,
+  "query": "Heaven Beach ANRI",
+  "embeddable": true
+ },
+ "al-timely-t06": {
+  "id": "al-timely-t06",
+  "videoId": "6q6GtPdVHL4",
+  "title": "悲しみがとまらない　I CAN'T STOP THE LONELINESS",
+  "channel": "Anri - Topic",
+  "duration": 267,
+  "query": "Kanashimi ga Tomaranai ANRI",
+  "embeddable": true
+ },
+ "al-timely-t07": {
+  "id": "al-timely-t07",
+  "videoId": "9iZz5rpx7aw",
+  "title": "ANRI 杏里 Anri アンリ  \"Shyness Boy\" Timely🎤♪🎶🎸［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 158,
+  "query": "Shyness Boy ANRI",
+  "embeddable": true
+ },
+ "al-timely-t09": {
+  "id": "al-timely-t09",
+  "videoId": "3uXFSvMZIwQ",
+  "title": "DRIVING MY LOVE",
+  "channel": "Anri - Topic",
+  "duration": 292,
+  "query": "Driving My Love ANRI",
+  "embeddable": true
+ },
+ "al-timely-t10": {
+  "id": "al-timely-t10",
+  "videoId": "LpJ4jwl9pi8",
+  "title": "【期間限定】杏里 ANRI アンリ  GOOD-NIGHT FOR YOU  グッドナイトフォーユー　🎤♪🎶［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 386,
+  "query": "Good-Night for You ANRI",
+  "embeddable": true
+ },
+ "al-timely-t11": {
+  "id": "al-timely-t11",
+  "videoId": "Z056hRt23Fo",
+  "title": "ANRI アンリ 杏里 ”Remember Summer Days” Timely!!🎤♪🎶🎸［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 207,
+  "query": "Remember Summer Days ANRI",
+  "embeddable": true
+ },
+ "al-bi-ki-ni-t01": {
+  "id": "al-bi-ki-ni-t01",
+  "videoId": "6riZjp82gKY",
+  "title": "ANRI　Anri　杏里　アンリ Good Bye Boogie Dance　グッバイブギダンス　🎤♪🎶［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 271,
+  "query": "Good Bye Boogie Dance ANRI",
+  "embeddable": true
+ },
+ "al-timely-t08": {
+  "id": "al-timely-t08",
+  "videoId": "XPHMr9uUXDc",
+  "title": "LOST LOVE IN THE RAIN",
+  "channel": "Anri - Topic",
+  "duration": 260,
+  "query": "Lost Love in the Rain ANRI",
+  "embeddable": true
+ },
+ "al-bi-ki-ni-t02": {
+  "id": "al-bi-ki-ni-t02",
+  "videoId": "WGQSXr8jnWI",
+  "title": "Dancin' Blue",
+  "channel": "Anri - Topic",
+  "duration": 196,
+  "query": "Dancin' Blue ANRI",
+  "embeddable": true
+ },
+ "al-bi-ki-ni-t03": {
+  "id": "al-bi-ki-ni-t03",
+  "videoId": "U5pXFKtnrKs",
+  "title": "September Walkin'",
+  "channel": "Anri - Topic",
+  "duration": 231,
+  "query": "September Walkin' ANRI",
+  "embeddable": true
+ },
+ "al-timely-t05": {
+  "id": "al-timely-t05",
+  "videoId": "owQUKuQFwKQ",
+  "title": "YOU ARE NOT ALONE",
+  "channel": "Anri - Topic",
+  "duration": 250,
+  "query": "You Are Not Alone ANRI",
+  "embeddable": true
+ },
+ "al-bi-ki-ni-t04": {
+  "id": "al-bi-ki-ni-t04",
+  "videoId": "Pme_z3Rn9KA",
+  "title": "Lady Sunshine",
+  "channel": "Anri - Topic",
+  "duration": 223,
+  "query": "Lady Sunshine ANRI",
+  "embeddable": true
+ },
+ "al-bi-ki-ni-t05": {
+  "id": "al-bi-ki-ni-t05",
+  "videoId": "TQBCJGsjDkw",
+  "title": "Yes I'm In Love",
+  "channel": "Anri - Topic",
+  "duration": 309,
+  "query": "Yes I'm In Love ANRI",
+  "embeddable": true
+ },
+ "al-bi-ki-ni-t07": {
+  "id": "al-bi-ki-ni-t07",
+  "videoId": "-l7KBh0x9ng",
+  "title": "Just Be Yourself",
+  "channel": "Anri - Topic",
+  "duration": 304,
+  "query": "Just Be Yourself ANRI",
+  "embeddable": true
+ },
+ "al-bi-ki-ni-t06": {
+  "id": "al-bi-ki-ni-t06",
+  "videoId": "QKHZJNIlOHk",
+  "title": "SURF CITY",
+  "channel": "Anri - Topic",
+  "duration": 261,
+  "query": "Surf City ANRI",
+  "embeddable": true
+ },
+ "al-bi-ki-ni-t10": {
+  "id": "al-bi-ki-ni-t10",
+  "videoId": "eESOF64-JN8",
+  "title": "AFFECTION",
+  "channel": "Anri - Topic",
+  "duration": 279,
+  "query": "Affection ANRI",
+  "embeddable": true
+ },
+ "al-bi-ki-ni-t08": {
+  "id": "al-bi-ki-ni-t08",
+  "videoId": "hGuBAs9liZg",
+  "title": "Beach Boy In My Heart",
+  "channel": "Anri - Topic",
+  "duration": 245,
+  "query": "Beach Boy In My Heart ANRI",
+  "embeddable": true
+ },
+ "al-bi-ki-ni-t09": {
+  "id": "al-bi-ki-ni-t09",
+  "videoId": "vmdwDrwnXOA",
+  "title": "Summer Focus",
+  "channel": "Anri - Topic",
+  "duration": 197,
+  "query": "Summer Focus ANRI",
+  "embeddable": true
+ },
+ "al-coool-t02": {
+  "id": "al-coool-t02",
+  "videoId": "vYWul3CJ5Us",
+  "title": "GONE WITH THE SADNESS",
+  "channel": "Anri - Topic",
+  "duration": 191,
+  "query": "Gone With The Sadness ANRI",
+  "embeddable": true
+ },
+ "al-coool-t03": {
+  "id": "al-coool-t03",
+  "videoId": "P7feyz-YZ8I",
+  "title": "KIMAMANI REFLECTION (NEW Version)",
+  "channel": "Anri - Topic",
+  "duration": 236,
+  "query": "Kimamani Reflection ANRI",
+  "embeddable": true
+ },
+ "al-coool-t04": {
+  "id": "al-coool-t04",
+  "videoId": "XIql3d8uOSc",
+  "title": "I CAN'T EVER CHANGE YOUR LOVE FOR ME",
+  "channel": "Anri - Topic",
+  "duration": 263,
+  "query": "I Can't Ever Change Your Love For Me ANRI",
+  "embeddable": true
+ },
+ "al-coool-t05": {
+  "id": "al-coool-t05",
+  "videoId": "tfMtdVseZt0",
+  "title": "SILLY CITY GIRL",
+  "channel": "Anri - Topic",
+  "duration": 180,
+  "query": "Silly City Girl ANRI",
+  "embeddable": true
+ },
+ "al-coool-t06": {
+  "id": "al-coool-t06",
+  "videoId": "XfKkXmpfXZs",
+  "title": "MORNING HIGHWAY",
+  "channel": "Anri - Topic",
+  "duration": 234,
+  "query": "Morning Highway ANRI",
+  "embeddable": true
+ },
+ "al-coool-t07": {
+  "id": "al-coool-t07",
+  "videoId": "Z056hRt23Fo",
+  "title": "ANRI アンリ 杏里 ”Remember Summer Days” Timely!!🎤♪🎶🎸［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 207,
+  "query": "Surprise Of Summer ANRI",
+  "embeddable": true
+ },
+ "al-coool-t01": {
+  "id": "al-coool-t01",
+  "videoId": "0WittnSTkV0",
+  "title": "BRING ME TO THE DANCENIGHT",
+  "channel": "Anri - Topic",
+  "duration": 191,
+  "query": "Bring Me To The Dancenight ANRI",
+  "embeddable": true
+ },
+ "al-coool-t08": {
+  "id": "al-coool-t08",
+  "videoId": "YjkKniF4BQM",
+  "title": "FLASHIN' NIGHT",
+  "channel": "Anri - Topic",
+  "duration": 222,
+  "query": "Flashin' Night ANRI",
+  "embeddable": true
+ },
+ "al-coool-t09": {
+  "id": "al-coool-t09",
+  "videoId": "OqOHMMavyKk",
+  "title": "杏里 ANRI / MERCURY LAMP 水銀燈 [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 336,
+  "query": "Mercury Lamp ANRI",
+  "embeddable": true
+ },
+ "al-coool-t10": {
+  "id": "al-coool-t10",
+  "videoId": "IPd0cY2g80s",
+  "title": "HE'S MY MUSIC",
+  "channel": "Anri - Topic",
+  "duration": 194,
+  "query": "He's My Music ANRI",
+  "embeddable": true
+ },
+ "al-coool-t11": {
+  "id": "al-coool-t11",
+  "videoId": "kMhy6qN8VGk",
+  "title": "Anri - Maui",
+  "channel": "Fever Magnetic",
+  "duration": 202,
+  "query": "Maui ANRI",
+  "embeddable": true
+ },
+ "al-wave-t03": {
+  "id": "al-wave-t03",
+  "videoId": "B_ZIfcyTaww",
+  "title": "ANRI／INTO THE BODY",
+  "channel": "Summer Lake",
+  "duration": 255,
+  "query": "Into The Body ANRI",
+  "embeddable": true
+ },
+ "al-wave-t02": {
+  "id": "al-wave-t02",
+  "videoId": "VZkGeqhIfcM",
+  "title": "Anri - Yoake No Soldier (Tradução PT-BR)",
+  "channel": "𝘾𝙡𝙪𝙗 𝘾𝙞𝙩𝙮𝙋𝙤𝙥",
+  "duration": 279,
+  "query": "Yoake no Soldier ANRI",
+  "embeddable": true
+ },
+ "al-wave-t05": {
+  "id": "al-wave-t05",
+  "videoId": "qYKXb8_cQak",
+  "title": "WAVE",
+  "channel": "Anri - Topic",
+  "duration": 286,
+  "query": "Wave ANRI",
+  "embeddable": true
+ },
+ "al-wave-t01": {
+  "id": "al-wave-t01",
+  "videoId": "tfMtdVseZt0",
+  "title": "SILLY CITY GIRL",
+  "channel": "Anri - Topic",
+  "duration": 180,
+  "query": "City Fiction ANRI",
+  "embeddable": true
+ },
+ "al-wave-t07": {
+  "id": "al-wave-t07",
+  "videoId": "r2CFBtisCNk",
+  "title": "LOVER'S NIGHT",
+  "channel": "Anri - Topic",
+  "duration": 263,
+  "query": "Lover's Night ANRI",
+  "embeddable": true
+ },
+ "al-wave-t04": {
+  "id": "al-wave-t04",
+  "videoId": "T2STyJnLcBs",
+  "title": "LONG ISLAND BEACH",
+  "channel": "Anri - Topic",
+  "duration": 257,
+  "query": "Long Island Beach ANRI",
+  "embeddable": true
+ },
+ "al-wave-t06": {
+  "id": "al-wave-t06",
+  "videoId": "dXvQWVrYBoI",
+  "title": "TAKE IT",
+  "channel": "Anri - Topic",
+  "duration": 262,
+  "query": "Take It ANRI",
+  "embeddable": true
+ },
+ "al-wave-t09": {
+  "id": "al-wave-t09",
+  "videoId": "ijFyx7fZvoQ",
+  "title": "OVERSEA CALL",
+  "channel": "Anri - Topic",
+  "duration": 265,
+  "query": "Oversea Call ANRI",
+  "embeddable": true
+ },
+ "al-wave-t08": {
+  "id": "al-wave-t08",
+  "videoId": "1FoOq8-X_Ro",
+  "title": "Anri - 16(Sixteen)BEAT",
+  "channel": "Fever Magnetic",
+  "duration": 284,
+  "query": "16(Sixteen)Beat ANRI",
+  "embeddable": true
+ },
+ "al-mystique-t02": {
+  "id": "al-mystique-t02",
+  "videoId": "sbH5JWGBOjc",
+  "title": "Anri - SENTIMENTAL EXPRESS",
+  "channel": "Fever Magnetic",
+  "duration": 254,
+  "query": "Sentimental Express ANRI",
+  "embeddable": true
+ },
+ "al-mystique-t01": {
+  "id": "al-mystique-t01",
+  "videoId": "VUyI6gBO1I0",
+  "title": "Anri - RED MOON CALLING",
+  "channel": "Fever Magnetic",
+  "duration": 277,
+  "query": "Red Moon Calling ANRI",
+  "embeddable": true
+ },
+ "al-mystique-t04": {
+  "id": "al-mystique-t04",
+  "videoId": "WgWxbASSjz8",
+  "title": "MYSTERY ZONE",
+  "channel": "Anri - Topic",
+  "duration": 249,
+  "query": "Mystery Zone ANRI",
+  "embeddable": true
+ },
+ "al-mystique-t03": {
+  "id": "al-mystique-t03",
+  "videoId": "pYthyZgQVQs",
+  "title": "Anri - HONEYMOON SHUTTLE 蜜月船",
+  "channel": "Fever Magnetic",
+  "duration": 265,
+  "query": "Honeymoon Shuttle ANRI",
+  "embeddable": true
+ },
+ "al-mystique-t05": {
+  "id": "al-mystique-t05",
+  "videoId": "RSYL4ewX1z4",
+  "title": "杏里 ANRI / ALL OF YOU オールオブユー [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 257,
+  "query": "All Of You ANRI",
+  "embeddable": true
+ },
+ "al-mystique-t06": {
+  "id": "al-mystique-t06",
+  "videoId": "WGpGop1p728",
+  "title": "MORNING HIGHWAY",
+  "channel": "Anri - Topic",
+  "duration": 223,
+  "query": "Morning Squall ANRI",
+  "embeddable": true
+ },
+ "al-mystique-t07": {
+  "id": "al-mystique-t07",
+  "videoId": "LlaEYViTing",
+  "title": "Anri: Southern Comfort 杏里/サザン・カンフォート　杏里 リゾート・ビデオ (1986 Japanese music LaserDisc)",
+  "channel": "Kim Laughton",
+  "duration": 2544,
+  "query": "Southern Comfort ANRI",
+  "embeddable": true
+ },
+ "al-mystique-t10": {
+  "id": "al-mystique-t10",
+  "videoId": "VbuDBY3uvnw",
+  "title": "EASY BREAK",
+  "channel": "Anri - Topic",
+  "duration": 240,
+  "query": "Easy Break ANRI",
+  "embeddable": true
+ },
+ "al-mystique-t09": {
+  "id": "al-mystique-t09",
+  "videoId": "uWqnsVMc8CQ",
+  "title": "ANRI アンリ 杏里    ”Last Summer  Whisper”  Heaven Beach🎤♪🎶🎸［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 249,
+  "query": "Whisper In Paradise ANRI",
+  "embeddable": true
+ },
+ "al-trouble-in-paradise-t02": {
+  "id": "al-trouble-in-paradise-t02",
+  "videoId": "McXrGhPwwUc",
+  "title": "TIME OUT",
+  "channel": "Anri - Topic",
+  "duration": 231,
+  "query": "Time Out ANRI",
+  "embeddable": true
+ },
+ "al-mystique-t08": {
+  "id": "al-mystique-t08",
+  "videoId": "V7zGTk5Vlkg",
+  "title": "Pride and Dream",
+  "channel": "Anri - Topic",
+  "duration": 266,
+  "query": "Pride And Tears ANRI",
+  "embeddable": true
+ },
+ "al-trouble-in-paradise-t04": {
+  "id": "al-trouble-in-paradise-t04",
+  "videoId": "mVteoZHRtKs",
+  "title": "THE TORCH",
+  "channel": "Anri - Topic",
+  "duration": 298,
+  "query": "The Torch ANRI",
+  "embeddable": true
+ },
+ "al-trouble-in-paradise-t01": {
+  "id": "al-trouble-in-paradise-t01",
+  "videoId": "JKB3mOawSLY",
+  "title": "THE PAGES OF YOUR HISTORY",
+  "channel": "Anri - Topic",
+  "duration": 290,
+  "query": "The Pages Of Your History ANRI",
+  "embeddable": true
+ },
+ "al-trouble-in-paradise-t03": {
+  "id": "al-trouble-in-paradise-t03",
+  "videoId": "rTcPBU6YNP8",
+  "title": "IMITATION LOVER",
+  "channel": "Anri - Topic",
+  "duration": 325,
+  "query": "Imitation Lover ANRI",
+  "embeddable": true
+ },
+ "al-trouble-in-paradise-t06": {
+  "id": "al-trouble-in-paradise-t06",
+  "videoId": "xVqoMTdfS2A",
+  "title": "TROUBLE IN PARADISE",
+  "channel": "Anri - Topic",
+  "duration": 269,
+  "query": "Trouble In Paradise ANRI",
+  "embeddable": true
+ },
+ "al-trouble-in-paradise-t07": {
+  "id": "al-trouble-in-paradise-t07",
+  "videoId": "T2zwxG7gZNk",
+  "title": "杏里 ANRI  /  INNOCENT TIME",
+  "channel": "ANRI 杏里 Official",
+  "duration": 309,
+  "query": "Precious Time ANRI",
+  "embeddable": true
+ },
+ "al-trouble-in-paradise-t08": {
+  "id": "al-trouble-in-paradise-t08",
+  "videoId": "QY1JQkPbC7M",
+  "title": "FALLEN ANGEL",
+  "channel": "Anri - Topic",
+  "duration": 197,
+  "query": "Fallen Angel ANRI",
+  "embeddable": true
+ },
+ "al-trouble-in-paradise-t05": {
+  "id": "al-trouble-in-paradise-t05",
+  "videoId": "yC11SuELlYo",
+  "title": "ANRI／A SLOW BOAT TO HEART",
+  "channel": "Summer Lake",
+  "duration": 304,
+  "query": "A Slow Boat To Heart ANRI",
+  "embeddable": true
+ },
+ "al-summer-farewells-t01": {
+  "id": "al-summer-farewells-t01",
+  "videoId": "VHOmaAtzH_4",
+  "title": "DANCE WITH NOSTALGIA",
+  "channel": "Anri - Topic",
+  "duration": 271,
+  "query": "Dance With Nostalgia ANRI",
+  "embeddable": true
+ },
+ "al-trouble-in-paradise-t10": {
+  "id": "al-trouble-in-paradise-t10",
+  "videoId": "IkfCXzm1GUQ",
+  "title": "杏里　ANRI　アンリ CURTAIN CALL　カーテンコール　🎤♪🎶［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 333,
+  "query": "Curtain Call ANRI",
+  "embeddable": true
+ },
+ "al-summer-farewells-t02": {
+  "id": "al-summer-farewells-t02",
+  "videoId": "Vbs9wlMadJw",
+  "title": "CAFE 25 VINGT CINQ",
+  "channel": "Anri - Topic",
+  "duration": 234,
+  "query": "Café 25 (Vingt Cinq) ANRI",
+  "embeddable": true
+ },
+ "al-summer-farewells-t03": {
+  "id": "al-summer-farewells-t03",
+  "videoId": "SybIlOUyGfE",
+  "title": "ボーイフレンド",
+  "channel": "Anri - Topic",
+  "duration": 302,
+  "query": "Boyfriend ANRI",
+  "embeddable": true
+ },
+ "al-trouble-in-paradise-t09": {
+  "id": "al-trouble-in-paradise-t09",
+  "videoId": "BHaFtZSo7nQ",
+  "title": "ANRI's Christmas Songs 杏里 クリスマスソング [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 1435,
+  "query": "Christmas Calendar ANRI",
+  "embeddable": true
+ },
+ "al-summer-farewells-t05": {
+  "id": "al-summer-farewells-t05",
+  "videoId": "6riZjp82gKY",
+  "title": "ANRI　Anri　杏里　アンリ Good Bye Boogie Dance　グッバイブギダンス　🎤♪🎶［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 271,
+  "query": "Chanel de Good-bye ANRI",
+  "embeddable": true
+ },
+ "al-summer-farewells-t06": {
+  "id": "al-summer-farewells-t06",
+  "videoId": "cB4tDPmRYXs",
+  "title": "MOON IN THE RAIN",
+  "channel": "Anri - Topic",
+  "duration": 302,
+  "query": "Moon In The Rain ANRI",
+  "embeddable": true
+ },
+ "al-summer-farewells-t08": {
+  "id": "al-summer-farewells-t08",
+  "videoId": "HXPjj85oUz0",
+  "title": "霧雨に消えてゆく",
+  "channel": "Anri - Topic",
+  "duration": 290,
+  "query": "Kirisame ni Kiete Yuku ANRI",
+  "embeddable": true
+ },
+ "al-summer-farewells-t09": {
+  "id": "al-summer-farewells-t09",
+  "videoId": "CALKvhZ6I7s",
+  "title": "HAPPY ENDでふられたい",
+  "channel": "Anri - Topic",
+  "duration": 240,
+  "query": "Happy End de Furaretai ANRI",
+  "embeddable": true
+ },
+ "al-summer-farewells-t10": {
+  "id": "al-summer-farewells-t10",
+  "videoId": "GrXwSSkZmtg",
+  "title": "杏里 ANRI～Honolulu Birthday Eve",
+  "channel": "snowflake",
+  "duration": 299,
+  "query": "Honolulu Birthday Eve ANRI",
+  "embeddable": true
+ },
+ "al-summer-farewells-t07": {
+  "id": "al-summer-farewells-t07",
+  "videoId": "kWkvnJG6eLE",
+  "title": "ANRI／さよなら SINGLE DAYS",
+  "channel": "Summer Lake",
+  "duration": 326,
+  "query": "Sayonara Single Days ANRI",
+  "embeddable": true
+ },
+ "c-1987-meditation-t01": {
+  "id": "c-1987-meditation-t01",
+  "videoId": "zEpIzC-COnA",
+  "title": "OLIVIA O KIKINAGARA",
+  "channel": "Anri - Topic",
+  "duration": 327,
+  "query": "Olivia o Kikinagara ANRI",
+  "embeddable": true
+ },
+ "c-1987-meditation-t02": {
+  "id": "c-1987-meditation-t02",
+  "videoId": "wGbWHv5EkPE",
+  "title": "ANRI／LAST PICTURE SHOW",
+  "channel": "Summer Lake",
+  "duration": 310,
+  "query": "Last Picture Show ANRI",
+  "embeddable": true
+ },
+ "c-1987-meditation-t03": {
+  "id": "c-1987-meditation-t03",
+  "videoId": "owQUKuQFwKQ",
+  "title": "YOU ARE NOT ALONE",
+  "channel": "Anri - Topic",
+  "duration": 250,
+  "query": "You Are Not Alone ANRI",
+  "embeddable": true
+ },
+ "c-1987-meditation-t06": {
+  "id": "c-1987-meditation-t06",
+  "videoId": "ijFyx7fZvoQ",
+  "title": "OVERSEA CALL",
+  "channel": "Anri - Topic",
+  "duration": 265,
+  "query": "Oversea Call ANRI",
+  "embeddable": true
+ },
+ "c-1987-meditation-t05": {
+  "id": "c-1987-meditation-t05",
+  "videoId": "RSYL4ewX1z4",
+  "title": "杏里 ANRI / ALL OF YOU オールオブユー [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 257,
+  "query": "All of You ANRI",
+  "embeddable": true
+ },
+ "c-1987-meditation-t04": {
+  "id": "c-1987-meditation-t04",
+  "videoId": "uWqnsVMc8CQ",
+  "title": "ANRI アンリ 杏里    ”Last Summer  Whisper”  Heaven Beach🎤♪🎶🎸［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 249,
+  "query": "Heaven Beach ANRI",
+  "embeddable": true
+ },
+ "c-1987-meditation-t08": {
+  "id": "c-1987-meditation-t08",
+  "videoId": "T2STyJnLcBs",
+  "title": "LONG ISLAND BEACH",
+  "channel": "Anri - Topic",
+  "duration": 257,
+  "query": "Long Island Beach ANRI",
+  "embeddable": true
+ },
+ "c-1987-meditation-t09": {
+  "id": "c-1987-meditation-t09",
+  "videoId": "tuBHVBum5Kg",
+  "title": "ANRI 杏里 / 砂浜 Sunahama 【歌詞 Lyrics】[Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 282,
+  "query": "Sunahama ANRI",
+  "embeddable": true
+ },
+ "c-1987-meditation-t07": {
+  "id": "c-1987-meditation-t07",
+  "videoId": "XIql3d8uOSc",
+  "title": "I CAN'T EVER CHANGE YOUR LOVE FOR ME",
+  "channel": "Anri - Topic",
+  "duration": 263,
+  "query": "I Can't Ever Change Your Love for Me ANRI",
+  "embeddable": true
+ },
+ "c-1987-meditation-t10": {
+  "id": "c-1987-meditation-t10",
+  "videoId": "eESOF64-JN8",
+  "title": "AFFECTION",
+  "channel": "Anri - Topic",
+  "duration": 279,
+  "query": "Affection ANRI",
+  "embeddable": true
+ },
+ "al-boogie-woogie-mainland-t01": {
+  "id": "al-boogie-woogie-mainland-t01",
+  "videoId": "NiYNCqaQ574",
+  "title": "【期間限定】杏里　ANRI　アンリ  BOOGIE WOOGIE MAINLAND  ブギウギ メインランド　🎤♪🎶［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 260,
+  "query": "Boogie Woogie Mainland ANRI",
+  "embeddable": true
+ },
+ "c-1987-meditation-t11": {
+  "id": "c-1987-meditation-t11",
+  "videoId": "LpJ4jwl9pi8",
+  "title": "【期間限定】杏里 ANRI アンリ  GOOD-NIGHT FOR YOU  グッドナイトフォーユー　🎤♪🎶［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 386,
+  "query": "Good-Night for You ANRI",
+  "embeddable": true
+ },
+ "al-boogie-woogie-mainland-t04": {
+  "id": "al-boogie-woogie-mainland-t04",
+  "videoId": "FIPA8LHiWdw",
+  "title": "D.J. I LOVE YOU",
+  "channel": "Anri - Topic",
+  "duration": 279,
+  "query": "D.J. I Love You ANRI",
+  "embeddable": true
+ },
+ "al-boogie-woogie-mainland-t05": {
+  "id": "al-boogie-woogie-mainland-t05",
+  "videoId": "alE0BtKxbhk",
+  "title": "ANRI／私だけのJOKER",
+  "channel": "Summer Lake",
+  "duration": 268,
+  "query": "私だけのJOKER ANRI",
+  "embeddable": true
+ },
+ "al-boogie-woogie-mainland-t06": {
+  "id": "al-boogie-woogie-mainland-t06",
+  "videoId": "CCOa5ow9I5U",
+  "title": "Future for you",
+  "channel": "Anri - Topic",
+  "duration": 281,
+  "query": "Goodbye Future ANRI",
+  "embeddable": true
+ },
+ "al-boogie-woogie-mainland-t07": {
+  "id": "al-boogie-woogie-mainland-t07",
+  "videoId": "CT8zox5itQQ",
+  "title": "MERCY! MERCY!",
+  "channel": "Anri - Topic",
+  "duration": 266,
+  "query": "Mercy! Mercy! ANRI",
+  "embeddable": true
+ },
+ "al-boogie-woogie-mainland-t08": {
+  "id": "al-boogie-woogie-mainland-t08",
+  "videoId": "uWqnsVMc8CQ",
+  "title": "ANRI アンリ 杏里    ”Last Summer  Whisper”  Heaven Beach🎤♪🎶🎸［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 249,
+  "query": "Edge Of Heaven ANRI",
+  "embeddable": true
+ },
+ "al-boogie-woogie-mainland-t09": {
+  "id": "al-boogie-woogie-mainland-t09",
+  "videoId": "537cU-KhsXU",
+  "title": "最後のサーフホリデー -Surf City Version-",
+  "channel": "Anri - Topic",
+  "duration": 270,
+  "query": "Saigo no Surf Holiday ANRI",
+  "embeddable": true
+ },
+ "al-boogie-woogie-mainland-t10": {
+  "id": "al-boogie-woogie-mainland-t10",
+  "videoId": "eP2vwliwSDo",
+  "title": "杏里 ANRI / SUMMER CANDLES [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 390,
+  "query": "Summer Candles ANRI",
+  "embeddable": true
+ },
+ "c-1988-my-favorite-songs-t01": {
+  "id": "c-1988-my-favorite-songs-t01",
+  "videoId": "zEpIzC-COnA",
+  "title": "OLIVIA O KIKINAGARA",
+  "channel": "Anri - Topic",
+  "duration": 327,
+  "query": "Olivia o Kikinagara (New Take) ANRI",
+  "embeddable": true
+ },
+ "c-1988-my-favorite-songs-t02": {
+  "id": "c-1988-my-favorite-songs-t02",
+  "videoId": "sgmYbKVRltc",
+  "title": "涙を海に返したい",
+  "channel": "Anri - Topic",
+  "duration": 209,
+  "query": "Namida wo Umi ni Kaeshitai ANRI",
+  "embeddable": true
+ },
+ "c-1988-my-favorite-songs-t04": {
+  "id": "c-1988-my-favorite-songs-t04",
+  "videoId": "tuBHVBum5Kg",
+  "title": "ANRI 杏里 / 砂浜 Sunahama 【歌詞 Lyrics】[Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 282,
+  "query": "Sunahama (New Take) ANRI",
+  "embeddable": true
+ },
+ "c-1988-my-favorite-songs-t03": {
+  "id": "c-1988-my-favorite-songs-t03",
+  "videoId": "3z3b5Z0bIJ4",
+  "title": "Cotton Kibun - Anri ~Music Box Version~",
+  "channel": "MUSiCBoXJapan",
+  "duration": 184,
+  "query": "Cotton Kibun ANRI",
+  "embeddable": true
+ },
+ "c-1988-my-favorite-songs-t05": {
+  "id": "c-1988-my-favorite-songs-t05",
+  "videoId": "jcDKvQDmtjs",
+  "title": "思いきりアメリカン",
+  "channel": "Anri - Topic",
+  "duration": 250,
+  "query": "Omoikiri American ANRI",
+  "embeddable": true
+ },
+ "c-1988-my-favorite-songs-t06": {
+  "id": "c-1988-my-favorite-songs-t06",
+  "videoId": "BY8vuRv5NqM",
+  "title": "杏里 ANRI / CAT'S EYE -2000- キャッツアイ 2000 [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 238,
+  "query": "Cat's Eye (Original) ANRI",
+  "embeddable": true
+ },
+ "c-1988-my-favorite-songs-t07": {
+  "id": "c-1988-my-favorite-songs-t07",
+  "videoId": "6q6GtPdVHL4",
+  "title": "悲しみがとまらない　I CAN'T STOP THE LONELINESS",
+  "channel": "Anri - Topic",
+  "duration": 267,
+  "query": "Kanashimi ga Tomaranai ANRI",
+  "embeddable": true
+ },
+ "c-1988-my-favorite-songs-t08": {
+  "id": "c-1988-my-favorite-songs-t08",
+  "videoId": "P7feyz-YZ8I",
+  "title": "KIMAMANI REFLECTION (NEW Version)",
+  "channel": "Anri - Topic",
+  "duration": 236,
+  "query": "Kimama ni Reflection ANRI",
+  "embeddable": true
+ },
+ "c-1988-my-favorite-songs-t09": {
+  "id": "c-1988-my-favorite-songs-t09",
+  "videoId": "1FoOq8-X_Ro",
+  "title": "Anri - 16(Sixteen)BEAT",
+  "channel": "Fever Magnetic",
+  "duration": 284,
+  "query": "16 (Sixteen) Beat ANRI",
+  "embeddable": true
+ },
+ "c-1988-my-favorite-songs-t10": {
+  "id": "c-1988-my-favorite-songs-t10",
+  "videoId": "T2zwxG7gZNk",
+  "title": "杏里 ANRI  /  INNOCENT TIME",
+  "channel": "ANRI 杏里 Official",
+  "duration": 309,
+  "query": "Innocent Time ANRI",
+  "embeddable": true
+ },
+ "c-1988-my-favorite-songs-t12": {
+  "id": "c-1988-my-favorite-songs-t12",
+  "videoId": "xVqoMTdfS2A",
+  "title": "TROUBLE IN PARADISE",
+  "channel": "Anri - Topic",
+  "duration": 269,
+  "query": "Trouble in Paradise (English Version) ANRI",
+  "embeddable": true
+ },
+ "c-1988-my-favorite-songs-t13": {
+  "id": "c-1988-my-favorite-songs-t13",
+  "videoId": "CALKvhZ6I7s",
+  "title": "HAPPY ENDでふられたい",
+  "channel": "Anri - Topic",
+  "duration": 240,
+  "query": "Happy End de Furaretai ANRI",
+  "embeddable": true
+ },
+ "c-1988-my-favorite-songs-t14": {
+  "id": "c-1988-my-favorite-songs-t14",
+  "videoId": "xapXF_IJlYQ",
+  "title": "ANRI 杏里 アンリ / CATCH THE WIND [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 266,
+  "query": "Catch the Wind ANRI",
+  "embeddable": true
+ },
+ "c-1988-my-favorite-songs-t15": {
+  "id": "c-1988-my-favorite-songs-t15",
+  "videoId": "0yad80tlWOo",
+  "title": "SURF & TEARS",
+  "channel": "Anri - Topic",
+  "duration": 307,
+  "query": "Surf & Tears ANRI",
+  "embeddable": true
+ },
+ "al-circuit-of-rainbow-t01": {
+  "id": "al-circuit-of-rainbow-t01",
+  "videoId": "Isfiu8ZWmmQ",
+  "title": "The Break of Dawn",
+  "channel": "Audio Attack - Topic",
+  "duration": 110,
+  "query": "THE BREAK OF DAWN ANRI",
+  "embeddable": true
+ },
+ "al-circuit-of-rainbow-t02": {
+  "id": "al-circuit-of-rainbow-t02",
+  "videoId": "a21EdjDhNic",
+  "title": "CIRCUIT of RAINBOW",
+  "channel": "Anri - Topic",
+  "duration": 288,
+  "query": "CIRCUIT of RAINBOW ANRI",
+  "embeddable": true
+ },
+ "c-1988-my-favorite-songs-t11": {
+  "id": "c-1988-my-favorite-songs-t11",
+  "videoId": "WGpGop1p728",
+  "title": "MORNING HIGHWAY",
+  "channel": "Anri - Topic",
+  "duration": 223,
+  "query": "Morning Squall ANRI",
+  "embeddable": true
+ },
+ "c-1988-my-favorite-songs-t16": {
+  "id": "c-1988-my-favorite-songs-t16",
+  "videoId": "wGbWHv5EkPE",
+  "title": "ANRI／LAST PICTURE SHOW",
+  "channel": "Summer Lake",
+  "duration": 310,
+  "query": "Last Picture Show ANRI",
+  "embeddable": true
+ },
+ "al-circuit-of-rainbow-t04": {
+  "id": "al-circuit-of-rainbow-t04",
+  "videoId": "Ef9ksD7RZyE",
+  "title": "ANRI 杏里 アンリ / Shoo-be Doo-be My Boy [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 339,
+  "query": "Shoo-be Doo-be My Boy ANRI",
+  "embeddable": true
+ },
+ "al-circuit-of-rainbow-t05": {
+  "id": "al-circuit-of-rainbow-t05",
+  "videoId": "qR2Hf4gASpE",
+  "title": "ANRI／失恋ゲームが終るまで",
+  "channel": "Summer Lake",
+  "duration": 273,
+  "query": "失恋ゲームが終るまで ANRI",
+  "embeddable": true
+ },
+ "al-circuit-of-rainbow-t03": {
+  "id": "al-circuit-of-rainbow-t03",
+  "videoId": "tfMtdVseZt0",
+  "title": "SILLY CITY GIRL",
+  "channel": "Anri - Topic",
+  "duration": 180,
+  "query": "Asian Girl ANRI",
+  "embeddable": true
+ },
+ "al-circuit-of-rainbow-t08": {
+  "id": "al-circuit-of-rainbow-t08",
+  "videoId": "M3rZlJZuYAM",
+  "title": "杏里 ANRI / Groove A・Go・Go [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 328,
+  "query": "Groove A Go Go ANRI",
+  "embeddable": true
+ },
+ "al-circuit-of-rainbow-t07": {
+  "id": "al-circuit-of-rainbow-t07",
+  "videoId": "vdCKumKt5Ak",
+  "title": "Havana Beans ((DANCIN' TUNE))",
+  "channel": "Anri - Topic",
+  "duration": 111,
+  "query": "Havana Beans ANRI",
+  "embeddable": true
+ },
+ "al-circuit-of-rainbow-t06": {
+  "id": "al-circuit-of-rainbow-t06",
+  "videoId": "HV2XPNnMZxY",
+  "title": "ANRI - Who Knows My Loneliness",
+  "channel": "Bong Salon",
+  "duration": 402,
+  "query": "WHO KNOWS MY LONELINESS? ANRI",
+  "embeddable": true
+ },
+ "al-circuit-of-rainbow-t10": {
+  "id": "al-circuit-of-rainbow-t10",
+  "videoId": "NhPRegXAw3k",
+  "title": "ANRI／MISS YOU, MISS ME",
+  "channel": "Summer Lake",
+  "duration": 255,
+  "query": "MISS YOU, MISS ME ANRI",
+  "embeddable": true
+ },
+ "al-circuit-of-rainbow-t11": {
+  "id": "al-circuit-of-rainbow-t11",
+  "videoId": "3q_Vy1qVE1M",
+  "title": "センチメンタルを捨てた人",
+  "channel": "Anri - Topic",
+  "duration": 308,
+  "query": "Sentimental o Sutekata Hito ANRI",
+  "embeddable": true
+ },
+ "al-circuit-of-rainbow-t09": {
+  "id": "al-circuit-of-rainbow-t09",
+  "videoId": "xDvhRV9TzTc",
+  "title": "Anri - P.S. 言葉にならない [P.S. Kotoba Ni Naranai]",
+  "channel": "Keir Hardie",
+  "duration": 306,
+  "query": "P.S. Kotoba ni Naranai ANRI",
+  "embeddable": true
+ },
+ "al-circuit-of-rainbow-t12": {
+  "id": "al-circuit-of-rainbow-t12",
+  "videoId": "N-8Cge04Vuk",
+  "title": "LOVERS ON VENUS",
+  "channel": "Anri - Topic",
+  "duration": 316,
+  "query": "LOVERS ON VENUS ANRI",
+  "embeddable": true
+ },
+ "al-mind-cruisin-t02": {
+  "id": "al-mind-cruisin-t02",
+  "videoId": "gZVfO_UHMjY",
+  "title": "V.S. SPACE POWER",
+  "channel": "Anri - Topic",
+  "duration": 241,
+  "query": "V.S. SPACE POWER ANRI",
+  "embeddable": true
+ },
+ "al-mind-cruisin-t04": {
+  "id": "al-mind-cruisin-t04",
+  "videoId": "yhVhnSnvtQ8",
+  "title": "杏里　ANRI　アンリ STARDUST GO HOME(ENGLISHバージョン) スターダストゴーホーム　🎤♪🎶［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 321,
+  "query": "STARDUST GO HOME ANRI",
+  "embeddable": true
+ },
+ "al-mind-cruisin-t01": {
+  "id": "al-mind-cruisin-t01",
+  "videoId": "XuHDXVClpwQ",
+  "title": "SOUTHERN COMFORT",
+  "channel": "Anri - Topic",
+  "duration": 267,
+  "query": "SOUTHERN CURRENT ANRI",
+  "embeddable": true
+ },
+ "al-mind-cruisin-t05": {
+  "id": "al-mind-cruisin-t05",
+  "videoId": "Df5QnKth3Os",
+  "title": "WHAT'S UP SISTERS",
+  "channel": "Anri - Topic",
+  "duration": 253,
+  "query": "WHAT'S UP SISTERS ANRI",
+  "embeddable": true
+ },
+ "al-mind-cruisin-t03": {
+  "id": "al-mind-cruisin-t03",
+  "videoId": "9UOaQpJJYXQ",
+  "title": "MIND CRUISIN'",
+  "channel": "Anri - Topic",
+  "duration": 257,
+  "query": "MIND CRUSIN' ANRI",
+  "embeddable": true
+ },
+ "al-mind-cruisin-t07": {
+  "id": "al-mind-cruisin-t07",
+  "videoId": "3tR8FP-V_UM",
+  "title": "JOSHUA ((INSTRUMENTAL TUNE))",
+  "channel": "Anri - Topic",
+  "duration": 106,
+  "query": "JOSHUA ANRI",
+  "embeddable": true
+ },
+ "al-mind-cruisin-t06": {
+  "id": "al-mind-cruisin-t06",
+  "videoId": "CcJi8FwS114",
+  "title": "杏里 ANRI / EVER BLUE [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 238,
+  "query": "SHADE OF BLUE ANRI",
+  "embeddable": true
+ },
+ "al-mind-cruisin-t09": {
+  "id": "al-mind-cruisin-t09",
+  "videoId": "9Taxiqn9GPI",
+  "title": "My Lost Angel | First Heartbreak | Anri W.T.",
+  "channel": "Anri W.T.",
+  "duration": 247,
+  "query": "Heartbreak Kōatsuryō ANRI",
+  "embeddable": true
+ },
+ "al-mind-cruisin-t08": {
+  "id": "al-mind-cruisin-t08",
+  "videoId": "7WrU0UV1cdY",
+  "title": "晩夏の恋人たちへ",
+  "channel": "Anri - Topic",
+  "duration": 338,
+  "query": "Banshatsu no Koibito-tachi e ANRI",
+  "embeddable": true
+ },
+ "al-mind-cruisin-t10": {
+  "id": "al-mind-cruisin-t10",
+  "videoId": "UbNtQitXrlg",
+  "title": "ANRI 杏里 / Love Letters［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 272,
+  "query": "LOVE LETTERS ANRI",
+  "embeddable": true
+ },
+ "al-mind-cruisin-t11": {
+  "id": "al-mind-cruisin-t11",
+  "videoId": "cXjv1nUIWQo",
+  "title": "ANRI／BIG FIGHT BIG KISS",
+  "channel": "Summer Lake",
+  "duration": 286,
+  "query": "BIG FIGHT BIG KISS ANRI",
+  "embeddable": true
+ },
+ "al-neutral-t01": {
+  "id": "al-neutral-t01",
+  "videoId": "-JUUskGsIiA",
+  "title": "杏里 ANRI  ”Back to the BASIC”",
+  "channel": "ANRI 杏里 Official",
+  "duration": 329,
+  "query": "Back to the BASIC ANRI",
+  "embeddable": true
+ },
+ "al-neutral-t02": {
+  "id": "al-neutral-t02",
+  "videoId": "J2lT33vwteA",
+  "title": "ANRI 杏里 アンリ / プライベート Sold out [Official Video] Private Sold Out",
+  "channel": "ANRI 杏里 Official",
+  "duration": 309,
+  "query": "Private Sold out ANRI",
+  "embeddable": true
+ },
+ "al-neutral-t03": {
+  "id": "al-neutral-t03",
+  "videoId": "rMgQ-T9IW9U",
+  "title": "ANRI／EARRING～TEARS OF TWO～",
+  "channel": "Summer Lake",
+  "duration": 310,
+  "query": "Earring ~tears of two~ ANRI",
+  "embeddable": true
+ },
+ "al-neutral-t04": {
+  "id": "al-neutral-t04",
+  "videoId": "dGJCkeDOi1M",
+  "title": "ANRI／RAP UP AFRICA",
+  "channel": "Summer Lake",
+  "duration": 273,
+  "query": "Rap Up Africa ANRI",
+  "embeddable": true
+ },
+ "al-neutral-t05": {
+  "id": "al-neutral-t05",
+  "videoId": "Mbl_Fz0p8Ig",
+  "title": "杏里 Anri duet with Peabo Bryson / VOICE OF MY HEART [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 308,
+  "query": "Voice of my heart ANRI",
+  "embeddable": true
+ },
+ "al-neutral-t06": {
+  "id": "al-neutral-t06",
+  "videoId": "ZoSiaZW5VNs",
+  "title": "杏里　ANRI　アンリ  Oasis　オアシス　🎤♪🎶🎸［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 299,
+  "query": "Oasis ANRI",
+  "embeddable": true
+ },
+ "al-neutral-t07": {
+  "id": "al-neutral-t07",
+  "videoId": "spurqSH3um0",
+  "title": "SWEET EMOTION",
+  "channel": "Anri - Topic",
+  "duration": 296,
+  "query": "Sweet Emotion ANRI",
+  "embeddable": true
+ },
+ "al-neutral-t08": {
+  "id": "al-neutral-t08",
+  "videoId": "KjLK8IUSPZM",
+  "title": "杏里 ANRI～9月のHometownから",
+  "channel": "snowflake",
+  "duration": 321,
+  "query": "9-gatsu no Hometown kara ANRI",
+  "embeddable": true
+ },
+ "al-neutral-t09": {
+  "id": "al-neutral-t09",
+  "videoId": "EN6igOMfDXU",
+  "title": "愛はCommunication",
+  "channel": "Anri - Topic",
+  "duration": 281,
+  "query": "愛はCommunication ANRI",
+  "embeddable": true
+ },
+ "al-neutral-t10": {
+  "id": "al-neutral-t10",
+  "videoId": "tGvPnKTSzxs",
+  "title": "ANRI 杏里「Mr.SANTA CLAUS～Present～」「St.Imagination」",
+  "channel": "ANRI 杏里 Official",
+  "duration": 235,
+  "query": "St. Imagination ANRI",
+  "embeddable": true
+ },
+ "al-neutral-t11": {
+  "id": "al-neutral-t11",
+  "videoId": "HvRnLE4WdrM",
+  "title": "嘘ならやさしく",
+  "channel": "Anri - Topic",
+  "duration": 333,
+  "query": "Uso Nara Yasashiku ANRI",
+  "embeddable": true
+ },
+ "c-1991-mfs2-t01": {
+  "id": "c-1991-mfs2-t01",
+  "videoId": "BHaFtZSo7nQ",
+  "title": "ANRI's Christmas Songs 杏里 クリスマスソング [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 1435,
+  "query": "Christmas Calendar ANRI",
+  "embeddable": true
+ },
+ "c-1991-mfs2-t02": {
+  "id": "c-1991-mfs2-t02",
+  "videoId": "SybIlOUyGfE",
+  "title": "ボーイフレンド",
+  "channel": "Anri - Topic",
+  "duration": 302,
+  "query": "Boyfriend ANRI",
+  "embeddable": true
+ },
+ "c-1991-mfs2-t03": {
+  "id": "c-1991-mfs2-t03",
+  "videoId": "kWkvnJG6eLE",
+  "title": "ANRI／さよなら SINGLE DAYS",
+  "channel": "Summer Lake",
+  "duration": 326,
+  "query": "Sayonara Single Days ANRI",
+  "embeddable": true
+ },
+ "c-1991-mfs2-t06": {
+  "id": "c-1991-mfs2-t06",
+  "videoId": "ijRuure-ge0",
+  "title": "愛してるなんてとても言えない",
+  "channel": "Anri - Topic",
+  "duration": 299,
+  "query": "愛してるなんてとても言えない ANRI",
+  "embeddable": true
+ },
+ "c-1991-mfs2-t04": {
+  "id": "c-1991-mfs2-t04",
+  "videoId": "ZQrLQxtXrcc",
+  "title": "(Yamaha Electone HS 8) 最後のサーフホリデー Saigo no sāfuhoridē (Last Surf Holiday) - 杏里 Anri",
+  "channel": "碧玉澜诗",
+  "duration": 260,
+  "query": "Saigo no Surf Holiday ANRI",
+  "embeddable": true
+ },
+ "c-1991-mfs2-t07": {
+  "id": "c-1991-mfs2-t07",
+  "videoId": "eOS6Oa9xVf8",
+  "title": "杏里 ANRI/スノーフレイクの街角 Snowflake no Machikado",
+  "channel": "ANRI 杏里 Official",
+  "duration": 191,
+  "query": "Snow Flake no Machikado ANRI",
+  "embeddable": true
+ },
+ "c-1991-mfs2-t08": {
+  "id": "c-1991-mfs2-t08",
+  "videoId": "M3rZlJZuYAM",
+  "title": "杏里 ANRI / Groove A・Go・Go [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 328,
+  "query": "Groove A Go Go ANRI",
+  "embeddable": true
+ },
+ "c-1991-mfs2-t09": {
+  "id": "c-1991-mfs2-t09",
+  "videoId": "xDvhRV9TzTc",
+  "title": "Anri - P.S. 言葉にならない [P.S. Kotoba Ni Naranai]",
+  "channel": "Keir Hardie",
+  "duration": 306,
+  "query": "P.S. Kotoba ni Naranai ANRI",
+  "embeddable": true
+ },
+ "c-1991-mfs2-t05": {
+  "id": "c-1991-mfs2-t05",
+  "videoId": "eP2vwliwSDo",
+  "title": "杏里 ANRI / SUMMER CANDLES [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 390,
+  "query": "Summer Candles ANRI",
+  "embeddable": true
+ },
+ "c-1991-mfs2-t12": {
+  "id": "c-1991-mfs2-t12",
+  "videoId": "yhVhnSnvtQ8",
+  "title": "杏里　ANRI　アンリ STARDUST GO HOME(ENGLISHバージョン) スターダストゴーホーム　🎤♪🎶［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 321,
+  "query": "Stardust Go Home (English) ANRI",
+  "embeddable": true
+ },
+ "c-1991-mfs2-t11": {
+  "id": "c-1991-mfs2-t11",
+  "videoId": "spurqSH3um0",
+  "title": "SWEET EMOTION",
+  "channel": "Anri - Topic",
+  "duration": 296,
+  "query": "Sweet Emotion (Single Version) ANRI",
+  "embeddable": true
+ },
+ "c-1991-mfs2-t13": {
+  "id": "c-1991-mfs2-t13",
+  "videoId": "-JUUskGsIiA",
+  "title": "杏里 ANRI  ”Back to the BASIC”",
+  "channel": "ANRI 杏里 Official",
+  "duration": 329,
+  "query": "Back to the Basic (Remix #1) ANRI",
+  "embeddable": true
+ },
+ "c-1991-mfs2-t15": {
+  "id": "c-1991-mfs2-t15",
+  "videoId": "uWqnsVMc8CQ",
+  "title": "ANRI アンリ 杏里    ”Last Summer  Whisper”  Heaven Beach🎤♪🎶🎸［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 249,
+  "query": "Last Love ANRI",
+  "embeddable": true
+ },
+ "c-1991-mfs2-t10": {
+  "id": "c-1991-mfs2-t10",
+  "videoId": "9UOaQpJJYXQ",
+  "title": "MIND CRUISIN'",
+  "channel": "Anri - Topic",
+  "duration": 257,
+  "query": "Mind Cruisin' ANRI",
+  "embeddable": true
+ },
+ "c-1991-mfs2-t14": {
+  "id": "c-1991-mfs2-t14",
+  "videoId": "HvRnLE4WdrM",
+  "title": "嘘ならやさしく",
+  "channel": "Anri - Topic",
+  "duration": 333,
+  "query": "Uso Nara Yasashiku ANRI",
+  "embeddable": true
+ },
+ "al-moana-lani-t01": {
+  "id": "al-moana-lani-t01",
+  "videoId": "cA1PTbTd_Zc",
+  "title": "PAPAYA PAPAIYA",
+  "channel": "Anri - Topic",
+  "duration": 134,
+  "query": "PAPAYA PAPAIA ANRI",
+  "embeddable": true
+ },
+ "al-moana-lani-t02": {
+  "id": "al-moana-lani-t02",
+  "videoId": "hm1f42dVCsU",
+  "title": "KOHOLA TAIL",
+  "channel": "Anri - Topic",
+  "duration": 297,
+  "query": "KOHOLA TAIL ANRI",
+  "embeddable": true
+ },
+ "al-moana-lani-t05": {
+  "id": "al-moana-lani-t05",
+  "videoId": "c77ddD0e940",
+  "title": "ANRI／SURF BREAK HALEIWA",
+  "channel": "Summer Lake",
+  "duration": 304,
+  "query": "Surf Break HALEIWA ANRI",
+  "embeddable": true
+ },
+ "al-moana-lani-t03": {
+  "id": "al-moana-lani-t03",
+  "videoId": "KiSLol8wxEc",
+  "title": "ANRI／愛は誰のものでもなく",
+  "channel": "Summer Lake",
+  "duration": 280,
+  "query": "愛は誰のものでもなく ANRI",
+  "embeddable": true
+ },
+ "al-moana-lani-t07": {
+  "id": "al-moana-lani-t07",
+  "videoId": "37VSZLdbfLo",
+  "title": "ANRI／夕なぎ",
+  "channel": "Summer Lake",
+  "duration": 307,
+  "query": "夕なぎ ANRI",
+  "embeddable": true
+ },
+ "al-moana-lani-t06": {
+  "id": "al-moana-lani-t06",
+  "videoId": "4XmHMYAH8Ck",
+  "title": "杏里 ANRI  / RETURN WITH LOVE [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 279,
+  "query": "RETURN WITH LOVE ANRI",
+  "embeddable": true
+ },
+ "al-moana-lani-t04": {
+  "id": "al-moana-lani-t04",
+  "videoId": "baUVlItzvPI",
+  "title": "Night of Shooting Stars ft. ANRI Arcane【#AOFEST2024】",
+  "channel": "Panny",
+  "duration": 271,
+  "query": "Saigo no Shooting Star ANRI",
+  "embeddable": true
+ },
+ "al-moana-lani-t09": {
+  "id": "al-moana-lani-t09",
+  "videoId": "F_qqRznv-Iw",
+  "title": "週末だけのPARADISE",
+  "channel": "Anri - Topic",
+  "duration": 311,
+  "query": "Shūmatsu dake no PARADISE ANRI",
+  "embeddable": true
+ },
+ "al-moana-lani-t08": {
+  "id": "al-moana-lani-t08",
+  "videoId": "n56fUpy0bb0",
+  "title": "杏里 ANRI / Move Me [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 294,
+  "query": "MOVE ME ANRI",
+  "embeddable": true
+ },
+ "al-moana-lani-t10": {
+  "id": "al-moana-lani-t10",
+  "videoId": "_A9WU5XALt4",
+  "title": "ANRI 杏里 / GIRLS IN SUMMER",
+  "channel": "ANRI 杏里 Official",
+  "duration": 164,
+  "query": "GIRLS IN SUMMER ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t01": {
+  "id": "c-1994-16th-summer-breeze-t01",
+  "videoId": "RSYL4ewX1z4",
+  "title": "杏里 ANRI / ALL OF YOU オールオブユー [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 257,
+  "query": "All of You ANRI",
+  "embeddable": true
+ },
+ "al-moana-lani-t11": {
+  "id": "al-moana-lani-t11",
+  "videoId": "uhvkLNCOsz4",
+  "title": "LANI ～Heavenly Garden～",
+  "channel": "Anri - Topic",
+  "duration": 272,
+  "query": "Lani: Heavenly Garden ANRI",
+  "embeddable": true
+ },
+ "al-moana-lani-t12": {
+  "id": "al-moana-lani-t12",
+  "videoId": "YoxPgsiw_mo",
+  "title": "杏里　ANRI　アンリ  Dreaming  ドリーミング 　🎤♪🎶［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 327,
+  "query": "Dreaming ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t02": {
+  "id": "c-1994-16th-summer-breeze-t02",
+  "videoId": "XIql3d8uOSc",
+  "title": "I CAN'T EVER CHANGE YOUR LOVE FOR ME",
+  "channel": "Anri - Topic",
+  "duration": 263,
+  "query": "I Can't Ever Change Your Love for Me ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t03": {
+  "id": "c-1994-16th-summer-breeze-t03",
+  "videoId": "QKHZJNIlOHk",
+  "title": "SURF CITY",
+  "channel": "Anri - Topic",
+  "duration": 261,
+  "query": "Surf City ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t05": {
+  "id": "c-1994-16th-summer-breeze-t05",
+  "videoId": "OqOHMMavyKk",
+  "title": "杏里 ANRI / MERCURY LAMP 水銀燈 [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 336,
+  "query": "Mercury Lamp ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t06": {
+  "id": "c-1994-16th-summer-breeze-t06",
+  "videoId": "ijFyx7fZvoQ",
+  "title": "OVERSEA CALL",
+  "channel": "Anri - Topic",
+  "duration": 265,
+  "query": "Oversea Call ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t04": {
+  "id": "c-1994-16th-summer-breeze-t04",
+  "videoId": "T2zwxG7gZNk",
+  "title": "杏里 ANRI  /  INNOCENT TIME",
+  "channel": "ANRI 杏里 Official",
+  "duration": 309,
+  "query": "Innocent Time ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t07": {
+  "id": "c-1994-16th-summer-breeze-t07",
+  "videoId": "xapXF_IJlYQ",
+  "title": "ANRI 杏里 アンリ / CATCH THE WIND [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 266,
+  "query": "Catch the Wind ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t08": {
+  "id": "c-1994-16th-summer-breeze-t08",
+  "videoId": "6q6GtPdVHL4",
+  "title": "悲しみがとまらない　I CAN'T STOP THE LONELINESS",
+  "channel": "Anri - Topic",
+  "duration": 267,
+  "query": "Kanashimi ga Tomaranai ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t09": {
+  "id": "c-1994-16th-summer-breeze-t09",
+  "videoId": "F_qqRznv-Iw",
+  "title": "週末だけのPARADISE",
+  "channel": "Anri - Topic",
+  "duration": 311,
+  "query": "Weekend Only Paradise ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t12": {
+  "id": "c-1994-16th-summer-breeze-t12",
+  "videoId": "CALKvhZ6I7s",
+  "title": "HAPPY ENDでふられたい",
+  "channel": "Anri - Topic",
+  "duration": 240,
+  "query": "Happy End de Furaretai ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t11": {
+  "id": "c-1994-16th-summer-breeze-t11",
+  "videoId": "0yad80tlWOo",
+  "title": "SURF & TEARS",
+  "channel": "Anri - Topic",
+  "duration": 307,
+  "query": "Surf & Tears ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t13": {
+  "id": "c-1994-16th-summer-breeze-t13",
+  "videoId": "yhVhnSnvtQ8",
+  "title": "杏里　ANRI　アンリ STARDUST GO HOME(ENGLISHバージョン) スターダストゴーホーム　🎤♪🎶［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 321,
+  "query": "Stardust Go Home ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t14": {
+  "id": "c-1994-16th-summer-breeze-t14",
+  "videoId": "XFc63HYzdFQ",
+  "title": "センチメンタルを捨てた人",
+  "channel": "Anri - Topic",
+  "duration": 333,
+  "query": "Sentimental o Suteta Hito ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t15": {
+  "id": "c-1994-16th-summer-breeze-t15",
+  "videoId": "9UOaQpJJYXQ",
+  "title": "MIND CRUISIN'",
+  "channel": "Anri - Topic",
+  "duration": 257,
+  "query": "Mind Cruisin' ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t16": {
+  "id": "c-1994-16th-summer-breeze-t16",
+  "videoId": "Mbl_Fz0p8Ig",
+  "title": "杏里 Anri duet with Peabo Bryson / VOICE OF MY HEART [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 308,
+  "query": "Voice of My Heart ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t17": {
+  "id": "c-1994-16th-summer-breeze-t17",
+  "videoId": "SybIlOUyGfE",
+  "title": "ボーイフレンド",
+  "channel": "Anri - Topic",
+  "duration": 302,
+  "query": "Boyfriend ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t18": {
+  "id": "c-1994-16th-summer-breeze-t18",
+  "videoId": "tNwZ6OL8NcE",
+  "title": "シャネルでグッドバイ",
+  "channel": "Anri - Topic",
+  "duration": 278,
+  "query": "Goodbye in Chanel ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t19": {
+  "id": "c-1994-16th-summer-breeze-t19",
+  "videoId": "VHOmaAtzH_4",
+  "title": "DANCE WITH NOSTALGIA",
+  "channel": "Anri - Topic",
+  "duration": 271,
+  "query": "Dance with Nostalgia ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t20": {
+  "id": "c-1994-16th-summer-breeze-t20",
+  "videoId": "XfKkXmpfXZs",
+  "title": "MORNING HIGHWAY",
+  "channel": "Anri - Topic",
+  "duration": 234,
+  "query": "Morning Highway ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t21": {
+  "id": "c-1994-16th-summer-breeze-t21",
+  "videoId": "NiYNCqaQ574",
+  "title": "【期間限定】杏里　ANRI　アンリ  BOOGIE WOOGIE MAINLAND  ブギウギ メインランド　🎤♪🎶［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 260,
+  "query": "Boogie Woogie Mainland ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t23": {
+  "id": "c-1994-16th-summer-breeze-t23",
+  "videoId": "_A9WU5XALt4",
+  "title": "ANRI 杏里 / GIRLS IN SUMMER",
+  "channel": "ANRI 杏里 Official",
+  "duration": 164,
+  "query": "Girls in Summer ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t22": {
+  "id": "c-1994-16th-summer-breeze-t22",
+  "videoId": "537cU-KhsXU",
+  "title": "最後のサーフホリデー -Surf City Version-",
+  "channel": "Anri - Topic",
+  "duration": 270,
+  "query": "Saigo no Surf Holiday ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t25": {
+  "id": "c-1994-16th-summer-breeze-t25",
+  "videoId": "-JUUskGsIiA",
+  "title": "杏里 ANRI  ”Back to the BASIC”",
+  "channel": "ANRI 杏里 Official",
+  "duration": 329,
+  "query": "Back to the Basic ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t26": {
+  "id": "c-1994-16th-summer-breeze-t26",
+  "videoId": "spurqSH3um0",
+  "title": "SWEET EMOTION",
+  "channel": "Anri - Topic",
+  "duration": 296,
+  "query": "Sweet Emotion ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t27": {
+  "id": "c-1994-16th-summer-breeze-t27",
+  "videoId": "Jleg6lsvSuo",
+  "title": "🌴 Anri - Dolphin Ring 🌊",
+  "channel": "Essence",
+  "duration": 316,
+  "query": "Dolphin Ring ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t28": {
+  "id": "c-1994-16th-summer-breeze-t28",
+  "videoId": "HvRnLE4WdrM",
+  "title": "嘘ならやさしく",
+  "channel": "Anri - Topic",
+  "duration": 333,
+  "query": "Uso Nara Yasashiku ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t24": {
+  "id": "c-1994-16th-summer-breeze-t24",
+  "videoId": "M3rZlJZuYAM",
+  "title": "杏里 ANRI / Groove A・Go・Go [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 328,
+  "query": "Groove A Go Go ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t30": {
+  "id": "c-1994-16th-summer-breeze-t30",
+  "videoId": "zEpIzC-COnA",
+  "title": "OLIVIA O KIKINAGARA",
+  "channel": "Anri - Topic",
+  "duration": 327,
+  "query": "Olivia wo Kikinagara ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t29": {
+  "id": "c-1994-16th-summer-breeze-t29",
+  "videoId": "n56fUpy0bb0",
+  "title": "杏里 ANRI / Move Me [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 294,
+  "query": "Move Me ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t01": {
+  "id": "c-1995-opus-21-t01",
+  "videoId": "tuBHVBum5Kg",
+  "title": "ANRI 杏里 / 砂浜 Sunahama 【歌詞 Lyrics】[Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 282,
+  "query": "Sunahama ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t02": {
+  "id": "c-1995-opus-21-t02",
+  "videoId": "6zVmoXRSxQ4",
+  "title": "🌴 Anri - ONE -Ai Wa Futari No Kotoba Dakara- 🌊",
+  "channel": "Essence",
+  "duration": 292,
+  "query": "One ~Ai wa Futari no Kotoba Dakara~ ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t05": {
+  "id": "c-1995-opus-21-t05",
+  "videoId": "Ef9ksD7RZyE",
+  "title": "ANRI 杏里 アンリ / Shoo-be Doo-be My Boy [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 339,
+  "query": "Shoo-Be Doo-Be My Boy ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t03": {
+  "id": "c-1995-opus-21-t03",
+  "videoId": "HXPjj85oUz0",
+  "title": "霧雨に消えてゆく",
+  "channel": "Anri - Topic",
+  "duration": 290,
+  "query": "Kirisame ni Kiete Yuku ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t06": {
+  "id": "c-1995-opus-21-t06",
+  "videoId": "LpJ4jwl9pi8",
+  "title": "【期間限定】杏里 ANRI アンリ  GOOD-NIGHT FOR YOU  グッドナイトフォーユー　🎤♪🎶［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 386,
+  "query": "Good-Night for You ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t08": {
+  "id": "c-1995-opus-21-t08",
+  "videoId": "uhvkLNCOsz4",
+  "title": "LANI ～Heavenly Garden～",
+  "channel": "Anri - Topic",
+  "duration": 272,
+  "query": "LANI〜Heavenly Garden〜 ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t04": {
+  "id": "c-1995-opus-21-t04",
+  "videoId": "HV2XPNnMZxY",
+  "title": "ANRI - Who Knows My Loneliness",
+  "channel": "Bong Salon",
+  "duration": 402,
+  "query": "Who Knows My Loneliness? ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t07": {
+  "id": "c-1995-opus-21-t07",
+  "videoId": "rGsK5TJR6J0",
+  "title": "HEAVEN BEACH",
+  "channel": "Anri - Topic",
+  "duration": 328,
+  "query": "Edge of Heaven ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t10": {
+  "id": "c-1995-opus-21-t10",
+  "videoId": "eP2vwliwSDo",
+  "title": "杏里 ANRI / SUMMER CANDLES [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 390,
+  "query": "Summer Candles ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t09": {
+  "id": "c-1995-opus-21-t09",
+  "videoId": "NGtXpVRU6Hw",
+  "title": "ANRI／晩夏の恋人たちへ",
+  "channel": "Summer Lake",
+  "duration": 317,
+  "query": "晩夏の恋人たちへ ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t11": {
+  "id": "c-1995-opus-21-t11",
+  "videoId": "cB4tDPmRYXs",
+  "title": "MOON IN THE RAIN",
+  "channel": "Anri - Topic",
+  "duration": 302,
+  "query": "Moon in the Rain ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t13": {
+  "id": "c-1995-opus-21-t13",
+  "videoId": "kWkvnJG6eLE",
+  "title": "ANRI／さよなら SINGLE DAYS",
+  "channel": "Summer Lake",
+  "duration": 326,
+  "query": "Sayonara Single Days ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t14": {
+  "id": "c-1995-opus-21-t14",
+  "videoId": "baUVlItzvPI",
+  "title": "Night of Shooting Stars ft. ANRI Arcane【#AOFEST2024】",
+  "channel": "Panny",
+  "duration": 271,
+  "query": "Saigo no Shooting Star ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t15": {
+  "id": "c-1995-opus-21-t15",
+  "videoId": "eOS6Oa9xVf8",
+  "title": "杏里 ANRI/スノーフレイクの街角 Snowflake no Machikado",
+  "channel": "ANRI 杏里 Official",
+  "duration": 191,
+  "query": "Snow Flake no Machikado ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t12": {
+  "id": "c-1995-opus-21-t12",
+  "videoId": "BHaFtZSo7nQ",
+  "title": "ANRI's Christmas Songs 杏里 クリスマスソング [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 1435,
+  "query": "Christmas Calendar ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t18": {
+  "id": "c-1995-opus-21-t18",
+  "videoId": "YoxPgsiw_mo",
+  "title": "杏里　ANRI　アンリ  Dreaming  ドリーミング 　🎤♪🎶［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 327,
+  "query": "Dreaming ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t19": {
+  "id": "c-1995-opus-21-t19",
+  "videoId": "xDvhRV9TzTc",
+  "title": "Anri - P.S. 言葉にならない [P.S. Kotoba Ni Naranai]",
+  "channel": "Keir Hardie",
+  "duration": 306,
+  "query": "P.S. Kotoba ni Naranai ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t17": {
+  "id": "c-1995-opus-21-t17",
+  "videoId": "UbNtQitXrlg",
+  "title": "ANRI 杏里 / Love Letters［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 272,
+  "query": "Love Letters ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t16": {
+  "id": "c-1995-opus-21-t16",
+  "videoId": "ZoSiaZW5VNs",
+  "title": "杏里　ANRI　アンリ  Oasis　オアシス　🎤♪🎶🎸［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 299,
+  "query": "Oasis ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t22": {
+  "id": "c-1995-opus-21-t22",
+  "videoId": "tGvPnKTSzxs",
+  "title": "ANRI 杏里「Mr.SANTA CLAUS～Present～」「St.Imagination」",
+  "channel": "ANRI 杏里 Official",
+  "duration": 235,
+  "query": "St. Imagination ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t23": {
+  "id": "c-1995-opus-21-t23",
+  "videoId": "FIPA8LHiWdw",
+  "title": "D.J. I LOVE YOU",
+  "channel": "Anri - Topic",
+  "duration": 279,
+  "query": "D.J. I Love You ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t24": {
+  "id": "c-1995-opus-21-t24",
+  "videoId": "IkfCXzm1GUQ",
+  "title": "杏里　ANRI　アンリ CURTAIN CALL　カーテンコール　🎤♪🎶［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 333,
+  "query": "Curtain Call ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t20": {
+  "id": "c-1995-opus-21-t20",
+  "videoId": "37VSZLdbfLo",
+  "title": "ANRI／夕なぎ",
+  "channel": "Summer Lake",
+  "duration": 307,
+  "query": "夕なぎ ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t21": {
+  "id": "c-1995-opus-21-t21",
+  "videoId": "N-8Cge04Vuk",
+  "title": "LOVERS ON VENUS",
+  "channel": "Anri - Topic",
+  "duration": 316,
+  "query": "Lovers on Venus ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t25": {
+  "id": "c-1995-opus-21-t25",
+  "videoId": "owQUKuQFwKQ",
+  "title": "YOU ARE NOT ALONE",
+  "channel": "Anri - Topic",
+  "duration": 250,
+  "query": "You Are Not Alone ANRI",
+  "embeddable": true
+ },
+ "al-angel-whisper-t01": {
+  "id": "al-angel-whisper-t01",
+  "videoId": "UZR9X615Kmw",
+  "title": "疑惑",
+  "channel": "Anri - Topic",
+  "duration": 266,
+  "query": "疑惑 ANRI",
+  "embeddable": true
+ },
+ "c-1995-opus-21-t26": {
+  "id": "c-1995-opus-21-t26",
+  "videoId": "shwAKcN8G9A",
+  "title": "ANRI／HEARTのRING A BELL",
+  "channel": "Summer Lake",
+  "duration": 279,
+  "query": "Heart no Ring a Bell ANRI",
+  "embeddable": true
+ },
+ "al-angel-whisper-t02": {
+  "id": "al-angel-whisper-t02",
+  "videoId": "MhZA8lriP3s",
+  "title": "レディの決意はダイヤモンドより硬い",
+  "channel": "Anri - Topic",
+  "duration": 315,
+  "query": "レディの決意はダイヤモンドより硬い ANRI",
+  "embeddable": true
+ },
+ "al-angel-whisper-t04": {
+  "id": "al-angel-whisper-t04",
+  "videoId": "NfTcqpbEhjI",
+  "title": "杏里 ANRI / もうひとつのBirthday [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 325,
+  "query": "Mou Hitotsu no Birthday ANRI",
+  "embeddable": true
+ },
+ "al-angel-whisper-t03": {
+  "id": "al-angel-whisper-t03",
+  "videoId": "DJIptQSSE3k",
+  "title": "杏里 ANRI / あの夏に戻りたい [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 272,
+  "query": "Ano Natsu ni Modoritai ANRI",
+  "embeddable": true
+ },
+ "al-angel-whisper-t05": {
+  "id": "al-angel-whisper-t05",
+  "videoId": "BSLwDbJiXpE",
+  "title": "1996年の玉手箱",
+  "channel": "Anri - Topic",
+  "duration": 262,
+  "query": "1996-nen no Tamatebako ANRI",
+  "embeddable": true
+ },
+ "al-angel-whisper-t06": {
+  "id": "al-angel-whisper-t06",
+  "videoId": "ZB5calsQ0Yg",
+  "title": "Angel's Gonna Cry",
+  "channel": "Anri - Topic",
+  "duration": 282,
+  "query": "Angel's Gonna Cry ANRI",
+  "embeddable": true
+ },
+ "al-angel-whisper-t09": {
+  "id": "al-angel-whisper-t09",
+  "videoId": "KG5cjVXThCw",
+  "title": "Wedding Shower",
+  "channel": "Anri - Topic",
+  "duration": 279,
+  "query": "Wedding Shower ANRI",
+  "embeddable": true
+ },
+ "al-angel-whisper-t07": {
+  "id": "al-angel-whisper-t07",
+  "videoId": "PfHgRQSaUMY",
+  "title": "ANRI 杏里 アンリ / Legend of Love【歌詞 Lyrics】[Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 282,
+  "query": "Legend of Love ANRI",
+  "embeddable": true
+ },
+ "al-angel-whisper-t08": {
+  "id": "al-angel-whisper-t08",
+  "videoId": "rNYSmFd7_ms",
+  "title": "Rakuen O Owarete",
+  "channel": "Release - Topic",
+  "duration": 389,
+  "query": "Rakuen o Mitsuketa Asa ANRI",
+  "embeddable": true
+ },
+ "al-angel-whisper-t11": {
+  "id": "al-angel-whisper-t11",
+  "videoId": "WGpGop1p728",
+  "title": "MORNING HIGHWAY",
+  "channel": "Anri - Topic",
+  "duration": 223,
+  "query": "Morning Dreamer ANRI",
+  "embeddable": true
+ },
+ "al-angel-whisper-t13": {
+  "id": "al-angel-whisper-t13",
+  "videoId": "eLzp4OCjg0Q",
+  "title": "もうひとつのBirthday ᐸRepriseᐳ",
+  "channel": "Anri - Topic",
+  "duration": 136,
+  "query": "Mou Hitotsu no Birthday (Reprise) ANRI",
+  "embeddable": true
+ },
+ "al-twin-soul-t01": {
+  "id": "al-twin-soul-t01",
+  "videoId": "PXy5YEaXFhQ",
+  "title": "踊らせて",
+  "channel": "Anri - Topic",
+  "duration": 250,
+  "query": "踊らせて ANRI",
+  "embeddable": true
+ },
+ "al-angel-whisper-t10": {
+  "id": "al-angel-whisper-t10",
+  "videoId": "kg606tLCB94",
+  "title": "Antonio's Song / The Rainbow (Duet with Michael Franks)",
+  "channel": "Anri - Topic",
+  "duration": 333,
+  "query": "Antonio's Song / The Rainbow ANRI",
+  "embeddable": true
+ },
+ "al-angel-whisper-t12": {
+  "id": "al-angel-whisper-t12",
+  "videoId": "fZb78PvoLcw",
+  "title": "Celebration On The Beach",
+  "channel": "Anri - Topic",
+  "duration": 296,
+  "query": "Celebration On The Beach ANRI",
+  "embeddable": true
+ },
+ "al-twin-soul-t02": {
+  "id": "al-twin-soul-t02",
+  "videoId": "CCOa5ow9I5U",
+  "title": "Future for you",
+  "channel": "Anri - Topic",
+  "duration": 281,
+  "query": "Future For You ANRI",
+  "embeddable": true
+ },
+ "al-twin-soul-t03": {
+  "id": "al-twin-soul-t03",
+  "videoId": "cAwo-TnwM80",
+  "title": "Midnight Sun",
+  "channel": "Anri - Topic",
+  "duration": 438,
+  "query": "Midnight Profiling ANRI",
+  "embeddable": true
+ },
+ "al-twin-soul-t05": {
+  "id": "al-twin-soul-t05",
+  "videoId": "HGwelsFhjRA",
+  "title": "浮気な彼のために",
+  "channel": "Anri - Topic",
+  "duration": 265,
+  "query": "Umarekawaru Tame ni ANRI",
+  "embeddable": true
+ },
+ "al-twin-soul-t04": {
+  "id": "al-twin-soul-t04",
+  "videoId": "V4mCaW9MFag",
+  "title": "ANRI／FOREVER TWIN SOUL",
+  "channel": "Summer Lake",
+  "duration": 309,
+  "query": "Forever Twin Soul ANRI",
+  "embeddable": true
+ },
+ "al-twin-soul-t07": {
+  "id": "al-twin-soul-t07",
+  "videoId": "sErWczOEfE0",
+  "title": "ANRI／OUR LITTLE ONE",
+  "channel": "Summer Lake",
+  "duration": 275,
+  "query": "Our Little One ANRI",
+  "embeddable": true
+ },
+ "al-twin-soul-t08": {
+  "id": "al-twin-soul-t08",
+  "videoId": "dtonpw5vRxw",
+  "title": "Anri - 晴れた日のワイパー (Rockapella on the BGVs) 1997",
+  "channel": "Nostalmania",
+  "duration": 347,
+  "query": "晴れた日のワイパー ANRI",
+  "embeddable": true
+ },
+ "al-twin-soul-t06": {
+  "id": "al-twin-soul-t06",
+  "videoId": "r2CFBtisCNk",
+  "title": "LOVER'S NIGHT",
+  "channel": "Anri - Topic",
+  "duration": 263,
+  "query": "EX-LOVER ANRI",
+  "embeddable": true
+ },
+ "al-twin-soul-t09": {
+  "id": "al-twin-soul-t09",
+  "videoId": "tGvPnKTSzxs",
+  "title": "ANRI 杏里「Mr.SANTA CLAUS～Present～」「St.Imagination」",
+  "channel": "ANRI 杏里 Official",
+  "duration": 235,
+  "query": "Mr. SANTA CLAUS ~Present~ ANRI",
+  "embeddable": true
+ },
+ "al-twin-soul-t12": {
+  "id": "al-twin-soul-t12",
+  "videoId": "kRZ1hKe-vUk",
+  "title": "CAT'S EYE -2000- Album Version",
+  "channel": "Anri - Topic",
+  "duration": 264,
+  "query": "Cat's Eye 2000 (Album Version) ANRI",
+  "embeddable": true
+ },
+ "al-twin-soul-t10": {
+  "id": "al-twin-soul-t10",
+  "videoId": "xQx5pOglUgs",
+  "title": "Close To You",
+  "channel": "Anri - Topic",
+  "duration": 240,
+  "query": "Close To You ANRI",
+  "embeddable": true
+ },
+ "al-moonlit-summer-tales-t02": {
+  "id": "al-moonlit-summer-tales-t02",
+  "videoId": "NBnI6UogA2w",
+  "title": "杏里 ANRI / Eternity エタニティ [Official Video] #ウェディングソング",
+  "channel": "ANRI 杏里 Official",
+  "duration": 289,
+  "query": "Eternity ANRI",
+  "embeddable": true
+ },
+ "al-twin-soul-t11": {
+  "id": "al-twin-soul-t11",
+  "videoId": "Zwo25_wXN00",
+  "title": "Anri Okita and Kaho Shibuya AVN 2016 Red Carpet Bounce and Kiss",
+  "channel": "The SMS Show",
+  "duration": 191,
+  "query": "KISS ANRI",
+  "embeddable": true
+ },
+ "al-moonlit-summer-tales-t03": {
+  "id": "al-moonlit-summer-tales-t03",
+  "videoId": "A0fYJ5zrP0s",
+  "title": "ANRI  アンリ  杏里   Lost Vacation  ロストバケーション　🎤♪🎶🎸［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 222,
+  "query": "Lost Vacation ANRI",
+  "embeddable": true
+ },
+ "al-moonlit-summer-tales-t04": {
+  "id": "al-moonlit-summer-tales-t04",
+  "videoId": "eVkGQqBioNE",
+  "title": "First Season",
+  "channel": "Anri - Topic",
+  "duration": 313,
+  "query": "First Season ANRI",
+  "embeddable": true
+ },
+ "al-moonlit-summer-tales-t05": {
+  "id": "al-moonlit-summer-tales-t05",
+  "videoId": "E7cEqWCVqKE",
+  "title": "ANRI／LONG WAY TO YOUR HEART",
+  "channel": "Summer Lake",
+  "duration": 306,
+  "query": "Long Way To Your Heart ANRI",
+  "embeddable": true
+ },
+ "al-moonlit-summer-tales-t06": {
+  "id": "al-moonlit-summer-tales-t06",
+  "videoId": "s3TV1QkL_b8",
+  "title": "自由な魚",
+  "channel": "Anri - Topic",
+  "duration": 297,
+  "query": "自由な魚 ANRI",
+  "embeddable": true
+ },
+ "al-moonlit-summer-tales-t10": {
+  "id": "al-moonlit-summer-tales-t10",
+  "videoId": "7wfHwRHtVAM",
+  "title": "What is love?",
+  "channel": "Anri - Topic",
+  "duration": 271,
+  "query": "What is love? ANRI",
+  "embeddable": true
+ },
+ "al-moonlit-summer-tales-t08": {
+  "id": "al-moonlit-summer-tales-t08",
+  "videoId": "3yHRqpP5o5c",
+  "title": "Soramimi",
+  "channel": "Anri - Topic",
+  "duration": 264,
+  "query": "Soramimi ANRI",
+  "embeddable": true
+ },
+ "al-moonlit-summer-tales-t12": {
+  "id": "al-moonlit-summer-tales-t12",
+  "videoId": "o39viP1N1eQ",
+  "title": "【期間限定】Anri 　アンリ　杏里   /   夏の月　Natsuno Tsuki  🎤♪🎶🎸［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 317,
+  "query": "Natsu no Tsuki (Reprise) ANRI",
+  "embeddable": true
+ },
+ "al-ever-blue-t01": {
+  "id": "al-ever-blue-t01",
+  "videoId": "CcJi8FwS114",
+  "title": "杏里 ANRI / EVER BLUE [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 238,
+  "query": "EVER BLUE ANRI",
+  "embeddable": true
+ },
+ "al-moonlit-summer-tales-t11": {
+  "id": "al-moonlit-summer-tales-t11",
+  "videoId": "YfRkFXURPlg",
+  "title": "Sin",
+  "channel": "Anri - Topic",
+  "duration": 227,
+  "query": "Sin ANRI",
+  "embeddable": true
+ },
+ "al-ever-blue-t03": {
+  "id": "al-ever-blue-t03",
+  "videoId": "U4aNeiHOuDM",
+  "title": "杏里 ANRI / 逢えないせつなさと [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 301,
+  "query": "Aenai Setsunasa to ANRI",
+  "embeddable": true
+ },
+ "al-moonlit-summer-tales-t09": {
+  "id": "al-moonlit-summer-tales-t09",
+  "videoId": "6caXf59ef9I",
+  "title": "ANRI　杏里　アンリ Sky Diver  スカイダイバー  プールの犬達  ゴールデンレトリバー  サーファーとダイバー🎤♪🎶🎸［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 213,
+  "query": "Sky Diver ANRI",
+  "embeddable": true
+ },
+ "al-ever-blue-t05": {
+  "id": "al-ever-blue-t05",
+  "videoId": "WGvf4G9HKU8",
+  "title": "左ききのジンクス",
+  "channel": "Anri - Topic",
+  "duration": 245,
+  "query": "左ききのジンクス ANRI",
+  "embeddable": true
+ },
+ "al-ever-blue-t02": {
+  "id": "al-ever-blue-t02",
+  "videoId": "e4HJzU-Q7QA",
+  "title": "Bless And Kiss",
+  "channel": "Anri - Topic",
+  "duration": 272,
+  "query": "Bless And Kiss ANRI",
+  "embeddable": true
+ },
+ "al-ever-blue-t04": {
+  "id": "al-ever-blue-t04",
+  "videoId": "LmpN6FdR1Fs",
+  "title": "Anri Kumaki (熊木杏里) - Mirai Shashin",
+  "channel": "Anri Kumaki 熊木杏里",
+  "duration": 306,
+  "query": "Mirai no Saisho no Hi ANRI",
+  "embeddable": true
+ },
+ "al-ever-blue-t06": {
+  "id": "al-ever-blue-t06",
+  "videoId": "rYNxwavFgKg",
+  "title": "ANRI 杏里 アンリ「Summerpolis」サマーポリス【歌詞 Lyrics】[Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 190,
+  "query": "Summerpolis ANRI",
+  "embeddable": true
+ },
+ "al-ever-blue-t08": {
+  "id": "al-ever-blue-t08",
+  "videoId": "7F25lpNGa0I",
+  "title": "Nasty",
+  "channel": "Anri - Topic",
+  "duration": 305,
+  "query": "Nasty ANRI",
+  "embeddable": true
+ },
+ "al-ever-blue-t10": {
+  "id": "al-ever-blue-t10",
+  "videoId": "hZDu7q9iLJE",
+  "title": "Daybreak",
+  "channel": "Anri - Topic",
+  "duration": 320,
+  "query": "Daybreak ANRI",
+  "embeddable": true
+ },
+ "al-ever-blue-t07": {
+  "id": "al-ever-blue-t07",
+  "videoId": "A2VoEZjrwV4",
+  "title": "Radiogenic",
+  "channel": "Anri - Topic",
+  "duration": 319,
+  "query": "Radiogenic ANRI",
+  "embeddable": true
+ },
+ "al-ever-blue-t11": {
+  "id": "al-ever-blue-t11",
+  "videoId": "uLvqegslX-g",
+  "title": "Love Songが聞こえる",
+  "channel": "Anri - Topic",
+  "duration": 298,
+  "query": "Love Song ga Kikoeru ANRI",
+  "embeddable": true
+ },
+ "al-beach-house-t01": {
+  "id": "al-beach-house-t01",
+  "videoId": "xNLUxDvQ7MA",
+  "title": "杏里 ANRI / Surf Break Highway [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 307,
+  "query": "Surf Break Highway ANRI",
+  "embeddable": true
+ },
+ "al-beach-house-t02": {
+  "id": "al-beach-house-t02",
+  "videoId": "cT1cjpAijfU",
+  "title": "今日は泣くのにふさわしい日",
+  "channel": "Anri - Topic",
+  "duration": 265,
+  "query": "今日は泣くのにふさわしい日 ANRI",
+  "embeddable": true
+ },
+ "al-beach-house-t03": {
+  "id": "al-beach-house-t03",
+  "videoId": "wImKmtZ6TAA",
+  "title": "Anri Kumaki (熊木杏里) - Ame",
+  "channel": "Anri Kumaki 熊木杏里",
+  "duration": 256,
+  "query": "Ame yori Setsunaku ANRI",
+  "embeddable": true
+ },
+ "al-beach-house-t04": {
+  "id": "al-beach-house-t04",
+  "videoId": "eESOF64-JN8",
+  "title": "AFFECTION",
+  "channel": "Anri - Topic",
+  "duration": 279,
+  "query": "Chain Affection ANRI",
+  "embeddable": true
+ },
+ "al-beach-house-t05": {
+  "id": "al-beach-house-t05",
+  "videoId": "WtFTvE5UqnM",
+  "title": "Touch Me in Paradise",
+  "channel": "Anri - Topic",
+  "duration": 323,
+  "query": "Touch Me in Paradise ANRI",
+  "embeddable": true
+ },
+ "al-beach-house-t06": {
+  "id": "al-beach-house-t06",
+  "videoId": "E26Ghyv3Qj0",
+  "title": "ANRI／たそがれ",
+  "channel": "Summer Lake",
+  "duration": 347,
+  "query": "たそがれ ANRI",
+  "embeddable": true
+ },
+ "al-beach-house-t07": {
+  "id": "al-beach-house-t07",
+  "videoId": "Mbl_Fz0p8Ig",
+  "title": "杏里 Anri duet with Peabo Bryson / VOICE OF MY HEART [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 308,
+  "query": "Voice to Voice ANRI",
+  "embeddable": true
+ },
+ "al-beach-house-t09": {
+  "id": "al-beach-house-t09",
+  "videoId": "6WtUnqkrLqc",
+  "title": "ANRI／愛しい",
+  "channel": "Summer Lake",
+  "duration": 315,
+  "query": "愛しい ANRI",
+  "embeddable": true
+ },
+ "al-beach-house-t10": {
+  "id": "al-beach-house-t10",
+  "videoId": "tRF2p4hBlj8",
+  "title": "杏里 ANRI / 千年の恋 [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 308,
+  "query": "Sennen no Koi ANRI",
+  "embeddable": true
+ },
+ "al-my-music-t01": {
+  "id": "al-my-music-t01",
+  "videoId": "XPHMr9uUXDc",
+  "title": "LOST LOVE IN THE RAIN",
+  "channel": "Anri - Topic",
+  "duration": 260,
+  "query": "Love Wonderland ANRI",
+  "embeddable": true
+ },
+ "al-my-music-t02": {
+  "id": "al-my-music-t02",
+  "videoId": "iQkViZ6XbfU",
+  "title": "杏里 ANRI / Sunset Beach Hotel [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 303,
+  "query": "Sunset Beach Hotel ANRI",
+  "embeddable": true
+ },
+ "al-beach-house-t08": {
+  "id": "al-beach-house-t08",
+  "videoId": "mSrsd-y8zcw",
+  "title": "Ten Years Later～ボーイフレンド再び～",
+  "channel": "Anri - Topic",
+  "duration": 353,
+  "query": "Ten Years Later ~Boyfriend Futari ni~ ANRI",
+  "embeddable": true
+ },
+ "al-my-music-t04": {
+  "id": "al-my-music-t04",
+  "videoId": "9RYWHUe731I",
+  "title": "Stardust Coast",
+  "channel": "Anri - Topic",
+  "duration": 329,
+  "query": "Stardust Coast ANRI",
+  "embeddable": true
+ },
+ "al-my-music-t06": {
+  "id": "al-my-music-t06",
+  "videoId": "Pme_z3Rn9KA",
+  "title": "Lady Sunshine",
+  "channel": "Anri - Topic",
+  "duration": 223,
+  "query": "Sunshine on me ANRI",
+  "embeddable": true
+ },
+ "al-my-music-t05": {
+  "id": "al-my-music-t05",
+  "videoId": "IPd0cY2g80s",
+  "title": "HE'S MY MUSIC",
+  "channel": "Anri - Topic",
+  "duration": 194,
+  "query": "My Music ANRI",
+  "embeddable": true
+ },
+ "al-my-music-t07": {
+  "id": "al-my-music-t07",
+  "videoId": "d9z4Xne6_2Q",
+  "title": "ANRI／TEARS IN CRYSTAL",
+  "channel": "Summer Lake",
+  "duration": 269,
+  "query": "Tears in Crystal (Album Version) ANRI",
+  "embeddable": true
+ },
+ "al-my-music-t09": {
+  "id": "al-my-music-t09",
+  "videoId": "zSZEX_LV_Js",
+  "title": "You are a star",
+  "channel": "Anri - Topic",
+  "duration": 273,
+  "query": "You are a Star ANRI",
+  "embeddable": true
+ },
+ "al-my-music-t10": {
+  "id": "al-my-music-t10",
+  "videoId": "BFVywvZ0AtM",
+  "title": "ANRI アンリ 杏里 / River of Life [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 281,
+  "query": "River of Life ANRI",
+  "embeddable": true
+ },
+ "ca-2002-smooth-jam-aspasia-t02": {
+  "id": "ca-2002-smooth-jam-aspasia-t02",
+  "videoId": "sHl4fyhAOqk",
+  "title": "It's Too Late",
+  "channel": "Anri - Topic",
+  "duration": 247,
+  "query": "It's Too Late ANRI",
+  "embeddable": true
+ },
+ "ca-2002-smooth-jam-aspasia-t01": {
+  "id": "ca-2002-smooth-jam-aspasia-t01",
+  "videoId": "Eamw4U5ZV1k",
+  "title": "Calina",
+  "channel": "Anri - Topic",
+  "duration": 266,
+  "query": "Calina ANRI",
+  "embeddable": true
+ },
+ "ca-2002-smooth-jam-aspasia-t03": {
+  "id": "ca-2002-smooth-jam-aspasia-t03",
+  "videoId": "8UN8BF29GBk",
+  "title": "ANRI／EVERYTHING'S ALRIGHT NOW",
+  "channel": "Summer Lake",
+  "duration": 260,
+  "query": "Everything's Alright Now ANRI",
+  "embeddable": true
+ },
+ "ca-2002-smooth-jam-aspasia-t04": {
+  "id": "ca-2002-smooth-jam-aspasia-t04",
+  "videoId": "-LnaK__yZQs",
+  "title": "Loving Blue",
+  "channel": "Anri - Topic",
+  "duration": 316,
+  "query": "Loving Blue ANRI",
+  "embeddable": true
+ },
+ "ca-2002-smooth-jam-aspasia-t05": {
+  "id": "ca-2002-smooth-jam-aspasia-t05",
+  "videoId": "J2lT33vwteA",
+  "title": "ANRI 杏里 アンリ / プライベート Sold out [Official Video] Private Sold Out",
+  "channel": "ANRI 杏里 Official",
+  "duration": 309,
+  "query": "Private Sold Out ANRI",
+  "embeddable": true
+ },
+ "ca-2002-smooth-jam-aspasia-t07": {
+  "id": "ca-2002-smooth-jam-aspasia-t07",
+  "videoId": "0S6uFdZoJok",
+  "title": "Funkin' For Jamaica",
+  "channel": "Anri - Topic",
+  "duration": 272,
+  "query": "Funkin' for Jamaica ANRI",
+  "embeddable": true
+ },
+ "ca-2002-smooth-jam-aspasia-t06": {
+  "id": "ca-2002-smooth-jam-aspasia-t06",
+  "videoId": "A0fYJ5zrP0s",
+  "title": "ANRI  アンリ  杏里   Lost Vacation  ロストバケーション　🎤♪🎶🎸［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 222,
+  "query": "Lost Vacation ANRI",
+  "embeddable": true
+ },
+ "ca-2002-smooth-jam-quiet-storm-t02": {
+  "id": "ca-2002-smooth-jam-quiet-storm-t02",
+  "videoId": "WtZ5aoyQw2Y",
+  "title": "杏里　ANRI　アンリ  『The Best of Me 』　Olivia Newton-John & David Foster",
+  "channel": "ANRI 杏里 Official",
+  "duration": 223,
+  "query": "The Best of Me ANRI",
+  "embeddable": true
+ },
+ "ca-2002-smooth-jam-quiet-storm-t03": {
+  "id": "ca-2002-smooth-jam-quiet-storm-t03",
+  "videoId": "kSd06jlCQ8A",
+  "title": "No Sympathy",
+  "channel": "Anri - Topic",
+  "duration": 331,
+  "query": "No Sympathy ANRI",
+  "embeddable": true
+ },
+ "ca-2002-smooth-jam-quiet-storm-t01": {
+  "id": "ca-2002-smooth-jam-quiet-storm-t01",
+  "videoId": "RVwQsCzg_nA",
+  "title": "Malibu",
+  "channel": "Anri - Topic",
+  "duration": 286,
+  "query": "Malibu ANRI",
+  "embeddable": true
+ },
+ "ca-2002-smooth-jam-quiet-storm-t04": {
+  "id": "ca-2002-smooth-jam-quiet-storm-t04",
+  "videoId": "VPJCFGhoUXQ",
+  "title": "Every Breath You Take",
+  "channel": "Anri - Topic",
+  "duration": 262,
+  "query": "Every Breath You Take ANRI",
+  "embeddable": true
+ },
+ "ca-2002-smooth-jam-quiet-storm-t05": {
+  "id": "ca-2002-smooth-jam-quiet-storm-t05",
+  "videoId": "U10CRir4HaY",
+  "title": "If We Try",
+  "channel": "Anri - Topic",
+  "duration": 283,
+  "query": "If ANRI",
+  "embeddable": true
+ },
+ "ca-2002-smooth-jam-quiet-storm-t06": {
+  "id": "ca-2002-smooth-jam-quiet-storm-t06",
+  "videoId": "CaDUGmxMYHY",
+  "title": "Hard To Say I'm Sorry - Chicago - Fingerstyle Guitar Tutorial + TAB & Lyrics",
+  "channel": "yunus guitarist",
+  "duration": 192,
+  "query": "Hard to Say I'm Sorry ANRI",
+  "embeddable": true
+ },
+ "ca-2002-smooth-jam-quiet-storm-t07": {
+  "id": "ca-2002-smooth-jam-quiet-storm-t07",
+  "videoId": "gWb57bWKuRw",
+  "title": "ANRI 杏里 アンリ / Somewhere in Time [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 160,
+  "query": "Somewhere in Time ANRI",
+  "embeddable": true
+ },
+ "al-sol-t01": {
+  "id": "al-sol-t01",
+  "videoId": "UWRdZ9l2tKk",
+  "title": "ANRI 杏里 アンリ / Field of Lights【歌詞 Lyrics】[Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 228,
+  "query": "Field of Lights ANRI",
+  "embeddable": true
+ },
+ "al-sol-t02": {
+  "id": "al-sol-t02",
+  "videoId": "anr-w0iWtyc",
+  "title": "Woman's Soul",
+  "channel": "Anri - Topic",
+  "duration": 386,
+  "query": "Woman's Soul ANRI",
+  "embeddable": true
+ },
+ "al-sol-t04": {
+  "id": "al-sol-t04",
+  "videoId": "MHnui-Tz4ZQ",
+  "title": "永遠にキスはしないで",
+  "channel": "Anri - Topic",
+  "duration": 331,
+  "query": "Eien ni Kiss wa Shinaide ANRI",
+  "embeddable": true
+ },
+ "al-sol-t03": {
+  "id": "al-sol-t03",
+  "videoId": "Ko7pbP8fn5s",
+  "title": "風に吹かれて",
+  "channel": "Anri - Topic",
+  "duration": 256,
+  "query": "風に吹かれて ANRI",
+  "embeddable": true
+ },
+ "al-sol-t06": {
+  "id": "al-sol-t06",
+  "videoId": "CzZnQrQ7LGE",
+  "title": "ANRI 杏里 アンリ \"Somewhere Sometime\" [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 243,
+  "query": "Somewhere Sometime ANRI",
+  "embeddable": true
+ },
+ "al-sol-t07": {
+  "id": "al-sol-t07",
+  "videoId": "KDhxv_gU4hk",
+  "title": "Not Serious But Free",
+  "channel": "Anri - Topic",
+  "duration": 248,
+  "query": "Not Serious But Free ANRI",
+  "embeddable": true
+ },
+ "al-sol-t08": {
+  "id": "al-sol-t08",
+  "videoId": "HAm0mlvrmEU",
+  "title": "あなたがそこにいるだけで",
+  "channel": "Anri - Topic",
+  "duration": 269,
+  "query": "あなたがそこにいるだけで ANRI",
+  "embeddable": true
+ },
+ "al-sol-t09": {
+  "id": "al-sol-t09",
+  "videoId": "V7zGTk5Vlkg",
+  "title": "Pride and Dream",
+  "channel": "Anri - Topic",
+  "duration": 266,
+  "query": "Pride and Dream ANRI",
+  "embeddable": true
+ },
+ "al-sol-t05": {
+  "id": "al-sol-t05",
+  "videoId": "lLscIE609lo",
+  "title": "Tender Solitude",
+  "channel": "Anri - Topic",
+  "duration": 311,
+  "query": "Tender Solitude ANRI",
+  "embeddable": true
+ },
+ "al-sol-t11": {
+  "id": "al-sol-t11",
+  "videoId": "fvGBrwbD5c0",
+  "title": "Everything Must Change",
+  "channel": "Anri - Topic",
+  "duration": 352,
+  "query": "Everything Must Change ANRI",
+  "embeddable": true
+ },
+ "al-sol-t12": {
+  "id": "al-sol-t12",
+  "videoId": "p035vRrTRqk",
+  "title": "ONLY HEAVEN CAN WAIT／杏里",
+  "channel": "Pinnacle 9 ww",
+  "duration": 241,
+  "query": "ONLY HEAVEN CAN WAIT (FOR LOVE) -reprise- ANRI",
+  "embeddable": true
+ },
+ "al-sol-t10": {
+  "id": "al-sol-t10",
+  "videoId": "6Pan2V_B5kc",
+  "title": "ONLY HEAVEN CAN WAIT (FOR LOVE)",
+  "channel": "Anri - Topic",
+  "duration": 239,
+  "query": "ONLY HEAVEN CAN WAIT (FOR LOVE) ANRI",
+  "embeddable": true
+ },
+ "al-2015-smooth-and-groove-t03": {
+  "id": "al-2015-smooth-and-groove-t03",
+  "videoId": "X8mISfcmGOk",
+  "title": "Eyes On Me",
+  "channel": "Anri - Topic",
+  "duration": 277,
+  "query": "Eyes On Me ANRI",
+  "embeddable": true
+ },
+ "al-2015-smooth-and-groove-t01": {
+  "id": "al-2015-smooth-and-groove-t01",
+  "videoId": "n9jkDwj5gJM",
+  "title": "ANRI／GROOVING LIFE",
+  "channel": "Summer Lake",
+  "duration": 273,
+  "query": "Grooving Life ANRI",
+  "embeddable": true
+ },
+ "al-2015-smooth-and-groove-t02": {
+  "id": "al-2015-smooth-and-groove-t02",
+  "videoId": "4V2yVVr9Ca8",
+  "title": "杏里 ANRI / Brand New Day! [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 238,
+  "query": "Brand New Day! ANRI",
+  "embeddable": true
+ },
+ "al-2015-smooth-and-groove-t06": {
+  "id": "al-2015-smooth-and-groove-t06",
+  "videoId": "x29oOtXh8iE",
+  "title": "You Drive Me Crazy",
+  "channel": "Anri - Topic",
+  "duration": 306,
+  "query": "You Drive Me Crazy ANRI",
+  "embeddable": true
+ },
+ "al-2015-smooth-and-groove-t04": {
+  "id": "al-2015-smooth-and-groove-t04",
+  "videoId": "egrxSlZpdVc",
+  "title": "Fall in Love",
+  "channel": "Anri - Topic",
+  "duration": 248,
+  "query": "Fall In Love ANRI",
+  "embeddable": true
+ },
+ "al-2015-smooth-and-groove-t05": {
+  "id": "al-2015-smooth-and-groove-t05",
+  "videoId": "UHEEMte7xlM",
+  "title": "In Tears",
+  "channel": "Anri - Topic",
+  "duration": 360,
+  "query": "In Tears ANRI",
+  "embeddable": true
+ },
+ "al-2015-smooth-and-groove-t07": {
+  "id": "al-2015-smooth-and-groove-t07",
+  "videoId": "MKBuYxM0rz8",
+  "title": "Before Full Moon",
+  "channel": "Anri - Topic",
+  "duration": 360,
+  "query": "Before Full Moon ANRI",
+  "embeddable": true
+ },
+ "al-2015-smooth-and-groove-t09": {
+  "id": "al-2015-smooth-and-groove-t09",
+  "videoId": "UbNtQitXrlg",
+  "title": "ANRI 杏里 / Love Letters［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 272,
+  "query": "Ready to Love ANRI",
+  "embeddable": true
+ },
+ "al-2015-smooth-and-groove-t11": {
+  "id": "al-2015-smooth-and-groove-t11",
+  "videoId": "rNdxKeEeg0Y",
+  "title": "ANRI／SENSE OF HAPPINESS",
+  "channel": "Summer Lake",
+  "duration": 225,
+  "query": "Sense of Happiness ANRI",
+  "embeddable": true
+ },
+ "al-2015-smooth-and-groove-t10": {
+  "id": "al-2015-smooth-and-groove-t10",
+  "videoId": "ix2BbjXlkuk",
+  "title": "Flashback Time",
+  "channel": "Anri - Topic",
+  "duration": 208,
+  "query": "Flashback Time ANRI",
+  "embeddable": true
+ },
+ "al-2015-smooth-and-groove-t12": {
+  "id": "al-2015-smooth-and-groove-t12",
+  "videoId": "MVCnzC7j-lA",
+  "title": "Be with U duet wuth SHIKATA",
+  "channel": "Anri - Topic",
+  "duration": 372,
+  "query": "Be with U ANRI",
+  "embeddable": true
+ },
+ "live-2017-fun-time-t01": {
+  "id": "live-2017-fun-time-t01",
+  "videoId": "xapXF_IJlYQ",
+  "title": "ANRI 杏里 アンリ / CATCH THE WIND [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 266,
+  "query": "Catch the Wind ANRI",
+  "embeddable": true
+ },
+ "live-2017-fun-time-t03": {
+  "id": "live-2017-fun-time-t03",
+  "videoId": "6zVmoXRSxQ4",
+  "title": "🌴 Anri - ONE -Ai Wa Futari No Kotoba Dakara- 🌊",
+  "channel": "Essence",
+  "duration": 292,
+  "query": "One ~Ai wa Futari no Kotoba Dakara~ ANRI",
+  "embeddable": true
+ },
+ "live-2017-fun-time-t04": {
+  "id": "live-2017-fun-time-t04",
+  "videoId": "N-8Cge04Vuk",
+  "title": "LOVERS ON VENUS",
+  "channel": "Anri - Topic",
+  "duration": 316,
+  "query": "Lovers on Venus ANRI",
+  "embeddable": true
+ },
+ "live-2017-fun-time-t06": {
+  "id": "live-2017-fun-time-t06",
+  "videoId": "zQEhXcAkO2A",
+  "title": "Between The Sheets",
+  "channel": "Anri - Topic",
+  "duration": 407,
+  "query": "Between the Sheets ANRI",
+  "embeddable": true
+ },
+ "live-2017-fun-time-t05": {
+  "id": "live-2017-fun-time-t05",
+  "videoId": "BggGMoMBUT8",
+  "title": "Secret Lovers",
+  "channel": "Anri - Topic",
+  "duration": 326,
+  "query": "Secret Lovers ANRI",
+  "embeddable": true
+ },
+ "live-2017-fun-time-t08": {
+  "id": "live-2017-fun-time-t08",
+  "videoId": "6q6GtPdVHL4",
+  "title": "悲しみがとまらない　I CAN'T STOP THE LONELINESS",
+  "channel": "Anri - Topic",
+  "duration": 267,
+  "query": "Kanashimi ga Tomaranai ANRI",
+  "embeddable": true
+ },
+ "live-2017-fun-time-t07": {
+  "id": "live-2017-fun-time-t07",
+  "videoId": "n56fUpy0bb0",
+  "title": "杏里 ANRI / Move Me [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 294,
+  "query": "Move Me ANRI",
+  "embeddable": true
+ },
+ "live-2017-fun-time-t09": {
+  "id": "live-2017-fun-time-t09",
+  "videoId": "yiUuVRBaCy0",
+  "title": "CAT'S EYE",
+  "channel": "Anri - Topic",
+  "duration": 203,
+  "query": "Cat's Eye ANRI",
+  "embeddable": true
+ },
+ "live-2017-fun-time-t10": {
+  "id": "live-2017-fun-time-t10",
+  "videoId": "eP2vwliwSDo",
+  "title": "杏里 ANRI / SUMMER CANDLES [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 390,
+  "query": "Summer Candles ANRI",
+  "embeddable": true
+ },
+ "live-2017-fun-time-t02": {
+  "id": "live-2017-fun-time-t02",
+  "videoId": "LIjlaY1jCv4",
+  "title": "杏里 ANRI 缶ビールとデニムシャツ Kanbiru to Denimushatsu [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 350,
+  "query": "Kan Beer to Denim Shatsu ANRI",
+  "embeddable": true
+ },
+ "live-2017-fun-time-t12": {
+  "id": "live-2017-fun-time-t12",
+  "videoId": "HvRnLE4WdrM",
+  "title": "嘘ならやさしく",
+  "channel": "Anri - Topic",
+  "duration": 333,
+  "query": "Uso Nara Yasashiku ANRI",
+  "embeddable": true
+ },
+ "live-2017-fun-time-t11": {
+  "id": "live-2017-fun-time-t11",
+  "videoId": "zEpIzC-COnA",
+  "title": "OLIVIA O KIKINAGARA",
+  "channel": "Anri - Topic",
+  "duration": 327,
+  "query": "Olivia wo Kikinagara ANRI",
+  "embeddable": true
+ },
+ "al-2018-anri-t02": {
+  "id": "al-2018-anri-t02",
+  "videoId": "UOKZB2sieaU",
+  "title": "Don't Stop Dreaming (feat. Diggy-MO')",
+  "channel": "Anri - Topic",
+  "duration": 276,
+  "query": "Don't Stop Dreaming ANRI",
+  "embeddable": true
+ },
+ "al-2018-anri-t03": {
+  "id": "al-2018-anri-t03",
+  "videoId": "hj-PthFfBAg",
+  "title": "Everlasting Love",
+  "channel": "Anri - Topic",
+  "duration": 273,
+  "query": "Everlasting Love ANRI",
+  "embeddable": true
+ },
+ "al-2018-anri-t01": {
+  "id": "al-2018-anri-t01",
+  "videoId": "xapXF_IJlYQ",
+  "title": "ANRI 杏里 アンリ / CATCH THE WIND [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 266,
+  "query": "Catch The Wave ANRI",
+  "embeddable": true
+ },
+ "al-2018-anri-t04": {
+  "id": "al-2018-anri-t04",
+  "videoId": "-JUUskGsIiA",
+  "title": "杏里 ANRI  ”Back to the BASIC”",
+  "channel": "ANRI 杏里 Official",
+  "duration": 329,
+  "query": "Back To The 80's ANRI",
+  "embeddable": true
+ },
+ "al-2018-anri-t06": {
+  "id": "al-2018-anri-t06",
+  "videoId": "Mbl_Fz0p8Ig",
+  "title": "杏里 Anri duet with Peabo Bryson / VOICE OF MY HEART [Official Video]",
+  "channel": "ANRI 杏里 Official",
+  "duration": 308,
+  "query": "You'll Be In My Heart ANRI",
+  "embeddable": true
+ },
+ "al-2018-anri-t05": {
+  "id": "al-2018-anri-t05",
+  "videoId": "xQx5pOglUgs",
+  "title": "Close To You",
+  "channel": "Anri - Topic",
+  "duration": 240,
+  "query": "Close To You ANRI",
+  "embeddable": true
+ },
+ "al-2018-anri-t07": {
+  "id": "al-2018-anri-t07",
+  "videoId": "VQhteloV6SI",
+  "title": "Sweet Emotion",
+  "channel": "Anri - Topic",
+  "duration": 289,
+  "query": "Sweet Friends ANRI",
+  "embeddable": true
+ },
+ "al-2018-anri-t08": {
+  "id": "al-2018-anri-t08",
+  "videoId": "U10CRir4HaY",
+  "title": "If We Try",
+  "channel": "Anri - Topic",
+  "duration": 283,
+  "query": "If We Try ANRI",
+  "embeddable": true
+ },
+ "al-2018-anri-t09": {
+  "id": "al-2018-anri-t09",
+  "videoId": "O2Pyl7MexOk",
+  "title": "Precious One ～かけがえのないストーリー",
+  "channel": "Anri - Topic",
+  "duration": 323,
+  "query": "Precious One ANRI",
+  "embeddable": true
+ },
+ "al-2018-anri-t10": {
+  "id": "al-2018-anri-t10",
+  "videoId": "UOKZB2sieaU",
+  "title": "Don't Stop Dreaming (feat. Diggy-MO')",
+  "channel": "Anri - Topic",
+  "duration": 276,
+  "query": "Don't Stop Dreaming (Key of Life Remix) ANRI",
+  "embeddable": true
+ },
+ "al-2018-anri-t11": {
+  "id": "al-2018-anri-t11",
+  "videoId": "hj-PthFfBAg",
+  "title": "Everlasting Love",
+  "channel": "Anri - Topic",
+  "duration": 273,
+  "query": "Everlasting Love (Acoustic Version) ANRI",
+  "embeddable": true
+ },
+ "al-feelin-t01": {
+  "id": "al-feelin-t01",
+  "videoId": "ogiH76eIAC0",
+  "title": "01 - Anri - Cordoba no Odoriko",
+  "channel": "ElektroBros",
+  "duration": 217,
+  "query": "コルドバの踊り子 ANRI",
+  "embeddable": true
+ },
+ "al-feelin-t06": {
+  "id": "al-feelin-t06",
+  "videoId": "J5p5_ZV6eXE",
+  "title": "地中海ドリーム",
+  "channel": "Anri - Topic",
+  "duration": 191,
+  "query": "Chichuukai Dream ANRI",
+  "embeddable": true
+ },
+ "al-feelin-t10": {
+  "id": "al-feelin-t10",
+  "videoId": "xB1vZZsM7ns",
+  "title": "めぐり来る季節のように",
+  "channel": "Anri - Topic",
+  "duration": 238,
+  "query": "めぐり来る季節のように ANRI",
+  "embeddable": true
+ },
+ "al-kanashimi-no-kujaku-t01": {
+  "id": "al-kanashimi-no-kujaku-t01",
+  "videoId": "d1EbdUlc-ok",
+  "title": "異国の出来事",
+  "channel": "Anri - Topic",
+  "duration": 211,
+  "query": "Ikoku no Dekigoto ANRI",
+  "embeddable": true
+ },
+ "al-summer-farewells-t04": {
+  "id": "al-summer-farewells-t04",
+  "videoId": "HGwelsFhjRA",
+  "title": "浮気な彼のために",
+  "channel": "Anri - Topic",
+  "duration": 265,
+  "query": "浮気な彼のために ANRI",
+  "embeddable": true
+ },
+ "al-wave-t10": {
+  "id": "al-wave-t10",
+  "videoId": "-YNUFtfnRXE",
+  "title": "瞳は永遠の香り",
+  "channel": "Anri - Topic",
+  "duration": 270,
+  "query": "Hitomi wa Eien no Kaori ANRI",
+  "embeddable": true
+ },
+ "al-kanashimi-no-kujaku-t10": {
+  "id": "al-kanashimi-no-kujaku-t10",
+  "videoId": "CALKvhZ6I7s",
+  "title": "HAPPY ENDでふられたい",
+  "channel": "Anri - Topic",
+  "duration": 240,
+  "query": "いつの日かHappy End ANRI",
+  "embeddable": true
+ },
+ "al-boogie-woogie-mainland-t03": {
+  "id": "al-boogie-woogie-mainland-t03",
+  "videoId": "ijRuure-ge0",
+  "title": "愛してるなんてとても言えない",
+  "channel": "Anri - Topic",
+  "duration": 299,
+  "query": "愛してるなんてとても言えない ANRI",
+  "embeddable": true
+ },
+ "c-1994-16th-summer-breeze-t10": {
+  "id": "c-1994-16th-summer-breeze-t10",
+  "videoId": "ijRuure-ge0",
+  "title": "愛してるなんてとても言えない",
+  "channel": "Anri - Topic",
+  "duration": 299,
+  "query": "愛してるなんてとても言えない ANRI",
+  "embeddable": true
+ },
+ "al-moonlit-summer-tales-t07": {
+  "id": "al-moonlit-summer-tales-t07",
+  "videoId": "mKa545Hw4I0",
+  "title": "Anri Kumaki (熊木杏里) - Hikari",
+  "channel": "Anri Kumaki 熊木杏里",
+  "duration": 230,
+  "query": "Hikari ni Nagasarete ANRI",
+  "embeddable": true
+ },
+ "al-moonlit-summer-tales-t01": {
+  "id": "al-moonlit-summer-tales-t01",
+  "videoId": "o39viP1N1eQ",
+  "title": "【期間限定】Anri 　アンリ　杏里   /   夏の月　Natsuno Tsuki  🎤♪🎶🎸［Official Video］",
+  "channel": "ANRI 杏里 Official",
+  "duration": 317,
+  "query": "夏の月 ANRI",
+  "embeddable": true
+ },
+ "al-my-music-t03": {
+  "id": "al-my-music-t03",
+  "videoId": "2mx8RwA_-3k",
+  "title": "ANRI／遠い夏のイマージュ",
+  "channel": "Summer Lake",
+  "duration": 325,
+  "query": "遠い夏のイマージュ ANRI",
+  "embeddable": true
+ },
+ "al-my-music-t08": {
+  "id": "al-my-music-t08",
+  "videoId": "olbckcbpF5E",
+  "title": "永遠の秘密",
+  "channel": "Anri - Topic",
+  "duration": 269,
+  "query": "永遠の秘密 ANRI",
   "embeddable": true
  }
 }

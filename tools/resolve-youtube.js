@@ -138,6 +138,11 @@ const DISTRACT = /(cover|tribute|remix\s*by|dj|mix\s*20|medley|reaction|cover\s*
 /* The discography entries describe the studio release, so a live/cover/tribute
    take is the wrong answer even when it comes from the official channel. */
 const NOT_STUDIO = /(\blive\b|ライブ|acoustic|unplugged|orchestra|symphon|tribute|cover|remaster|\d{4}\s*live|concert|hall|pacifico|nhk|ymphony)/i;
+/* "Anri" is also the name of other artists, and the token "anri" turns up in
+   unrelated words (Arcane, and in Japanese given names). Reject results whose
+   title or channel is dominated by a different artist. */
+const COLLIDE = /(feat\.|ft\.)\s*[a-z]|arcane|alan\s*walker|alok|travis|drake|official\s*video\s*by\s|zzz/i;
+const ANRI_WORD = /anri|杏里/i;
 
 function scoreCandidate(v, task) {
   if (v.isLive) return -1;
@@ -148,14 +153,33 @@ function scoreCandidate(v, task) {
   const hay = (title + ' ' + chan).toLowerCase();
   const want = task.title.toLowerCase();
 
-  // how much of the track title appears in the video title / channel
+  // How much of the track title appears in the video. Japanese-only releases are
+  // often uploaded under their original title (e.g. 悲しみがとまらない), so the
+  // romaji alone will not match — credit the Japanese title too.
   const tokens = want.split(/[^a-z0-9]+/).filter(t => t.length > 2);
   let hit = 0;
   for (const t of tokens) if (hay.includes(t)) hit++;
-  const ratio = tokens.length ? hit / tokens.length : 0;
-  if (ratio < 0.5) return -1;
+  let ratio = tokens.length ? hit / tokens.length : 0;
+
+  if (ratio < 0.5) {
+    // fall back to matching the Japanese title
+    const ja = (task.titleJa || '').replace(/[\s　ー～〜]/g, '');
+    if (ja && ja.length >= 2) {
+      const norm = s => s.replace(/[\s　ー～〜（）()「」・･,.:;!?！？]/g, '');
+      const h = norm(title);
+      if (h.includes(ja) || norm(chan).includes(ja)) ratio = 0.75;
+    }
+    if (ratio < 0.5) return -1;
+  }
 
   let score = ratio;
+
+  // A different artist entirely: the video must look like an Anri recording.
+  const isAnriVideo = ANRI_WORD.test(title) || ANRI_WORD.test(chan);
+  if (!isAnriVideo) return -1;
+  if (COLLIDE.test(title) && !/(feat\.|ft\.)\s*anri/i.test(title)) score -= 2.0;
+  // "Anri" as a fragment of another word (Arcane, Anriyan, …)
+  if (/\b\w*anri\w*\b/i.test(title) && !/\banri\b/i.test(title)) score -= 1.5;
 
   // the artist's own channel is the strongest positive signal
   if (OFFICIAL_CHANNELS.test(chan)) score += 1.5;
@@ -188,29 +212,42 @@ async function fetchMeta(videoId) {
 }
 
 async function resolveOne(task) {
-  const query = `${task.title} ${ARTIST}`;
-  const r = await searchYouTube(query);
-  if (r.error) return { id: task.id, error: r.error };
-  if (!r.length) return { id: task.id, error: 'no results' };
+  // Try the romanized title first, then the original Japanese title. Many of the
+  // 1980s-90s track titles are Japanese-only, and their romaji (often a
+  // researcher's transliteration) does not appear on YouTube at all — the
+  // Japanese title is the better key. A query is only accepted if it yields a
+  // result that actually looks like an Anri recording; otherwise we move on
+  // rather than falling back to an unrelated video.
+  const queries = [task.title + ' ' + ARTIST];
+  if (task.titleJa && task.titleJa !== task.title) {
+    queries.push(task.titleJa + ' ' + ARTIST);
+  }
 
-  // Rank candidates by title/channel match, dropping live streams and clips.
-  const ranked = r
-    .map(v => ({ v, s: scoreCandidate(v, task) }))
-    .filter(x => x.s > 0)
-    .sort((a, b) => b.s - a.s)
-    .map(x => x.v);
-  const best = ranked[0] || r[0];
-  const meta = await fetchMeta(best.videoId);
+  for (const q of queries) {
+    const r = await searchYouTube(q);
+    if (!r || r.error || !r.length) continue;
 
-  return {
-    id: task.id,
-    videoId: best.videoId,
-    title: meta.title || best.title,
-    channel: meta.channel || best.channel,
-    duration: best.length,
-    query,
-    embeddable: true
-  };
+    const ranked = r
+      .map(v => ({ v, s: scoreCandidate(v, task) }))
+      .filter(x => x.s > 0)
+      .sort((a, b) => b.s - a.s)
+      .map(x => x.v);
+    if (!ranked.length) continue;              // nothing plausible for this query
+
+    const best = ranked[0];
+    const meta = await fetchMeta(best.videoId);
+    return {
+      id: task.id,
+      videoId: best.videoId,
+      title: meta.title || best.title,
+      channel: meta.channel || best.channel,
+      duration: best.length,
+      query: q,
+      embeddable: true
+    };
+  }
+
+  return { id: task.id, error: 'no plausible match' };
 }
 
 /* ---------- run the pool ---------- */
