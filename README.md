@@ -70,11 +70,12 @@ node tools/build.js --verbose  # also list tracks with no YouTube video
 The build prints a coverage report:
 
 ```
+output        anri.html  (160 KB, self-contained)
 slides        45  (1 intro + 44 year slides)
 releases      107
 tracks        404  from 33 tracklist file(s)
-videoId       398/404 resolved  (98%), 391 embeddable
-chorus        372/404 analysed  (92%), 24 low confidence
+videoId       400/404 resolved  (99%)
+chorus        400/404 analysed  (99%), 0 low confidence
 ```
 
 ## Regenerating the YouTube ids
