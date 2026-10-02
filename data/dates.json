@@ -1,0 +1,667 @@
+{
+ "al-timely": {
+  "released": "1983-12-05",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "TIMELY!!",
+  "year": 1983
+ },
+ "box-2023-coool-timely": {
+  "released": "2023-07-19",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "TIMELY!!",
+  "year": 2023
+ },
+ "al-apricot-jam": {
+  "released": "1978-11-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "apricot jam",
+  "year": 1978
+ },
+ "al-feelin": {
+  "released": "1979-06-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Feelin’",
+  "year": 1979
+ },
+ "al-heaven-beach": {
+  "released": "1982-11-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Heaven Beach",
+  "year": 1982
+ },
+ "c-1982-omoikiri-american": {
+  "released": "1982-05-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "思いきりアメリカン I Love Poping World, Anri",
+  "year": 1982
+ },
+ "al-bi-ki-ni": {
+  "released": "1983-06-05",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Bi・Ki・Ni",
+  "year": 1983
+ },
+ "s-1983-lady-sunshine": {
+  "released": "1983-06-05",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Lady Sunshine",
+  "year": 1983
+ },
+ "s-1983-cats-eye": {
+  "released": "1983-08-05",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "CAT’S EYE",
+  "year": 1983
+ },
+ "al-coool": {
+  "released": "1984-06-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "COOOL",
+  "year": 1984
+ },
+ "s-1984-kimama-ni": {
+  "released": "1984-04-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "気ままにREFLECTION",
+  "year": 1984
+ },
+ "al-wave": {
+  "released": "1985-06-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "WAVE",
+  "year": 1985
+ },
+ "s-1985-sixteen-beat": {
+  "released": "1985-04-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "16 BEAT",
+  "year": 1985
+ },
+ "al-mystique": {
+  "released": "1986-06-05",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "MYSTIQUE",
+  "year": 1986
+ },
+ "al-trouble-in-paradise": {
+  "released": "1986-11-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Trouble in Paradise",
+  "year": 1986
+ },
+ "c-1986-the-anri": {
+  "released": "1985-08-05",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "思いきりアメリカン I Love Poping World, Anri",
+  "year": 1985
+ },
+ "s-1986-oriental-rose": {
+  "released": "1986-02-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Oriental Rose",
+  "year": 1986
+ },
+ "s-1986-trouble-in-paradise": {
+  "released": "1986-11-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Trouble in Paradise",
+  "year": 1986
+ },
+ "al-summer-farewells": {
+  "released": "1987-05-02",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Summer Farewells",
+  "year": 1987
+ },
+ "c-1987-meditation": {
+  "released": "1987-11",
+  "precision": "month",
+  "source": "musicbrainz",
+  "matched": "meditation",
+  "year": 1987
+ },
+ "s-1987-surf-and-tears": {
+  "released": "1987-06-22",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Surf & Tears",
+  "year": 1987
+ },
+ "al-boogie-woogie-mainland": {
+  "released": "1988",
+  "precision": "year",
+  "source": "musicbrainz",
+  "matched": "BOOGIE WOOGIE MAINLAND",
+  "year": 1988
+ },
+ "s-1980-kaze": {
+  "released": "1980-04-05",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "風のジェラシー",
+  "year": 1980
+ },
+ "s-1997-cats-eye-2000": {
+  "released": null,
+  "dateReason": "no results"
+ },
+ "d-2023-cats-eye": {
+  "released": "2023-01-27",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "CAT'S EYE 2023",
+  "year": 2023
+ },
+ "s-1978-olivia": {
+  "released": "1978-11-05",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "オリビアを聴きながら",
+  "year": 1978
+ },
+ "s-1979-chichuukai": {
+  "released": "1979-04-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "地中海ドリーム",
+  "year": 1979
+ },
+ "s-1979-namida": {
+  "released": "1979-08-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "涙を海に返したい",
+  "year": 1979
+ },
+ "s-1979-inspiration": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "c-1980-anri-the-best": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "c-1980-anri-2": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "s-1980-kawaii-boring": {
+  "released": "1980-09-05",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "可愛いポーリン",
+  "year": 1980
+ },
+ "al-kanashimi-no-kujaku": {
+  "released": "1981-09-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "哀しみの孔雀",
+  "year": 1981
+ },
+ "s-1981-cotton": {
+  "released": "1981-04-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "コットン気分",
+  "year": 1981
+ },
+ "s-1981-ikoku": {
+  "released": "1981-09-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "異国の出来事",
+  "year": 1981
+ },
+ "s-1982-espresso": {
+  "released": "1982-02-05",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "エスプレッソで眠れない",
+  "year": 1982
+ },
+ "s-1982-omoikiri-american": {
+  "released": "1982-04-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "思いきりアメリカン",
+  "year": 1982
+ },
+ "s-1982-fly-by-day": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "s-1983-kanashimi-ga-tomaranai": {
+  "released": "1983-11-05",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "悲しみがとまらない",
+  "year": 1983
+ },
+ "v-1984-in-concert": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "s-1986-morning-squall": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "v-1987-budokan": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "s-1987-happy-end": {
+  "released": null,
+  "dateReason": "no results"
+ },
+ "c-1988-my-favorite-songs": {
+  "released": "1988-07-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "MY FAVORITE SONGS",
+  "year": 1988
+ },
+ "v-1988-hiroshima": {
+  "released": "1988",
+  "precision": "year",
+  "source": "musicbrainz",
+  "matched": "Hiroshima",
+  "year": 1988
+ },
+ "s-1988-summer-candles": {
+  "released": "1988-07-13",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "SUMMER CANDLES",
+  "year": 1988
+ },
+ "s-1988-snow-flake": {
+  "released": "1988-12-14",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "スノーフレイクの街角",
+  "year": 1988
+ },
+ "al-circuit-of-rainbow": {
+  "released": "1989-07-31",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "CIRCUIT of RAINBOW",
+  "year": 1989
+ },
+ "v-1989-hawaii": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "al-mind-cruisin": {
+  "released": "1990-06-23",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "MIND CRUISIN’",
+  "year": 1990
+ },
+ "al-neutral": {
+  "released": "1991-06-01",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "NEUTRAL",
+  "year": 1991
+ },
+ "c-1991-mfs2": {
+  "released": "1991-12-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "MY FAVORITE SONGS 2",
+  "year": 1991
+ },
+ "s-1991-sweet-emotion": {
+  "released": "1991-02-14",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Sweet Emotion",
+  "year": 1991
+ },
+ "s-1991-back-to-basic": {
+  "released": "1991-06-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Back to the BASIC",
+  "year": 1991
+ },
+ "s-1991-uso-nara": {
+  "released": "1991-08-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "嘘ならやさしく",
+  "year": 1991
+ },
+ "s-1991-last-love": {
+  "released": "1991-11-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "ラスト ラブ",
+  "year": 1991
+ },
+ "al-moana-lani": {
+  "released": "1992-06-24",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "MOANA LANI",
+  "year": 1992
+ },
+ "s-1992-lani-heavenly-garden": {
+  "released": "1992-06-03",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "LANI –Heavenly Garden–",
+  "year": 1992
+ },
+ "s-1993-dolphin-ring": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "c-1994-16th-summer-breeze": {
+  "released": "1994-07-08",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "16th Summer Breeze",
+  "year": 1994
+ },
+ "s-1994-all-of-you": {
+  "released": "1994-06-17",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "ALL OF YOU",
+  "year": 1994
+ },
+ "s-1994-share": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "c-1995-opus-21": {
+  "released": "1995-09-01",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "OPUS 21",
+  "year": 1995
+ },
+ "s-1995-legends-of-love": {
+  "released": "1995-08-19",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Legend of Love",
+  "year": 1995
+ },
+ "al-angel-whisper": {
+  "released": "1996-07-29",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Angel Whisper",
+  "year": 1996
+ },
+ "s-1996-ano-natsu": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "s-1996-birthday": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "al-twin-soul": {
+  "released": "1997-10-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "TWIN SOUL",
+  "year": 1997
+ },
+ "s-1997-future-for-you": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "al-moonlit-summer-tales": {
+  "released": "1998-07-15",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "MOONLIT SUMMER TALES",
+  "year": 1998
+ },
+ "s-1998-eternity": {
+  "released": null,
+  "dateReason": "no results"
+ },
+ "s-1998-natsu-no-tsuki": {
+  "released": "1998-06-10",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "夏の月",
+  "year": 1998
+ },
+ "al-ever-blue": {
+  "released": "1999-06-23",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Ever Blue",
+  "year": 1999
+ },
+ "s-1999-aenai": {
+  "released": "1999-05-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "逢えないせつなさと",
+  "year": 1999
+ },
+ "al-beach-house": {
+  "released": "2000-07-19",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "The Beach House",
+  "year": 2000
+ },
+ "c-2000-anri-the-best": {
+  "released": "2000-05-24",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "ANRI the BEST",
+  "year": 2000
+ },
+ "al-my-music": {
+  "released": "2001-10-24",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "MY MUSIC",
+  "year": 2001
+ },
+ "s-2001-sunset-beach-hotel": {
+  "released": "2001-08-22",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Sunset Beach Hotel",
+  "year": 2001
+ },
+ "ca-2002-smooth-jam-aspasia": {
+  "released": "2002-05-22",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Smooth Jam-Aspasia-",
+  "year": 2002
+ },
+ "ca-2002-smooth-jam-quiet-storm": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "co-2002-candle-light": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "c-2003-r134": {
+  "released": "2003-07-23",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "R134 OCEAN DeLIGHTS",
+  "year": 2003
+ },
+ "co-2003-tenshi": {
+  "released": null,
+  "dateReason": "no results"
+ },
+ "s-2004-return-to-silence": {
+  "released": "2004-07-21",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Return To The Silence",
+  "year": 2004
+ },
+ "al-sol": {
+  "released": "2005-11-02",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Sol",
+  "year": 2005
+ },
+ "s-2005-field-of-lights": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "ca-2007-tears-of-anri": {
+  "released": "2007-09-12",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "tears of anri",
+  "year": 2007
+ },
+ "c-2007-a-day-in-summer": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "ca-2008-tears-of-anri-2": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "s-2008-mou-kanashikunai": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "sc-2009-anri-again": {
+  "released": "2009-12-02",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "ANRI AGAIN〜Best Of Myself〜",
+  "year": 2009
+ },
+ "c-2011-heart-to-heart": {
+  "released": "2011-07-06",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Heart to Heart ～with you～",
+  "year": 2011
+ },
+ "sc-2013-surf-city": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "sc-2014-surf-and-tears": {
+  "released": "2014-06-25",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Surf & Tears",
+  "year": 2014
+ },
+ "al-2015-smooth-and-groove": {
+  "released": "2015-08-19",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Smooth & Groove",
+  "year": 2015
+ },
+ "c-2016-melodies": {
+  "released": "2015-08-19",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Smooth & Groove",
+  "year": 2015
+ },
+ "live-2017-fun-time": {
+  "released": "2017-07-12",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "FUNTIME",
+  "year": 2017
+ },
+ "al-2018-anri": {
+  "released": "2018-08-01",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "ANRI",
+  "year": 2018
+ },
+ "d-2019-dukes-anthem": {
+  "released": "2019-03-06",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Duke’s Anthem〜星空のどこかで〜",
+  "year": 2019
+ },
+ "d-2019-wasurerarenai": {
+  "released": "2019-03-06",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "忘れられない贈りもの",
+  "year": 2019
+ },
+ "d-2019-crescent-moon": {
+  "released": "2019-03-06",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Crescent Moon",
+  "year": 2019
+ },
+ "box-2020-in-the-box": {
+  "released": "2019-03-27",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "プリパラ&アイドルタイムプリパラコンプリートアルバムBOX",
+  "year": 2019
+ },
+ "c-2021-voice-to-voice": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "co-2021-watching-over-you": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "box-2023-heaven-beach-bikini": {
+  "released": "2023-07-19",
+  "precision": "day",
+  "source": "musicbrainz",
+  "matched": "Bi・Ki・Ni",
+  "year": 2023
+ },
+ "co-2024-marine-blue-memories": {
+  "released": null,
+  "dateReason": "no confident match"
+ },
+ "c-2025-anri-the-best-blue": {
+  "released": null,
+  "dateReason": "no confident match"
+ }
+}

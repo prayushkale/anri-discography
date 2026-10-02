@@ -18,9 +18,35 @@ const discog = readJSON(P('data', 'discography.json'));
 if (!discog) { console.error('  ! data/discography.json is required'); process.exit(1); }
 const ytIds   = readJSON(P('data', 'yt-ids.json'), {});
 const choruses = readJSON(P('data', 'choruses.json'), {});
+const covers   = readJSON(P('data', 'covers.json'), {});
+const dates    = readJSON(P('data', 'dates.json'), {});
 const tracklists = fs.existsSync(P('data', 'tracklists'))
   ? fs.readdirSync(P('data', 'tracklists')).filter(f => f.endsWith('.json'))
   : [];
+
+/* ---- attach release dates ----
+   A `released` field written straight into discography.json always wins, so a
+   hand-corrected date survives re-running tools/fetch-dates.js. Otherwise fall
+   back to the fetched date, and finally to the year alone — the app knows the
+   year from the nesting, but it is better to ship it as a real field. */
+let datedReleases = 0;
+for (const y of discog.years) {
+  for (const rel of y.releases) {
+    rel.year = y.year;
+    const d = dates[rel.id];
+    if (rel.released) {
+      rel.dateSource = rel.dateSource || 'manual';
+    } else if (d && d.released) {
+      rel.released = d.released;
+      rel.dateSource = 'musicbrainz';
+      rel.datePrecision = d.precision || null;
+    } else {
+      rel.released = String(y.year);
+      rel.dateSource = 'year';
+    }
+    if (rel.dateSource !== 'year') datedReleases++;
+  }
+}
 
 /* ---- attach tracklists to releases ---- */
 let tracksAttached = 0;
@@ -40,15 +66,52 @@ for (const tl of tracklists) {
           merged.videoId = ytIds[id].videoId;
           merged.query   = ytIds[id].query   || (merged.title + ' ANRI');
           merged.embeddable = ytIds[id].embeddable !== false;
+          // shown per-track on the release slide, so keep what the resolver found
+          if (ytIds[id].channel) merged.channel = ytIds[id].channel;
+          if (ytIds[id].duration) merged.duration = ytIds[id].duration;
         }
         // join chorus analysis
         if (choruses[id] && choruses[id].start != null) {
           merged.chorus = { start: choruses[id].start, end: choruses[id].end, confidence: choruses[id].confidence };
+          // a hand-set span is not an analysis result, and the app shows it differently
+          if (choruses[id].manual) merged.chorus.manual = true;
         }
         return merged;
       });
       tracksAttached += rel.tracks.length;
     }
+  }
+}
+
+/* ---- synthesize a one-track list for trackless singles ----
+   A single IS its one track, so give it a tracklist rather than leaving the app
+   with nothing to play (which made it open YouTube in a new tab instead).
+   Anthologies are excluded: a box set, video or compilation is many tracks, so a
+   one-item list would let the resolver match a promo teaser or a documentary and
+   present it as the release. They keep their search link instead.
+   Mirrors tools/load-tracks.js — both must agree on the track id. */
+const isAnthology = rel => rel.type === 'Box set' || rel.type === 'Video' ||
+                           rel.type === 'Compilation';
+let synthAttached = 0;
+for (const y of discog.years) {
+  for (const rel of y.releases) {
+    if (rel.tracks) continue;
+    if (isAnthology(rel)) continue;
+    const id = `${rel.id}-t01`;
+    const merged = { id, n: 1, title: rel.title, titleJa: rel.titleJa || null };
+    if (ytIds[id]) {
+      merged.videoId = ytIds[id].videoId;
+      merged.query   = ytIds[id].query   || (rel.title + ' ANRI');
+      merged.embeddable = ytIds[id].embeddable !== false;
+      if (ytIds[id].channel) merged.channel = ytIds[id].channel;
+      if (ytIds[id].duration) merged.duration = ytIds[id].duration;
+    }
+    if (choruses[id] && choruses[id].start != null) {
+      merged.chorus = { start: choruses[id].start, end: choruses[id].end, confidence: choruses[id].confidence };
+      if (choruses[id].manual) merged.chorus.manual = true;
+    }
+    rel.tracks = [merged];
+    synthAttached++;
   }
 }
 
@@ -60,22 +123,102 @@ for (const y of discog.years) {
   }
 }
 
+/* ---- prune the deck: no repeated songs, no empty slides ----
+   Anri reissued the same song for decades, so a raw walk of the discography
+   showed the same track dozens of times: a single on its own slide, the album
+   cut later (or earlier), and every greatest-hits album in between. The deck is
+   meant to be a chronological story, so each song is shown once, at the first
+   release that carried it, and a release with nothing left to show disappears.
+
+   Three passes, all chronological so "first" means earliest:
+     1. drop collections — compilations, box sets and videos exist only to
+        repackage earlier records, and they have no tracklist of their own
+        (a box set would otherwise let the resolver match a promo teaser).
+        Removing them first also frees the singles they were shadowing, so
+        1983 Cat's Eye is a single, not a highlight reel.
+     2. hide repeated songs on singles, digital singles and collaborations.
+        Albums that are a genuine performance — studio, live, cover and
+        self-cover records — are left whole: a live take or a self-covered song
+        shares a title with the original but is a different recording.
+     3. drop releases left with no tracks, and years left with no releases. */
+const COLLECTIONS = new Set(['Compilation', 'Box set', 'Video']);
+const REPEATABLE  = new Set(['Single', 'Digital single', 'Collaboration']);
+const isCollection = rel => COLLECTIONS.has(rel.type);
+
+/* Titles are compared loosely: case, spacing and punctuation vary between the
+   same song across releases ("Cat's Eye" / "Cat's Eye 2000" is a different song,
+   but "Last Love" and "Last Love " are not). */
+const songKey = title => (title || '')
+  .toLowerCase()
+  .replace(/[\s\u3000]+/g, ' ')
+  .replace(/[!'"・~–—,.:()（）「」]/g, '')
+  .trim();
+
+const seenSongs = new Set();
+let droppedCollections = 0, hiddenRepeats = 0, emptiedReleases = 0, emptiedYears = 0;
+
+for (const y of discog.years) {
+  const kept = [];
+  for (const rel of y.releases) {
+    if (isCollection(rel)) { droppedCollections++; continue; }
+    const tracks = rel.tracks || [];
+    if (!tracks.length) { droppedCollections++; continue; }
+
+    let keep = tracks;
+    if (REPEATABLE.has(rel.type)) {
+      keep = tracks.filter(t => {
+        const key = songKey(t.title);
+        if (seenSongs.has(key)) { hiddenRepeats++; return false; }
+        seenSongs.add(key);
+        return true;
+      });
+    } else {
+      // albums always claim their songs, so a later single cannot steal one
+      tracks.forEach(t => seenSongs.add(songKey(t.title)));
+    }
+
+    if (!keep.length) { emptiedReleases++; continue; }
+    rel.tracks = keep;
+    kept.push(rel);
+  }
+  y.releases = kept;
+  if (!kept.length) emptiedYears++;
+}
+discog.years = discog.years.filter(y => y.releases.length);
+
 /* ---- report ---- */
-let totalTracks = 0, resolved = 0, embeddable = 0, withChorus = 0, lowConf = 0, unverified = 0;
+let totalTracks = 0, resolved = 0, embeddable = 0, withChorus = 0, lowConf = 0, unverified = 0, manualChorus = 0;
+let keptDated = 0, keptDayPrecision = 0;
 const orphans = [];
 for (const y of discog.years) {
   for (const rel of y.releases) {
+    // recount dates here: the pass above ran over every release, before pruning
+    if (rel.dateSource !== 'year') keptDated++;
+    if (rel.datePrecision === 'day') keptDayPrecision++;
     for (const t of rel.tracks || []) {
       totalTracks++;
       if (t.videoId) { resolved++; if (t.embeddable !== false) embeddable++; }
       else if (t.id) orphans.push(t.id);
-      if (t.chorus) { withChorus++; if ((t.chorus.confidence || 0) < 0.45) lowConf++; }
+      if (t.chorus) { withChorus++; if (t.chorus.manual) manualChorus++; if ((t.chorus.confidence || 0) < 0.45) lowConf++; }
       if (t.unverified) unverified++;
     }
   }
 }
 
-const payload = { artist: discog.artist, years: discog.years, portrait: discog.artist.portrait || null };
+// Only ship artwork that actually resolved — the app draws a coloured tile for
+// anything missing, so empty entries would just bloat the single file. Releases
+// dropped above are pruned too, so their art does not ride along unseen.
+const shippedCovers = {};
+let coverHits = 0;
+for (const y of discog.years) {
+  for (const rel of y.releases) {
+    const c = covers[rel.id];
+    if (c && c.url) { shippedCovers[rel.id] = { url: c.url, title: c.title || null }; coverHits++; }
+  }
+}
+
+const payload = { artist: discog.artist, years: discog.years, portrait: discog.artist.portrait || null, covers: shippedCovers };
+const releaseCount = discog.years.reduce((n, y) => n + y.releases.length, 0);
 
 const template = fs.readFileSync(P('src', 'template.html'), 'utf8');
 const PLACEHOLDER = '/*__ANRI_DATA__*/null';
@@ -101,16 +244,20 @@ const outPath = P('anri.html');
 fs.writeFileSync(outPath, out, 'utf8');
 
 const kb = (fs.statSync(outPath).size / 1024).toFixed(0);
-const slides = discog.years.length + 1;
+const slides = discog.years.length + releaseCount + 1;
 const pct = (a, b) => (b ? ((a / b) * 100).toFixed(0) + '%' : 'n/a');
 
 console.log('\n  ANRI Discography — build complete\n');
 console.log(`  output        anri.html  (${kb} KB, self-contained)`);
-console.log(`  slides        ${slides}  (1 intro + ${discog.years.length} year slides)`);
-console.log(`  releases      ${discog.years.reduce((n, y) => n + y.releases.length, 0)}`);
-console.log(`  tracks        ${totalTracks}  from ${tracklists.length} tracklist file(s)`);
+console.log(`  slides        ${slides}  (1 intro + ${discog.years.length} year + ${releaseCount} release)`);
+console.log(`  releases      ${releaseCount}`);
+console.log(`  tracks        ${totalTracks}  (${tracksAttached} from ${tracklists.length} tracklist file(s), ${synthAttached} synthesized singles)`);
 console.log(`  videoId       ${resolved}/${totalTracks} resolved  (${pct(resolved, totalTracks)}), ${embeddable} embeddable`);
 console.log(`  chorus        ${withChorus}/${totalTracks} analysed  (${pct(withChorus, totalTracks)}), ${lowConf} low confidence`);
+if (manualChorus) console.log(`  hand-set      ${manualChorus} in the app, ${totalTracks - withChorus} track(s) still without a chorus`);
+console.log(`  covers        ${coverHits}/${releaseCount} releases have artwork`);
+console.log(`  dates         ${keptDated}/${releaseCount} releases dated  (${keptDayPrecision} to the day, rest year-only)`);
+console.log(`  pruned        ${hiddenRepeats} repeated song(s) hidden, ${droppedCollections} collection/empty slide(s) and ${emptiedReleases} emptied release(s) removed${emptiedYears ? `, ${emptiedYears} empty year(s)` : ''}`);
 if (unverified) console.log(`  unverified    ${unverified} track(s) flagged from source research`);
 if (orphans.length && process.argv.includes('--verbose')) {
   console.log(`\n  unresolved (${orphans.length}):`);
@@ -119,4 +266,6 @@ if (orphans.length && process.argv.includes('--verbose')) {
 }
 if (!resolved) console.log('  hint: run `node tools/resolve-youtube.js` to resolve YouTube video IDs');
 if (!withChorus) console.log('  hint: run `node tools/analyze-choruses.js` to detect choruses (needs yt-dlp + ffmpeg)');
-console.log('');
+if (!coverHits) console.log('  hint: run `node tools/fetch-covers.js` to fetch release artwork');
+if (!datedReleases) console.log('  hint: run `node tools/fetch-dates.js` to fetch release dates');
+console.log(`\n  run it with:  node tools/serve.js   (a file:// page cannot play YouTube video)\n`);

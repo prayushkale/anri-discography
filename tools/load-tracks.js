@@ -30,10 +30,38 @@ function loadTracks() {
     }
   }
 
+  /* A Box set or Video has no canonical audio track, and a compilation is an
+     anthology — treating either as "one track named after the release" would let
+     the YouTube resolver match a 21-minute documentary or a promo teaser and
+     present it as the release. Those keep a search link instead. */
+  const isAnthology = rel => rel.type === 'Box set' || rel.type === 'Video' ||
+                             rel.type === 'Compilation';
+
   const tracks = [];
   for (const y of discog.years) {
     for (const rel of y.releases) {
-      if (!rel.tracklist) continue;
+      /* A single IS its one track, so give it a tracklist rather than leaving the
+         app with nothing to play — without this, singles had no track entity and
+         the app opened YouTube in a new tab instead of playing them in-frame. */
+      if (!rel.tracklist) {
+        if (isAnthology(rel)) continue;
+        rel.tracks = [{
+          id: `${rel.id}-t01`,
+          n: 1,
+          title: rel.title,
+          titleJa: rel.titleJa || null,
+          note: null,
+          unverified: false,
+          year: y.year,
+          releaseId: rel.id,
+          releaseTitle: rel.title,
+          releaseType: rel.type,
+          label: rel.label || null,
+          query: `${rel.title} ANRI`
+        }];
+        rel.tracks.forEach(t => tracks.push(t));
+        continue;
+      }
       const list = tracklists[rel.tracklist];
       if (!list) continue;
       const rows = list.tracks || [];
