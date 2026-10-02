@@ -29,7 +29,7 @@ const tracklists = fs.existsSync(P('data', 'tracklists'))
    hand-corrected date survives re-running tools/fetch-dates.js. Otherwise fall
    back to the fetched date, and finally to the year alone — the app knows the
    year from the nesting, but it is better to ship it as a real field. */
-let datedReleases = 0, dayPrecision = 0;
+let datedReleases = 0;
 for (const y of discog.years) {
   for (const rel of y.releases) {
     rel.year = y.year;
@@ -45,7 +45,6 @@ for (const y of discog.years) {
       rel.dateSource = 'year';
     }
     if (rel.dateSource !== 'year') datedReleases++;
-    if (rel.datePrecision === 'day') dayPrecision++;
   }
 }
 
@@ -124,11 +123,78 @@ for (const y of discog.years) {
   }
 }
 
+/* ---- prune the deck: no repeated songs, no empty slides ----
+   Anri reissued the same song for decades, so a raw walk of the discography
+   showed the same track dozens of times: a single on its own slide, the album
+   cut later (or earlier), and every greatest-hits album in between. The deck is
+   meant to be a chronological story, so each song is shown once, at the first
+   release that carried it, and a release with nothing left to show disappears.
+
+   Three passes, all chronological so "first" means earliest:
+     1. drop collections — compilations, box sets and videos exist only to
+        repackage earlier records, and they have no tracklist of their own
+        (a box set would otherwise let the resolver match a promo teaser).
+        Removing them first also frees the singles they were shadowing, so
+        1983 Cat's Eye is a single, not a highlight reel.
+     2. hide repeated songs on singles, digital singles and collaborations.
+        Albums that are a genuine performance — studio, live, cover and
+        self-cover records — are left whole: a live take or a self-covered song
+        shares a title with the original but is a different recording.
+     3. drop releases left with no tracks, and years left with no releases. */
+const COLLECTIONS = new Set(['Compilation', 'Box set', 'Video']);
+const REPEATABLE  = new Set(['Single', 'Digital single', 'Collaboration']);
+const isCollection = rel => COLLECTIONS.has(rel.type);
+
+/* Titles are compared loosely: case, spacing and punctuation vary between the
+   same song across releases ("Cat's Eye" / "Cat's Eye 2000" is a different song,
+   but "Last Love" and "Last Love " are not). */
+const songKey = title => (title || '')
+  .toLowerCase()
+  .replace(/[\s\u3000]+/g, ' ')
+  .replace(/[!'"・~–—,.:()（）「」]/g, '')
+  .trim();
+
+const seenSongs = new Set();
+let droppedCollections = 0, hiddenRepeats = 0, emptiedReleases = 0, emptiedYears = 0;
+
+for (const y of discog.years) {
+  const kept = [];
+  for (const rel of y.releases) {
+    if (isCollection(rel)) { droppedCollections++; continue; }
+    const tracks = rel.tracks || [];
+    if (!tracks.length) { droppedCollections++; continue; }
+
+    let keep = tracks;
+    if (REPEATABLE.has(rel.type)) {
+      keep = tracks.filter(t => {
+        const key = songKey(t.title);
+        if (seenSongs.has(key)) { hiddenRepeats++; return false; }
+        seenSongs.add(key);
+        return true;
+      });
+    } else {
+      // albums always claim their songs, so a later single cannot steal one
+      tracks.forEach(t => seenSongs.add(songKey(t.title)));
+    }
+
+    if (!keep.length) { emptiedReleases++; continue; }
+    rel.tracks = keep;
+    kept.push(rel);
+  }
+  y.releases = kept;
+  if (!kept.length) emptiedYears++;
+}
+discog.years = discog.years.filter(y => y.releases.length);
+
 /* ---- report ---- */
 let totalTracks = 0, resolved = 0, embeddable = 0, withChorus = 0, lowConf = 0, unverified = 0, manualChorus = 0;
+let keptDated = 0, keptDayPrecision = 0;
 const orphans = [];
 for (const y of discog.years) {
   for (const rel of y.releases) {
+    // recount dates here: the pass above ran over every release, before pruning
+    if (rel.dateSource !== 'year') keptDated++;
+    if (rel.datePrecision === 'day') keptDayPrecision++;
     for (const t of rel.tracks || []) {
       totalTracks++;
       if (t.videoId) { resolved++; if (t.embeddable !== false) embeddable++; }
@@ -140,11 +206,15 @@ for (const y of discog.years) {
 }
 
 // Only ship artwork that actually resolved — the app draws a coloured tile for
-// anything missing, so empty entries would just bloat the single file.
+// anything missing, so empty entries would just bloat the single file. Releases
+// dropped above are pruned too, so their art does not ride along unseen.
 const shippedCovers = {};
 let coverHits = 0;
-for (const [id, c] of Object.entries(covers)) {
-  if (c && c.url) { shippedCovers[id] = { url: c.url, title: c.title || null }; coverHits++; }
+for (const y of discog.years) {
+  for (const rel of y.releases) {
+    const c = covers[rel.id];
+    if (c && c.url) { shippedCovers[rel.id] = { url: c.url, title: c.title || null }; coverHits++; }
+  }
 }
 
 const payload = { artist: discog.artist, years: discog.years, portrait: discog.artist.portrait || null, covers: shippedCovers };
@@ -186,7 +256,8 @@ console.log(`  videoId       ${resolved}/${totalTracks} resolved  (${pct(resolve
 console.log(`  chorus        ${withChorus}/${totalTracks} analysed  (${pct(withChorus, totalTracks)}), ${lowConf} low confidence`);
 if (manualChorus) console.log(`  hand-set      ${manualChorus} in the app, ${totalTracks - withChorus} track(s) still without a chorus`);
 console.log(`  covers        ${coverHits}/${releaseCount} releases have artwork`);
-console.log(`  dates         ${datedReleases}/${releaseCount} releases dated  (${dayPrecision} to the day, rest year-only)`);
+console.log(`  dates         ${keptDated}/${releaseCount} releases dated  (${keptDayPrecision} to the day, rest year-only)`);
+console.log(`  pruned        ${hiddenRepeats} repeated song(s) hidden, ${droppedCollections} collection/empty slide(s) and ${emptiedReleases} emptied release(s) removed${emptiedYears ? `, ${emptiedYears} empty year(s)` : ''}`);
 if (unverified) console.log(`  unverified    ${unverified} track(s) flagged from source research`);
 if (orphans.length && process.argv.includes('--verbose')) {
   console.log(`\n  unresolved (${orphans.length}):`);
