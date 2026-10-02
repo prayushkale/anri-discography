@@ -1,15 +1,41 @@
 # ANRI — Complete Discography
 
 A slide-by-slide presentation app of the Japanese singer **Anri** (杏里, b. Eiko Kawashima, 1961).
-44 year-slides from 1978 to 2025, every release playable on YouTube, with a **chorus toggle**
-that jumps straight to the hook — so you can build a whole chorus reel by pressing one key.
+**152 slides** from 1978 to 2025: an intro, a year index for each of 44 years, and one slide per
+release. Every release has its **cover art**, a large embedded **YouTube player**, full release
+detail, and a **chorus toggle** that jumps straight to the hook.
 
 ## Open it
 
-Double-click **`anri.html`**. That's it.
+```bash
+node tools/serve.js
+```
 
-No install, no server, no build step needed to *use* the app. It works from `file://`,
-and you can copy the single file to a USB stick or email it.
+That's it — no install, no dependencies, no build step needed to *use* the app.
+
+`serve.js` prints a local `http://localhost:8000` URL and opens your browser.
+
+### Deep links
+
+Append a hash to jump straight to a year or a release:
+
+```
+anri.html#1986          the 1986 index
+anri.html#al-timely     the Timely!! release slide
+anri.html#42            slide 42
+```
+
+### Why not just double-click `anri.html`?
+
+**YouTube will not play video embedded from a `file://` page.** Opened from disk,
+every track fails with *"Video player configuration error"* (YouTube's internal
+Error 153), because `file://` has no real origin for the embed to be authorised
+against. It is not the videos and not the browser — the same tracks play fine the
+moment the page is served over `http://`.
+
+The app is still one self-contained file you can copy to a USB stick or email —
+it just needs a local web server (any will do; `npx serve` works) rather than a
+double-click.
 
 ## Using it
 
@@ -18,43 +44,87 @@ and you can copy the single file to a USB stick or email it.
 | `→` `Space` `PgDn` | Next slide |
 | `←` `PgUp` | Previous slide |
 | `Space` | Play / pause the current track |
-| `C` | **Chorus mode** — jumps to the chorus |
-| `L` | **Loop chorus** — repeats the chorus |
+| `C` | **Chorus mode** — playback jumps to the chorus |
 | `F` | Fullscreen |
-| `O` | Jump-to-year overview |
+| `O` | Jump-to overview (grouped by year) |
 | `P` | Blackout (pause the presentation) |
 | `Home` / `End` | First / last slide |
 
-Click any **release card** to expand its tracklist, then click a track to play it.
-Releases without a tracklist (compilations, box sets, videos) open their YouTube search instead.
+**Navigate in two levels.** A year slide is a cover index — pick a release to open it.
+Each release slide has a full-size player, the artwork, the release facts and the
+complete tracklist, with a `← year` chip to go back.
+
+Click any **track** in a release's tracklist to play it in place. Singles included:
+a single *is* its one track, so it plays in the frame like any album track.
+
+Only **box sets, videos and compilations** have no playable tracklist — those offer
+a YouTube search link instead.
 
 ### The chorus feature
 
 Each track has a detected chorus region, shown as a cyan band on the progress bar.
 
-- **Chorus toggle (`C`)** — playback starts at the chorus rather than the intro.
-- **Loop chorus** — repeats that region endlessly, which is how you sample it.
-- **Set chorus here** — while the track plays, capture the current position as the chorus
-  start. This overrides the detected value.
-- **Reset** — revert back to the detected chorus.
+- **Chorus toggle (`C`)** — a small icon at the right of the transport strip. Switch it on and
+  playback jumps to the chorus; switch it on before playing and a track starts there instead.
+  It is deliberately tiny, so it stays out of the way until you want it.
+- The **cyan band** on the scrub bar shows where the chorus is, and costs no UI space.
+- A track with no detected chorus shows the toggle disabled.
 
-Manual overrides are saved in your browser's `localStorage`, so they survive reloads.
-They are per-browser: the shipped `anri.html` always starts from the detected values.
+Cyan is the only colour the *interface* reserves for itself; everything else is
+chrome. The rest of the colour on screen is album art, which is the point — the
+artwork is never competing with a coloured button.
+
+Chorus markers you set by hand in an earlier version of the app are still honoured
+from `localStorage`. There is no UI to set new ones.
+
+## Design
+
+The app is a **neon catalogue**: a deep indigo/violet ground lit by four accents.
+Surfaces are the ground, a lifted glass panel, or a hairline border — never a
+shadow doing structural work. Colour arrives through the album art, not the chrome.
+
+| Token | Value | |
+|---|---|---|
+| Ground | `#0b0a1f` | page |
+| Sun | `#ff8a3d` | the primary accent — years, headings, play |
+| Pink | `#ff4d8d` | paired with sun in every gradient |
+| Cyan | `#39d0d8` | chorus, dates, links — the one functional signal |
+| Gold | `#ffd166` | Oricon positions, secondary data |
+| Violet | `#3d2a8a` | scrollbars, grid glow |
+| Glass | `rgba(255,255,255,.05)` | every raised panel |
+| Radius | `10–16px` | cards, rails, the player frame |
+
+Rules that keep it coherent:
+
+- **Type is the hierarchy.** Big gradients carry the artist name, the year, and the
+  release title; everything else is weight and size.
+- **The year is the subject** of a year slide: a 96px gradient numeral above a rule.
+- **Releases with no artwork get a coloured tile** carrying the title's first
+  character, hue-cycling by position, so a year index stays a wall of colour rather
+  than a field of empty grey boxes.
+- **The playing track fills with a sun-to-pink gradient**, so the current track is
+  findable instantly in a 16-row tracklist.
+- Grids and rails are separated by 1px borders and glass fills, never by shadow.
 
 ## Layout
 
 ```
-anri.html              ← the deliverable. Generated, self-contained, double-clickable.
+anri.html              ← the deliverable. Generated, self-contained.
 src/template.html      ← app source (markup + CSS + JS), with a __ANRI__ placeholder
 data/
   discography.json     ← source of truth: artist info, all releases, per-year grouping
   tracklists/*.json    ← one file per album, 33 albums
   yt-ids.json          ← generated: track id -> YouTube video id
   choruses.json        ← generated: track id -> chorus start/end/confidence
+  covers.json          ← generated: release id -> album artwork URL
+  dates.json           ← generated: release id -> release date + precision
 tools/
   load-tracks.js       ← shared: merges discography + tracklists into a flat track list
   resolve-youtube.js   ← YouTube search -> video id
   analyze-choruses.js  ← yt-dlp + ffmpeg -> chorus detection
+  fetch-covers.js      ← iTunes search -> release artwork
+  fetch-dates.js       ← MusicBrainz -> release dates
+  serve.js             ← serves the app on localhost (needed for playback)
   build.js             ← inlines all data into anri.html
 ```
 
@@ -70,12 +140,14 @@ node tools/build.js --verbose  # also list tracks with no YouTube video
 The build prints a coverage report:
 
 ```
-output        anri.html  (160 KB, self-contained)
-slides        45  (1 intro + 44 year slides)
+output        anri.html  (221 KB, self-contained)
+slides        152  (1 intro + 44 year + 107 release)
 releases      107
-tracks        404  from 33 tracklist file(s)
-videoId       400/404 resolved  (99%)
-chorus        400/404 analysed  (99%), 0 low confidence
+tracks        460  (404 from 33 tracklist file(s), 56 synthesized singles)
+videoId       455/460 resolved  (99%), 455 embeddable
+chorus        400/460 analysed  (87%), 0 low confidence
+covers        61/107 releases have artwork
+dates         79/107 releases dated  (76 to the day, rest year-only)
 ```
 
 ## Regenerating the YouTube ids
@@ -133,8 +205,8 @@ Audio is deleted immediately after analysis. Only timestamps are kept.
 `Sign in to confirm you're not a bot` or HTTP 403. The tool detects that, pauses
 with an escalating back-off (60s → 180s → 420s → 900s), and retries the track
 once things cool down. Anything still unavailable after that is simply left
-without a chorus — the app falls back to "Set chorus here". If you need to fill
-gaps later, just run the command again; it only processes what's missing.
+without a chorus — the app shows the chorus toggle disabled on that track. If you need
+to fill gaps later, just run the command again; it only processes what's missing.
 
 ```bash
 node tools/analyze-choruses.js --pause 4000   # slower, if you keep hitting 403s
@@ -158,8 +230,8 @@ path; reach for `--cookies` only as a second opinion when you're actually blocke
 **Accuracy.** This finds *the most-repeated section*, which is usually the chorus
 but is not guaranteed to be. A track whose intro riffs harder than its chorus, or
 whose bridge repeats more than its hook, will get the wrong answer. That's what
-the `confidence` score flags, and what "Set chorus here" is for. If a track
-resolves to a low-confidence marker, listen to it and correct it by hand.
+the `confidence` score flags. A low-confidence marker means the band on the scrub bar
+may not be the real hook.
 
 ## Notes on the data
 

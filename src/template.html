@@ -5,11 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ANRI — Complete Discography</title>
 <style>
+/* ==========================================================================
+   NEON CATALOGUE — design system
+
+   A deep indigo/violet ground lit by four accents: sun, pink, cyan and gold.
+   Every surface is either the ground, a lifted glass panel, or a hairline
+   border — no shadows-as-structure. Album art supplies the colour that the
+   chrome deliberately refuses to compete with.
+   ========================================================================== */
 :root{
   --navy:#0b0a1f; --violet2:#3d2a8a;
   --sun:#ff8a3d; --pink:#ff4d8d; --cyan:#39d0d8; --gold:#ffd166;
   --ink:#f4f1ff; --muted:#a79ec9; --dim:#6f6699;
-  --line:rgba(255,255,255,.12); --glass:rgba(255,255,255,.05);
+  --line:rgba(255,255,255,.12); --line-soft:rgba(255,255,255,.07);
+  --glass:rgba(255,255,255,.05);
+  /* chorus is the one functional signal, so it keeps a colour of its own */
+  --chorus:#39d0d8;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;overflow:hidden;background:#05040f;
@@ -17,252 +28,380 @@ html,body{height:100%;overflow:hidden;background:#05040f;
   color:var(--ink);-webkit-font-smoothing:antialiased}
 body{display:flex;align-items:center;justify-content:center}
 
+/* the stage scales to the window, so every slide is authored at 1600x900 */
 #stage{position:relative;width:1600px;height:900px;transform-origin:center center;flex:0 0 auto;
+  overflow:hidden;
   background:
     radial-gradient(120% 80% at 12% 0%, #2a1a5e 0%, transparent 55%),
     radial-gradient(100% 70% at 92% 12%, #4a1440 0%, transparent 52%),
     radial-gradient(90% 90% at 50% 108%, #1b2a6b 0%, transparent 60%),
-    linear-gradient(160deg,#0b0a1f 0%,#12102c 45%,#0a0818 100%);
-  overflow:hidden}
-#stage::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.3;
-  background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+    linear-gradient(160deg,#0b0a1f 0%,#12102c 45%,#0a0818 100%)}
+/* a faint 60px grid, masked so it fades out top and bottom — structure, not texture */
+#bg{position:absolute;inset:0;pointer-events:none;opacity:.32;
+  background-image:
+    linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
   background-size:60px 60px;
   -webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 35%,#000 70%,transparent 100%);
   mask-image:linear-gradient(180deg,transparent 0%,#000 35%,#000 70%,transparent 100%)}
-#stage::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
-  background:repeating-linear-gradient(180deg,rgba(255,255,255,.022) 0 1px,transparent 1px 3px)}
-#vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 100% at 50% 50%,transparent 45%,rgba(0,0,0,.55) 100%)}
+#vig{position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(140% 120% at 50% 40%,transparent 58%,rgba(0,0,0,.55) 100%)}
 
 #deck{position:absolute;inset:0}
-.slide{position:absolute;inset:0;padding:56px 72px 84px;opacity:0;visibility:hidden;
-  transition:opacity .45s ease,transform .45s cubic-bezier(.22,1,.36,1);
-  transform:translateX(60px) scale(.985);display:flex;flex-direction:column}
+.slide{position:absolute;inset:0;padding:40px 46px 74px;opacity:0;visibility:hidden;
+  transition:opacity .42s ease,transform .45s cubic-bezier(.22,1,.36,1);
+  transform:translateX(70px) scale(.98);display:flex;flex-direction:column}
 .slide.active{opacity:1;visibility:visible;transform:none}
-.slide.prev{transform:translateX(-60px) scale(.985)}
+.slide.prev{transform:translateX(-70px) scale(.98)}
 
-/* intro */
-.intro{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
-.kicker{font-size:13px;letter-spacing:.42em;text-transform:uppercase;color:var(--sun);font-weight:700;margin-bottom:22px}
-.nameJa{font-size:150px;line-height:.86;font-weight:800;letter-spacing:.04em;margin-bottom:6px;
+/* ============ INTRO ============ */
+.intro{display:grid;grid-template-columns:1.06fr .94fr;gap:44px;align-items:stretch;height:100%;min-height:0}
+.introL{display:flex;flex-direction:column;min-height:0;justify-content:center}
+.kicker{display:inline-flex;align-items:center;gap:9px;align-self:flex-start;font-size:10px;letter-spacing:.3em;
+  text-transform:uppercase;font-weight:700;margin-bottom:20px;color:var(--sun)}
+.kicker::before{content:"";width:28px;height:2px;border-radius:2px;
+  background:linear-gradient(90deg,var(--sun),var(--pink));flex:0 0 auto}
+.nameJa{font-size:clamp(80px,8vw,140px);line-height:.84;font-weight:800;letter-spacing:.04em;margin-bottom:10px;
   background:linear-gradient(100deg,#fff 0%,#ffd9c2 30%,var(--sun) 55%,var(--pink) 78%,var(--violet2) 100%);
   -webkit-background-clip:text;background-clip:text;color:transparent;
   text-shadow:0 0 70px rgba(255,138,61,.22)}
-.nameEn{font-size:52px;font-weight:200;letter-spacing:.34em;text-transform:uppercase;margin-bottom:16px}
-.realname{font-size:17px;color:var(--muted);letter-spacing:.05em;margin-bottom:30px}
+.nameEn{font-size:clamp(26px,2.5vw,42px);font-weight:200;letter-spacing:.28em;text-transform:uppercase;
+  margin-bottom:14px;color:var(--ink)}
+.realname{font-size:14px;color:var(--muted);letter-spacing:.04em;margin-bottom:18px;
+  padding-bottom:16px;border-bottom:1px solid var(--line)}
 .realname b{color:var(--cyan);font-weight:500}
-.metaGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 30px;max-width:560px;margin-bottom:28px}
-.metaItem{border-left:2px solid var(--violet2);padding-left:13px}
-.metaItem .k{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);margin-bottom:5px}
-.metaItem .v{font-size:15px;font-weight:500}
-.genres{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
-.genre{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;padding:6px 13px;border-radius:999px;
-  border:1px solid rgba(255,138,61,.45);color:var(--sun);background:rgba(255,138,61,.09)}
-.links{display:flex;gap:11px;flex-wrap:wrap;margin-bottom:24px}
-.link{display:inline-flex;align-items:center;gap:8px;font-size:13px;padding:10px 17px;border-radius:999px;
-  border:1px solid var(--line);color:var(--ink);text-decoration:none;background:var(--glass);transition:.18s}
-.link:hover{border-color:var(--cyan);color:var(--cyan);background:rgba(57,208,216,.1)}
-.bio{font-size:14.5px;line-height:1.72;color:#cdc6e8;border-left:2px solid var(--pink);padding-left:16px}
-.introR{display:flex;flex-direction:column;gap:20px;min-height:0}
-.portrait{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);
-  aspect-ratio:4/5;background:linear-gradient(150deg,#2a1a5e,#4a1440 55%,#1b2a6b);flex:0 0 auto}
-.portrait img{width:100%;height:100%;object-fit:cover;display:block}
-.portrait .fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-  font-size:110px;font-weight:800;color:rgba(255,255,255,.14);z-index:0}
-/* the fallback is only for when the photo fails; once the image paints it must not
-   show through, so it is removed once the image reports success */
-.portrait img{position:relative;z-index:1}
-.credit{position:absolute;left:0;right:0;bottom:0;padding:18px 12px 8px;font-size:9px;color:rgba(255,255,255,.55);
-  letter-spacing:.04em;background:linear-gradient(180deg,transparent,rgba(0,0,0,.75))}
-.hlTitle{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--dim);margin-bottom:12px}
-.hlList{display:flex;flex-direction:column;gap:9px;overflow-y:auto;min-height:0;padding-right:6px}
-.hlList::-webkit-scrollbar{width:6px}
-.hlList::-webkit-scrollbar-thumb{background:var(--violet2);border-radius:3px}
-.hl{display:flex;gap:12px;font-size:12px;line-height:1.5;color:#c3bce0;background:var(--glass);
-  border:1px solid var(--line);border-radius:10px;padding:10px 12px}
-.hlY{font-size:11px;font-weight:700;color:var(--sun);flex:0 0 44px;letter-spacing:.04em}
-.startHint{margin-top:26px;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);display:flex;align-items:center;gap:9px}
-.startHint kbd{background:rgba(255,255,255,.1);border:1px solid var(--line);border-bottom-width:2px;
-  border-radius:5px;padding:3px 8px;font-size:11px;font-family:inherit;color:var(--ink)}
-.arrowPulse{animation:pulse 1.9s ease-in-out infinite;color:var(--sun)}
-@keyframes pulse{0%,100%{opacity:.35;transform:translateX(0)}50%{opacity:1;transform:translateX(6px)}}
 
-/* year header */
-.yHead{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;
-  padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:22px;flex:0 0 auto}
-.yYear{font-size:96px;line-height:.82;font-weight:800;letter-spacing:-.02em;
-  background:linear-gradient(94deg,#fff,#ffd9c2 40%,var(--sun) 70%,var(--pink));
+.metaGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-bottom:20px;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.metaItem{padding:10px 14px 10px 0;position:relative}
+.metaItem:not(:first-child){padding-left:14px;border-left:1px solid var(--line-soft)}
+.metaItem .k{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin-bottom:5px;font-weight:700}
+.metaItem .v{font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.statRow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-bottom:20px}
+.stat{padding:0 16px 0 0;position:relative}
+.stat:not(:first-child){padding-left:16px;border-left:1px solid var(--line-soft)}
+.stat .n{font-size:34px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em;
+  background:linear-gradient(120deg,#fff,var(--sun));
   -webkit-background-clip:text;background-clip:text;color:transparent}
-.yRight{text-align:right}
-.pillRow{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end;margin-bottom:9px}
-.pill{font-size:10px;letter-spacing:.11em;text-transform:uppercase;padding:5px 10px;border-radius:999px;
-  border:1px solid var(--line);color:var(--muted);background:var(--glass);white-space:nowrap}
-.pill b{color:var(--ink);font-weight:600}
-.cnt{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
-.cnt b{color:var(--cyan);font-size:15px;font-weight:700;letter-spacing:0}
+.stat .l{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-top:6px;font-weight:700}
 
-.yBody{flex:1;display:grid;grid-template-columns:1fr 690px;gap:34px;min-height:0}
-.railWrap{overflow-y:auto;overflow-x:hidden;padding-right:12px;min-height:0}
-.railWrap::-webkit-scrollbar{width:7px}
-.railWrap::-webkit-scrollbar-track{background:rgba(255,255,255,.04);border-radius:4px}
-.railWrap::-webkit-scrollbar-thumb{background:var(--violet2);border-radius:4px}
-.railWrap::-webkit-scrollbar-thumb:hover{background:var(--sun)}
+.genres{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.genre{font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:5px 11px;font-weight:700;
+  border:1px solid rgba(255,138,61,.45);border-radius:999px;color:var(--sun);background:rgba(255,138,61,.09);white-space:nowrap}
+
+.links{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.link{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;padding:8px 15px;border-radius:999px;
+  border:1px solid var(--line);color:var(--ink);text-decoration:none;font-weight:700;
+  letter-spacing:.06em;background:var(--glass);transition:.18s}
+.link:hover{border-color:var(--cyan);background:rgba(57,208,216,.12);color:var(--cyan)}
+.bio{font-size:13px;line-height:1.58;color:#cdc6e8;padding-left:16px;
+  border-left:2px solid var(--pink);margin-bottom:14px;max-width:56ch}
+.startHint{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);
+  display:flex;align-items:center;gap:9px;font-weight:600;margin-bottom:-4px}
+.startHint kbd{background:rgba(255,255,255,.1);border:1px solid var(--line);border-bottom-width:2px;
+  border-radius:5px;padding:3px 8px;font-size:10px;font-family:inherit;color:var(--ink)}
+.arrowPulse{animation:pulse 1.9s ease-in-out infinite;font-size:15px;color:var(--sun)}
+@keyframes pulse{0%,100%{opacity:.3;transform:translateX(0)}50%{opacity:1;transform:translateX(6px)}}
+
+.introR{display:flex;flex-direction:column;gap:14px;min-height:0}
+.portraitRow{display:grid;grid-template-columns:210px 1fr;gap:14px;height:250px;flex:0 0 auto}
+.portrait{position:relative;overflow:hidden;border-radius:14px;border:1px solid var(--line);flex:0 0 auto;
+  background:linear-gradient(150deg,#2a1a5e,#4a1440 55%,#1b2a6b)}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1}
+.portrait .fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-size:60px;font-weight:800;color:rgba(255,255,255,.14);z-index:0}
+.credit{position:absolute;left:0;right:0;bottom:0;padding:14px 8px 6px;font-size:8px;
+  color:rgba(255,255,255,.55);letter-spacing:.03em;background:linear-gradient(180deg,transparent,rgba(0,0,0,.75))}
+
+.heroCard{border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;
+  justify-content:center;gap:11px;background:
+    linear-gradient(140deg,rgba(255,138,61,.12),rgba(255,77,141,.07) 55%,rgba(57,208,216,.06));
+  border-color:rgba(255,138,61,.28)}
+.heroTop{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+.heroBig{font-size:46px;font-weight:800;line-height:.9;letter-spacing:-.02em;
+  background:linear-gradient(120deg,#fff,var(--sun) 60%,var(--pink));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.heroLbl{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);font-weight:700}
+.heroSub{font-size:12.5px;color:var(--muted);line-height:1.6}
+.heroSub b{color:var(--cyan);font-weight:700}
+.heroChips{display:flex;gap:6px;flex-wrap:wrap;margin-top:1px}
+.hchip{font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 9px;
+  border:1px solid var(--line);border-radius:999px;color:var(--muted);background:var(--glass)}
+
+.hlTitle{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);font-weight:700;
+  display:flex;align-items:center;gap:11px;flex:0 0 auto}
+.hlTitle::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+.hlList{display:grid;grid-template-columns:1fr;gap:7px;flex:1;min-height:0;align-content:start;overflow-y:auto}
+.hl{display:flex;gap:14px;font-size:11px;line-height:1.5;color:#c3bce0;
+  padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:var(--glass)}
+.hlY{font-size:10px;font-weight:800;color:var(--sun);flex:0 0 52px;letter-spacing:.04em;
+  font-variant-numeric:tabular-nums}
+
+/* ============ YEAR SLIDE ============ */
+.yHead{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex:0 0 auto;
+  padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:18px}
+/* the year is the subject of this slide, so it is set huge and lit */
+.yYear{font-size:96px;line-height:.8;font-weight:800;letter-spacing:-.03em;
+  font-variant-numeric:tabular-nums;
+  background:linear-gradient(94deg,#fff,#ffd9c2 40%,var(--sun) 70%,var(--pink));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  text-shadow:0 0 60px rgba(255,138,61,.18)}
+.yRight{display:flex;flex-direction:column;align-items:flex-end;gap:9px}
+.pillRow{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}
+.pill{font-size:9px;letter-spacing:.16em;text-transform:uppercase;padding:5px 11px;font-weight:700;
+  border:1px solid var(--line);border-radius:999px;color:var(--muted);background:var(--glass);white-space:nowrap}
+.pill b{color:var(--ink);font-weight:700}
+.cnt{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);font-weight:700}
+.cnt b{color:var(--cyan);font-size:13px;font-weight:700;letter-spacing:0}
+
+/* the year slide is a cover index only; the player lives on release slides */
+.yBody{flex:1;overflow-y:auto;overflow-x:hidden;padding-right:10px;min-height:0;align-content:start}
+.yBody::-webkit-scrollbar{width:7px}
+.yBody::-webkit-scrollbar-track{background:rgba(255,255,255,.04);border-radius:4px}
+.yBody::-webkit-scrollbar-thumb{background:var(--violet2);border-radius:4px}
+.yBody::-webkit-scrollbar-thumb:hover{background:var(--sun)}
 .grp{margin-bottom:20px}
-.grpHead{display:flex;align-items:center;gap:10px;margin-bottom:11px}
-.grpDot{width:7px;height:7px;border-radius:50%;background:var(--sun);flex:0 0 auto;box-shadow:0 0 10px var(--sun)}
-.grpName{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);font-weight:700}
-.grpCount{font-size:10.5px;color:var(--dim)}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:11px}
-.card{background:rgba(255,255,255,.045);border:1px solid var(--line);border-radius:12px;
-  padding:13px 15px 34px;cursor:pointer;transition:.18s;border-left:3px solid transparent;position:relative}
+.grpHead{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.grpHead::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--sun);
+  box-shadow:0 0 10px var(--sun);flex:0 0 auto}
+.grpName{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.grpCount{font-size:9.5px;color:var(--dim);font-weight:700}
+
+/* release card: cover art on the left, metadata on the right */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:11px}
+.card{background:var(--glass);border:1px solid var(--line);border-radius:12px;padding:14px;cursor:pointer;
+  transition:.18s;position:relative;
+  display:grid;grid-template-columns:92px 1fr;gap:14px;align-items:start}
 .card:hover{background:rgba(255,255,255,.085);border-color:rgba(255,138,61,.4);transform:translateY(-2px)}
-.card.sel{border-left-color:var(--sun);background:rgba(255,138,61,.13);border-color:rgba(255,138,61,.5)}
-.chead{display:flex;align-items:flex-start;justify-content:space-between;gap:9px;margin-bottom:5px}
+.card:hover .ctitle{color:var(--ink)}
+
+.cover{width:92px;height:92px;overflow:hidden;position:relative;flex:0 0 auto;border-radius:9px;
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+.cover img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1}
+
+/* Releases with no artwork get a coloured tile carrying the title's first glyph,
+   so a year index stays a wall of colour rather than a field of empty grey boxes.
+   The hue cycles by position so adjacent cards never share a fill. */
+.noart{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:0;line-height:1;
+  font-size:30px;font-weight:800;color:rgba(255,255,255,.3);
+  background:linear-gradient(135deg,#6d28d9,#db2777)}
+.card:nth-child(6n+2) .noart{background:linear-gradient(135deg,#0e7490,#22d3ee)}
+.card:nth-child(6n+3) .noart{background:linear-gradient(135deg,#c2410c,#fbbf24)}
+.card:nth-child(6n+4) .noart{background:linear-gradient(135deg,#4338ca,#0891b2)}
+.card:nth-child(6n+5) .noart{background:linear-gradient(135deg,#be185d,#f472b6)}
+.card:nth-child(6n+6) .noart{background:linear-gradient(135deg,#4d7c0f,#facc15)}
+
+.cBody{min-width:0}
+.chead{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:5px}
 .chead>div{min-width:0;flex:1}
-.ctitle{font-size:15px;font-weight:600;line-height:1.3}
-.ctitleJa{font-size:11.5px;color:var(--muted);margin-top:3px;line-height:1.3}
-.cmeta{font-size:10.5px;color:var(--dim);letter-spacing:.07em;margin-top:7px;display:flex;gap:11px;flex-wrap:wrap;align-items:center}
+.ctitle{font-size:15px;font-weight:600;line-height:1.25;color:var(--muted);letter-spacing:-.005em}
+.ctitleJa{font-size:11px;color:var(--dim);margin-top:3px;line-height:1.3}
+.cchips{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.cchip{font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:3px 8px;
+  border:1px solid var(--line);border-radius:999px;color:var(--dim);background:var(--glass);white-space:nowrap}
+.cchip.date{color:var(--ink);border-color:rgba(57,208,216,.4);background:rgba(57,208,216,.1)}
+.cchip.dim{color:var(--dim)}
+.cmeta{font-size:9.5px;color:var(--dim);margin-top:7px;display:flex;gap:9px;
+  flex-wrap:wrap;align-items:center;letter-spacing:.04em}
 .cmeta .peak{color:var(--gold);font-weight:700}
 .cmeta .peak.top::after{content:" ★";color:var(--sun)}
-.cnote{font-size:11px;color:#a99fcb;line-height:1.5;margin-top:8px;padding-left:9px;border-left:1px solid rgba(167,158,201,.35)}
-.orbadge{display:block;flex:0 0 auto;align-self:flex-start;font-size:10px;font-weight:700;padding:3px 7px;border-radius:5px;
-  background:rgba(255,209,102,.16);color:var(--gold);white-space:nowrap;min-width:26px;text-align:center;max-width:max-content}
-.expand{position:absolute;right:13px;bottom:11px;font-size:11px;color:var(--dim);letter-spacing:.09em;display:flex;align-items:center;gap:5px}
-.expand.on{color:var(--cyan)}
-.trackList{display:none;margin-top:11px;padding-top:11px;border-top:1px solid var(--line);max-height:216px;overflow-y:auto}
-.trackList.open{display:block}
-.trackList::-webkit-scrollbar{width:6px}
-.trackList::-webkit-scrollbar-thumb{background:var(--violet2);border-radius:3px}
-.tr{display:flex;align-items:flex-start;gap:10px;padding:6px 8px;border-radius:6px;cursor:pointer;transition:.14s}
+.cnote{font-size:10px;color:#a99fcb;line-height:1.45;margin-top:6px;padding-left:8px;
+  border-left:1px solid rgba(167,158,201,.35)}
+.expand{position:absolute;right:12px;bottom:10px;font-size:9px;color:var(--dim);letter-spacing:.16em;
+  display:flex;align-items:center;gap:5px;font-weight:700;text-transform:uppercase}
+.card:hover .expand{color:var(--sun)}
+.tr{display:flex;align-items:flex-start;gap:9px;padding:5px 7px;border-radius:6px;cursor:pointer;transition:.14s}
 .tr:hover{background:rgba(57,208,216,.11)}
-.tr.act{background:rgba(255,138,61,.2)}
-.trN{font-size:9.5px;color:var(--dim);flex:0 0 17px;text-align:right;padding-top:2px;font-variant-numeric:tabular-nums}
-.trT{font-size:12.5px;line-height:1.4;flex:1}
-.trJa{font-size:10.5px;color:var(--muted);display:block;margin-top:1px}
-.trNote{font-size:10px;color:var(--dim);display:block;margin-top:1px;font-style:italic}
-.trY{font-size:9px;flex:0 0 auto;color:var(--cyan);opacity:0;transition:.14s;font-weight:700;padding-top:3px}
+.tr.act{background:linear-gradient(90deg,rgba(255,138,61,.28),rgba(255,77,141,.2))}
+.tr.act .trT{color:var(--ink);font-weight:700}
+.tr.act .trJa,.tr.act .trNote,.tr.act .trChan,.tr.act .trDur,.tr.act .trN{color:var(--muted)}
+.trN{font-size:9px;color:var(--dim);flex:0 0 15px;text-align:right;padding-top:2px;font-variant-numeric:tabular-nums}
+.trT{font-size:12px;line-height:1.35;flex:1;color:var(--muted)}
+.trJa{font-size:10px;color:var(--dim);display:block;margin-top:1px}
+.trNote{font-size:9.5px;color:var(--dim);display:block;margin-top:1px;font-style:italic}
+.trChan{font-size:8.5px;color:var(--dim);display:block;margin-top:2px;opacity:.8}
+.trDur{font-size:9.5px;color:var(--dim);font-variant-numeric:tabular-nums;flex:0 0 auto;padding-top:2px}
+.trY{font-size:8.5px;flex:0 0 auto;color:var(--cyan);opacity:0;transition:.14s;font-weight:700;padding-top:3px}
 .tr:hover .trY,.tr.act .trY{opacity:1}
-.noplay{margin-top:11px;padding-top:11px;border-top:1px solid var(--line);font-size:11.5px;line-height:1.55}
-.noplay a{color:var(--cyan);text-decoration:none;border-bottom:1px solid rgba(57,208,216,.4)}
-.card.np{padding-bottom:13px}
+.noplay{margin-top:10px;font-size:11px;color:var(--dim);line-height:1.5}
+.noplay a,.rFact a{color:var(--cyan);text-decoration:none;border-bottom:1px solid rgba(57,208,216,.4)}
+.card.np{padding-bottom:12px}
 
-/* player */
-.pCol{display:flex;flex-direction:column;gap:14px;min-height:0}
-.pHead{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex:0 0 auto}
-.pTitle{font-size:23px;font-weight:700;line-height:1.22}
-.pTitleJa{font-size:14px;color:var(--muted);margin-top:4px}
-.pParent{font-size:11.5px;color:var(--dim);letter-spacing:.07em;margin-top:6px}
-.pParent .sep{opacity:.4;margin:0 5px}
-.pHeadActions{display:flex;gap:7px;flex:0 0 auto}
-.iconBtn{width:34px;height:34px;border-radius:8px;border:1px solid var(--line);background:var(--glass);
-  color:var(--muted);cursor:pointer;font-size:14px;transition:.16s}
-.iconBtn:hover{color:var(--cyan);border-color:var(--cyan);background:rgba(57,208,216,.11)}
-.pFrame{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;
-  background:#000;border:1px solid var(--line);flex:0 0 auto}
-.pFrame.empty{display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.03);border-style:dashed}
-.pFrame .ph{text-align:center;color:var(--dim);font-size:12.5px;line-height:1.7;padding:20px}
-.spin{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:2}
+/* ============ RELEASE SLIDE ============ */
+/* the player takes every pixel the detail rail does not need */
+.rBody{flex:1;display:grid;grid-template-columns:1fr 400px;gap:26px;min-height:0}
+.rPlay{display:flex;flex-direction:column;gap:12px;min-height:0}
+.rHead{display:flex;align-items:flex-start;gap:14px;flex:0 0 auto;padding-bottom:13px;
+  border-bottom:1px solid var(--line)}
+.backChip{font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:var(--glass);
+  color:var(--muted);cursor:pointer;transition:.16s;flex:0 0 auto;align-self:center}
+.backChip:hover{color:var(--ink);background:rgba(255,138,61,.16);border-color:var(--sun)}
+.rTitle{font-size:40px;font-weight:800;line-height:1;letter-spacing:-.02em;color:var(--ink)}
+.rTitleJa{font-size:13px;color:var(--muted);margin-top:5px;letter-spacing:.02em}
+.rNote{font-size:11.5px;color:var(--muted);line-height:1.45;margin-top:7px;font-style:italic;
+  padding-left:10px;border-left:2px solid var(--pink);max-width:74ch}
+
+/* detail rail: artwork, facts, then the full-height tracklist */
+.rRail{display:flex;flex-direction:column;gap:12px;min-height:0;
+  border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--glass)}
+.rArt{width:100%;overflow:hidden;position:relative;flex:0 0 auto;
+  aspect-ratio:16/10;max-height:180px;margin:0 auto;border-radius:10px;
+  background:var(--glass);border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+.rArt img{width:100%;height:100%;object-fit:contain;display:block;position:relative;z-index:1}
+.rArt .noart{font-size:52px;border-radius:0;
+  background:linear-gradient(135deg,#6d28d9,#db2777 55%,#c2410c)}
+.rFacts{display:flex;flex-direction:column;gap:0;flex:0 0 auto;border-top:1px solid var(--line)}
+.rFact{display:flex;gap:10px;font-size:10.5px;line-height:1.35;padding:6px 0;
+  border-bottom:1px solid var(--line-soft)}
+.rFact:last-child{border-bottom:none}
+.rFact .k{color:var(--dim);letter-spacing:.16em;text-transform:uppercase;font-weight:700;
+  flex:0 0 92px;font-size:9px;padding-top:1px}
+.rFact .v{color:var(--muted);font-weight:600;min-width:0;flex:1}
+.rFact .v .peak{color:var(--gold);font-weight:700}
+.rFact .v .peak.top::after{content:" ★";color:var(--sun)}
+.rTLTitle{font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);font-weight:700;
+  display:flex;align-items:center;gap:11px;flex:0 0 auto;margin-top:4px}
+.rTLTitle::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+.rTracks{flex:1;overflow-y:auto;min-height:0;margin:0 -6px;padding:0 6px}
+.rTracks::-webkit-scrollbar{width:6px}
+.rTracks::-webkit-scrollbar-thumb{background:var(--violet2);border-radius:3px}
+.rTracks .trY{font-size:8px;opacity:1;color:var(--cyan);text-align:right;padding-top:3px;min-width:34px}
+.rTracks .trChan{font-size:8.5px;color:var(--dim);display:block;margin-top:2px;opacity:.75}
+.rTracks .trDur{font-size:9.5px;color:var(--dim);font-variant-numeric:tabular-nums;flex:0 0 auto;padding-top:2px}
+
+/* ============ PLAYER ============ */
+/* The frame is sized from its width so 16:9 always holds: `flex:1` would let
+   flexbox decide the height and squeeze the video into a letterbox. Width is the
+   binding dimension here, so derive the height from it. */
+.pFrame{position:relative;width:100%;aspect-ratio:16/9;flex:0 0 auto;overflow:hidden;
+  background:#000;border:1px solid var(--line);border-radius:12px}
+.pFrame.empty{display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.03);border-style:dashed}
+.pFrame .ph{text-align:center;color:var(--dim);font-size:12px;line-height:1.6;padding:20px;letter-spacing:.1em;
+  text-transform:uppercase;font-weight:700}
+.pFrame .ph .big{display:block;font-size:26px;margin-bottom:8px;opacity:.6;color:var(--muted)}
+.spin{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:3}
 .spin.hide{display:none}
-.spinner{width:34px;height:34px;border:3px solid rgba(255,255,255,.16);border-top-color:var(--sun);border-radius:50%;animation:spin .8s linear infinite}
+.spinner{width:34px;height:34px;border:3px solid rgba(255,255,255,.16);border-top-color:var(--sun);
+  border-radius:50%;animation:spin .8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 #ytHost{width:100%;height:100%}
+#ytHost>div,#ytHost iframe{width:100%!important;height:100%!important;border:0;display:block}
 
-.tp{display:flex;align-items:center;gap:12px;flex:0 0 auto}
-.playBtn{flex:0 0 auto;width:50px;height:50px;border-radius:50%;border:none;cursor:pointer;
-  background:linear-gradient(135deg,var(--sun),var(--pink));color:#fff;display:flex;align-items:center;justify-content:center;
-  transition:.18s;box-shadow:0 5px 22px rgba(255,77,141,.34)}
-.playBtn:hover{transform:scale(1.07)}
-.playBtn.playing .playIcon{width:14px;height:17px;border:none;margin-left:0;
-  background:linear-gradient(90deg,#fff 0 5px,transparent 5px 9px,#fff 9px 100%)}
-.playIcon{width:0;height:0;border-left:15px solid #fff;border-top:9.5px solid transparent;border-bottom:9.5px solid transparent;margin-left:4px}
+.tp{display:flex;align-items:center;gap:12px;flex:0 0 auto;padding-top:2px}
+.playBtn{flex:0 0 auto;width:46px;height:46px;border-radius:50%;border:none;cursor:pointer;
+  background:linear-gradient(135deg,var(--sun),var(--pink));color:#fff;
+  display:flex;align-items:center;justify-content:center;transition:.18s;
+  box-shadow:0 5px 22px rgba(255,77,141,.34)}
+.playBtn:hover:not(:disabled){transform:scale(1.07)}
+.playBtn:disabled{opacity:.28;cursor:not-allowed;background:var(--glass);color:var(--muted);box-shadow:none}
+.playBtn.playing .playIcon{width:13px;height:16px;border:none;margin-left:0;
+  background:linear-gradient(90deg,currentColor 0 4.5px,transparent 4.5px 8.5px,currentColor 8.5px 100%)}
+.playIcon{width:0;height:0;border-left:14px solid currentColor;border-top:9px solid transparent;
+  border-bottom:9px solid transparent;margin-left:4px}
 .scrub{flex:1;min-width:0}
-.scrubBar{position:relative;height:6px;border-radius:3px;
-  background:linear-gradient(90deg,rgba(255,255,255,.22) 0%,rgba(255,255,255,.22) 100%);
+.scrubBar{position:relative;height:6px;border-radius:3px;background:rgba(255,255,255,.16);
   box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);cursor:pointer;overflow:visible}
-.scrubFill{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:linear-gradient(90deg,var(--sun),var(--pink));width:0}
+.scrubFill{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:3px;
+  background:linear-gradient(90deg,var(--sun),var(--pink))}
 .scrubChorus{position:absolute;top:-4px;bottom:-4px;background:rgba(57,208,216,.28);
-  border-left:1.5px solid var(--cyan);border-right:1.5px solid var(--cyan);border-radius:2px;pointer-events:none;display:none}
+  border-left:2px solid var(--cyan);border-right:2px solid var(--cyan);border-radius:2px;
+  pointer-events:none;display:none}
 .scrubChorus.show{display:block}
-/* duration unknown: show the marker centred rather than hiding it */
 .scrubChorus.show:not([style*="left"]){left:50%;transform:translateX(-50%);width:26px}
-.time{font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums;flex:0 0 auto;letter-spacing:.03em}
+.time{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums;flex:0 0 auto;letter-spacing:.04em}
 
-.chorusBox{background:linear-gradient(135deg,rgba(57,208,216,.11),rgba(255,77,141,.07));
-  border:1px solid rgba(57,208,216,.3);border-radius:12px;padding:13px 15px;
-  display:flex;flex-direction:column;gap:11px;flex:0 0 auto}
-.chorusTop{display:flex;align-items:center;justify-content:space-between;gap:13px}
-.chorusLabel{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--cyan);font-weight:700;display:flex;align-items:center;gap:8px}
-.pulseDot{width:7px;height:7px;border-radius:50%;background:var(--cyan);animation:pd 2.1s infinite}
-@keyframes pd{0%,100%{opacity:1}50%{opacity:.25}}
-.tog{position:relative;width:52px;height:26px;border-radius:13px;border:1px solid var(--line);
-  background:rgba(255,255,255,.09);cursor:pointer;transition:.2s;flex:0 0 auto;padding:0}
-.tog.on{background:linear-gradient(90deg,var(--cyan),var(--violet2));border-color:var(--cyan)}
-.tog i{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:#fff;transition:.2s cubic-bezier(.22,1,.36,1)}
-.tog.on i{left:28px}
-.chorusMeta{font-size:11.5px;color:var(--muted);line-height:1.5;min-height:17px}
-.chorusMeta .at{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
-.chorusMeta .weak{color:var(--gold);font-size:10.5px}
-.chorusMeta .mine{color:var(--cyan)}
-.chorusMeta .none{color:var(--gold)}
-.chorusBtns{display:flex;gap:7px;flex-wrap:wrap}
-.cBtn{font-size:11px;letter-spacing:.06em;padding:7px 12px;border-radius:7px;border:1px solid var(--line);
-  background:var(--glass);color:var(--muted);cursor:pointer;transition:.16s;white-space:nowrap}
-.cBtn:hover{color:var(--ink);border-color:var(--cyan);background:rgba(57,208,216,.12)}
-.cBtn.act{color:var(--cyan);border-color:var(--cyan);background:rgba(57,208,216,.16)}
-.cBtn:disabled{opacity:.35;cursor:not-allowed}
-.tinyBtn{font-size:10.5px;padding:5px 10px;border-radius:6px;border:1px solid var(--line);background:transparent;
-  color:var(--dim);cursor:pointer;transition:.16s;white-space:nowrap}
+/* Chorus mode keeps a colour of its own, because it is the one thing the ear
+   cannot see coming. Reduced to a glyph that sits back until hovered or switched
+   on; the cyan band on the scrub bar is the only other cue. */
+.cTog{width:24px;height:24px;border:1px solid var(--line);border-radius:6px;background:transparent;
+  color:var(--dim);cursor:pointer;font-size:12px;line-height:1;transition:.16s;flex:0 0 auto;
+  display:inline-flex;align-items:center;justify-content:center;opacity:.5;padding:0}
+.cTog:hover:not(:disabled){opacity:1;color:var(--cyan);border-color:var(--cyan);background:rgba(57,208,216,.12)}
+.cTog:disabled{opacity:.2;cursor:not-allowed}
+.cTog.on{opacity:1;color:var(--cyan);border-color:var(--cyan);background:rgba(57,208,216,.16)}
+.chorusHint{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);
+  font-weight:700;opacity:0;transition:.2s;white-space:nowrap}
+.rPlay:hover .chorusHint,.chorusHint.show{opacity:.9}
+.tinyBtn{font-size:10px;padding:6px 10px;border:1px solid var(--line);border-radius:6px;
+  background:transparent;color:var(--dim);cursor:pointer;transition:.16s;white-space:nowrap;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase}
 .tinyBtn:hover{color:var(--cyan);border-color:var(--cyan)}
 
-.fb{background:rgba(255,77,141,.1);border:1px solid rgba(255,77,141,.4);border-radius:10px;
-  padding:12px 14px;font-size:12px;line-height:1.6;color:#ffc9dd;display:flex;flex-direction:column;gap:8px;flex:0 0 auto}
-.fb a{color:var(--cyan);text-decoration:none;border-bottom:1px solid rgba(57,208,216,.4);align-self:flex-start;font-size:11.5px}
-.fb .why{font-size:11px;color:#c99fb4;line-height:1.5}
+.fb{background:rgba(255,77,141,.1);border:1px solid rgba(255,77,141,.4);border-left:2px solid var(--pink);
+  border-radius:10px;padding:11px 13px;font-size:11.5px;line-height:1.55;color:#ffc9dd;
+  display:flex;flex-direction:column;gap:7px;flex:0 0 auto}
+.fb a{color:var(--cyan);text-decoration:none;border-bottom:1px solid rgba(57,208,216,.4);align-self:flex-start;
+  font-size:11px;font-weight:700}
+.fb .why{font-size:10.5px;color:#c99fb4;line-height:1.5}
+.fb b{color:var(--ink)}
 
-.foot{position:absolute;left:0;right:0;bottom:0;height:66px;padding:0 72px;display:flex;align-items:center;
-  justify-content:space-between;gap:24px;background:linear-gradient(180deg,transparent,rgba(5,4,15,.9) 55%);z-index:5}
-.footL{display:flex;align-items:center;gap:13px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
-.footL .nm{color:var(--ink);font-weight:600}
-.navBtns{display:flex;gap:7px}
-.navBtn{width:38px;height:38px;border-radius:9px;border:1px solid var(--line);background:var(--glass);
-  color:var(--muted);cursor:pointer;font-size:15px;transition:.16s}
-.navBtn:hover:not(:disabled){color:var(--ink);border-color:var(--sun);background:rgba(255,138,61,.15)}
-.navBtn:disabled{opacity:.28;cursor:not-allowed}
-.scrubRail{flex:1;min-width:0;height:34px;position:relative;display:flex;align-items:center;cursor:pointer}
+/* ============ CHROME ============ */
+.foot{position:absolute;left:0;right:0;bottom:0;height:52px;padding:0 26px 0 46px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px;z-index:5;
+  background:linear-gradient(180deg,transparent,rgba(5,4,15,.9) 55%)}
+.footL{display:flex;align-items:center;gap:11px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--dim);font-weight:700;flex:0 0 auto}
+.footL .nm{color:var(--ink);font-weight:700}
+.footL .sep{opacity:.3}
+.scrubRail{flex:1;min-width:0;height:30px;position:relative;display:flex;align-items:center;cursor:pointer}
 .railTrack{position:absolute;left:0;right:0;height:3px;border-radius:2px;background:rgba(255,255,255,.11);pointer-events:none}
-.railProg{position:absolute;left:0;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--sun),var(--pink));width:0;transition:width .3s;pointer-events:none}
-.ticks{position:absolute;left:0;right:0;height:34px;display:flex;align-items:center}
+.railProg{position:absolute;left:0;height:3px;border-radius:2px;width:0;transition:width .3s;pointer-events:none;
+  background:linear-gradient(90deg,var(--sun),var(--pink))}
+.ticks{position:absolute;left:0;right:0;height:30px;display:flex;align-items:center}
 .tick{flex:1;height:100%;display:flex;align-items:center;justify-content:center}
-.tickBar{width:2px;height:7px;border-radius:1px;background:rgba(255,255,255,.22);transition:.16s}
-.tick:hover .tickBar{background:var(--cyan);height:14px}
-.tick.on .tickBar{background:var(--sun);height:16px;box-shadow:0 0 9px var(--sun)}
+.tickBar{width:2px;height:5px;border-radius:1px;background:rgba(255,255,255,.22);transition:.16s}
+.tick:hover .tickBar{background:var(--cyan);height:12px}
+.tick.on .tickBar{background:var(--sun);height:14px;box-shadow:0 0 9px var(--sun)}
+.navBtns{display:flex;gap:6px;flex:0 0 auto}
+.navBtn{width:34px;height:34px;border:1px solid var(--line);border-radius:8px;background:var(--glass);
+  color:var(--muted);cursor:pointer;font-size:14px;transition:.16s;font-weight:700}
+.navBtn:hover:not(:disabled){color:var(--ink);background:rgba(255,138,61,.15);border-color:var(--sun)}
+.navBtn:disabled{opacity:.25;cursor:not-allowed}
 
-#blackout{position:absolute;inset:0;background:#000;z-index:40;display:none;align-items:center;justify-content:center;cursor:pointer}
+#blackout{position:absolute;inset:0;background:#05040f;z-index:40;display:none;align-items:center;justify-content:center;cursor:pointer}
 #blackout.on{display:flex}
-#blackout .bz{font-size:15px;letter-spacing:.32em;text-transform:uppercase;color:var(--dim)}
-#overview{position:absolute;inset:0;background:rgba(5,4,15,.97);z-index:35;display:none;flex-direction:column;padding:34px 46px}
+#blackout .bz{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--dim)}
+#overview{position:absolute;inset:0;background:rgba(5,4,15,.97);z-index:35;display:none;
+  flex-direction:column;padding:28px 40px}
 #overview.on{display:flex}
-.ovHead{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--line)}
-.ovTitle{font-size:20px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
-.ovGrid{flex:1;display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:11px;overflow-y:auto;align-content:start}
-.ovCell{background:var(--glass);border:1px solid var(--line);border-radius:9px;padding:12px;cursor:pointer;transition:.16s;text-align:left}
-.ovCell:hover{border-color:var(--cyan);background:rgba(57,208,216,.11);transform:translateY(-2px)}
+.ovHead{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px;padding-bottom:12px;
+  border-bottom:1px solid var(--line)}
+.ovTitle{font-size:14px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--ink)}
+.ovGrid{flex:1;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:9px;
+  overflow-y:auto;align-content:start}
+.ovCell{background:var(--glass);border:1px solid var(--line);border-radius:9px;padding:10px;cursor:pointer;
+  transition:.16s;text-align:left}
+.ovCell:hover{border-color:var(--cyan);background:rgba(57,208,216,.11)}
 .ovCell.on{border-color:var(--sun);background:rgba(255,138,61,.15)}
-.ovY{font-size:20px;font-weight:800}
-.ovN{font-size:10.5px;color:var(--dim);margin-top:4px}
-.ovIntro .ovY{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--sun)}
-.hintBar{display:flex;gap:11px;flex-wrap:nowrap;pointer-events:none;opacity:.7;flex:0 0 auto}
-.hintBar span{font-size:10px;color:var(--dim);letter-spacing:.05em;white-space:nowrap;display:flex;align-items:center;gap:4px}
-.hintBar kbd{background:rgba(255,255,255,.09);border:1px solid var(--line);border-bottom-width:2px;
-  border-radius:4px;padding:1px 5px;font-family:inherit;color:var(--muted);font-size:9px}
+.ovY{font-size:20px;font-weight:800;color:var(--ink);letter-spacing:-.01em}
+.ovN{font-size:10px;color:var(--dim);margin-top:4px;line-height:1.35}
+.ovIntro .ovY{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--sun)}
+/* year cells are the anchors of the deck — make them read as headings */
+.ovYear{grid-column:span 2}
+.ovYear .ovY{font-size:26px;background:linear-gradient(120deg,#fff,var(--sun));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.ovYear .ovN{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);font-weight:700}
+/* release cells hang off the year, so indent and dim them */
+.ovRel{background:rgba(255,255,255,.02);padding-left:14px}
+.ovRel .ovN{color:var(--muted);font-size:11px;font-weight:600}
+.ovMeta{font-size:8.5px;color:var(--dim);margin-top:4px;letter-spacing:.08em;text-transform:uppercase}
+
+@media (prefers-reduced-motion:reduce){
+  .slide{transition:none}
+}
 </style>
 </head>
 <body>
 <div id="stage">
+  <div id="bg"></div>
   <div id="vig"></div>
   <div id="deck"></div>
   <div id="overview">
     <div class="ovHead">
-      <div class="ovTitle">Jump to year</div>
+      <div class="ovTitle">Index</div>
       <button class="tinyBtn" id="ovClose">Close (Esc)</button>
     </div>
     <div class="ovGrid" id="ovGrid"></div>
@@ -270,16 +409,7 @@ body{display:flex;align-items:center;justify-content:center}
   <div id="blackout"><div class="bz">Paused — press P to resume</div></div>
   <div class="foot">
     <div class="footL">
-      <span class="nm">ANRI</span><span>杏里</span><span id="pct">1 / 1</span>
-    </div>
-    <div class="hintBar">
-      <span><kbd>←</kbd><kbd>→</kbd> slide</span>
-      <span><kbd>Space</kbd> play</span>
-      <span><kbd>C</kbd> chorus</span>
-      <span><kbd>L</kbd> loop</span>
-      <span><kbd>O</kbd> years</span>
-      <span><kbd>F</kbd> full</span>
-      <span><kbd>P</kbd> pause</span>
+      <span class="nm">ANRI</span><span class="sep">/</span><span>杏里</span><span class="sep">/</span><span id="pct">1 / 1</span>
     </div>
     <div class="scrubRail" id="scrubRail">
       <div class="railTrack"></div>
@@ -287,8 +417,8 @@ body{display:flex;align-items:center;justify-content:center}
       <div class="ticks" id="ticks"></div>
     </div>
     <div class="navBtns">
-      <button class="navBtn" id="prevBtn" title="Previous (←)">‹</button>
-      <button class="navBtn" id="nextBtn" title="Next (→)">›</button>
+      <button class="navBtn" id="prevBtn" title="Previous">‹</button>
+      <button class="navBtn" id="nextBtn" title="Next">›</button>
     </div>
   </div>
 </div>
@@ -298,19 +428,24 @@ body{display:flex;align-items:center;justify-content:center}
 /* ==========================================================================
    ANRI Discography — presentation app
    window.__ANRI__ is injected at build time by tools/build.js
+
+   NOTE: this app must be served over http://, not opened as file://.
+   YouTube refuses embeds from a file:// origin and every track then fails
+   with "Error 153 / Video player configuration error". Run `node tools/serve.js`.
    ========================================================================== */
 (function(){
 "use strict";
 
 var DATA = /*__ANRI_DATA__*/null;
 if(!DATA){
-  document.body.innerHTML='<div style="padding:60px;font:16px/1.7 sans-serif;color:#f4f1ff">'+
+  document.body.innerHTML='<div style="padding:60px;font:16px/1.7 sans-serif;color:#fff8f2">'+
     'Data not found. Run <code>node tools/build.js</code> to generate anri.html.</div>';
   return;
 }
 
 var A = DATA.artist;
 var YEARS = DATA.years;
+var COVERS = DATA.covers || {};
 var GROUP_ORDER = ['Studio album','Single','Digital single','Collaboration','Cover album',
                    'Self-cover album','Compilation','Live album','Box set','Video'];
 
@@ -333,10 +468,56 @@ function fmtTime(s){
 }
 function searchUrl(title){ return 'https://www.youtube.com/results?search_query=' + encodeURIComponent(title + ' ANRI'); }
 
-/* ---------- slide model ---------- */
+/* ---------- release dates ----------
+   Shipped as whatever precision the source actually recorded: "1983",
+   "1983-07" or "1983-07-05". Never invent a day the source did not have. */
+var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function fmtDate(d){
+  if(!d) return '';
+  var m = String(d).match(/^(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?$/);
+  if(!m) return String(d);
+  if(!m[2]) return m[1];
+  if(!m[3]) return MONTHS[parseInt(m[2],10) - 1] + ' ' + m[1];
+  return parseInt(m[3],10) + ' ' + MONTHS[parseInt(m[2],10) - 1] + ' ' + m[1];
+}
+
+/* ---------- discography-wide stats for the intro ---------- */
+var STATS = (function(){
+  var releases = 0, tracks = 0, years = {}, oricon3 = 0;
+  YEARS.forEach(function(y){
+    years[y.year] = true;
+    y.releases.forEach(function(r){
+      releases++;
+      if(r.oricon && r.oricon <= 3) oricon3++;
+      if(r.tracks) tracks += r.tracks.length;
+    });
+  });
+  var ys = Object.keys(years).map(Number).sort(function(a,b){return a-b;});
+  return { releases: releases, tracks: tracks, span: (ys[0] + '–' + ys[ys.length-1]),
+           years: ys.length, oricon3: oricon3 };
+})();
+
+/* ---------- slide model ----------
+   Two levels: a year index of that year's releases, then one slide per release.
+   A year with six releases used to cram all six onto one scrollable rail beside a
+   small player; now each release gets the full stage and a full-size player.
+   relIndex maps a release id to its slide number so a year card can drill in. */
 var slides = [{kind:'intro', label:'Intro'}];
-YEARS.forEach(function(y){ slides.push({kind:'year', year:y, label:String(y.year)}); });
+var relIndex = {};
+YEARS.forEach(function(y){
+  slides.push({kind:'year', year:y, label:String(y.year)});
+  y.releases.forEach(function(r){
+    relIndex[r.id] = slides.length;
+    slides.push({kind:'release', year:y, rel:r, label:r.title});
+  });
+});
 var TOTAL = slides.length;
+
+/* Slide number for a release, or null if it is not in the deck. */
+function releaseSlide(id){
+  var i = relIndex[id];
+  return (i != null) ? i : null;
+}
 
 /* ---------- state ---------- */
 var cur = 0;
@@ -344,15 +525,14 @@ var current = null;       // selected track object (with .chorus/.videoId merged
 var player = null;
 var playerReady = false;
 var pollTimer = null;
-var flashTimer = null;
-var STATE = {chorusOn:false, loopOn:false};
+var STATE = {chorusOn:false};
 
-/* ---------- localStorage chorus overrides ---------- */
+/* Chorus markers set by hand in an earlier version of this app are still honoured.
+   Reading costs nothing and silently ignoring someone's saved markers would be a
+   regression; there is no UI to write new ones, so nothing writes here. */
 var LS = {
   key: function(id){ return 'anri.chorus.' + id; },
-  get: function(id){ try{ var v = localStorage.getItem(LS.key(id)); return v ? JSON.parse(v) : null; }catch(e){ return null; } },
-  set: function(id, val){ try{ localStorage.setItem(LS.key(id), JSON.stringify(val)); }catch(e){} },
-  del: function(id){ try{ localStorage.removeItem(LS.key(id)); }catch(e){} }
+  get: function(id){ try{ var v = localStorage.getItem(LS.key(id)); return v ? JSON.parse(v) : null; }catch(e){ return null; } }
 };
 
 /* ---------- chorus resolution: override > analysed > none ---------- */
@@ -368,13 +548,6 @@ function chorusFor(t){
   return {start:null, end:null, source:'none', confidence:0};
 }
 function chorusStart(t){ var c = chorusFor(t); return (c && c.start != null) ? c.start : 0; }
-function chorusEnd(t){
-  var c = chorusFor(t);
-  if(c && c.end != null) return c.end;
-  var d = dur();
-  if(d) return d;
-  return chorusStart(t) + 30;
-}
 function chorusActive(){
   return !!(STATE.chorusOn && current && chorusStart(current) > 0);
 }
@@ -389,8 +562,9 @@ var nodes = [];
 
 function renderIntro(){
   var s = el('div','slide intro');
+
   var L = el('div','introL');
-  L.appendChild(el('div','kicker','Complete Discography · 1978–2025'));
+  L.appendChild(el('div','kicker','Complete Discography · ' + esc(STATS.span)));
   L.appendChild(el('div','nameJa', esc(A.nameJa)));
   L.appendChild(el('div','nameEn', esc(A.name)));
   L.appendChild(el('div','realname','<b>' + esc(A.realName) + '</b>'));
@@ -399,13 +573,26 @@ function renderIntro(){
   var meta = [
     ['Born', esc(A.born)],
     ['From', esc(A.birthplace)],
-    ['Years active', esc(A.yearsActive)],
+    ['Active', esc(A.yearsActive)],
     ['Instrument', esc(A.instrument || 'Vocals')]
   ];
   meta.forEach(function(p){
     mg.appendChild(el('div','metaItem','<div class="k">' + p[0] + '</div><div class="v">' + p[1] + '</div>'));
   });
   L.appendChild(mg);
+
+  // headline numbers — the discography at a glance
+  var sr = el('div','statRow');
+  var stats = [
+    [STATS.releases, 'Releases'],
+    [STATS.tracks, 'Tracks'],
+    [STATS.years, 'Years'],
+    [STATS.oricon3, 'Top-3 albums']
+  ];
+  stats.forEach(function(p){
+    sr.appendChild(el('div','stat', '<div class="n">' + p[0] + '</div><div class="l">' + p[1] + '</div>'));
+  });
+  L.appendChild(sr);
 
   var g = el('div','genres');
   A.genres.forEach(function(x){ g.appendChild(el('div','genre', esc(x))); });
@@ -419,9 +606,12 @@ function renderIntro(){
   L.appendChild(links);
 
   L.appendChild(el('div','bio', esc(A.bio)));
-  L.appendChild(el('div','startHint','<span class="arrowPulse">→</span> press <kbd>→</kbd> or <kbd>Space</kbd> to begin'));
+  L.appendChild(el('div','startHint','<span class="arrowPulse">▶</span> press <kbd>→</kbd> to begin'));
 
   var R = el('div','introR');
+
+  // portrait + headline card
+  var pr = el('div','portraitRow');
   var port = el('div','portrait');
   var fb = el('div','fallback', esc(A.nameJa));
   port.appendChild(fb);
@@ -434,10 +624,26 @@ function renderIntro(){
     port.appendChild(img);
     if(A.portraitCredit) port.appendChild(el('div','credit', esc(A.portraitCredit)));
   }
-  R.appendChild(port);
+  pr.appendChild(port);
+
+  var hero = el('div','heroCard');
+  hero.appendChild(el('div','heroTop',
+    '<span class="heroBig">' + STATS.releases + '</span>' +
+    '<span class="heroLbl">releases<br>' + esc(STATS.span) + '</span>'));
+  hero.appendChild(el('div','heroSub',
+    'A city-pop landmark: <b>' + STATS.tracks + '</b> catalogue tracks across ' +
+    STATS.years + ' years. Every release below carries its artwork and is playable.'));
+  var chips = el('div','heroChips');
+  ['1983 debut', 'Cat\'s Eye', 'Oricon #1s', 'Anime tie-ins'].forEach(function(c){
+    chips.appendChild(el('span','hchip', esc(c)));
+  });
+  hero.appendChild(chips);
+  pr.appendChild(hero);
+  R.appendChild(pr);
+
   R.appendChild(el('div','hlTitle','Career highlights'));
   var hl = el('div','hlList');
-  A.highlights.forEach(function(x){
+  (A.highlights || []).forEach(function(x){
     hl.appendChild(el('div','hl','<span class="hlY">' + esc(x.year) + '</span><span>' + esc(x.text) + '</span>'));
   });
   R.appendChild(hl);
@@ -446,6 +652,8 @@ function renderIntro(){
   return s;
 }
 
+/* The year slide is an index: a grid of that year's releases, nothing else.
+   The player moved to the per-release slide so this space can breathe. */
 function renderYear(y){
   var s = el('div','slide');
   var trackTotal = 0;
@@ -462,106 +670,215 @@ function renderYear(y){
   });
   right.appendChild(pr);
   right.appendChild(el('div','cnt','<b>' + y.releases.length + '</b> release' + (y.releases.length === 1 ? '' : 's')
-    + (trackTotal ? ' · <b>' + trackTotal + '</b> tracks' : '')));
+    + (trackTotal ? ' · <b>' + trackTotal + '</b> tracks' : '')
+    + ' · select one to play'));
   head.appendChild(right);
   s.appendChild(head);
 
   var body = el('div','yBody');
-  var rail = el('div','railWrap');
   GROUP_ORDER.forEach(function(type){
     var items = y.releases.filter(function(r){ return r.type === type; });
     if(!items.length) return;
     var grp = el('div','grp');
     grp.appendChild(el('div','grpHead',
-      '<span class="grpDot"></span><span class="grpName">' + esc(type) + '</span><span class="grpCount">(' + items.length + ')</span>'));
+      '<span class="grpName">' + esc(type) + '</span><span class="grpCount">(' + items.length + ')</span>'));
     var cards = el('div','cards');
     items.forEach(function(r){ cards.appendChild(renderCard(r)); });
     grp.appendChild(cards);
-    rail.appendChild(grp);
+    body.appendChild(grp);
   });
-  body.appendChild(rail);
-
-  var pc = el('div','pCol');
-  var ph = el('div','pHead');
-  ph.innerHTML = '<div><div class="pTitle">—</div><div class="pTitleJa">Select a track to play</div></div>' +
-                 '<div class="pHeadActions"></div>';
-  pc.appendChild(ph);
-  pc.appendChild(el('div','pFrame empty','<div class="ph">Select a track to play</div>'));
-  pc.appendChild(el('div','tp',
-    '<button class="playBtn" title="Play (Space)"><span class="playIcon"></span></button>' +
-    '<div class="scrub"><div class="scrubBar"><div class="scrubChorus"></div><div class="scrubFill"></div></div></div>' +
-    '<div class="time">0:00 / 0:00</div>'));
-  pc.appendChild(el('div','chorusBox',
-    '<div class="chorusTop"><span class="chorusLabel"><span class="pulseDot"></span>Chorus</span>' +
-    '<button class="tog" title="Chorus mode (C)"><i></i></button></div>' +
-    '<div class="chorusMeta">No track selected</div>' +
-    '<div class="chorusBtns">' +
-      '<button class="cBtn" data-act="go">Jump to chorus</button>' +
-      '<button class="cBtn" data-act="loop">Loop chorus</button>' +
-      '<button class="cBtn" data-act="set">Set chorus here</button>' +
-      '<button class="tinyBtn" data-act="reset" style="display:none">Reset</button>' +
-    '</div>'));
-  pc.appendChild(el('div','fb'));
-  pc.querySelector('.fb').style.display = 'none';
-  body.appendChild(pc);
   s.appendChild(body);
   return s;
 }
 
 function renderCard(r){
   var card = el('div','card');
-  if(r.oricon) card.appendChild(el('div','orbadge','#' + r.oricon));
-  card.appendChild(el('div','chead',
-    '<div><div class="ctitle">' + esc(r.title) + '</div>' +
-    (r.titleJa ? '<div class="ctitleJa">' + esc(r.titleJa) + '</div>' : '') + '</div>'));
+
+  // cover art — real artwork when the fetcher found it, a coloured tile otherwise
+  var art = COVERS[r.id];
+  var cover = el('div','cover');
+  var glyph = (r.titleJa || r.title || '♪').trim().slice(0, 1);
+  cover.appendChild(el('div','noart', esc(glyph)));
+  if(art && art.url){
+    var cimg = el('img');
+    cimg.alt = r.title + ' cover';
+    cimg.loading = 'lazy';
+    cimg.onload  = function(){ this.previousSibling.style.display = 'none'; };
+    cimg.onerror = function(){ this.style.display = 'none'; this.previousSibling.style.display = 'flex'; };
+    cimg.src = art.url;
+    cover.appendChild(cimg);
+  }
+  card.appendChild(cover);
+
+  var body = el('div','cBody');
+  var chead = el('div','chead');
+  chead.innerHTML = '<div><div class="ctitle">' + esc(r.title) + '</div>' +
+    (r.titleJa ? '<div class="ctitleJa">' + esc(r.titleJa) + '</div>' : '') + '</div>';
+  body.appendChild(chead);
+
+  // type and release date read at a glance, so a year index is scannable
+  var chips = [];
+  chips.push('<span class="cchip">' + esc(r.type) + '</span>');
+  if(r.released) chips.push('<span class="cchip date">' + esc(fmtDate(r.released)) + '</span>');
+  if(r.formats) chips.push('<span class="cchip dim">' + esc(r.formats) + '</span>');
+  body.appendChild(el('div','cchips', chips.join('')));
 
   var meta = [];
   if(r.label) meta.push('<span>' + esc(r.label) + '</span>');
   if(r.oricon) meta.push('<span class="peak' + (r.oricon <= 3 ? ' top' : '') + '">Oricon #' + r.oricon + '</span>');
   if(r.with) meta.push('<span>with ' + esc(r.with) + '</span>');
-  if(r.formats) meta.push('<span>' + esc(r.formats) + '</span>');
-  if(r.tracks && r.tracks.length) meta.push('<span>' + r.tracks.length + ' tracks</span>');
-  if(meta.length) card.appendChild(el('div','cmeta', meta.join('')));
-  if(r.note) card.appendChild(el('div','cnote', esc(r.note)));
+  if(r.tracks && r.tracks.length) meta.push('<span>' + r.tracks.length + ' track' + (r.tracks.length === 1 ? '' : 's') + '</span>');
+  if(meta.length) body.appendChild(el('div','cmeta', meta.join('')));
+  if(r.note) body.appendChild(el('div','cnote', esc(r.note)));
+  card.appendChild(body);
 
-  var hasTracks = r.tracks && r.tracks.length;
   card.dataset.release = r.id;
-  if(hasTracks){
-    card.appendChild(el('div','expand','▸ tracks'));
-    var tl = el('div','trackList');
-    r.tracks.forEach(function(t){
-      var tr = el('div','tr');
-      tr.dataset.track = t.id;
-      tr.innerHTML = '<span class="trN">' + t.n + '</span>' +
-        '<span class="trT">' + esc(t.title) +
-          (t.titleJa ? '<span class="trJa">' + esc(t.titleJa) + '</span>' : '') +
-          (t.note ? '<span class="trNote">' + esc(t.note) + '</span>' : '') +
-        '</span><span class="trY">' + (t.videoId ? 'YOUTUBE' : '—') + '</span>';
-      tl.appendChild(tr);
-    });
-    card.appendChild(tl);
-  } else if(r.type === 'Box set' || r.type === 'Video'){
+  var hasTracks = r.tracks && r.tracks.length;
+  if(!hasTracks){
     card.classList.add('np');
     card.appendChild(el('div','noplay',
-      '<a href="' + esc(searchUrl(r.title)) + '" target="_blank" rel="noopener">Search YouTube for this →</a>'));
+      'No tracklist filed — <a href="' + esc(searchUrl(r.title)) + '" target="_blank" rel="noopener">search YouTube ↗</a>'));
+  } else {
+    card.appendChild(el('div','expand','Open →'));
   }
   return card;
+}
+
+/* ---------- the release slide: full-size player + full detail ----------
+   This is where a release lives. The video takes the whole left column at 16:9
+   and the right rail carries the artwork, facts and the complete tracklist. */
+function renderRelease(y, rel){
+  var s = el('div','slide');
+  var tracks = rel.tracks || [];
+
+  var body = el('div','rBody');
+
+  /* ---- left: header + hero player ---- */
+  var play = el('div','rPlay');
+
+  var head = el('div','rHead');
+  var back = el('button','backChip','← ' + y.year);
+  back.title = 'Back to the ' + y.year + ' index';
+  back.dataset.back = '1';
+  head.appendChild(back);
+  var ht = el('div','', '<div class="rTitle">' + esc(rel.title) + '</div>' +
+    (rel.titleJa ? '<div class="rTitleJa">' + esc(rel.titleJa) + '</div>' : '') +
+    (rel.note ? '<div class="rNote">' + esc(rel.note) + '</div>' : ''));
+  head.appendChild(ht);
+  play.appendChild(head);
+
+  play.appendChild(el('div','pFrame empty','<div class="ph"><span class="big">▶</span>Select a track to play</div>'));
+
+  // transport: play, scrub, time, and the chorus toggle as a lone dim glyph
+  play.appendChild(el('div','tp',
+    '<button class="playBtn" title="Play"><span class="playIcon"></span></button>' +
+    '<div class="scrub"><div class="scrubBar"><div class="scrubChorus"></div><div class="scrubFill"></div></div></div>' +
+    '<div class="time">0:00 / 0:00</div>' +
+    '<span class="chorusHint">chorus</span>' +
+    '<button class="cTog" title="Chorus mode (C)">⟳</button>'));
+
+  var fbEl = el('div','fb');
+  fbEl.style.display = 'none';
+  play.appendChild(fbEl);
+
+  body.appendChild(play);
+
+  /* ---- right: artwork, facts, tracklist ---- */
+  var rail = el('div','rRail');
+  var art = COVERS[rel.id];
+  var ab = el('div','rArt');
+  var glyph = (rel.titleJa || rel.title || '♪').trim().slice(0, 1);
+  var ph = el('div','noart', esc(glyph));
+  ab.appendChild(ph);
+  if(art && art.url){
+    var aimg = el('img');
+    aimg.alt = rel.title + ' cover';
+    aimg.loading = 'lazy';
+    aimg.onload  = function(){ ph.style.display = 'none'; };
+    aimg.onerror = function(){ this.style.display = 'none'; ph.style.display = 'flex'; };
+    aimg.src = art.url;
+    ab.appendChild(aimg);
+  }
+  rail.appendChild(ab);
+
+  // facts — only what we actually know, so nothing renders as a blank row
+  var total = tracks.reduce(function(n, t){ return n + (t.duration || 0); }, 0);
+  var facts = [];
+  facts.push(['Released', fmtDate(rel.released)]);
+  if(rel.label) facts.push(['Label', esc(rel.label)]);
+  if(rel.type) facts.push(['Type', esc(rel.type)]);
+  if(rel.oricon) facts.push(['Oricon peak', '<span class="peak' + (rel.oricon <= 3 ? ' top' : '') + '">#' + rel.oricon + '</span>']);
+  if(rel.formats) facts.push(['Format', esc(rel.formats)]);
+  if(rel.with) facts.push(['With', esc(rel.with)]);
+  if(tracks.length) facts.push(['Tracks', tracks.length > 1 ? tracks.length + ' tracks' : '1 track']);
+  if(total) facts.push(['Running time', fmtTime(total)]);
+  if(rel.wiki) facts.push(['Reference', '<a href="' + esc(rel.wiki) + '" target="_blank" rel="noopener">Wikipedia ↗</a>']);
+  var fEl = el('div','rFacts');
+  facts.forEach(function(p){
+    if(!p[1]) return;
+    fEl.appendChild(el('div','rFact','<span class="k">' + p[0] + '</span><span class="v">' + p[1] + '</span>'));
+  });
+  rail.appendChild(fEl);
+
+  if(tracks.length){
+    rail.appendChild(el('div','rTLTitle', esc(tracks.length === 1 ? 'Track' : 'Tracklist')));
+    var tl = el('div','rTracks');
+    tracks.forEach(function(t){ tl.appendChild(trackRow(t)); });
+    rail.appendChild(tl);
+  } else {
+    rail.appendChild(el('div','rTLTitle','No tracklist'));
+    rail.appendChild(el('div','rFact',
+      '<span class="v">This release has no filed tracklist. ' +
+      '<a href="' + esc(searchUrl(rel.title)) + '" target="_blank" rel="noopener">Search YouTube ↗</a></span>'));
+  }
+
+  body.appendChild(rail);
+  s.appendChild(body);
+  return s;
+}
+
+/* One tracklist row, shared by the release rail. */
+function trackRow(t){
+  var tr = el('div','tr');
+  tr.dataset.track = t.id;
+  tr.innerHTML =
+    '<span class="trN">' + t.n + '</span>' +
+    '<span class="trT">' + esc(t.title) +
+      (t.titleJa ? '<span class="trJa">' + esc(t.titleJa) + '</span>' : '') +
+      (t.note ? '<span class="trNote">' + esc(t.note) + '</span>' : '') +
+      (t.channel ? '<span class="trChan">' + esc(t.channel) + '</span>' : '') +
+    '</span>' +
+    (t.duration ? '<span class="trDur">' + fmtTime(t.duration) + '</span>' : '') +
+    '<span class="trY">' + (t.videoId ? '▶' : '—') + '</span>';
+  return tr;
 }
 
 /* ==========================================================================
    BUILD DECK
    ========================================================================== */
+/* Slides are built on demand. With one slide per release the deck is ~150
+   slides and ~400 track rows; building them all up front made first paint slow
+   for no benefit, since only three slides are ever visible at once (this one
+   and its two neighbours, so the outgoing transition has something to animate). */
 function build(){
   deck.innerHTML = '';
-  nodes = [];
-  slides.forEach(function(s){
-    var n = (s.kind === 'intro') ? renderIntro() : renderYear(s.year);
-    deck.appendChild(n);
-    nodes.push(n);
-  });
+  nodes = new Array(TOTAL);
+  ensureSlides(0, 1);
   buildTicks();
   buildOverview();
   goTo(0, true);
+}
+function ensureSlides(from, to){
+  for(var i = Math.max(0, from); i <= Math.min(TOTAL - 1, to); i++){
+    if(nodes[i]) continue;
+    var s = slides[i];
+    var n = s.kind === 'intro' ? renderIntro()
+          : s.kind === 'year'  ? renderYear(s.year)
+          : renderRelease(s.year, s.rel);
+    n.dataset.idx = i;
+    deck.appendChild(n);
+    nodes[i] = n;
+  }
 }
 
 /* ==========================================================================
@@ -569,14 +886,17 @@ function build(){
    ========================================================================== */
 function goTo(i, force){
   if(i < 0 || i >= TOTAL) return;
+  ensureSlides(i - 1, i + 1);
   if(!force && i !== cur) stopPlayer();
   cur = i;
   var s = slides[i];
   for(var k = 0; k < nodes.length; k++){
+    if(!nodes[k]) continue;
     nodes[k].classList.toggle('active', k === i);
     nodes[k].classList.toggle('prev', k < i);
   }
-  if(s.kind === 'year'){
+  // only a release slide has a player, so only it needs resetting
+  if(s.kind === 'release'){
     if(!force) resetPlayer();
   } else {
     stopPlayer();
@@ -606,20 +926,31 @@ function buildTicks(){
     t.appendChild(tick);
   }
 }
+/* The deck is ~150 slides now, so a flat grid of them is an unusable wall. Group
+   by year: the year cell jumps to its index, the release cells jump straight to
+   that release's slide. */
 function buildOverview(){
   var g = document.getElementById('ovGrid');
   g.innerHTML = '';
-  for(var i = 0; i < TOTAL; i++){
-    (function(idx){
-      var s = slides[idx];
-      var cell = el('div','ovCell' + (s.kind === 'intro' ? ' ovIntro' : ''));
-      cell.appendChild(el('div','ovY', s.kind === 'intro' ? 'Intro' : s.label));
-      cell.appendChild(el('div','ovN', s.kind === 'intro' ? 'The artist'
-        : (s.year.releases.length + ' release' + (s.year.releases.length === 1 ? '' : 's'))));
-      cell.addEventListener('click', function(){ closeOverview(); goTo(idx); });
-      g.appendChild(cell);
-    })(i);
-  }
+  slides.forEach(function(s, idx){
+    var cell = el('div','ovCell');
+    if(s.kind === 'intro'){
+      cell.classList.add('ovIntro');
+      cell.appendChild(el('div','ovY','Intro'));
+      cell.appendChild(el('div','ovN','The artist'));
+    } else if(s.kind === 'year'){
+      cell.classList.add('ovYear');
+      cell.appendChild(el('div','ovY', String(s.year.year)));
+      cell.appendChild(el('div','ovN', s.year.releases.length + ' release' + (s.year.releases.length === 1 ? '' : 's')));
+    } else {
+      cell.classList.add('ovRel');
+      cell.dataset.hue = (relIndex[s.rel.id] % 6);
+      cell.appendChild(el('div','ovN', esc(s.rel.title)));
+      cell.appendChild(el('div','ovMeta', esc(s.rel.type) + (s.rel.released ? ' · ' + fmtDate(s.rel.released) : '')));
+    }
+    cell.addEventListener('click', function(){ closeOverview(); goTo(idx); });
+    g.appendChild(cell);
+  });
 }
 function renderOverview(){
   var cells = document.getElementById('ovGrid').children;
@@ -639,7 +970,7 @@ function resetPlayer(){
   var f = qs('.pFrame');
   if(f){
     f.classList.add('empty');
-    f.innerHTML = '<div class="ph">Select a track to play</div>';
+    f.innerHTML = '<div class="ph"><span class="big">▶</span>Select a track to play</div>';
   }
   var fb = qs('.fb');
   if(fb){ fb.style.display = 'none'; fb.innerHTML = ''; }
@@ -664,27 +995,32 @@ function ensureApi(){
   });
 }
 
-function pickTrack(trackId, releaseId){
-  var s = slides[cur];
-  if(s.kind !== 'year') return;
-  var found = null, rel = null;
-  s.year.releases.forEach(function(r){
-    if(found) return;
-    if(r.id !== releaseId) return;
-    rel = r;
-    (r.tracks || []).forEach(function(t){ if(t.id === trackId) found = t; });
-  });
-  if(!found){
-    /* release without a tracklist → search */
-    var rr = s.year.releases.filter(function(x){ return x.id === releaseId; })[0];
-    if(rr) window.open(searchUrl(rr.title), '_blank', 'noopener');
-    return;
+/* Click handlers are delegated across the deck and report a track id, so resolve
+   it against the data model rather than the DOM: a track belongs to exactly one
+   release, and that release owns the slide it should play on. */
+function findTrackById(id){
+  for(var i = 0; i < slides.length; i++){
+    var s = slides[i];
+    if(s.kind !== 'release') continue;
+    var ts = s.rel.tracks || [];
+    for(var k = 0; k < ts.length; k++) if(ts[k].id === id) return { track: ts[k], of: s.rel };
   }
-  selectTrack(found, rel);
+  return null;
 }
 
-function selectTrack(t, rel){
-  markSelected(t.id, rel.id);
+function pickTrack(trackId){
+  var found = findTrackById(trackId);
+  if(!found) return;
+  // selecting from a year index jumps to that release's own slide first
+  if(slides[cur].kind !== 'release'){
+    var i = releaseSlide(found.of.id);
+    if(i != null) goTo(i);
+  }
+  selectTrack(found.track);
+}
+
+function selectTrack(t){
+  markSelected(t.id);
   current = t;
   if(!t.videoId || t.embeddable === false){
     refreshPlayerChrome();
@@ -704,25 +1040,43 @@ function selectTrack(t, rel){
   refreshPlayerChrome();
   ensureApi().then(function(){
     if(current !== t) return;
-    makePlayer(t);
+    makePlayer(t, f);
   });
 }
 
-function makePlayer(t){
+function makePlayer(t, f){
   var mount = document.createElement('div');
   mount.id = 'ytMount';
-  mount.style.width = '100%';
-  mount.style.height = '100%';
   var host = qs('#ytHost');
   if(!host) return;
   host.innerHTML = '';
   host.appendChild(mount);
 
+  // The IFrame API wants width/height as *numbers* of pixels: it assigns them to
+  // the iframe's width/height attributes (unsigned longs), so the strings '100%'
+  // coerce to 0 and yield a 0x0 iframe — audio plays, no picture. Measure the
+  // frame and hand over real pixels. getBoundingClientRect() reports post-transform
+  // values, and the stage is scaled to the window, so undo that scale to get the
+  // iframe's own pixel size.
+  var box = f.getBoundingClientRect();
+  var stage = document.getElementById('stage');
+  var scale = 1;
+  if(stage){
+    var m = new WebKitCSSMatrix(window.getComputedStyle(stage).transform);
+    if(m && m.a) scale = m.a;
+  }
+  if(!scale || !isFinite(scale)) scale = 1;
+  var w = Math.max(320, Math.round(box.width  / scale));
+  var h = Math.max(180, Math.round(box.height / scale));
+
   var startAt = chorusActive() ? Math.floor(chorusStart(t)) : 0;
   player = new YT.Player('ytMount', {
     videoId: t.videoId,
+    width: w,
+    height: h,
     playerVars: {
       playsinline: 1, controls: 1, rel: 0, fs: 1, modestbranding: 1,
+      origin: location.origin,
       start: startAt
     },
     events: {
@@ -744,7 +1098,6 @@ function onStateChange(e){
   var pb = qs('.playBtn');
   if(pb) pb.classList.toggle('playing', e.data === 1);
   if(e.data === 1) startPolling();
-  if(e.data === 0) loopIfNeeded();
   refreshProgress();
 }
 
@@ -754,16 +1107,7 @@ function startPolling(){
     if(!playerReady) return;
     if(!current){ clearInterval(pollTimer); pollTimer = null; return; }   // slide was reset
     refreshProgress();
-    loopIfNeeded();
   }, 200);
-}
-
-function loopIfNeeded(){
-  if(!STATE.loopOn || !current || !playerReady) return;
-  var end = chorusEnd(current);
-  if(end && now() >= end - 0.15){
-    try{ player.seekTo(chorusStart(current), true); player.playVideo(); }catch(e){}
-  }
 }
 
 function seekToChorus(){
@@ -781,29 +1125,6 @@ function togglePlay(){
   }catch(e){}
 }
 
-function setChorusHere(){
-  if(!current || !playerReady){ flash('Select a track first'); return; }
-  var t = now();
-  if(t < 1){ flash('Seek into the song first'); return; }
-  var d = dur();
-  LS.set(current.id, {start:t, end: (d ? Math.min(t + 28, d) : t + 28)});
-  refreshPlayerChrome();
-  flash('Chorus set to ' + fmtTime(t));
-}
-function resetChorus(){
-  if(!current) return;
-  LS.del(current.id);
-  refreshPlayerChrome();
-  flash('Reverted to analysed chorus');
-}
-function flash(msg){
-  var meta = qs('.chorusMeta');
-  if(!meta) return;
-  meta.innerHTML = '<span class="mine">' + esc(msg) + '</span>';
-  if(flashTimer) clearTimeout(flashTimer);
-  flashTimer = setTimeout(refreshPlayerChrome, 1500);
-}
-
 function showFallback(code, t){
   var track = t || current;
   var fb = qs('.fb');
@@ -817,8 +1138,14 @@ function showFallback(code, t){
          : (track && track.embeddable === false ? 'This upload blocks embedding'
             : 'No YouTube video was resolved for this track');
   var vid = (track && track.videoId) ? track.videoId : '';
+  var why = 'Some uploads disable playback outside YouTube, or are region-locked.';
+  if(code === 153 || code === 101 || code === 150){
+    // this is the signature failure of opening the app over file://
+    why = 'YouTube blocks embeds on pages opened from a file:// path. ' +
+          'Serve the app over http (node tools/serve.js) and this track will play.';
+  }
   fb.innerHTML = '<div><b>' + esc(msg) + '</b></div>' +
-    '<div class="why">Some uploads disable playback outside YouTube, or are region-locked.</div>' +
+    '<div class="why">' + esc(why) + '</div>' +
     (vid ? '<a href="https://www.youtube.com/watch?v=' + esc(vid) + '" target="_blank" rel="noopener">Open on YouTube →</a>' : '') +
     '<a href="' + esc(searchUrl(track ? track.title : '')) + '" target="_blank" rel="noopener">Search YouTube instead →</a>';
   fb.style.display = 'flex';
@@ -826,60 +1153,35 @@ function showFallback(code, t){
   if(spin) spin.classList.add('hide');
 }
 
-/* ---------- chrome rendering ---------- */
+/* ---------- chrome rendering ----------
+   The release slide carries the release's own identity in its header and marks
+   the playing track in the tracklist, so all that is left to update per-track is
+   the transport state and the one chorus toggle. */
 function refreshPlayerChrome(){
   var slide = activeSlide();
   if(!slide) return;
-  var head = slide.querySelector('.pHead');
-  var meta = slide.querySelector('.chorusMeta');
-  var tog   = slide.querySelector('.tog');
-  var pb    = slide.querySelector('.playBtn');
+  var tog = slide.querySelector('.cTog');
+  var pb  = slide.querySelector('.playBtn');
+  var hint = slide.querySelector('.chorusHint');
 
   if(!current){
-    if(head) head.innerHTML = '<div><div class="pTitle">—</div><div class="pTitleJa">Select a track to play</div></div><div class="pHeadActions"></div>';
-    if(meta) meta.innerHTML = 'No track selected';
-    if(tog) tog.classList.remove('on');
+    if(tog){ tog.classList.remove('on'); tog.disabled = true; }
+    if(hint) hint.classList.remove('show');
     if(pb){ pb.disabled = true; pb.classList.remove('playing'); }
-    slide.querySelectorAll('.chorusBtns .cBtn').forEach(function(b){ b.disabled = true; });
-    var rb = slide.querySelector('[data-act="reset"]');
-    if(rb) rb.style.display = 'none';
     return;
   }
 
-  if(head){
-    var sub = [];
-    if(current.parentTitle) sub.push(esc(current.parentTitle) + '<span class="sep">·</span>');
-    sub.push(esc(current.query || ('From ' + A.name)));
-    head.innerHTML = '<div><div class="pTitle">' + esc(current.title) + '</div>' +
-      (current.titleJa ? '<div class="pTitleJa">' + esc(current.titleJa) + '</div>' : '') +
-      '<div class="pParent">' + sub.join('') + '</div></div>' +
-      '<div class="pHeadActions"><button class="iconBtn" id="ytLink" title="Open on YouTube">↗</button></div>';
-  }
-
-  var c = chorusFor(current);
-  if(meta){
-    if(c.source === 'custom'){
-      meta.innerHTML = '<span class="at">' + fmtTime(c.start) + (c.end != null ? ' – ' + fmtTime(c.end) : '') + '</span> <span class="mine">· your marker</span>';
-    } else if(c.source === 'analysed'){
-      meta.innerHTML = '<span class="at">' + fmtTime(c.start) + (c.end != null ? ' – ' + fmtTime(c.end) : '') + '</span>' +
-        (c.confidence && c.confidence < 0.45 ? ' <span class="weak">· low confidence</span>' : '');
-    } else {
-      meta.innerHTML = '<span class="none">No analysed chorus</span> — use “Set chorus here”';
-    }
-  }
-  if(tog) tog.classList.toggle('on', STATE.chorusOn);
-  if(pb) pb.disabled = !playerReady;
-
   var hasChorus = chorusStart(current) > 0;
-  slide.querySelectorAll('.chorusBtns [data-act]').forEach(function(b){
-    var act = b.getAttribute('data-act');
-    b.classList.remove('act');
-    if(act === 'go' || act === 'loop') b.disabled = !hasChorus;
-    if(act === 'set') b.disabled = !playerReady;
-    if(act === 'loop') b.classList.toggle('act', STATE.loopOn);
-  });
-  var rb = slide.querySelector('[data-act="reset"]');
-  if(rb) rb.style.display = LS.get(current.id) ? 'inline-block' : 'none';
+  if(tog){
+    tog.classList.toggle('on', STATE.chorusOn);
+    tog.disabled = !hasChorus;                 // nothing to jump to without a chorus
+    tog.title = hasChorus ? 'Chorus mode (C)' : 'No analysed chorus';
+  }
+  if(hint){
+    hint.textContent = hasChorus ? 'chorus' : 'no chorus';
+    hint.classList.toggle('show', STATE.chorusOn);
+  }
+  if(pb) pb.disabled = !playerReady;
 
   refreshProgress();
 }
@@ -899,8 +1201,6 @@ function refreshProgress(){
     band.style.left = (c.start / d * 100) + '%';
     band.style.width = (Math.max(end - c.start, 3) / d * 100) + '%';
   } else if(band){
-    // Duration is not available until the player is ready, and stays 0 in some
-    // environments. Keep the chorus visible as a marker rather than hiding it.
     if(c && c.start != null){
       band.classList.add('show');
       band.style.left = '';
@@ -912,64 +1212,47 @@ function refreshProgress(){
   if(time) time.textContent = fmtTime(n) + (d ? ' / ' + fmtTime(d) : '');
 }
 
-function markSelected(trackId, releaseId){
+/* The release slide's tracklist is always visible, so marking the playing track
+   is just a class toggle on the row. */
+function markSelected(trackId){
   var slide = activeSlide();
   if(!slide) return;
-  var card = null;
-  slide.querySelectorAll('.card').forEach(function(c){
-    c.classList.remove('sel');
-    var tl = c.querySelector('.trackList');
-    if(tl && tl.querySelector('.tr[data-track="' + cssEsc(trackId) + '"]')) card = c;
+  slide.querySelectorAll('.tr').forEach(function(n){
+    n.classList.toggle('act', n.dataset.track === trackId);
   });
-  if(card){
-    card.classList.add('sel');
-    var tl = card.querySelector('.trackList');
-    if(!tl.classList.contains('open')){ tl.classList.add('open'); var ex = card.querySelector('.expand'); if(ex){ ex.classList.add('on'); ex.innerHTML = '▾ tracks'; } }
-    tl.querySelectorAll('.tr').forEach(function(n){ n.classList.toggle('act', n.dataset.track === trackId); });
-  }
 }
-function cssEsc(s){ return String(s).replace(/["\\]/g, '\\$&'); }
 
-/* ---------- card / track click handling (delegated) ---------- */
+/* ---------- card / track / control clicks (delegated over the whole deck) ---------- */
 deck.addEventListener('click', function(e){
+  // "← year" chip on a release slide
+  var back = e.target.closest('.backChip');
+  if(back){
+    var s = slides[cur];
+    if(s.kind === 'release'){
+      for(var i = 0; i < slides.length; i++){
+        if(slides[i].kind === 'year' && slides[i].year === s.year){ goTo(i); return; }
+      }
+    }
+    return;
+  }
+
   var tr = e.target.closest('.tr');
-  if(tr){
-    e.stopPropagation();
-    var card = tr.closest('.card');
-    pickTrack(tr.dataset.track, card.dataset.release);
-    return;
-  }
+  if(tr){ e.stopPropagation(); pickTrack(tr.dataset.track); return; }
+
+  // a year card opens that release's own slide
   var card = e.target.closest('.card');
-  if(!card) return;
-  if(e.target.closest('.trackList')) return;
-  var tl = card.querySelector('.trackList');
-  if(tl){
-    var open = tl.classList.toggle('open');
-    var ex = card.querySelector('.expand');
-    if(ex){ ex.classList.add('on', open); ex.innerHTML = open ? '▾ tracks' : '▸ tracks'; }
-    return;
+  if(card){
+    if(e.target.closest('a')) return;                 // let the search link do its job
+    var i = releaseSlide(card.dataset.release);
+    if(i != null) goTo(i);
   }
-  /* no tracklist → open its YouTube search */
-  var title = card.querySelector('.ctitle');
-  if(title && !card.querySelector('.noplay')) window.open(searchUrl(title.textContent), '_blank', 'noopener');
-});
+}, true);
 
 deck.addEventListener('click', function(e){
   var pg = e.target.closest('.playBtn');
   if(pg){ togglePlay(); return; }
-  var tog = e.target.closest('.tog');
-  if(tog){ toggleChorus(); return; }
-  var yl = e.target.closest('#ytLink');
-  if(yl){ if(current) window.open('https://www.youtube.com/watch?v=' + current.videoId, '_blank', 'noopener'); return; }
-  var b = e.target.closest('.chorusBtns [data-act]');
-  if(b){
-    var act = b.getAttribute('data-act');
-    if(act === 'go') seekToChorus();
-    else if(act === 'loop') toggleLoop();
-    else if(act === 'set') setChorusHere();
-    else if(act === 'reset') resetChorus();
-    return;
-  }
+  var tog = e.target.closest('.cTog');
+  if(tog && !tog.disabled){ toggleChorus(); return; }
   var bar = e.target.closest('.scrubBar');
   if(bar){
     if(!playerReady) return;
@@ -983,10 +1266,6 @@ function toggleChorus(){
   STATE.chorusOn = !STATE.chorusOn;
   refreshPlayerChrome();
   if(STATE.chorusOn && current) seekToChorus();
-}
-function toggleLoop(){
-  STATE.loopOn = !STATE.loopOn;
-  refreshPlayerChrome();
 }
 
 /* ==========================================================================
@@ -1017,7 +1296,6 @@ document.addEventListener('keydown', function(e){
     case 'Home': goTo(0); break;
     case 'End': goTo(TOTAL - 1); break;
     case 'c': case 'C': toggleChorus(); break;
-    case 'l': case 'L': toggleLoop(); break;
     case 'o': case 'O': document.getElementById('overview').classList.toggle('on'); renderOverview(); break;
     case 'p': case 'P': document.getElementById('blackout').classList.toggle('on'); break;
     case 'f': case 'F': toggleFS(); break;
@@ -1058,6 +1336,25 @@ document.addEventListener('fullscreenchange', function(){ setTimeout(fit, 60); }
 /* ---------- go ---------- */
 build();
 fit();
+
+/* Deep link: anri.html#1994 or #al-timely opens that year or release directly;
+   #42 opens slide 42. Useful for sharing one part of a 150-slide deck. */
+(function(){
+  var yearIndex = {};
+  slides.forEach(function(s, i){ if(s.kind === 'year') yearIndex[s.year.year] = i; });
+  function jump(){
+    var h = decodeURIComponent(location.hash.replace(/^#/, '')).trim();
+    if(!h) return;
+    // a year and a release id both look like plain text, so try them before the
+    // bare slide number — "#1994" is a year, not slide 1994
+    if(relIndex[h] != null){ goTo(relIndex[h]); return; }
+    var y = parseInt(h, 10);
+    if(String(y) === h && yearIndex[y] != null){ goTo(yearIndex[y]); return; }
+    if(String(y) === h && y > 0 && y < TOTAL){ goTo(y - 1); return; }
+  }
+  window.addEventListener('hashchange', jump);
+  jump();
+})();
 
 })();
 </script>

@@ -138,6 +138,12 @@ const DISTRACT = /(cover|tribute|remix\s*by|dj|mix\s*20|medley|reaction|cover\s*
 /* The discography entries describe the studio release, so a live/cover/tribute
    take is the wrong answer even when it comes from the official channel. */
 const NOT_STUDIO = /(\blive\b|ライブ|acoustic|unplugged|orchestra|symphon|tribute|cover|remaster|\d{4}\s*live|concert|hall|pacifico|nhk|ymphony)/i;
+/* Multi-song uploads pack several tracks into one video and YouTube reports the
+   combined length, so they slip past the duration cap. A single release must be
+   one track, and an official upload naming three or more songs in quotes is the
+   clearest signal that it is not. Two quoted titles is still ambiguous (a single
+   often ships with its instrumental), so require three. */
+const MULTI_SONG = /"[^"]+"[〜~＋+\-–—]?"[^"]+"[〜~＋+\-–—]?"[^"]+"/;
 /* "Anri" is also the name of other artists, and the token "anri" turns up in
    unrelated words (Arcane, and in Japanese given names). Reject results whose
    title or channel is dominated by a different artist. */
@@ -147,6 +153,15 @@ const ANRI_WORD = /anri|杏里/i;
 function scoreCandidate(v, task) {
   if (v.isLive) return -1;
   if (v.length && v.length < 90) return -1;          // < 1.5 min is a clip, not a track
+  /* A single is one song (~2-7 min). The search index also returns full-album
+     uploads, promo teasers and recording documentaries for the same title, and
+     those will happily outscore the real thing on channel name. Cap the length
+     so an anthology is never presented as the single. */
+  if (task.releaseType === 'Single' || task.releaseType === 'Digital single' ||
+      task.releaseType === 'Collaboration') {
+    if (v.length && v.length > 12 * 60) return -1;
+    if (MULTI_SONG.test(v.title || '')) return -1;
+  }
 
   const title = v.title || '';
   const chan = v.channel || '';
