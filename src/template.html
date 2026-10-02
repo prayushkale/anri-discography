@@ -287,8 +287,8 @@ body{display:flex;align-items:center;justify-content:center}
 .spinner{width:34px;height:34px;border:3px solid rgba(255,255,255,.16);border-top-color:var(--sun);
   border-radius:50%;animation:spin .8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-#ytHost{width:100%;height:100%}
-#ytHost>div,#ytHost iframe{width:100%!important;height:100%!important;border:0;display:block}
+.ytHost{width:100%;height:100%}
+.ytHost>div,.ytHost iframe{width:100%!important;height:100%!important;border:0;display:block}
 
 .tp{display:flex;align-items:center;gap:12px;flex:0 0 auto;padding-top:2px}
 .playBtn{flex:0 0 auto;width:46px;height:46px;border-radius:50%;border:none;cursor:pointer;
@@ -312,6 +312,38 @@ body{display:flex;align-items:center;justify-content:center}
 .scrubChorus.show{display:block}
 .scrubChorus.show:not([style*="left"]){left:50%;transform:translateX(-50%);width:26px}
 .time{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums;flex:0 0 auto;letter-spacing:.04em}
+
+/* ---- hand-set chorus editor ----
+   Shown only for a track with no analysed chorus, because there is nothing to
+   re-tune otherwise. The bar grows so the two grips are big enough to hit, and
+   the transport is bottom-aligned, so growing it moves nothing else. */
+.cEdit{width:24px;height:24px;border:1px solid var(--line);border-radius:6px;background:transparent;
+  color:var(--dim);cursor:pointer;font-size:12px;line-height:1;transition:.16s;flex:0 0 auto;
+  display:none;align-items:center;justify-content:center;opacity:.5;padding:0}
+.cEdit:hover:not(:disabled){opacity:1;color:var(--cyan);border-color:var(--cyan);background:rgba(57,208,216,.12)}
+.cEdit:disabled{opacity:.2;cursor:not-allowed}
+.cEdit.on{opacity:1;color:var(--cyan);border-color:var(--cyan);background:rgba(57,208,216,.16)}
+.scrubBar.editing{height:24px;cursor:default}
+.scrubBar.editing .scrubChorus{background:rgba(57,208,216,.42);z-index:2}
+.edStart,.edEnd{position:absolute;top:0;bottom:0;width:10px;margin-left:-5px;z-index:4;display:none;
+  cursor:ew-resize;touch-action:none}
+.scrubBar.editing .edStart,.scrubBar.editing .edEnd{display:block}
+/* the visible grip is the sliver; ::before widens the grab target, because a
+   10px target on a 6px bar is miserable on a trackpad */
+.edStart::before,.edEnd::before{content:'';position:absolute;top:0;bottom:0;left:-9px;width:28px}
+.edStart::after,.edEnd::after{content:'';position:absolute;top:0;bottom:0;left:3px;width:4px;border-radius:2px;
+  background:var(--cyan);box-shadow:0 0 10px rgba(57,208,216,.8)}
+.edStart.grab::after,.edEnd.grab::after{background:#fff}
+.edTip{position:absolute;left:0;bottom:30px;z-index:6;display:none;white-space:nowrap;
+  font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--cyan);
+  background:rgba(5,4,15,.92);border:1px solid rgba(57,208,216,.5);border-radius:6px;padding:4px 8px;
+  font-variant-numeric:tabular-nums;transform:translateX(-50%)}
+.scrubBar.editing .edTip.show{display:block}
+.edBar{position:relative}
+.edBtns{display:none;gap:6px;align-items:center;flex:0 0 auto}
+.scrubBar.editing ~ .edBtns,.edBtns.show{display:flex}
+.edNote{font-size:10px;color:var(--muted);letter-spacing:.06em;white-space:nowrap;display:none}
+.edNote.show{display:inline}
 
 /* Chorus mode keeps a colour of its own, because it is the one thing the ear
    cannot see coming. Reduced to a glyph that sits back until hovered or switched
@@ -528,12 +560,24 @@ var pollTimer = null;
 var STATE = {chorusOn:false};
 
 /* Chorus markers set by hand in an earlier version of this app are still honoured.
-   Reading costs nothing and silently ignoring someone's saved markers would be a
-   regression; there is no UI to write new ones, so nothing writes here. */
+   The app can now write new ones: the editor saves to localStorage so the band
+   updates immediately, and posts to the dev server so the choice survives a
+   rebuild and a cleared cache. */
 var LS = {
   key: function(id){ return 'anri.chorus.' + id; },
-  get: function(id){ try{ var v = localStorage.getItem(LS.key(id)); return v ? JSON.parse(v) : null; }catch(e){ return null; } }
+  get: function(id){ try{ var v = localStorage.getItem(LS.key(id)); return v ? JSON.parse(v) : null; }catch(e){ return null; } },
+  set: function(id, val){
+    try {
+      if(val == null) localStorage.removeItem(LS.key(id));
+      else localStorage.setItem(LS.key(id), JSON.stringify(val));
+    }catch(e){}
+  }
 };
+
+/* Editor state. `ed` is the span being dragged, in seconds; `grab` is which part
+   of it the pointer is holding. Kept apart from the saved chorus so a drag never
+   writes anywhere until Save is pressed. */
+var ED = {on:false, start:0, end:0, grab:null, moved:false, min:2};
 
 /* ---------- chorus resolution: override > analysed > none ---------- */
 function chorusFor(t){
@@ -543,7 +587,10 @@ function chorusFor(t){
     return {start:ov.start, end:(typeof ov.end === 'number' ? ov.end : null), source:'custom', confidence:1};
   }
   if(t.chorus && typeof t.chorus.start === 'number'){
-    return {start:t.chorus.start, end:t.chorus.end, source:'analysed', confidence:t.chorus.confidence || 0};
+    // A hand-set span baked in at build time is not an analysis result, and must
+    // still be clearable from the UI.
+    return {start:t.chorus.start, end:t.chorus.end,
+            source:(t.chorus.manual ? 'manual' : 'analysed'), confidence:t.chorus.confidence || 0};
   }
   return {start:null, end:null, source:'none', confidence:0};
 }
@@ -772,10 +819,17 @@ function renderRelease(y, rel){
   // transport: play, scrub, time, and the chorus toggle as a lone dim glyph
   play.appendChild(el('div','tp',
     '<button class="playBtn" title="Play"><span class="playIcon"></span></button>' +
-    '<div class="scrub"><div class="scrubBar"><div class="scrubChorus"></div><div class="scrubFill"></div></div></div>' +
+    '<div class="scrub"><div class="scrubBar edBar"><div class="scrubChorus"></div><div class="scrubFill"></div>' +
+    '<div class="edStart"></div><div class="edEnd"></div><div class="edTip"></div></div></div>' +
     '<div class="time">0:00 / 0:00</div>' +
     '<span class="chorusHint">chorus</span>' +
-    '<button class="cTog" title="Chorus mode (C)">⟳</button>'));
+    '<button class="cTog" title="Chorus mode (C)">⟳</button>' +
+    '<button class="cEdit" title="Set chorus timing (E)">✎</button>' +
+    '<div class="edBtns">' +
+      '<span class="edNote"></span>' +
+      '<button class="tinyBtn edSave" title="Save (S)">Save</button>' +
+      '<button class="tinyBtn edClear" title="Remove this chorus">Clear</button>' +
+    '</div>'));
 
   var fbEl = el('div','fb');
   fbEl.style.display = 'none';
@@ -887,8 +941,9 @@ function ensureSlides(from, to){
 function goTo(i, force){
   if(i < 0 || i >= TOTAL) return;
   ensureSlides(i - 1, i + 1);
-  if(!force && i !== cur) stopPlayer();
+  if(!force && i !== cur) resetPlayer();   // destroy the live player while it is still in the DOM
   cur = i;
+  clearStaleFrames(i);
   var s = slides[i];
   for(var k = 0; k < nodes.length; k++){
     if(!nodes[k]) continue;
@@ -896,11 +951,7 @@ function goTo(i, force){
     nodes[k].classList.toggle('prev', k < i);
   }
   // only a release slide has a player, so only it needs resetting
-  if(s.kind === 'release'){
-    if(!force) resetPlayer();
-  } else {
-    stopPlayer();
-  }
+  if(s.kind !== 'release') stopPlayer();
   renderFooter();
   renderOverview();
   refreshPlayerChrome();
@@ -966,6 +1017,9 @@ function qs(sel){ var s = activeSlide(); return s ? s.querySelector(sel) : null;
 
 function resetPlayer(){
   current = null;
+  ED.on = false; ED.grab = null;               // a half-drawn span is not portable
+  var oldBar = qs('.scrubBar');
+  if(oldBar) oldBar.classList.remove('editing');
   destroyPlayer();
   var f = qs('.pFrame');
   if(f){
@@ -978,6 +1032,21 @@ function resetPlayer(){
 }
 function stopPlayer(){
   try{ if(player && playerReady) player.pauseVideo(); }catch(e){}
+}
+
+/* Slides are built lazily and stay in the DOM, so every slide that has played
+   keeps a live YouTube embed running. Left alone, the slide you just left keeps
+   playing audio over the slide you are on and holds an iframe nobody is
+   watching. Drop the frames of every built slide except the destination. */
+function clearStaleFrames(keepIdx){
+  for(var k = 0; k < nodes.length; k++){
+    if(k === keepIdx || !nodes[k]) continue;
+    var pf = nodes[k].querySelector('.pFrame');
+    if(pf && !pf.classList.contains('empty')){
+      pf.innerHTML = '';
+      pf.classList.add('empty');
+    }
+  }
 }
 function destroyPlayer(){
   if(pollTimer){ clearInterval(pollTimer); pollTimer = null; }
@@ -1020,6 +1089,10 @@ function pickTrack(trackId){
 }
 
 function selectTrack(t){
+  // Switching track abandons any span being drawn — it belonged to the last one.
+  ED.on = false; ED.grab = null;
+  var oldBar = qs('.scrubBar');
+  if(oldBar) oldBar.classList.remove('editing');
   markSelected(t.id);
   current = t;
   if(!t.videoId || t.embeddable === false){
@@ -1035,7 +1108,7 @@ function selectTrack(t){
   // otherwise the old iframe and its poll timer leak and fight over `player`
   destroyPlayer();
   f.classList.remove('empty');
-  f.innerHTML = '<div class="spin"><div class="spinner"></div></div><div id="ytHost"></div>';
+  f.innerHTML = '<div class="spin"><div class="spinner"></div></div><div class="ytHost"></div>';
 
   refreshPlayerChrome();
   ensureApi().then(function(){
@@ -1045,11 +1118,16 @@ function selectTrack(t){
 }
 
 function makePlayer(t, f){
-  var mount = document.createElement('div');
-  mount.id = 'ytMount';
-  var host = qs('#ytHost');
+  var host = qs('.ytHost');
   if(!host) return;
+  // Hand the API the element, not an id. Slides are built lazily and stay in the
+  // DOM, so every slide that has played keeps its own host — several copies exist
+  // at once and `new YT.Player('ytMount')` resolves that name with
+  // document.getElementById, which returns the FIRST (stale, off-screen) one.
+  // The iframe then lands in the hidden slide instead of this one: audio may
+  // still play, but the viewer stays blank.
   host.innerHTML = '';
+  var mount = document.createElement('div');
   host.appendChild(mount);
 
   // The IFrame API wants width/height as *numbers* of pixels: it assigns them to
@@ -1070,7 +1148,7 @@ function makePlayer(t, f){
   var h = Math.max(180, Math.round(box.height / scale));
 
   var startAt = chorusActive() ? Math.floor(chorusStart(t)) : 0;
-  player = new YT.Player('ytMount', {
+  player = new YT.Player(mount, {
     videoId: t.videoId,
     width: w,
     height: h,
@@ -1081,6 +1159,10 @@ function makePlayer(t, f){
     },
     events: {
       onReady: function(e){
+        // A fast navigation can destroy this player before the API finishes
+        // booting it, and the event still lands. Touching a torn-down player is
+        // what makes the API log "not attached to the DOM", so drop the event.
+        if(player !== e.target) return;
         playerReady = true;
         var spin = qs('.spin');
         if(spin) spin.classList.add('hide');
@@ -1115,6 +1197,198 @@ function seekToChorus(){
   var s = chorusStart(current);
   if(!s) return;
   try{ player.seekTo(s, true); player.playVideo(); }catch(e){}
+}
+
+/* ==========================================================================
+   HAND-SET CHORUS EDITOR
+   The analyser only ever marks the most repeated section of a track, and it
+   skips a lot of singles outright. This lets a span be drawn by hand for those,
+   then saved so the app treats it like any other chorus.
+
+   Everything is expressed in seconds and converted to pixels at paint time, so
+   a change to the player's duration cannot leave the handles somewhere stale.
+   ========================================================================== */
+
+/* Is there anything to edit? A loaded player is required because the bar is
+   scaled by duration, and with no duration there is no coordinate system. */
+function canEdit(){
+  return !!(current && playerReady && dur() > 0 && chorusFor(current).start == null);
+}
+
+function edBar(){ return qs('.scrubBar'); }
+
+/* Pointer x to seconds, clamped to the track. */
+function edSeconds(e){
+  var bar = edBar();
+  if(!bar) return 0;
+  var r = bar.getBoundingClientRect();
+  var d = dur();
+  if(!r.width || !d) return 0;
+  return Math.max(0, Math.min(d, (e.clientX - r.left) / r.width * d));
+}
+
+/* Keep both edges legal no matter which one moved. An edge that would swallow
+   the other is pushed out to the 2s minimum rather than allowed to cross. */
+function edClamp(){
+  var d = dur();
+  if(!(d > 0)) return;
+  ED.start = Math.max(0, Math.min(ED.start, d));
+  ED.end   = Math.max(0, Math.min(ED.end, d));
+  if(ED.end - ED.start < ED.min){
+    if(ED.grab === 'end') ED.end = Math.min(d, ED.start + ED.min);
+    else ED.start = Math.max(0, ED.end - ED.min);
+  }
+  if(ED.end - ED.start < ED.min) ED.end = Math.min(d, ED.start + ED.min);
+}
+
+function enterEdit(){
+  if(!canEdit()) return;
+  var d = dur();
+  // Seed from the playhead, since the whole point is to mark what is playing.
+  var c = chorusFor(current);
+  var s = (c.start != null) ? c.start : now();
+  ED.on = true;
+  ED.start = Math.max(0, Math.min(s, d - ED.min));
+  ED.end   = Math.min(d, ED.start + 30);
+  ED.grab = null;
+  var bar = edBar();
+  if(bar) bar.classList.add('editing');
+  edChrome();
+  refreshProgress();
+}
+
+function exitEdit(){
+  if(!ED.on) return;
+  ED.on = false; ED.grab = null;
+  var slide = activeSlide();
+  if(slide){
+    var bar = slide.querySelector('.scrubBar');
+    if(bar) bar.classList.remove('editing');
+    var tip = slide.querySelector('.edTip');
+    if(tip) tip.classList.remove('show');
+  }
+  edChrome();
+  refreshProgress();
+}
+
+function toggleEdit(){ ED.on ? exitEdit() : enterEdit(); }
+
+/* Move the grips, the band and the readout from ED. Called on every tick while
+   editing, so it stays correct when the player is re-created underneath. */
+function paintEditor(){
+  if(!ED.on) return;
+  var slide = activeSlide();
+  if(!slide) return;
+  var d = dur();
+  if(!(d > 0)) return;
+  var hs = slide.querySelector('.edStart'), he = slide.querySelector('.edEnd');
+  var tip = slide.querySelector('.edTip');
+  if(hs) hs.style.left = (ED.start / d * 100) + '%';
+  if(he) he.style.left = (ED.end / d * 100) + '%';
+  if(tip){
+    tip.classList.add('show');
+    tip.textContent = fmtTime(ED.start) + ' → ' + fmtTime(ED.end) +
+                      '  (' + fmtTime(ED.end - ED.start) + ')';
+    var bar = slide.querySelector('.scrubBar');
+    if(bar){
+      var r = bar.getBoundingClientRect();
+      var pct = ((ED.start + ED.end) / 2) / d;
+      // keep the label on screen even when the span sits at either end
+      tip.style.left = Math.max(4, Math.min(96, pct * 100)) + '%';
+    }
+  }
+}
+
+/* Save/Clear visibility and the ✎ button, all derived from the same predicate. */
+function edChrome(){
+  var slide = activeSlide();
+  if(!slide) return;
+  var eb = slide.querySelector('.cEdit');
+  var btns = slide.querySelector('.edBtns');
+  var save = slide.querySelector('.edSave');
+  var clr  = slide.querySelector('.edClear');
+  var note = slide.querySelector('.edNote');
+
+  if(eb){
+    // Only offered when there is genuinely no chorus to jump to.
+    if(current && chorusFor(current).start == null) eb.style.display = 'inline-flex';
+    else eb.style.display = 'none';
+    eb.classList.toggle('on', ED.on);
+    eb.disabled = !playerReady;
+    eb.title = !playerReady ? 'Play the track first — timing needs the audio loaded'
+                           : 'Set the chorus by hand (E)';
+  }
+  var cc0 = current ? chorusFor(current) : null;
+  var handSet0 = !!cc0 && (cc0.source === 'custom' || cc0.source === 'manual');
+  // The group has to be on screen for Clear to be reachable, so it follows the
+  // same rule as the button: editing, or a hand-set span that can be removed.
+  if(btns) btns.classList.toggle('show', ED.on || handSet0);
+  if(save) save.disabled = !ED.on;
+  if(save) save.style.display = ED.on ? 'inline-block' : 'none';
+  if(clr){
+    clr.style.display = (ED.on || handSet0) ? 'inline-block' : 'none';
+  }
+  if(note) note.textContent = ED.on ? 'drag the two grips' : '';
+}
+
+function setEditNote(msg){
+  var note = qs('.edNote');
+  if(note) note.textContent = msg || '';
+}
+
+function saveChorus(){
+  if(!ED.on || !current) return;
+  var s = Math.round(ED.start * 100) / 100;
+  var e = Math.round(ED.end * 100) / 100;
+  var id = current.id;
+
+  // localStorage first, so the band is right even if the write below fails.
+  LS.set(id, {start:s, end:e});
+  // The track object carries the build-time chorus, so update it too — otherwise
+  // only the localStorage override would be hiding a stale band.
+  current.chorus = {start:s, end:e, confidence:1, manual:true};
+  exitEdit();
+  refreshPlayerChrome();
+
+  fetch('/api/chorus', {
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({id:id, start:s, end:e, duration: dur() || (current.duration || null)})
+  }).then(function(r){
+    if(!r.ok) throw new Error('http ' + r.status);
+    setEditNote('saved to choruses.json');
+    setTimeout(function(){ setEditNote(''); }, 2500);
+  }).catch(function(){
+    // Never claim a durable save that did not happen.
+    setEditNote('saved in this browser only — not written to disk');
+  });
+}
+
+function clearChorus(){
+  if(!current) return;
+  var id = current.id;
+  var c = chorusFor(current);
+  // Nothing hand-set here: the only way back to that state is to drop a local
+  // override, and an analysed chorus must not be deleted from under the user.
+  if(c.source === 'analysed'){
+    setEditNote('analysed chorus — not editable');
+    return;
+  }
+  LS.set(id, null);
+  // Drop the build-time copy too, or the band keeps drawing the span we just removed.
+  delete current.chorus;
+  ED.on = false;
+  exitEdit();
+  fetch('/api/chorus', {
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({id:id, start:null, end:null})
+  }).then(function(r){
+    setEditNote(r.ok ? 'chorus cleared' : 'cleared in this browser only');
+    setTimeout(function(){ setEditNote(''); }, 2500);
+  }).catch(function(){
+    setEditNote('cleared in this browser only');
+  });
+  refreshPlayerChrome();
 }
 
 function togglePlay(){
@@ -1178,11 +1452,12 @@ function refreshPlayerChrome(){
     tog.title = hasChorus ? 'Chorus mode (C)' : 'No analysed chorus';
   }
   if(hint){
-    hint.textContent = hasChorus ? 'chorus' : 'no chorus';
-    hint.classList.toggle('show', STATE.chorusOn);
+    hint.textContent = hasChorus ? 'chorus' : 'set chorus';
+    hint.classList.toggle('show', STATE.chorusOn || ED.on);
   }
   if(pb) pb.disabled = !playerReady;
 
+  edChrome();
   refreshProgress();
 }
 
@@ -1194,14 +1469,18 @@ function refreshProgress(){
   var band = slide.querySelector('.scrubChorus');
   var time = slide.querySelector('.time');
   var c = chorusFor(current);
+  // While editing, the band is driven by the in-progress span, not the saved
+  // one, so the grips and the shaded region cannot disagree.
+  var st = ED.on ? ED.start : (c ? c.start : null);
+  var en = ED.on ? ED.end   : (c ? c.end   : null);
   if(fill) fill.style.width = (d ? (n / d * 100) : 0) + '%';
-  if(band && d && c && c.start != null){
-    var end = (c.end != null ? c.end : d);
+  if(band && d && st != null){
+    var end = (en != null ? en : d);
     band.classList.add('show');
-    band.style.left = (c.start / d * 100) + '%';
-    band.style.width = (Math.max(end - c.start, 3) / d * 100) + '%';
+    band.style.left = (st / d * 100) + '%';
+    band.style.width = (Math.max(end - st, 3) / d * 100) + '%';
   } else if(band){
-    if(c && c.start != null){
+    if(st != null){
       band.classList.add('show');
       band.style.left = '';
       band.style.width = '';
@@ -1210,6 +1489,7 @@ function refreshProgress(){
     }
   }
   if(time) time.textContent = fmtTime(n) + (d ? ' / ' + fmtTime(d) : '');
+  paintEditor();
 }
 
 /* The release slide's tracklist is always visible, so marking the playing track
@@ -1253,14 +1533,83 @@ deck.addEventListener('click', function(e){
   if(pg){ togglePlay(); return; }
   var tog = e.target.closest('.cTog');
   if(tog && !tog.disabled){ toggleChorus(); return; }
+  var eb = e.target.closest('.cEdit');
+  if(eb && !eb.disabled){ toggleEdit(); return; }
+  var sv = e.target.closest('.edSave');
+  if(sv){ saveChorus(); return; }
+  var cl = e.target.closest('.edClear');
+  if(cl){ clearChorus(); return; }
   var bar = e.target.closest('.scrubBar');
   if(bar){
+    // A drag that ends over the bar also fires a click; seeking there would yank
+    // playback to wherever the pointer was released.
+    if(ED.moved) return;
     if(!playerReady) return;
+    if(ED.on) return;                          // the bar is a drag surface, not a seek bar
     var r = bar.getBoundingClientRect();
     var d = dur();
     if(d){ try{ player.seekTo((e.clientX - r.left) / r.width * d, true); }catch(err){} }
   }
 }, true);
+
+/* ---------- chorus editor: drag the two grips ----------
+   Pointer events so mouse, pen and touch take one path, with capture so the drag
+   survives the pointer leaving the bar. Bound on the deck in the capture phase
+   like the click handlers above. */
+deck.addEventListener('pointerdown', function(e){
+  if(!ED.on) return;
+  var bar = e.target.closest('.scrubBar');
+  if(!bar) return;
+  var hs = e.target.closest('.edStart');
+  var he = e.target.closest('.edEnd');
+  var body = !hs && !he && e.target.closest('.scrubChorus');
+  if(!hs && !he && !body) return;             // bare bar does nothing while editing
+  e.preventDefault();
+  e.stopPropagation();
+  ED.moved = true;
+  var t = edSeconds(e);
+  if(hs){ ED.grab = 'start'; ED.start = t; edClamp(); }
+  else if(he){ ED.grab = 'end'; ED.end = t; edClamp(); }
+  else if(body){ ED.grab = 'body'; ED.anchor = t - ED.start; edClamp(); }
+  if(hs) hs.classList.add('grab');
+  if(he) he.classList.add('grab');
+  try{ bar.setPointerCapture(e.pointerId); }catch(err){}
+  refreshProgress();
+}, true);
+
+deck.addEventListener('pointermove', function(e){
+  if(!ED.on || !ED.grab) return;
+  e.preventDefault();
+  var t = edSeconds(e);
+  if(ED.grab === 'start') ED.start = t;
+  else if(ED.grab === 'end') ED.end = t;
+  else if(ED.grab === 'body'){
+    // slide the whole span, keeping its length
+    var len = ED.end - ED.start;
+    var s = t - (ED.anchor || 0);
+    s = Math.max(0, Math.min(s, dur() - len));
+    ED.start = s; ED.end = s + len;
+  }
+  edClamp();
+  refreshProgress();
+}, true);
+
+function endEditDrag(e){
+  if(!ED.on || !ED.grab) return;
+  var slide = activeSlide();
+  if(slide){
+    var a = slide.querySelector('.edStart'), b = slide.querySelector('.edEnd');
+    if(a) a.classList.remove('grab');
+    if(b) b.classList.remove('grab');
+  }
+  try{ edBar().releasePointerCapture(e.pointerId); }catch(err){}
+  ED.grab = null;
+  // The click event for this gesture fires after pointerup; clear the flag once
+  // it has been dispatched so the seek guard does not outlive the gesture.
+  setTimeout(function(){ ED.moved = false; }, 0);
+}
+deck.addEventListener('pointerup', endEditDrag, true);
+deck.addEventListener('pointercancel', endEditDrag, true);
 
 function toggleChorus(){
   STATE.chorusOn = !STATE.chorusOn;
@@ -1296,10 +1645,12 @@ document.addEventListener('keydown', function(e){
     case 'Home': goTo(0); break;
     case 'End': goTo(TOTAL - 1); break;
     case 'c': case 'C': toggleChorus(); break;
+    case 'e': case 'E': if(ED.on || canEdit()) toggleEdit(); break;
+    case 's': case 'S': if(ED.on) saveChorus(); break;
     case 'o': case 'O': document.getElementById('overview').classList.toggle('on'); renderOverview(); break;
     case 'p': case 'P': document.getElementById('blackout').classList.toggle('on'); break;
     case 'f': case 'F': toggleFS(); break;
-    case 'Escape': closeOverview(); break;
+    case 'Escape': if(ED.on) exitEdit(); else closeOverview(); break;
   }
 });
 function toggleFS(){

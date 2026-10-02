@@ -74,6 +74,8 @@ for (const tl of tracklists) {
         // join chorus analysis
         if (choruses[id] && choruses[id].start != null) {
           merged.chorus = { start: choruses[id].start, end: choruses[id].end, confidence: choruses[id].confidence };
+          // a hand-set span is not an analysis result, and the app shows it differently
+          if (choruses[id].manual) merged.chorus.manual = true;
         }
         return merged;
       });
@@ -107,6 +109,7 @@ for (const y of discog.years) {
     }
     if (choruses[id] && choruses[id].start != null) {
       merged.chorus = { start: choruses[id].start, end: choruses[id].end, confidence: choruses[id].confidence };
+      if (choruses[id].manual) merged.chorus.manual = true;
     }
     rel.tracks = [merged];
     synthAttached++;
@@ -122,7 +125,7 @@ for (const y of discog.years) {
 }
 
 /* ---- report ---- */
-let totalTracks = 0, resolved = 0, embeddable = 0, withChorus = 0, lowConf = 0, unverified = 0;
+let totalTracks = 0, resolved = 0, embeddable = 0, withChorus = 0, lowConf = 0, unverified = 0, manualChorus = 0;
 const orphans = [];
 for (const y of discog.years) {
   for (const rel of y.releases) {
@@ -130,7 +133,7 @@ for (const y of discog.years) {
       totalTracks++;
       if (t.videoId) { resolved++; if (t.embeddable !== false) embeddable++; }
       else if (t.id) orphans.push(t.id);
-      if (t.chorus) { withChorus++; if ((t.chorus.confidence || 0) < 0.45) lowConf++; }
+      if (t.chorus) { withChorus++; if (t.chorus.manual) manualChorus++; if ((t.chorus.confidence || 0) < 0.45) lowConf++; }
       if (t.unverified) unverified++;
     }
   }
@@ -181,6 +184,7 @@ console.log(`  releases      ${releaseCount}`);
 console.log(`  tracks        ${totalTracks}  (${tracksAttached} from ${tracklists.length} tracklist file(s), ${synthAttached} synthesized singles)`);
 console.log(`  videoId       ${resolved}/${totalTracks} resolved  (${pct(resolved, totalTracks)}), ${embeddable} embeddable`);
 console.log(`  chorus        ${withChorus}/${totalTracks} analysed  (${pct(withChorus, totalTracks)}), ${lowConf} low confidence`);
+if (manualChorus) console.log(`  hand-set      ${manualChorus} in the app, ${totalTracks - withChorus} track(s) still without a chorus`);
 console.log(`  covers        ${coverHits}/${releaseCount} releases have artwork`);
 console.log(`  dates         ${datedReleases}/${releaseCount} releases dated  (${dayPrecision} to the day, rest year-only)`);
 if (unverified) console.log(`  unverified    ${unverified} track(s) flagged from source research`);
